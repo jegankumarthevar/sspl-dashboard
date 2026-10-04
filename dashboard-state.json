@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-10-04T16:48:45.145637+00:00",
+  "exported_at": "2026-10-04T16:51:45.256653+00:00",
   "mode": "BOUNDED_OBSERVATION",
   "cash_usd": 500.0,
   "equity_usd": 500.0,
@@ -57,12 +57,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:49.568Z",
       "queue": {
-        "PENDING": 287,
+        "PENDING": 299,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:22.156Z",
+        "last_successful_scan_at": "2026-10-04T16:49:25.431Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -117,10 +117,12 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T12:50:47.744Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 100
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:50:47.745Z",
+        "last_successful_scan_at": "2026-10-04T16:51:17.525Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -294,7 +296,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:07:57.024Z",
+        "last_successful_scan_at": "2026-10-04T16:51:20.566Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -352,7 +354,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:07:59.931Z",
+        "last_successful_scan_at": "2026-10-04T16:51:20.809Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -412,11 +414,11 @@
       "forward_baseline_at": "2026-10-04T13:04:53.133Z",
       "queue": {
         "COMPLETE": 1,
-        "PENDING": 95
+        "PENDING": 99
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:22.465Z",
+        "last_successful_scan_at": "2026-10-04T16:49:25.769Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791127783,
         "complete_buys": 0,
@@ -474,7 +476,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:05.562Z",
+        "last_successful_scan_at": "2026-10-04T16:51:24.145Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -529,10 +531,12 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:19:37.598Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 100
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:19:37.599Z",
+        "last_successful_scan_at": "2026-10-04T16:51:26.612Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -646,11 +650,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:18.282Z",
       "queue": {
+        "PENDING": 30,
         "UNSUPPORTED": 3
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:31.554Z",
+        "last_successful_scan_at": "2026-10-04T16:51:31.779Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -708,7 +713,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:34.149Z",
+        "last_successful_scan_at": "2026-10-04T16:51:32.363Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -764,12 +769,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:19:41.311Z",
       "queue": {
-        "PENDING": 38,
+        "PENDING": 138,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:39.942Z",
+        "last_successful_scan_at": "2026-10-04T16:51:35.413Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -888,7 +893,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:00.568Z",
+        "last_successful_scan_at": "2026-10-04T16:51:23.673Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -947,13 +952,13 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:14.932Z",
       "queue": {
-        "PENDING": 546,
+        "PENDING": 555,
         "STALE_DROPPED_DATA_INCOMPLETE": 42,
         "UNSUPPORTED": 49
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:23.574Z",
+        "last_successful_scan_at": "2026-10-04T16:49:26.057Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1009,11 +1014,11 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:19:39.520Z",
       "queue": {
-        "PENDING": 12
+        "PENDING": 68
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:22.644Z",
+        "last_successful_scan_at": "2026-10-04T16:51:27.934Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1129,7 +1134,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:22.887Z",
+        "last_successful_scan_at": "2026-10-04T16:51:29.501Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1188,12 +1193,12 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:17.179Z",
       "queue": {
-        "PENDING": 216,
+        "PENDING": 225,
         "UNSUPPORTED": 20
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:24.876Z",
+        "last_successful_scan_at": "2026-10-04T16:49:27.419Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1249,12 +1254,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:10:24.675Z",
       "queue": {
-        "PENDING": 4,
+        "PENDING": 50,
         "UNSUPPORTED": 30
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:48.590Z",
+        "last_successful_scan_at": "2026-10-04T16:51:35.831Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1370,7 +1375,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:08:57.655Z",
+        "last_successful_scan_at": "2026-10-04T16:51:38.565Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1426,12 +1431,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:20.436Z",
       "queue": {
-        "PENDING": 7,
+        "PENDING": 107,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:13:17.089Z",
+        "last_successful_scan_at": "2026-10-04T16:51:39.174Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1489,7 +1494,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:19:45.348Z",
+        "last_successful_scan_at": "2026-10-04T16:51:41.461Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1545,12 +1550,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:21.540Z",
       "queue": {
-        "PENDING": 5,
+        "PENDING": 105,
         "UNSUPPORTED": 36
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:34:35.797Z",
+        "last_successful_scan_at": "2026-10-04T16:51:43.046Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1606,13 +1611,13 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:22.733Z",
       "queue": {
-        "PENDING": 245,
+        "PENDING": 345,
         "STALE_DROPPED_DATA_INCOMPLETE": 164,
         "UNSUPPORTED": 31
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T14:13:20.943Z",
+        "last_successful_scan_at": "2026-10-04T16:51:44.544Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1671,12 +1676,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:19:48.261Z",
       "queue": {
-        "PENDING": 73,
+        "PENDING": 76,
         "UNSUPPORTED": 8
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:26.455Z",
+        "last_successful_scan_at": "2026-10-04T16:49:28.922Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -1915,12 +1920,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:50:51.476Z",
       "queue": {
-        "PENDING": 841,
+        "PENDING": 865,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:29.357Z",
+        "last_successful_scan_at": "2026-10-04T16:49:31.315Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -2865,12 +2870,12 @@
       "forward_baseline_at": "2026-10-04T09:10:26.841Z",
       "queue": {
         "COMPLETE": 7,
-        "PENDING": 160,
+        "PENDING": 170,
         "UNSUPPORTED": 29
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:39:48.293Z",
+        "last_successful_scan_at": "2026-10-04T16:49:31.832Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791127871,
         "complete_buys": 0,
@@ -3523,14 +3528,14 @@
       "forward_baseline_at": "2026-10-04T09:47:38.041Z",
       "queue": {
         "COMPLETE": 21,
-        "PENDING": 180,
+        "PENDING": 186,
         "UNSUPPORTED": 8
       },
       "outcome_queue": {
         "INELIGIBLE": 2
       },
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:20.743Z",
+        "last_successful_scan_at": "2026-10-04T16:49:23.283Z",
         "latest_buy_at": 1791127302,
         "latest_sell_at": 1791127542,
         "complete_buys": 2,
@@ -5132,7 +5137,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:35.629Z",
+        "last_successful_scan_at": "2026-10-04T16:49:35.110Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791114444,
         "complete_buys": 0,
@@ -5773,13 +5778,13 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:46.959Z",
       "queue": {
-        "PENDING": 277,
+        "PENDING": 283,
         "STALE_DROPPED_DATA_INCOMPLETE": 43,
         "UNSUPPORTED": 31
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:32.615Z",
+        "last_successful_scan_at": "2026-10-04T16:49:34.723Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -5897,13 +5902,13 @@
       "forward_baseline_at": "2026-10-04T09:47:50.261Z",
       "queue": {
         "COMPLETE": 10,
-        "PENDING": 378,
+        "PENDING": 410,
         "STALE_DROPPED_DATA_INCOMPLETE": 242,
         "UNSUPPORTED": 15
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:36.117Z",
+        "last_successful_scan_at": "2026-10-04T16:49:37.645Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791114387,
         "complete_buys": 0,
@@ -5963,13 +5968,13 @@
       "forward_baseline_at": "2026-10-04T09:47:51.247Z",
       "queue": {
         "COMPLETE": 10,
-        "PENDING": 293,
+        "PENDING": 296,
         "STALE_DROPPED_DATA_INCOMPLETE": 82,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:38.429Z",
+        "last_successful_scan_at": "2026-10-04T16:49:38.863Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791114411,
         "complete_buys": 0,
@@ -6382,12 +6387,12 @@
       "forward_baseline_at": "2026-10-04T09:47:57.975Z",
       "queue": {
         "COMPLETE": 12,
-        "PENDING": 195,
+        "PENDING": 205,
         "UNSUPPORTED": 18
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:34:04.033Z",
+        "last_successful_scan_at": "2026-10-04T16:49:40.501Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791128234,
         "complete_buys": 0,
@@ -6808,12 +6813,12 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:05.671Z",
       "queue": {
-        "PENDING": 99,
+        "PENDING": 105,
         "UNSUPPORTED": 25
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:43.545Z",
+        "last_successful_scan_at": "2026-10-04T16:49:43.526Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -6939,7 +6944,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:44.338Z",
+        "last_successful_scan_at": "2026-10-04T16:49:46.293Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -7478,12 +7483,12 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:04.457Z",
       "queue": {
-        "PENDING": 488,
+        "PENDING": 494,
         "UNSUPPORTED": 37
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:41.317Z",
+        "last_successful_scan_at": "2026-10-04T16:49:42.595Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -7841,13 +7846,13 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:11.061Z",
       "queue": {
-        "PENDING": 535,
+        "PENDING": 550,
         "STALE_DROPPED_DATA_INCOMPLETE": 47,
         "UNSUPPORTED": 31
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:47.139Z",
+        "last_successful_scan_at": "2026-10-04T16:49:46.581Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -8035,12 +8040,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:17:04.505Z",
       "queue": {
-        "PENDING": 395,
+        "PENDING": 403,
         "UNSUPPORTED": 19
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:47.558Z",
+        "last_successful_scan_at": "2026-10-04T16:49:49.467Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -8099,12 +8104,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:17:05.587Z",
       "queue": {
-        "PENDING": 56,
+        "PENDING": 58,
         "UNSUPPORTED": 11
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:43:18.158Z",
+        "last_successful_scan_at": "2026-10-04T16:49:50.065Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -8712,12 +8717,12 @@
       "forward_baseline_at": "2026-10-04T09:48:24.430Z",
       "queue": {
         "COMPLETE": 17,
-        "PENDING": 338,
+        "PENDING": 347,
         "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:51.120Z",
+        "last_successful_scan_at": "2026-10-04T16:49:52.495Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791126356,
         "complete_buys": 0,
@@ -9733,12 +9738,12 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:27.574Z",
       "queue": {
-        "PENDING": 376,
+        "PENDING": 388,
         "UNSUPPORTED": 28
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:52.904Z",
+        "last_successful_scan_at": "2026-10-04T16:49:53.780Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -10634,12 +10639,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:31.534Z",
       "queue": {
-        "PENDING": 51,
+        "PENDING": 54,
         "UNSUPPORTED": 13
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:54.836Z",
+        "last_successful_scan_at": "2026-10-04T16:49:55.276Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -10814,12 +10819,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:17:21.944Z",
       "queue": {
-        "PENDING": 79,
+        "PENDING": 80,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:55.796Z",
+        "last_successful_scan_at": "2026-10-04T16:49:57.504Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -11055,12 +11060,12 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:36.514Z",
       "queue": {
-        "PENDING": 70,
+        "PENDING": 83,
         "UNSUPPORTED": 9
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:06:30.291Z",
+        "last_successful_scan_at": "2026-10-04T16:49:58.159Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -11489,13 +11494,13 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:31.398Z",
       "queue": {
-        "PENDING": 258,
+        "PENDING": 266,
         "STALE_DROPPED_DATA_INCOMPLETE": 103,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:58.992Z",
+        "last_successful_scan_at": "2026-10-04T16:50:01.057Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -11554,12 +11559,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:37.312Z",
       "queue": {
-        "PENDING": 1191,
+        "PENDING": 1241,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:01.926Z",
+        "last_successful_scan_at": "2026-10-04T16:50:01.630Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -12683,12 +12688,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:35.740Z",
       "queue": {
-        "PENDING": 219,
+        "PENDING": 221,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:02.452Z",
+        "last_successful_scan_at": "2026-10-04T16:50:03.948Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -12923,12 +12928,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:46.062Z",
       "queue": {
-        "PENDING": 73,
+        "PENDING": 75,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:04.791Z",
+        "last_successful_scan_at": "2026-10-04T16:50:05.171Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13103,12 +13108,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:48.915Z",
       "queue": {
-        "PENDING": 739,
+        "PENDING": 761,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:37:36.529Z",
+        "last_successful_scan_at": "2026-10-04T16:50:06.844Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13290,12 +13295,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:43.553Z",
       "queue": {
-        "PENDING": 251,
+        "PENDING": 254,
         "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:07.686Z",
+        "last_successful_scan_at": "2026-10-04T16:50:08.923Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13361,7 +13366,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:09.953Z",
+        "last_successful_scan_at": "2026-10-04T16:50:09.733Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791110882,
         "complete_buys": 0,
@@ -13420,11 +13425,11 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:49.570Z",
       "queue": {
-        "PENDING": 283
+        "PENDING": 292
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:10.590Z",
+        "last_successful_scan_at": "2026-10-04T16:50:12.813Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13608,7 +13613,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:43:44.470Z",
+        "last_successful_scan_at": "2026-10-04T16:50:16.343Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13672,7 +13677,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:19.266Z",
+        "last_successful_scan_at": "2026-10-04T16:50:20.077Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13731,12 +13736,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:56.647Z",
       "queue": {
-        "PENDING": 90,
+        "PENDING": 97,
         "UNSUPPORTED": 9
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:37:55.290Z",
+        "last_successful_scan_at": "2026-10-04T16:50:24.663Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14341,7 +14346,7 @@
         "INELIGIBLE": 1
       },
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:46:21.207Z",
+        "last_successful_scan_at": "2026-10-04T16:49:24.166Z",
         "latest_buy_at": 1791126801,
         "latest_sell_at": 1791127875,
         "complete_buys": 1,
@@ -14405,7 +14410,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:13.588Z",
+        "last_successful_scan_at": "2026-10-04T16:50:13.085Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14522,12 +14527,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:49.105Z",
       "queue": {
-        "PENDING": 231,
+        "PENDING": 235,
         "UNSUPPORTED": 26
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:13.990Z",
+        "last_successful_scan_at": "2026-10-04T16:50:15.979Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14830,12 +14835,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:52.261Z",
       "queue": {
-        "PENDING": 141,
+        "PENDING": 143,
         "UNSUPPORTED": 13
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:17.551Z",
+        "last_successful_scan_at": "2026-10-04T16:50:18.871Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14894,12 +14899,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:54.784Z",
       "queue": {
-        "PENDING": 347,
+        "PENDING": 352,
         "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:23.137Z",
+        "last_successful_scan_at": "2026-10-04T16:50:23.839Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16267,7 +16272,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:25.438Z",
+        "last_successful_scan_at": "2026-10-04T16:50:27.684Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16387,12 +16392,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:49:14.587Z",
       "queue": {
-        "PENDING": 61,
+        "PENDING": 62,
         "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:27.967Z",
+        "last_successful_scan_at": "2026-10-04T16:50:27.936Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16931,7 +16936,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:29.041Z",
+        "last_successful_scan_at": "2026-10-04T16:50:30.845Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791110802,
         "complete_buys": 0,
@@ -16990,12 +16995,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:21.964Z",
       "queue": {
-        "PENDING": 131,
+        "PENDING": 132,
         "UNSUPPORTED": 3
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:30.968Z",
+        "last_successful_scan_at": "2026-10-04T16:50:31.441Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -17054,12 +17059,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:23.129Z",
       "queue": {
-        "PENDING": 419,
+        "PENDING": 458,
         "UNSUPPORTED": 24
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:38:03.003Z",
+        "last_successful_scan_at": "2026-10-04T16:50:33.759Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -17480,12 +17485,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:19:56.926Z",
       "queue": {
-        "PENDING": 907,
+        "PENDING": 940,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:33.765Z",
+        "last_successful_scan_at": "2026-10-04T16:50:35.193Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -17721,12 +17726,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:32.973Z",
       "queue": {
-        "PENDING": 44,
+        "PENDING": 45,
         "UNSUPPORTED": 9
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:36.913Z",
+        "last_successful_scan_at": "2026-10-04T16:50:38.895Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -17843,12 +17848,12 @@
       },
       "forward_baseline_at": "2026-10-04T09:10:51.051Z",
       "queue": {
-        "PENDING": 259,
+        "PENDING": 262,
         "UNSUPPORTED": 17
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:39.810Z",
+        "last_successful_scan_at": "2026-10-04T16:50:39.538Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -17907,12 +17912,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:49:27.778Z",
       "queue": {
-        "PENDING": 189,
+        "PENDING": 191,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:40.230Z",
+        "last_successful_scan_at": "2026-10-04T16:50:42.515Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -18327,12 +18332,12 @@
       "forward_baseline_at": "2026-10-04T10:02:31.936Z",
       "queue": {
         "COMPLETE": 5,
-        "PENDING": 43,
+        "PENDING": 50,
         "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:36.641Z",
+        "last_successful_scan_at": "2026-10-04T16:50:36.658Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791123858,
         "complete_buys": 0,
@@ -18754,7 +18759,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:45.605Z",
+        "last_successful_scan_at": "2026-10-04T16:50:46.214Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -18990,12 +18995,12 @@
       },
       "forward_baseline_at": "2026-10-04T12:58:47.876Z",
       "queue": {
-        "PENDING": 168,
+        "PENDING": 171,
         "UNSUPPORTED": 3
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:48.500Z",
+        "last_successful_scan_at": "2026-10-04T16:50:49.947Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -19054,12 +19059,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:09:35.683Z",
       "queue": {
-        "PENDING": 212,
+        "PENDING": 234,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:38:21.558Z",
+        "last_successful_scan_at": "2026-10-04T16:50:51.501Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -19124,7 +19129,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:44:10.800Z",
+        "last_successful_scan_at": "2026-10-04T16:50:42.789Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -19299,12 +19304,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:08.241Z",
       "queue": {
-        "PENDING": 562,
+        "PENDING": 568,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:43.965Z",
+        "last_successful_scan_at": "2026-10-04T16:50:45.700Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -19546,7 +19551,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:47.844Z",
+        "last_successful_scan_at": "2026-10-04T16:50:48.659Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791116351,
         "complete_buys": 0,
@@ -20264,13 +20269,13 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:50.700Z",
       "queue": {
-        "PENDING": 511,
+        "PENDING": 555,
         "STALE_DROPPED_DATA_INCOMPLETE": 192,
         "UNSUPPORTED": 16
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:53.165Z",
+        "last_successful_scan_at": "2026-10-04T16:50:54.403Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -20630,7 +20635,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:51.910Z",
+        "last_successful_scan_at": "2026-10-04T16:50:53.841Z",
         "latest_buy_at": null,
         "latest_sell_at": 1791116323,
         "complete_buys": 0,
@@ -20928,12 +20933,12 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:51.704Z",
       "queue": {
-        "PENDING": 305,
+        "PENDING": 308,
         "UNSUPPORTED": 23
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:53.520Z",
+        "last_successful_scan_at": "2026-10-04T16:50:55.288Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -22757,12 +22762,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:14:13.913Z",
       "queue": {
-        "PENDING": 349,
+        "PENDING": 368,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:57.219Z",
+        "last_successful_scan_at": "2026-10-04T16:50:57.796Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -22821,11 +22826,11 @@
       },
       "forward_baseline_at": "2026-10-04T13:05:00.588Z",
       "queue": {
-        "PENDING": 374
+        "PENDING": 387
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:54.310Z",
+        "last_successful_scan_at": "2026-10-04T16:50:55.773Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -23296,12 +23301,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:27.056Z",
       "queue": {
-        "PENDING": 499,
+        "PENDING": 527,
         "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:55.632Z",
+        "last_successful_scan_at": "2026-10-04T16:50:57.412Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -24006,11 +24011,11 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:34.509Z",
       "queue": {
-        "PENDING": 307
+        "PENDING": 350
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:41:16.228Z",
+        "last_successful_scan_at": "2026-10-04T16:51:00.182Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -26500,12 +26505,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:14:53.185Z",
       "queue": {
-        "PENDING": 344,
+        "PENDING": 373,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:03.369Z",
+        "last_successful_scan_at": "2026-10-04T16:51:05.449Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -26975,12 +26980,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:38.730Z",
       "queue": {
-        "PENDING": 110,
+        "PENDING": 114,
         "UNSUPPORTED": 2
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:03.085Z",
+        "last_successful_scan_at": "2026-10-04T16:51:03.165Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -27337,12 +27342,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:41.961Z",
       "queue": {
-        "PENDING": 232,
+        "PENDING": 237,
         "UNSUPPORTED": 3
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:06.268Z",
+        "last_successful_scan_at": "2026-10-04T16:51:05.948Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -27517,12 +27522,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:08.586Z",
       "queue": {
-        "PENDING": 190,
+        "PENDING": 202,
         "UNSUPPORTED": 1
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:41:23.669Z",
+        "last_successful_scan_at": "2026-10-04T16:51:08.858Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -27699,11 +27704,11 @@
       },
       "forward_baseline_at": "2026-10-04T13:15:01.845Z",
       "queue": {
-        "PENDING": 301
+        "PENDING": 370
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:44:37.184Z",
+        "last_successful_scan_at": "2026-10-04T16:51:09.259Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -28353,12 +28358,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:19:22.124Z",
       "queue": {
-        "PENDING": 463,
+        "PENDING": 474,
         "UNSUPPORTED": 1
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:12.054Z",
+        "last_successful_scan_at": "2026-10-04T16:51:13.115Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -28478,12 +28483,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:49.405Z",
       "queue": {
-        "PENDING": 351,
+        "PENDING": 354,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:14.980Z",
+        "last_successful_scan_at": "2026-10-04T16:51:16.691Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -28725,7 +28730,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:47:21.674Z",
+        "last_successful_scan_at": "2026-10-04T16:50:21.732Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -29259,12 +29264,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:14:41.538Z",
       "queue": {
-        "PENDING": 439,
+        "PENDING": 477,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:00.099Z",
+        "last_successful_scan_at": "2026-10-04T16:51:01.715Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -29632,12 +29637,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:45.681Z",
       "queue": {
-        "PENDING": 587,
+        "PENDING": 595,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:10.576Z",
+        "last_successful_scan_at": "2026-10-04T16:51:11.750Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -29816,12 +29821,12 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:46.669Z",
       "queue": {
-        "PENDING": 590,
+        "PENDING": 597,
         "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T16:48:14.305Z",
+        "last_successful_scan_at": "2026-10-04T16:51:14.646Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -52333,7 +52338,7 @@
   ],
   "pipeline": {
     "baselines": 501,
-    "pending_transactions": 41595,
+    "pending_transactions": 43098,
     "complete_buys": 5,
     "outcome_states": {
       "INELIGIBLE": 5
@@ -52348,19 +52353,19 @@
     "keyed_providers": [
       {
         "provider": "helius",
-        "reserved_used_units": 3875,
+        "reserved_used_units": 3924,
         "budget_limit_units": 950000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock",
-        "reserved_used_units": 43050,
+        "reserved_used_units": 43150,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock2",
-        "reserved_used_units": 34200,
+        "reserved_used_units": 34300,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
@@ -52372,54 +52377,54 @@
       },
       {
         "provider": "alchemy2",
-        "reserved_used_units": 63560,
+        "reserved_used_units": 65080,
         "budget_limit_units": 30000000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "quicknode1",
-        "reserved_used_units": 24420,
+        "reserved_used_units": 24930,
         "budget_limit_units": 9000000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack1",
-        "reserved_used_units": 222,
+        "reserved_used_units": 239,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack2",
-        "reserved_used_units": 179,
+        "reserved_used_units": 196,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack3",
-        "reserved_used_units": 159,
+        "reserved_used_units": 176,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack4",
-        "reserved_used_units": 154,
+        "reserved_used_units": 170,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack5",
-        "reserved_used_units": 144,
+        "reserved_used_units": 160,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "quicknode2",
-        "reserved_used_units": 3660,
+        "reserved_used_units": 4170,
         "budget_limit_units": 9000000,
         "status": "BUDGET_AVAILABLE"
       }
     ],
-    "last_keyed_receipt": "2026-10-04T16:48:44.126Z"
+    "last_keyed_receipt": "2026-10-04T16:51:44.470Z"
   },
   "latest_buys": [
     {
