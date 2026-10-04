@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-10-04T13:34:56.705447+00:00",
+  "exported_at": "2026-10-04T13:49:52.927427+00:00",
   "mode": "BOUNDED_OBSERVATION",
   "cash_usd": 500.0,
   "equity_usd": 500.0,
@@ -7,126 +7,6 @@
   "initial_usd": 500.0,
   "positions": [],
   "wallets": [
-    {
-      "wallet_address": "8y5xhxgBeYNh453AB2kWH4PV5kmBJTy4A1mjXmq9Th7W",
-      "label": "Early buyer of 4 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
-      "status": "CANDIDATE",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "missing_reasons": [
-          "NO_SCORING_EVIDENCE"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": null,
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "Ecmuu7qcuX4WMzXU6CTryuKsMURyDidAKS8J1554L92X",
-      "label": "Early buyer of 4 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
-      "status": "CANDIDATE",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "missing_reasons": [
-          "NO_SCORING_EVIDENCE"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": null,
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "GBRTiNiiRexYESkgfadjrQEwiKdx8SkzThojCQYT4u5i",
-      "label": "Early buyer of 3 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
-      "status": "CANDIDATE",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "missing_reasons": [
-          "NO_SCORING_EVIDENCE"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": null,
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "pBTiFEds716DaFSkjGbetxk6eQMYaoDQ7ySU2b1Y7ow",
-      "label": "Early buyer of 3 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
-      "status": "CANDIDATE",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "missing_reasons": [
-          "NO_SCORING_EVIDENCE"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": null,
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
     {
       "wallet_address": "1411K8uz43Mp3bv5TShPX4PsZPD7iwidruzo4gLBNnBT",
       "label": "PROMOTED: first-20 buyer on 2 mint(s) that reached >=1.5x (best 3.4x, Gecko/Birdeye candles); on-chain early-buyer evidence only, no profit claim",
@@ -11132,6 +11012,64 @@
       }
     },
     {
+      "wallet_address": "8y5xhxgBeYNh453AB2kWH4PV5kmBJTy4A1mjXmq9Th7W",
+      "label": "Early buyer of 4 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
+      "status": "DATA_INCOMPLETE",
+      "score": null,
+      "win_rate": null,
+      "total_trades": 0,
+      "qualification": {
+        "policy": {
+          "version": "sspl-forward-gecko-1",
+          "start": 1791034118,
+          "minVerifiedOutcomes": 20,
+          "minCoverage": 0.8,
+          "qualifyScore": 70,
+          "tradeToleranceSeconds": 30,
+          "candleToleranceSeconds": 30,
+          "deadlineSeconds": 300,
+          "earlySeconds": 120,
+          "priceRatio": 2,
+          "volumeRatio": 2,
+          "weights": {
+            "win": 0.4,
+            "early": 0.2,
+            "momentum": 0.4
+          },
+          "poolScope": "PARSED_BUY_POOL_ONLY",
+          "partialMinutes": "FULLY_CONTAINED",
+          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
+        },
+        "buy_count": 0,
+        "verified_outcomes": 0,
+        "coverage": null,
+        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
+        "score_eligible_outcomes": 0,
+        "win_rate": null,
+        "early_entry_rate": null,
+        "momentum_rate": null,
+        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
+        "rejected": [],
+        "missing_reasons": [
+          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
+        ]
+      },
+      "watch_role": "STANDARD",
+      "primary_evidence": null,
+      "forward_baseline_at": null,
+      "queue": {},
+      "outcome_queue": {},
+      "scanner": {
+        "last_successful_scan_at": null,
+        "latest_buy_at": null,
+        "latest_sell_at": null,
+        "complete_buys": 0,
+        "complete_sells": 0,
+        "accounting_profit_status": "DATA_INCOMPLETE",
+        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
+      }
+    },
+    {
       "wallet_address": "8zyZy97bKmzjPDydNuSixY6i2bdEgYKyz5xHn1M6FViV",
       "label": "RAW CANDIDATE: first-20 buyer on 1 mint(s) at >=1.5x (best 9831.0x est.); on-chain early-buyer evidence only, no profit claim",
       "status": "DATA_INCOMPLETE",
@@ -13298,13 +13236,13 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:47.857Z",
       "queue": {
-        "PENDING": 150,
+        "PENDING": 249,
         "STALE_DROPPED_DATA_INCOMPLETE": 53,
-        "UNSUPPORTED": 3
+        "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:05:08.802Z",
+        "last_successful_scan_at": "2026-10-04T13:35:20.513Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13359,10 +13297,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T12:49:03.359Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 23,
+        "UNSUPPORTED": 4
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:03.361Z",
+        "last_successful_scan_at": "2026-10-04T13:35:37.886Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13476,12 +13417,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:56.647Z",
       "queue": {
-        "PENDING": 2,
-        "UNSUPPORTED": 2
+        "PENDING": 30,
+        "UNSUPPORTED": 5
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:45.969Z",
+        "last_successful_scan_at": "2026-10-04T13:41:12.117Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13539,7 +13480,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:46.168Z",
+        "last_successful_scan_at": "2026-10-04T13:41:13.500Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13597,7 +13538,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:58:43.775Z",
+        "last_successful_scan_at": "2026-10-04T13:41:14.892Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13655,7 +13596,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:47.284Z",
+        "last_successful_scan_at": "2026-10-04T13:41:17.173Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13711,12 +13652,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:59.948Z",
       "queue": {
-        "PENDING": 13,
+        "PENDING": 24,
         "UNSUPPORTED": 11
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:54.619Z",
+        "last_successful_scan_at": "2026-10-04T13:41:20.784Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13774,7 +13715,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:10.489Z",
+        "last_successful_scan_at": "2026-10-04T13:41:32.292Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13829,10 +13770,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T12:49:07.157Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 37,
+        "UNSUPPORTED": 5
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:07.158Z",
+        "last_successful_scan_at": "2026-10-04T13:41:29.433Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -13890,7 +13834,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:10.884Z",
+        "last_successful_scan_at": "2026-10-04T13:41:35.200Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14131,12 +14075,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:46.860Z",
       "queue": {
-        "PENDING": 15,
-        "UNSUPPORTED": 12
+        "PENDING": 37,
+        "UNSUPPORTED": 13
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:18:16.758Z",
+        "last_successful_scan_at": "2026-10-04T13:35:11.865Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14194,7 +14138,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:18:17.757Z",
+        "last_successful_scan_at": "2026-10-04T13:35:30.214Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14250,12 +14194,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:49.105Z",
       "queue": {
-        "PENDING": 34,
-        "UNSUPPORTED": 18
+        "PENDING": 62,
+        "UNSUPPORTED": 22
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:05:17.537Z",
+        "last_successful_scan_at": "2026-10-04T13:35:29.162Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14313,7 +14257,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:18:17.986Z",
+        "last_successful_scan_at": "2026-10-04T13:35:40.870Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14371,7 +14315,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:03:51.900Z",
+        "last_successful_scan_at": "2026-10-04T13:35:41.390Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14426,10 +14370,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:09:32.943Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 98,
+        "UNSUPPORTED": 2
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:09:32.944Z",
+        "last_successful_scan_at": "2026-10-04T13:35:46.534Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14484,10 +14431,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T12:49:04.571Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 96,
+        "UNSUPPORTED": 4
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:04.573Z",
+        "last_successful_scan_at": "2026-10-04T13:35:55.181Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14543,12 +14493,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:52.261Z",
       "queue": {
-        "PENDING": 37,
-        "UNSUPPORTED": 7
+        "PENDING": 45,
+        "UNSUPPORTED": 9
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:18:18.085Z",
+        "last_successful_scan_at": "2026-10-04T13:40:54.714Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14603,10 +14553,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:03:54.784Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 56,
+        "UNSUPPORTED": 6
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:03:54.784Z",
+        "last_successful_scan_at": "2026-10-04T13:41:03.318Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14722,7 +14675,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:39.895Z",
+        "last_successful_scan_at": "2026-10-04T13:41:06.058Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14780,7 +14733,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:49.105Z",
+        "last_successful_scan_at": "2026-10-04T13:41:17.779Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14838,7 +14791,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:07.558Z",
+        "last_successful_scan_at": "2026-10-04T13:41:32.128Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14896,7 +14849,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:03:57.121Z",
+        "last_successful_scan_at": "2026-10-04T13:41:35.843Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -14954,7 +14907,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:15:54.805Z",
+        "last_successful_scan_at": "2026-10-04T13:41:38.088Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15012,7 +14965,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:58:44.991Z",
+        "last_successful_scan_at": "2026-10-04T13:41:41.073Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15130,7 +15083,7 @@
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:00.868Z",
+        "last_successful_scan_at": "2026-10-04T13:41:39.506Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15188,7 +15141,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:02.264Z",
+        "last_successful_scan_at": "2026-10-04T13:41:43.314Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15244,12 +15197,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:03.416Z",
       "queue": {
-        "PENDING": 30,
-        "UNSUPPORTED": 12
+        "PENDING": 129,
+        "UNSUPPORTED": 13
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:00:57.064Z",
+        "last_successful_scan_at": "2026-10-04T13:41:46.746Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15307,7 +15260,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:12.308Z",
+        "last_successful_scan_at": "2026-10-04T13:41:58.196Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15365,7 +15318,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:03:57.628Z",
+        "last_successful_scan_at": "2026-10-04T13:42:05.674Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15539,7 +15492,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:24.598Z",
+        "last_successful_scan_at": "2026-10-04T13:46:27.968Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15595,12 +15548,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:10.976Z",
       "queue": {
-        "PENDING": 19,
-        "UNSUPPORTED": 7
+        "PENDING": 23,
+        "UNSUPPORTED": 10
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:29.216Z",
+        "last_successful_scan_at": "2026-10-04T13:46:36.454Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15658,7 +15611,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:29.774Z",
+        "last_successful_scan_at": "2026-10-04T13:46:45.310Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15714,11 +15667,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:10:46.539Z",
       "queue": {
-        "UNSUPPORTED": 9
+        "PENDING": 5,
+        "UNSUPPORTED": 12
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:18:22.033Z",
+        "last_successful_scan_at": "2026-10-04T13:46:53.753Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15774,13 +15728,13 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:14.266Z",
       "queue": {
-        "PENDING": 140,
+        "PENDING": 236,
         "STALE_DROPPED_DATA_INCOMPLETE": 94,
-        "UNSUPPORTED": 15
+        "UNSUPPORTED": 19
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:17:53.149Z",
+        "last_successful_scan_at": "2026-10-04T13:47:11.051Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15838,7 +15792,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:17:55.955Z",
+        "last_successful_scan_at": "2026-10-04T13:47:22.712Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15894,12 +15848,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:04.364Z",
       "queue": {
-        "PENDING": 47,
-        "UNSUPPORTED": 14
+        "PENDING": 77,
+        "UNSUPPORTED": 19
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:11.917Z",
+        "last_successful_scan_at": "2026-10-04T13:41:55.412Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -15954,10 +15908,12 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:07.658Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 7
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:20.877Z",
+        "last_successful_scan_at": "2026-10-04T13:46:19.150Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16013,11 +15969,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:09.860Z",
       "queue": {
-        "UNSUPPORTED": 1
+        "PENDING": 38,
+        "UNSUPPORTED": 6
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:23.996Z",
+        "last_successful_scan_at": "2026-10-04T13:46:27.805Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16072,10 +16029,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T12:49:14.587Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 12,
+        "UNSUPPORTED": 3
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:49:14.589Z",
+        "last_successful_scan_at": "2026-10-04T13:46:45.103Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16133,7 +16093,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T11:18:21.946Z",
+        "last_successful_scan_at": "2026-10-04T13:46:45.475Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16247,18 +16207,18 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:10:47.639Z",
       "queue": {
-        "COMPLETE": 6,
-        "PENDING": 250,
+        "COMPLETE": 7,
+        "PENDING": 449,
         "STALE_DROPPED_DATA_INCOMPLETE": 440,
         "UNSUPPORTED": 4
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:17:44.499Z",
+        "last_successful_scan_at": "2026-10-04T13:47:02.402Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791111728,
+        "latest_sell_at": 1791121602,
         "complete_buys": 0,
-        "complete_sells": 6,
+        "complete_sells": 7,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -16309,10 +16269,13 @@
       "watch_role": "STANDARD",
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:04:00.839Z",
-      "queue": {},
+      "queue": {
+        "PENDING": 4,
+        "UNSUPPORTED": 4
+      },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:04:00.840Z",
+        "last_successful_scan_at": "2026-10-04T13:47:19.700Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16370,7 +16333,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:17:55.243Z",
+        "last_successful_scan_at": "2026-10-04T13:47:11.366Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16428,7 +16391,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:17:58.962Z",
+        "last_successful_scan_at": "2026-10-04T13:47:22.875Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16486,7 +16449,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:17:59.115Z",
+        "last_successful_scan_at": "2026-10-04T13:47:25.763Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -16723,8 +16686,8 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:23.129Z",
       "queue": {
-        "PENDING": 96,
-        "UNSUPPORTED": 16
+        "PENDING": 194,
+        "UNSUPPORTED": 17
       },
       "outcome_queue": {},
       "scanner": {
@@ -20333,6 +20296,64 @@
       }
     },
     {
+      "wallet_address": "Ecmuu7qcuX4WMzXU6CTryuKsMURyDidAKS8J1554L92X",
+      "label": "Early buyer of 4 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
+      "status": "DATA_INCOMPLETE",
+      "score": null,
+      "win_rate": null,
+      "total_trades": 0,
+      "qualification": {
+        "policy": {
+          "version": "sspl-forward-gecko-1",
+          "start": 1791034118,
+          "minVerifiedOutcomes": 20,
+          "minCoverage": 0.8,
+          "qualifyScore": 70,
+          "tradeToleranceSeconds": 30,
+          "candleToleranceSeconds": 30,
+          "deadlineSeconds": 300,
+          "earlySeconds": 120,
+          "priceRatio": 2,
+          "volumeRatio": 2,
+          "weights": {
+            "win": 0.4,
+            "early": 0.2,
+            "momentum": 0.4
+          },
+          "poolScope": "PARSED_BUY_POOL_ONLY",
+          "partialMinutes": "FULLY_CONTAINED",
+          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
+        },
+        "buy_count": 0,
+        "verified_outcomes": 0,
+        "coverage": null,
+        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
+        "score_eligible_outcomes": 0,
+        "win_rate": null,
+        "early_entry_rate": null,
+        "momentum_rate": null,
+        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
+        "rejected": [],
+        "missing_reasons": [
+          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
+        ]
+      },
+      "watch_role": "STANDARD",
+      "primary_evidence": null,
+      "forward_baseline_at": null,
+      "queue": {},
+      "outcome_queue": {},
+      "scanner": {
+        "last_successful_scan_at": null,
+        "latest_buy_at": null,
+        "latest_sell_at": null,
+        "complete_buys": 0,
+        "complete_sells": 0,
+        "accounting_profit_status": "DATA_INCOMPLETE",
+        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
+      }
+    },
+    {
       "wallet_address": "EeSs9Q4T8FFW68XpX54RVTgF6Jgh31zyCJuKfo4yFKjA",
       "label": "RAW CANDIDATE: first-20 buyer on 1 mint(s) that reached >=1.5x (best 3.0x, Gecko/Birdeye candles); on-chain early-buyer evidence only, no profit claim",
       "status": "DATA_INCOMPLETE",
@@ -23660,6 +23681,64 @@
       "outcome_queue": {},
       "scanner": {
         "last_successful_scan_at": "2026-10-04T13:14:21.447Z",
+        "latest_buy_at": null,
+        "latest_sell_at": null,
+        "complete_buys": 0,
+        "complete_sells": 0,
+        "accounting_profit_status": "DATA_INCOMPLETE",
+        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
+      }
+    },
+    {
+      "wallet_address": "GBRTiNiiRexYESkgfadjrQEwiKdx8SkzThojCQYT4u5i",
+      "label": "Early buyer of 3 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
+      "status": "DATA_INCOMPLETE",
+      "score": null,
+      "win_rate": null,
+      "total_trades": 0,
+      "qualification": {
+        "policy": {
+          "version": "sspl-forward-gecko-1",
+          "start": 1791034118,
+          "minVerifiedOutcomes": 20,
+          "minCoverage": 0.8,
+          "qualifyScore": 70,
+          "tradeToleranceSeconds": 30,
+          "candleToleranceSeconds": 30,
+          "deadlineSeconds": 300,
+          "earlySeconds": 120,
+          "priceRatio": 2,
+          "volumeRatio": 2,
+          "weights": {
+            "win": 0.4,
+            "early": 0.2,
+            "momentum": 0.4
+          },
+          "poolScope": "PARSED_BUY_POOL_ONLY",
+          "partialMinutes": "FULLY_CONTAINED",
+          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
+        },
+        "buy_count": 0,
+        "verified_outcomes": 0,
+        "coverage": null,
+        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
+        "score_eligible_outcomes": 0,
+        "win_rate": null,
+        "early_entry_rate": null,
+        "momentum_rate": null,
+        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
+        "rejected": [],
+        "missing_reasons": [
+          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
+        ]
+      },
+      "watch_role": "STANDARD",
+      "primary_evidence": null,
+      "forward_baseline_at": null,
+      "queue": {},
+      "outcome_queue": {},
+      "scanner": {
+        "last_successful_scan_at": null,
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -27188,11 +27267,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:57.952Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:57.953Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -27423,11 +27502,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:58.121Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:58.122Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -28128,12 +28207,12 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:02:06.720Z",
       "queue": {
-        "PENDING": 2,
-        "UNSUPPORTED": 5
+        "PENDING": 6,
+        "UNSUPPORTED": 8
       },
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T12:16:20.566Z",
+        "last_successful_scan_at": "2026-10-04T13:42:04.141Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -28191,7 +28270,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:04:03.354Z",
+        "last_successful_scan_at": "2026-10-04T13:47:20.082Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -28720,11 +28799,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:35:01.011Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:35:01.021Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -29082,6 +29161,64 @@
       }
     },
     {
+      "wallet_address": "pBTiFEds716DaFSkjGbetxk6eQMYaoDQ7ySU2b1Y7ow",
+      "label": "Early buyer of 3 pump mint(s) that reached >=1.5x (harvest scan, replacement)",
+      "status": "DATA_INCOMPLETE",
+      "score": null,
+      "win_rate": null,
+      "total_trades": 0,
+      "qualification": {
+        "policy": {
+          "version": "sspl-forward-gecko-1",
+          "start": 1791034118,
+          "minVerifiedOutcomes": 20,
+          "minCoverage": 0.8,
+          "qualifyScore": 70,
+          "tradeToleranceSeconds": 30,
+          "candleToleranceSeconds": 30,
+          "deadlineSeconds": 300,
+          "earlySeconds": 120,
+          "priceRatio": 2,
+          "volumeRatio": 2,
+          "weights": {
+            "win": 0.4,
+            "early": 0.2,
+            "momentum": 0.4
+          },
+          "poolScope": "PARSED_BUY_POOL_ONLY",
+          "partialMinutes": "FULLY_CONTAINED",
+          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
+        },
+        "buy_count": 0,
+        "verified_outcomes": 0,
+        "coverage": null,
+        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
+        "score_eligible_outcomes": 0,
+        "win_rate": null,
+        "early_entry_rate": null,
+        "momentum_rate": null,
+        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
+        "rejected": [],
+        "missing_reasons": [
+          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
+        ]
+      },
+      "watch_role": "STANDARD",
+      "primary_evidence": null,
+      "forward_baseline_at": null,
+      "queue": {},
+      "outcome_queue": {},
+      "scanner": {
+        "last_successful_scan_at": null,
+        "latest_buy_at": null,
+        "latest_sell_at": null,
+        "complete_buys": 0,
+        "complete_sells": 0,
+        "accounting_profit_status": "DATA_INCOMPLETE",
+        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
+      }
+    },
+    {
       "wallet_address": "ssyrwXBpvT8NskCyQc7ozXZmSny1Kr8oxdzHNNuTVMJ",
       "label": "RAW CANDIDATE: first-20 buyer on 1 mint(s) at >=1.5x (best 9831.0x est.); on-chain early-buyer evidence only, no profit claim",
       "status": "DATA_INCOMPLETE",
@@ -29390,6 +29527,544 @@
   },
   "activity": [
     {
+      "signature": "5rR5ZTDUzovd1ug3Wm3wE6ZQQnk71KeABJProzUJCs5rPzgMco4C2yacNNU6BcP3tLHMyoHPs6qqssq8UcuXhjnA",
+      "wallet_address": "BV66b15pZ8vUJV86MVopcDW5uY26mnvnkFnQ8XyUpiHv",
+      "block_time": 1791121611,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4Mfg2NE9UV6JvZeAgDadJe6xUW2Hv1ufReiYM3WR3wsMKEz8KN6Eg96GbuUu9Dss5BdnWu2SisHAEe9Vy1xA8jTq",
+      "wallet_address": "BuGacsFWAqk8LZk7SPcJ2iqdGdUnPyTqvwSVUU48ao5o",
+      "block_time": 1791121603,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "634QcDiM7bnBxcg4LBkNu25mdNZxViDn23JUqBkAhPZUctSjSrqqyYUvipwERxgpzCGZGMdC8bb3xN2uQdyoHLoE",
+      "wallet_address": "BV66b15pZ8vUJV86MVopcDW5uY26mnvnkFnQ8XyUpiHv",
+      "block_time": 1791121603,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5tudRcpyBQMpCYhG9cKA68UwRjJXEsvzaL1TZGaVPfaYcHvZyKjt4UvEJTvthSHJHz7Mk5kmrGxF1qouBvr7gkWL",
+      "wallet_address": "BuGacsFWAqk8LZk7SPcJ2iqdGdUnPyTqvwSVUU48ao5o",
+      "block_time": 1791121602,
+      "direction": "SELL",
+      "mint_in": "7rmwrJcVWGrwHBqc5wQuLhrmBUTWDmQz9EBEjUCZjK1u",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "7rmwrJcVWGrwHBqc5wQuLhrmBUTWDmQz9EBEjUCZjK1u",
+        "pool_address": "AVJ4kxhtvMh25bDWestABcKS9weujyr967JXyy5z2fHi",
+        "token_quantity_raw": "1768806367194",
+        "token_decimals": 6,
+        "sol_lamports": "91322678",
+        "curve_sol_lamports": "92478662",
+        "protocol_fee_lamports": "878548",
+        "creator_fee_lamports": "277436",
+        "transaction_fee_lamports": "30000"
+      }
+    },
+    {
+      "signature": "2Lb9829m8sDMBzSUfMxJDB1XYFZpbrQdS9S1GfPLvjar9XYhcF6qoD6d7bmxzeiizoDLPYLxvrrhgH4cz6B9k1DT",
+      "wallet_address": "BuGacsFWAqk8LZk7SPcJ2iqdGdUnPyTqvwSVUU48ao5o",
+      "block_time": 1791121600,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "3KQ81ed56Dj4qXxLviQMs5pfH8smuAhSjWTENoWzQ4pR67BYM53M4vheubQNvwJXLHwh8vpUi5GgFmUpeX4rVesj",
+      "wallet_address": "BV66b15pZ8vUJV86MVopcDW5uY26mnvnkFnQ8XyUpiHv",
+      "block_time": 1791121596,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4u9CBEt8DMHeperxQToecTAcR8y8nn1Cm1SK84AEUeoAXPfnDmx5242hhUWiGF5c26x6viZ22N9qBTJLkEU2BzbE",
+      "wallet_address": "C9nUBXomUT9HZksfdFtG23krkB4zftuqBj1boKHYkbmX",
+      "block_time": 1791121511,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4n58MqkaGfEpdm44egKJ3h8VGb897hdU51gRg5rajR4mtyi9gprM8wtRweCXNhfwGoo4WARLpQjaDKQoZVvgUDsu",
+      "wallet_address": "BohHTVdwVDnSvhpg8GcLjZQ8ipNC6dEWydDWLh6JqVNN",
+      "block_time": 1791121434,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "42oLdm23Y3tvfU3utDNpBuAZnJsXHnsgUFRASzYmNgzHuCqgXRzcg6SrjwuC9PrsgJ7tXMvLq3SFvjtiZ8PZvwjd",
+      "wallet_address": "BxWtHNjPSZnEJS6QFY476Mc2J81WGbo7kgv38kHbKh2d",
+      "block_time": 1791121369,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "3VY2bodNCeCwMLd88jXK4xY7DoPPJ1kcZ6rYCvFp6WaWE4zs9UYnJT6PFigf6CQUzpjA4LqiEyzXRc8HCKsg8fJH",
+      "wallet_address": "BxWtHNjPSZnEJS6QFY476Mc2J81WGbo7kgv38kHbKh2d",
+      "block_time": 1791121354,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2iNKNm1auUw7sK8npyKeiGRjHProNSaijmzCSjULUoxtWx9dHuJbJ678Z9iCPT9nn3r1k7URkBr3d2PsinqaeTpU",
+      "wallet_address": "BaKbPLfDRDqLtZYFewVpeqjT1PULo9wjfSNnFfnoK9LZ",
+      "block_time": 1791121284,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4YMEnsZxcvVtiKVPyEWEML7ff6auo1ViczwF8N7gMFXCvDqG7uhTBAsoUkBCzfrZEAQ3WmvC6Km6qZ6TQ4RjQhL",
+      "wallet_address": "B9LwKidP6Tg1w9zqvTkACK2UKGwZYatGv7FqkqvLUSLE",
+      "block_time": 1791121281,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"FAILED_OR_MISSING_META\"]",
+      "trade": null
+    },
+    {
+      "signature": "baEm11wAUyRjBcsn8Kfrw6TJYRmz5iEct8gTMWx7toEeEhkq4TojpbCoVEWEuaa3uKAf74NUUqLZXQQMwRs4SQx",
+      "wallet_address": "AVcVGBdf1R4aSbQXZVTBBpJTXhBygB1Pf68EeLH5ftiH",
+      "block_time": 1791121274,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "3eH8qrSV9w11ZKBWVGrvPGFM12SvDLUzYc1ksAogvx2ttemdaRZGQgp5vvDGVhq4kNMC8m1vtCmFxw4F5Uob5uLk",
+      "wallet_address": "BaKbPLfDRDqLtZYFewVpeqjT1PULo9wjfSNnFfnoK9LZ",
+      "block_time": 1791121254,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5bP3yLbXydJ2dC1ZJLVUkymdMicCd578b2oBRDdqhPFEFy4QoUJPR4Njj3hRRcDKoeJfhHZxncUd9HmJZHZJYjF9",
+      "wallet_address": "BaKbPLfDRDqLtZYFewVpeqjT1PULo9wjfSNnFfnoK9LZ",
+      "block_time": 1791121222,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "mvPFbNEd7JncqgMSFwukdkd5oUkfHWuPBCBaqJ39CG2YWtUg5v1NPZJEKYLFw6tkiitvfZyBF5TxMNrBaZAqgAo",
+      "wallet_address": "BNufVMrBkQmbjz3Kcw2EFANayFvEuoA9jWnTzp5p46eK",
+      "block_time": 1791121205,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2h2eM3hdbcQ7c3kzakxHctm8G5AtiQA1Mp2jmUoTKdrn6AXimeXzbJ2PThGkctyiTBpNRAatyqVGYE9aG6zWoeGM",
+      "wallet_address": "BNufVMrBkQmbjz3Kcw2EFANayFvEuoA9jWnTzp5p46eK",
+      "block_time": 1791121200,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4wrYUNcL2x3r8RhkmBArVLFFRFM9eqmsftKCaV5f6f12ni2RJaQ2AzxfRCRpwr9a77vaQURHuzWt7gTKyhxPrcb1",
+      "wallet_address": "BjXeFkvxS4A72xeB9k3zrhUBzRa4YHc16kAaSDuptQry",
+      "block_time": 1791121197,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4rmb55CBnN7ktS2neQdrf8LjrQbjpJmP7e3jnq3gje13tTxH6WXSK4qLh7Bdshk53ogkHjQvnBqwB4MzbxJyZMZX",
+      "wallet_address": "bEMGs8jGHZdfv4779xstYAErKTX1LY1mv3JvsGhKyap",
+      "block_time": 1791121189,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "4jZpHfCLnhgYjhQEWriRus4wRvUg6DQ9Fdp9si3L2uEGjCt5fvu2H2hB7RUKbjJMWLqyMzJfhUtCtZTRkGZfxAm",
+      "wallet_address": "bEMGs8jGHZdfv4779xstYAErKTX1LY1mv3JvsGhKyap",
+      "block_time": 1791121188,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "5uVveQNeAWTEHHiTbrsm6HQMVe1ht3cZLjUowVCUn4U7yvH7ycTJbqrtyvzPAvM7uqTuv1ytJdjVMHhzzoXrVoZf",
+      "wallet_address": "BNufVMrBkQmbjz3Kcw2EFANayFvEuoA9jWnTzp5p46eK",
+      "block_time": 1791121188,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "3AHomgyLBsLtMmjPzjgVHAEkGYx7criAuSsNCgSDggVmbJurdyZGBtU2qqS2fBzhA5ewWgLLHCGX2vPzBWSAoBPC",
+      "wallet_address": "BjXeFkvxS4A72xeB9k3zrhUBzRa4YHc16kAaSDuptQry",
+      "block_time": 1791121162,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4SNj8Jmc7D8kzxnSp76ABTiCvM5t9afaoeRWbfmkUP6oEnkBqa9zed37coTwuRYrveX9AB2hzezpetjM4TAJEFUx",
+      "wallet_address": "BjXeFkvxS4A72xeB9k3zrhUBzRa4YHc16kAaSDuptQry",
+      "block_time": 1791121160,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5bFzmxjDsvPCYY8V9A2baYmqHgtsAjWA4QYzsnLKp5mvfou6Cpwwp7krN5ooM9DbL3HLk8xkSxVE2bxWsCPRHAhm",
+      "wallet_address": "bEMGs8jGHZdfv4779xstYAErKTX1LY1mv3JvsGhKyap",
+      "block_time": 1791121131,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "4M6xTnuKBTU7CZqW9GZNZx46CAxSCvHrtboxbgUUVSdc15JNPNKxud6n2Y62xwhru92neN3BBc5HkcGtzma55nfT",
+      "wallet_address": "AVcVGBdf1R4aSbQXZVTBBpJTXhBygB1Pf68EeLH5ftiH",
+      "block_time": 1791121049,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5U6Kr6GXbeHBe5ngJhNMbkiiEWk5ST4VbVy27ST8ehCFmv7yEQwbnVJ44AZGN7rV8ycNPneEHuLBh4ohFyAZMysJ",
+      "wallet_address": "ApSqUG7VPy8dr5adZW6CNCcANshz9LgYarvnTYv8tMhM",
+      "block_time": 1791120994,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"FAILED_OR_MISSING_META\"]",
+      "trade": null
+    },
+    {
+      "signature": "xbpWL8L8G4EmJJavwirwcAz4jm3g84GRNdAQrpRoXKbu58xw9xpPgvAxPJ23EECgQcbEPzUhLzEbCZzDSG7DD2x",
+      "wallet_address": "AVcVGBdf1R4aSbQXZVTBBpJTXhBygB1Pf68EeLH5ftiH",
+      "block_time": 1791120988,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "61jj95d7eFwkjqurGmw9NZ7cgwdBphr5bkGAFXwJKFwCtU2iLNV7W77ZHXfLoWW7JQKSnhNVBYvterLAYgn8wAaJ",
+      "wallet_address": "BohHTVdwVDnSvhpg8GcLjZQ8ipNC6dEWydDWLh6JqVNN",
+      "block_time": 1791120978,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "61yX5t2K6GmTnAjUKTXqVLsCeofEBjQ7EK9RSNR3EvMxXsAc75hHnbhiE6CNGUXMpew3mBrKbg2Q5jGGTZoALtjD",
+      "wallet_address": "ApSqUG7VPy8dr5adZW6CNCcANshz9LgYarvnTYv8tMhM",
+      "block_time": 1791120972,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "mQRUjczA9fWkWeJXjyTWMBziUom27fa9U7GJYkYX5qyaJvPf4DomJRwyuzTWAkoSj58wDJt6K9VZqVL7FdREwDt",
+      "wallet_address": "ApSqUG7VPy8dr5adZW6CNCcANshz9LgYarvnTYv8tMhM",
+      "block_time": 1791120963,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"FAILED_TRANSACTION\"]",
+      "trade": null
+    },
+    {
+      "signature": "66FwqwDws8oQM7XQ1abDaHZLq1mivUc21amaoG98xGWLezFhMRsjDBSXsPPW7DYqYd4zzeuaCsCrxPvxa4gjpKyy",
+      "wallet_address": "AoitFUatYHUBZQi7fHZMjRVrhep6TPuoxP4t28ye2vUN",
+      "block_time": 1791120937,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2cESZTyWoZF3WgaDumTMrACbQawb8x4kX6Rb7BNmWR9wZT1qdvMpnQozuqViqmu5BoKKoQQzTgsPVohbbDxBbjbZ",
+      "wallet_address": "Bgcrbz4BvTdajCbRgAKbwVU4hQcHPYy9Nk5rL9xpA8eu",
+      "block_time": 1791120932,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "42GziKS7XQiiwfKkdnGtGk3xz9TKCsHVfrHtQywWdnXB1MGvGMGDoGoJptdrAq4F9urgaRNhVpSVAwDWWnHfxD8B",
+      "wallet_address": "AoitFUatYHUBZQi7fHZMjRVrhep6TPuoxP4t28ye2vUN",
+      "block_time": 1791120922,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2RCXaA4PGaR4oKb8aEiDmGW5KWJob3ySDMRBHXd6gUGiG8r4rYJ5Q84PdaBvn2dvfhNvcsnsU6fDiHcTGAzSqui6",
+      "wallet_address": "Bgcrbz4BvTdajCbRgAKbwVU4hQcHPYy9Nk5rL9xpA8eu",
+      "block_time": 1791120917,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4TwLySije5UjQWuhdvog7rs9aXBa8kwJwhPaodwSAGAxawGKYtmedJShbeM533vUiVqXeDSdvMCpNcQny8uegA5x",
+      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
+      "block_time": 1791120914,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2iqaGHhwABK8asAySkkCm6Pe8uPFyk3J9QC5HHXdboZJhqoQPSFV4bWn6xRfDG4mF57PBdvjyNSyJvwAu8UhzLs3",
+      "wallet_address": "ASVEma5AZb2Z3K1Fb3238UKfC15Bmpd3WqLU8WkhJUGZ",
+      "block_time": 1791120912,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2N4Lq8ogKnUSoiXjGYjwaEe7bEcANQNDkZEPTsCa3QcTBZFzfkerVNMUP3RZBsgA9qVADboLeWsTxDCv6zsxLPM7",
+      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
+      "block_time": 1791120911,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "541GiMHSXc8Ak4efX9PWqkgtrm65WquBsEFnBY69MGShtQDfCTaSsRgsJqgsjkCKcNFHFCFAJ9qPFJht33ftA6eR",
+      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
+      "block_time": 1791120911,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "3ysR9YL1iDG6DH1ZZ4cNg43J4qnNLcvnrR3ZzRy1Z6Rsm3foEH7LYVt8rHfuqBLA8792Tmc9sjtRkuMCnUFyp4Wt",
+      "wallet_address": "AoitFUatYHUBZQi7fHZMjRVrhep6TPuoxP4t28ye2vUN",
+      "block_time": 1791120896,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "E4T8mteUopDJCqcdGSY2YSrUKV7C1oWooW2eijmv6viNhM9oUxNnwqLXHFupy9pLRgpDUqcujP8pmiyWszdUwwV",
+      "wallet_address": "AmjmF2LrGV9Jak8mgMwvTq5Nn5eYfjLMNpb4ozoYrvZ9",
+      "block_time": 1791120884,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5V48UsDmMQn38ddYnVv8ywLe7DUCq4bTLk9TqsGyr65BwSs94eEa3SvDXaZjsuTrjC2xsCjDY69rVkJiKyj5TLHm",
+      "wallet_address": "AmjmF2LrGV9Jak8mgMwvTq5Nn5eYfjLMNpb4ozoYrvZ9",
+      "block_time": 1791120828,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "3VyGquUyZWVr1mbCJucZ19VBFdycEKiCawtprigN8j4vGvj62YhpiCbgE1zNmck8cPpt7PvZsEMd21bB3KaeXMqv",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791120822,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "5Rn7VE534CTJLMxnusWz5An5JXCAwX2HVX7NyohQ9rFT6Ad2HwBuAe7udovXDUEQWHPuaqyJw833UKiLNPocxCDx",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791120821,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "5h1ew34yjtYe47DtFfur9NUG2TPqjZWjUoYKiwWSbVr9dBxzFocr2ibGVZhSL2DMTb6RNbQ4dmzLYbwCPDxohzVi",
+      "wallet_address": "ASVEma5AZb2Z3K1Fb3238UKfC15Bmpd3WqLU8WkhJUGZ",
+      "block_time": 1791120788,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "66gJVSCfuK121EG9LVnjpjLpQLXBsMX4ZQsGdtwphz45daAb5rAvH7AgSFJMePwknqyyyZMeawgHnr4EAgWipZ6Z",
+      "wallet_address": "BohHTVdwVDnSvhpg8GcLjZQ8ipNC6dEWydDWLh6JqVNN",
+      "block_time": 1791120788,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "4r3uS393gWVhpbCQ1FAECZkZodHQyPcAVgFeJnjLxwTp3UGK7JfFR9RUH7ZqQFvnRMZF7z5dmDTWbU7g791qU6Pf",
+      "wallet_address": "ASVEma5AZb2Z3K1Fb3238UKfC15Bmpd3WqLU8WkhJUGZ",
+      "block_time": 1791120764,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5L1mVU5z3czJqAN93MhSZc3QmH6o6hdB8GyjJ12m9dQ6YMTxW2igMsPvJmCTaLsQk8etEQZKCwp33cc4uMaMqY6e",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791120752,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "3BC6maY7UYgbmy4iTy7f1Cyh7QXQAnwcagBGTk23QkVqveC2YbiFfjYDcU2jNJNTKBf2sTTnvNby9Br4W93pzEaY",
+      "wallet_address": "BxWtHNjPSZnEJS6QFY476Mc2J81WGbo7kgv38kHbKh2d",
+      "block_time": 1791120743,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
       "signature": "44V5SNcLTjtwQ4Z5JZT5mGhkKXwdvfjSDRF1QfvHddcBsrx75AwSVPSTSsiqp9LoRPcLUL7kyuf3ASa42Ft5UMHy",
       "wallet_address": "hv1Svd5VUR1ns5rAQxLZp8mCqcbhTnbc6qM3ZpRLE3Z",
       "block_time": 1791120721,
@@ -29441,6 +30116,17 @@
       "mint_out": null,
       "evidence_quality": "DATA_INCOMPLETE",
       "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "PuH34bz3sHw1wzRmBGRHwg7TLXcW1smUQBks6ibg5vEyGQbEi9ziADLYF9KeRfBSjqqicSTtv4VFw3fEQdD1SEP",
+      "wallet_address": "AmjmF2LrGV9Jak8mgMwvTq5Nn5eYfjLMNpb4ozoYrvZ9",
+      "block_time": 1791120699,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
       "trade": null
     },
     {
@@ -29565,6 +30251,17 @@
       "trade": null
     },
     {
+      "signature": "5YCSbGnQsQ1ZDXLpRYNKLTXcwvaG1QNvz9ShsKXEzoTiu93oUysJM6ug8JmnnseH4zDrdv3vAurENu1rQvHtxHvw",
+      "wallet_address": "AowTUid5daQr9EqwazF7hDm3jBTQSisv6LaHGhQL8k92",
+      "block_time": 1791120636,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
       "signature": "4FSFz874HrV5Ld6CVmMENuUsswMaVQ1kuaREzYxPrdHzUSvKeNmY4LJb49J24PJNNRoydFAXXLZXDjt8TMDoCt8k",
       "wallet_address": "GtsZdFAWMirv7akKP5Vx55M4c4sZLvTgnzcdebedGNWy",
       "block_time": 1791120634,
@@ -29573,6 +30270,17 @@
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
       "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "YxbgXQAukDyoAqfzzBYTh4AcPJLUxqvBw3Drvo7SSCv9s2FsDCyquRgVzsXW71UGetiwYo8wg8kiELh3TKkrfaZ",
+      "wallet_address": "AowTUid5daQr9EqwazF7hDm3jBTQSisv6LaHGhQL8k92",
+      "block_time": 1791120633,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"FAILED_OR_MISSING_META\"]",
       "trade": null
     },
     {
@@ -29642,6 +30350,17 @@
       "trade": null
     },
     {
+      "signature": "5UHDZPojGdXaGPvB9Jvbbw993yFYszVMtwRBGjxv1KsbMb51U1W9HhpQ8bKvbgAQbTx1fWbqqJ5S2HGbCC6uVmkP",
+      "wallet_address": "AoitDSeP6hAmEuWJgP2RdBmQtwPe36EappQKu9wPFhdH",
+      "block_time": 1791120574,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
       "signature": "3333xcNkWLRkR4dHQFUdvjnXNXqWmzVAFqDaRiv72uWCjkct2rEiNdi25xJ5Sf9Pky6ZeWNVkVQygkDAsJ39DqsH",
       "wallet_address": "HTgVVGboxX2Dsn6b6bXAXgqGT1SkxSgENuRQF5FrCiAD",
       "block_time": 1791120560,
@@ -29694,6 +30413,17 @@
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
       "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
+      "trade": null
+    },
+    {
+      "signature": "8fgrFv5QwzCgc9HHbZ4zwSAh1SKNFi1GnCy6Q9gDe4zCgQ3ZXy7ReCFAqSY9WVgvKJGhnhv5WS3CBTLBsQLxWUo",
+      "wallet_address": "AoitDSeP6hAmEuWJgP2RdBmQtwPe36EappQKu9wPFhdH",
+      "block_time": 1791120481,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
       "trade": null
     },
     {
@@ -29924,589 +30654,6 @@
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
       "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "5vBYhpSUc2L2SVZZQkVJN1sJ8gv8gRqLTGUC3n2UGR94erdPkc2upQuy7J1eLgNobxyqLUfagH1ziJH2wqPRdng5",
-      "wallet_address": "GFSADPMcuJY1JetNCsm7KpEwT8BL18EdPNLZ1xAFNZq3",
-      "block_time": 1791120127,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "19ktmmLtk9NYgDPw3HJDEg4ZsPnPfsRihP98Uq8WhQxHX8ZVK2s1uodBe8LCfHWtnhkVQmTviTaTSHpy7QkAkY1",
-      "wallet_address": "FZU56d9iPqohXM5XBrYYBZLi2UoUnZT4V5Qf2631tEzb",
-      "block_time": 1791120100,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
-      "trade": null
-    },
-    {
-      "signature": "3eQny4rnGd14g3HHGpkqaSdYW5w6GAt9DD1xZ42a5x2rvt1SKbUNcBTAST2XmWSovDCLBVVaEzZguaL3hQsmKixz",
-      "wallet_address": "HcWPg6ELLoWAX1rJuqabbu5BUWEoAmJv4JczgohAn3Fq",
-      "block_time": 1791120052,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "4cudmBq8S4tcN2hbU9BdzLytWnvXpd5X9oNbb7RD3ZmMPDoxiq2B8duGFpTQMXbA332VqDFtztvzx2RLYCMm1CE7",
-      "wallet_address": "HkpkWAf358HY7xWouuZm2pL8bxQFFeHXTTVosx4a4qtM",
-      "block_time": 1791120016,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "3s5z2j2C2dxr7VMqcXr6yPQzZ6bAd7ghh63gLRDG8J2TPonvENu5RKShLBcrheCdTdU597Zxxn6Jt4UaureW8ux1",
-      "wallet_address": "GYT5jTXoF9HYbPuot9wUJ9KCFPaBP1tpAWoW39BH3wtk",
-      "block_time": 1791120000,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "2iAN5KwK58yMhro9Phn3pAAmUx51N7oY3Kxa9uLRm1gYgL5nvfsBREPgwR8mAR8zb6PSBWQcrGig1LbXq3dwXW9U",
-      "wallet_address": "GDQeTnqkyeLyRSjWaeFY5HsxaWoQmmXFc1N6wyuuHiQD",
-      "block_time": 1791119930,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_OR_MISSING_META\"]",
-      "trade": null
-    },
-    {
-      "signature": "5Qzf3sgPLL2kFAhiute6vMWbz93mKPEGdhsA92oZhBmtXdgXkySu3qG9pSvia9P8SiRzAKdLQu6jDnCKzLBmopzC",
-      "wallet_address": "FD6sHr894CjAJVdPivw7H63EfXXrTFnXuUF6r2v2Td1a",
-      "block_time": 1791119869,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "zwgeWEgsdbVwMH2X1YEtMFuhj8Ki5HkgeguC9adVP9sGA1DPvFUvVpuDwpXLjT8MVGmATiDquRyzeg8GVrXYQuj",
-      "wallet_address": "FtvCoSdcoktWrcpN1aH376qpk5BPAWcNX7CD1Y8Q1qMR",
-      "block_time": 1791119847,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4cEuK67x2wZT1Q68KDwRVqNUvNS9qqMEPMdYWNjkNSXXiAxM2ZABpWZrtyBwuLK3dv3mZSPt9jhveqnuBKZh6uNs",
-      "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
-      "block_time": 1791119843,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "2pvZHjyunC7BvfVV1Cjj8XzRQiBuTCzMHgAJLwWYh5dQQhXB9aaHv14eGPkvM1hwrk5R9TCG8oZ7XLiS4Xjcza1E",
-      "wallet_address": "GFSADPMcuJY1JetNCsm7KpEwT8BL18EdPNLZ1xAFNZq3",
-      "block_time": 1791119827,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "27LBpm3NHonTwkXDm2fwyFWUnXa4D6Ta51EezDiige3uoQP9Vfpqf4JfP9sX1c7r7VDiKAeNMKrft5gxupmsq8hN",
-      "wallet_address": "FXZGytQbUvXjRfuLsyMR2S1wGYWbYTNeYbUjArMmTuz5",
-      "block_time": 1791119815,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "5KA7M1vkXwTJ4snxR5gPEmzYhXBv98wf4QYnXYT3WbikVi2NeSsHks8maNqojH7PFSL9SyDk77KhYnuK78PFh7j9",
-      "wallet_address": "G1RKuirayRCmAGNo8WjRWyjoyyeGKze3o2s7otGoqiGa",
-      "block_time": 1791119815,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4g9YwcEjXqR2t5t6xBJrnptSeo3UezwUD482iBq35KEjEN9DZNfozSirfmVkBxosToXmM2XySrP3StXXMUyQvSYB",
-      "wallet_address": "HkpkWAf358HY7xWouuZm2pL8bxQFFeHXTTVosx4a4qtM",
-      "block_time": 1791119778,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "4z96yWxbtvWd6yqLUdw4Uf3XYijpiGksdr9UyweaGBdRqiW51exGGc9fwZkcUw3pCrxYfhS6i3jF18JaiFhW7wjp",
-      "wallet_address": "HYFhXZ3Gugdcag7PEbzgcx3vAs84wRpVP3B1Et2Gffna",
-      "block_time": 1791119756,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_OR_MISSING_META\"]",
-      "trade": null
-    },
-    {
-      "signature": "2MzQbuSi47brGvFZnSj6a73pRS2QBM3UfkH7XaABjw4XgSYRymBv11xS6cPjDLZpyNHurNYmTMX3iRZddn8p9yLF",
-      "wallet_address": "FBvxneTq8dY7WKxj924CseuveWzDL5tN9JuSW3S9nJkN",
-      "block_time": 1791119746,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "2wsHAK2ePkB3hin5VpNqDZJT7CCgy4pokhvs5GBFGmRFsKit3ZJ8JVQ98K6ieGLzfWSgLm2g3L39ko4nGZB7hTm3",
-      "wallet_address": "FBvxneTq8dY7WKxj924CseuveWzDL5tN9JuSW3S9nJkN",
-      "block_time": 1791119746,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "4rtyrvn28WGFa9GQ7TB54s5wnzKsjKzAnzdcLT2xcRAmqgCagVDEQLsFm9uboGaJyfuu9H1znvUKq7mN153ChKiD",
-      "wallet_address": "FBvxneTq8dY7WKxj924CseuveWzDL5tN9JuSW3S9nJkN",
-      "block_time": 1791119746,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "2TeGyRp1bVAuVDgjevDRPGmtunghSp8M7PAJm85xWWtf9YQ3gAbmLxksrZ3LsryKYsAtq8JbNQEFMJcrjjVxNSkL",
-      "wallet_address": "Gw6VgF4XpYYx2tbsh6Tm2f76hVmBUdX9Fx353NoVEHMr",
-      "block_time": 1791119735,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "NfHAxysLwiB1mpCYgQGPSfEhFzvmCPzdmXzdxzZcStrAWgqZj7Q8wUa5msL2GLZW3kCvcMh7VQKUhL2NGJuekEg",
-      "wallet_address": "GtsZdFAWMirv7akKP5Vx55M4c4sZLvTgnzcdebedGNWy",
-      "block_time": 1791119734,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "5YdW946Y6aXorPKuqcbUxCVxhrQTH3uaufsqK1RVeLDs1s5zknjHK5GrRabA1P3jnsRaY1ru3h3MYFfvpA1hs9yf",
-      "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
-      "block_time": 1791119695,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
-      "trade": null
-    },
-    {
-      "signature": "2Kjs43nHg7YJq3V5gNAD7uVL1y3GQVg1W8Pp2CxgW8WnBmyRAgeDJMFNovSqmPkjtmn4SpDZipCoxu4QQSb8c9gj",
-      "wallet_address": "He2MvrgaeTTXLsKJpiECLtPojxzGXPyGk8jLWNiWZgcU",
-      "block_time": 1791119681,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3TCam9TccG1baqTXdVnjegC2qLpy38eM1dhWVHqn8RsfoEud7YXQD4JsHsrM3JLweKxkU5rZj4B8UDRheqPrGf9w",
-      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
-      "block_time": 1791119673,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3pNPLKvZyQMbcuTZurYjo2WqftGFv62neKodJV7sGrvU6q1ztEbS9m6ydvw1Tyr2nth9eYorwJaxzX6SZfrYzrmx",
-      "wallet_address": "FYJmSnjohgr5rs3m6FH6FXU3F3HNts7X1d4v1xbMAujE",
-      "block_time": 1791119644,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "BSLuWSoHMKt25NDW1UuAvxg98tgUp2qH7zZGKHCs2yNoM6RpRmk7xNT9chESwyyCNPjfyyoMYiMTuRqHqmnYf7o",
-      "wallet_address": "GFSADPMcuJY1JetNCsm7KpEwT8BL18EdPNLZ1xAFNZq3",
-      "block_time": 1791119601,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "4dZN8Gfj7S7HPJUbJmgchMmFbMahr5KCekuWWTWZS9MeV58J6dbAAruCAZbfN2iHBgHmZFEFYKWDf8r3ZTF52tUJ",
-      "wallet_address": "FtvCoSdcoktWrcpN1aH376qpk5BPAWcNX7CD1Y8Q1qMR",
-      "block_time": 1791119490,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "5TaUSw1x5ViJX8qPoWWt6qc9cpM6HsycvTfB7c6PwaHup2gDdaoisbDgT4hWnh9aWJCC5XMyzNv7sDhrHoRYGHJc",
-      "wallet_address": "Fs9RN3wAsuJKPbTmtX5eek1bhW5krNH8RkQxkFAtgNfR",
-      "block_time": 1791119434,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4r13RFBWTgQ4EcCGcWUizK75v3D3dxYgyMWaQm2MpjJ2PFdVd3VgDQfJjD4ppnbGfMfE6xT5SMecMYcqGnbQTJKP",
-      "wallet_address": "Fs9RN3wAsuJKPbTmtX5eek1bhW5krNH8RkQxkFAtgNfR",
-      "block_time": 1791119430,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "44N9HtMhWnAhjzr7fSuvr5tQbEyaC26uLUFRn1fVhC9ww24uLcDzzDxWHdYyxcXqb63b268hD8Ksj7kGsNpR3cMj",
-      "wallet_address": "Fs9RN3wAsuJKPbTmtX5eek1bhW5krNH8RkQxkFAtgNfR",
-      "block_time": 1791119406,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4hCVfVPAVv9mr4m4nqBdZpVEwXWRK6XDEHHHKZF586VWrCH7157iEjz8e1Qqir78x4hq1sqXnkdfpHdy7HuEofn1",
-      "wallet_address": "HcWPg6ELLoWAX1rJuqabbu5BUWEoAmJv4JczgohAn3Fq",
-      "block_time": 1791119366,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "TxkaavU5jmzRpxzS9yCyphmi2Uw1DJsHfEkdYoYC2PG1CkyDUB6C4X9c71vxAWDCc1BHVdV6RgZu8N9cADqHTRj",
-      "wallet_address": "J9w3GzAQSXiqg8VxuUg65m1TGvYSqZko9FfnYSfaEnH7",
-      "block_time": 1791119327,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "2RFbNiVWbKwJVT6DfsU1SBE64MtmX7ohyTpehop3T5s87GWdbp2PzWzWf2SumUviKweCmEwGUHzk28YeF1UxwwCx",
-      "wallet_address": "56e2PjxqjQLh1Ew2mQVRQovZWWjErtPdjkkJvhwBSFHy",
-      "block_time": 1791119310,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "R1aLFgRWdWnvJzhed1n5cuwb1JB88vVjnHtYGFhTBtMUQ2oSmG5FZkg8YrubnWcYt4zq9w478uopAQbDLqH63UZ",
-      "wallet_address": "56e2PjxqjQLh1Ew2mQVRQovZWWjErtPdjkkJvhwBSFHy",
-      "block_time": 1791119272,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "tYmxxagGkNgrPvHq83p4z3VxhJeffap97mThMgR6rboAnAWrwFNcYLo6Q4eAjxwKzuCeAxswZvbpEA3VCh5Xpjw",
-      "wallet_address": "FtvCoSdcoktWrcpN1aH376qpk5BPAWcNX7CD1Y8Q1qMR",
-      "block_time": 1791119247,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "37D1EJL358WykrEfSZRaJjdpg7cb41Ut7YmoVCMXqfZUpinznuPesDGXZaS1N8oZqQWsnPzZ8gLNdKHj4NZkvezn",
-      "wallet_address": "4Zxsnmyd9naMqipfvd1YKaHThVVwqSTahH21EaTBjrDK",
-      "block_time": 1791119199,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4c6Z6xgN7c3RCtNmuwvGQxZ9oFgbxYkmpD1SGAGdmUf28ogLSa57nk7jWrq8kMgB4W1Kc3kDhRHH62Gwtizoyeu9",
-      "wallet_address": "4Zxsnmyd9naMqipfvd1YKaHThVVwqSTahH21EaTBjrDK",
-      "block_time": 1791119151,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4yYwkNpru7gcPKQXtYirBnYk4hXr3XVYBDkyasucGbLJutdfCuJDFvedZVjYMWhMuJus87XbEFzWV4r6KhwqgtP7",
-      "wallet_address": "J9w3GzAQSXiqg8VxuUg65m1TGvYSqZko9FfnYSfaEnH7",
-      "block_time": 1791119148,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "5j8hb7RB1VtBuo6mZ24bP8zJHXW9awr4bxPgt9ouQUxENw1mi2vx9QaYWzGVbKPDieAJek9ozF6fuUscjyLcPrCi",
-      "wallet_address": "GFSADPMcuJY1JetNCsm7KpEwT8BL18EdPNLZ1xAFNZq3",
-      "block_time": 1791119144,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "2TVVrJJgwrmHipA9hAzX8waYAYGX7GBbtTKz3P2iyRpXoVq2aBuimyCrXEHRhZTTsoc3jcnoqrNoBgzL7c9DJqvR",
-      "wallet_address": "J9w3GzAQSXiqg8VxuUg65m1TGvYSqZko9FfnYSfaEnH7",
-      "block_time": 1791119138,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "MoesME7ojrU15ZtDdudE2WzYAvDa8Uwcw4bJ1Xb8GsryqRxhTa7yeoS1K4jTcZEiugtRKsr5gJGj7Wsu9HAJ1fn",
-      "wallet_address": "FBvxneTq8dY7WKxj924CseuveWzDL5tN9JuSW3S9nJkN",
-      "block_time": 1791119134,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3HKerFbqxcWN6khd32kHit2dR2t6CW5Tugb1fmpxKjLCk14uCTUgj2dgT39gUkjk6ULEiW7LVnehLm6j9vm24vQV",
-      "wallet_address": "4Zxsnmyd9naMqipfvd1YKaHThVVwqSTahH21EaTBjrDK",
-      "block_time": 1791118962,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3dzCqo9xwzJxSMPeeyAf7AxvdCJc7PvPYNK1SQKVotipibeWaY9UsnDhjobGZcvQvbwNYAxvLrrA2ArCRGLjcwpC",
-      "wallet_address": "4ziYEjZC19DCrpc3TRvLaeNyUmN58cuKwMxTdSFwJW4z",
-      "block_time": 1791118938,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "2fzkNAu1vwot1Xy11DJMcVgRs67FE6iBTf5MVVVLHvbKwrrmaoNeQyqaSFD6KVUgskGkZry17rATxE2jaE8NTu6L",
-      "wallet_address": "4ziYEjZC19DCrpc3TRvLaeNyUmN58cuKwMxTdSFwJW4z",
-      "block_time": 1791118836,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4gZKscxdeLSeYzBayKmqvJEG71MMMyjb5FSdYtkoCdNiBfNd2g5UPCXaRXvc6pv2F9AGzaqQuMZ12ww9JFKZh2G3",
-      "wallet_address": "4ziYEjZC19DCrpc3TRvLaeNyUmN58cuKwMxTdSFwJW4z",
-      "block_time": 1791118760,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "kQizd9rZAJ8JuBYn6twiPG8WvtUgjaiYc81mxkbjrxwEG2AMTria6eWLTFR3MBzXFnNFqt5ttdPhAquq1EHvJ22",
-      "wallet_address": "7js8EjhibGmWEgsWXUrYXxP6WFACiHXJQ3RpbGy3fuDi",
-      "block_time": 1791118686,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3C5ZisWiVftmDuJCZJGpgb1A8A3EB8WER5wHhvEYLw955qjMZsg5aqVVuPLCzZYaLQUuot8Vngujj1hUy24yY7jo",
-      "wallet_address": "7js8EjhibGmWEgsWXUrYXxP6WFACiHXJQ3RpbGy3fuDi",
-      "block_time": 1791118663,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "2qiUfeP3wcmCHbRxicuNB9bUZuY4rYNTniAVU4r4Kxdq9RMcSjAbMoZpQUngF4cWTwgen9WWz3269377Q5bw1R3N",
-      "wallet_address": "7js8EjhibGmWEgsWXUrYXxP6WFACiHXJQ3RpbGy3fuDi",
-      "block_time": 1791118651,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "RbvJKnhJJst5BivwVkZrnGcQ3udj98mzEqaKoqPJUaDsGYo2SNjV3coX1JntYLBwBzBMqPcMNfwMsMJpdyoeeWP",
-      "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
-      "block_time": 1791118647,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4Cf8EBYZpLHQqruTHQ8NjgJevJ37wdJ7Ww6DUVwrAg9WieETnYQVn4v42BNGtLkhPATEPXNvHBzXqMCwdpWfDyEH",
-      "wallet_address": "77wS9zZHJ57AXR2QvkX8Fu8iqUPBbYvUnJ2irb36QyTG",
-      "block_time": 1791118646,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "29VVyv4bfx8vQxxeyE99iapa1YvfzGgJNc2N6Zvd39mwLiEvT6c41iM3CkskA5TQjJLczoatAcPTGToM9dcNFA2d",
-      "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
-      "block_time": 1791118643,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "4WUYYmPwkjKJkS1jpdRd1YHnboN22nZ9ZM9P5hPRzN4VRzssZM22FbRvDhbFbVDtXbMjAxochWgCpDcS6CEuT5bR",
-      "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
-      "block_time": 1791118641,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "61B75bXJnncgUaxA4usUfScKqYBeRJvg9fEFgtvRAkfyaPKmzSpkjpfjsd64PUvVTB2T2rdC2d6zPsc7XVL8aVxn",
-      "wallet_address": "7B8E7tMmkPe9WmA3fVUHcNFK5rRvfbkRNc9nn2RziWFT",
-      "block_time": 1791118628,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
-      "trade": null
-    },
-    {
-      "signature": "5JRgbytdxfJZoEUW8TMGG7s6Hufhm7Y5DUBwBRNLzA4kiXNJ9NrkwVfcoG5QYryGEoTSwCZ7gchXJj1FGy82UivQ",
-      "wallet_address": "77wS9zZHJ57AXR2QvkX8Fu8iqUPBbYvUnJ2irb36QyTG",
-      "block_time": 1791118579,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "hnsMqzSQhRVCaa9QEiRZBF24dBvPqngboWhRxmj4FZBZ1cxk5ykVwNGKLwEXbcpkDgmXnf9495ygc5ZGCM2RozN",
-      "wallet_address": "7B8E7tMmkPe9WmA3fVUHcNFK5rRvfbkRNc9nn2RziWFT",
-      "block_time": 1791118568,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"FAILED_TRANSACTION\"]",
       "trade": null
     },
     {
@@ -31881,6 +32028,27 @@
     }
   ],
   "coin_activity": [
+    {
+      "signature": "5tudRcpyBQMpCYhG9cKA68UwRjJXEsvzaL1TZGaVPfaYcHvZyKjt4UvEJTvthSHJHz7Mk5kmrGxF1qouBvr7gkWL",
+      "wallet_address": "BuGacsFWAqk8LZk7SPcJ2iqdGdUnPyTqvwSVUU48ao5o",
+      "block_time": 1791121602,
+      "direction": "SELL",
+      "mint_in": "7rmwrJcVWGrwHBqc5wQuLhrmBUTWDmQz9EBEjUCZjK1u",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "7rmwrJcVWGrwHBqc5wQuLhrmBUTWDmQz9EBEjUCZjK1u",
+        "pool_address": "AVJ4kxhtvMh25bDWestABcKS9weujyr967JXyy5z2fHi",
+        "token_quantity_raw": "1768806367194",
+        "token_decimals": 6,
+        "sol_lamports": "91322678",
+        "curve_sol_lamports": "92478662",
+        "protocol_fee_lamports": "878548",
+        "creator_fee_lamports": "277436",
+        "transaction_fee_lamports": "30000"
+      }
+    },
     {
       "signature": "44V5SNcLTjtwQ4Z5JZT5mGhkKXwdvfjSDRF1QfvHddcBsrx75AwSVPSTSsiqp9LoRPcLUL7kyuf3ASa42Ft5UMHy",
       "wallet_address": "hv1Svd5VUR1ns5rAQxLZp8mCqcbhTnbc6qM3ZpRLE3Z",
@@ -46139,6 +46307,7 @@
     "7a8wUCnr1bjkB8gKvtRmmokgTaZXZWnoauwUWmsFoP7m": "2026-10-04T10:48:48.277Z",
     "7hbRB2XwmEsYrymYbREaqTmJHsXvkCin2ewE375qpump": "2026-10-04T11:10:26.537Z",
     "7m1qjnWrNtxLo2eKohBNis4HrsNP6jEzCdeuehCkpump": "2026-10-04T11:11:12.555Z",
+    "7rmwrJcVWGrwHBqc5wQuLhrmBUTWDmQz9EBEjUCZjK1u": "2026-10-04T13:46:59.744Z",
     "7tLK23UHf8BNcqbrYxZM8YPaFKc88sBtiw136Fjtpump": "2026-10-04T12:04:22.473Z",
     "89NkZ8NNGm8fCwG8iVDkXpDRR66hQommsJATspSUrDd": "2026-10-04T12:34:03.969Z",
     "8CttdHw3PWJCHmejnG81tZpf29jNFnhzoKMs3ShivYE6": "2026-10-04T12:33:58.538Z",
@@ -50507,7 +50676,7 @@
     "thousand_wallet_one_request_floor_seconds": 1100,
     "basis": "BOUNDED_ROTATING_COHORT_NOT_ALL_LIVE",
     "formal_gate_unchanged": true,
-    "active_baselines": 486,
+    "active_baselines": 489,
     "new_wallet_baseline_policy": "SPARE_BUDGET_UP_TO_60_FIXED_CYCLE_PLAN",
     "accounting_profit_status": "DATA_INCOMPLETE",
     "one_lakh_single_request_floor_hours": 30.55555555555556,
@@ -50530,8 +50699,8 @@
     }
   ],
   "pipeline": {
-    "baselines": 486,
-    "pending_transactions": 7138,
+    "baselines": 489,
+    "pending_transactions": 8240,
     "complete_buys": 2,
     "outcome_states": {
       "INELIGIBLE": 2
@@ -50546,19 +50715,19 @@
     "keyed_providers": [
       {
         "provider": "helius",
-        "reserved_used_units": 2521,
+        "reserved_used_units": 2592,
         "budget_limit_units": 950000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock",
-        "reserved_used_units": 40200,
+        "reserved_used_units": 40350,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock2",
-        "reserved_used_units": 31350,
+        "reserved_used_units": 31500,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
@@ -50570,18 +50739,18 @@
       },
       {
         "provider": "alchemy2",
-        "reserved_used_units": 21360,
+        "reserved_used_units": 23560,
         "budget_limit_units": 30000000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "quicknode1",
-        "reserved_used_units": 10440,
+        "reserved_used_units": 11160,
         "budget_limit_units": 9000000,
         "status": "BUDGET_AVAILABLE"
       }
     ],
-    "last_keyed_receipt": "2026-10-04T13:34:55.247Z"
+    "last_keyed_receipt": "2026-10-04T13:47:25.761Z"
   },
   "latest_buys": [
     {
