@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-10-04T13:34:39.328351+00:00",
+  "exported_at": "2026-10-04T13:34:56.705447+00:00",
   "mode": "BOUNDED_OBSERVATION",
   "cash_usd": 500.0,
   "equity_usd": 500.0,
@@ -408,7 +408,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:13:55.458Z",
+        "last_successful_scan_at": "2026-10-04T13:34:47.039Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -22605,7 +22605,7 @@
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:47.119Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -22775,11 +22775,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:46.618Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:46.618Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -23302,11 +23302,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:49.478Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:49.478Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -24012,11 +24012,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:52.267Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:52.268Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -24186,11 +24186,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:46.802Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:46.804Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -24540,11 +24540,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:50.492Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:50.493Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -25308,11 +25308,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:54.223Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:54.224Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -25714,11 +25714,11 @@
       },
       "watch_role": "STANDARD",
       "primary_evidence": null,
-      "forward_baseline_at": null,
+      "forward_baseline_at": "2026-10-04T13:34:55.249Z",
       "queue": {},
       "outcome_queue": {},
       "scanner": {
-        "last_successful_scan_at": null,
+        "last_successful_scan_at": "2026-10-04T13:34:55.249Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -29363,238 +29363,6 @@
       "outcome_queue": {},
       "scanner": {
         "last_successful_scan_at": "2026-10-04T12:33:55.308Z",
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "B21oTRzqWNLwfamqpfPjrq4F5jDLGEY1iVYoR7aGS7EB",
-      "label": "GitHub unverified curation | PRUNED no on-chain history 2026-10-04",
-      "status": "PAUSED",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "policy": {
-          "version": "sspl-forward-gecko-1",
-          "start": 1791034118,
-          "minVerifiedOutcomes": 20,
-          "minCoverage": 0.8,
-          "qualifyScore": 70,
-          "tradeToleranceSeconds": 30,
-          "candleToleranceSeconds": 30,
-          "deadlineSeconds": 300,
-          "earlySeconds": 120,
-          "priceRatio": 2,
-          "volumeRatio": 2,
-          "weights": {
-            "win": 0.4,
-            "early": 0.2,
-            "momentum": 0.4
-          },
-          "poolScope": "PARSED_BUY_POOL_ONLY",
-          "partialMinutes": "FULLY_CONTAINED",
-          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
-        },
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
-        "score_eligible_outcomes": 0,
-        "win_rate": null,
-        "early_entry_rate": null,
-        "momentum_rate": null,
-        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
-        "rejected": [],
-        "missing_reasons": [
-          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:19:27.849Z",
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "CreQJ2t94QK5dsxUvYn5PJKpDHDRGizp58Rqho3aE2h3",
-      "label": "GitHub unverified curation | PRUNED no on-chain history 2026-10-04",
-      "status": "PAUSED",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "policy": {
-          "version": "sspl-forward-gecko-1",
-          "start": 1791034118,
-          "minVerifiedOutcomes": 20,
-          "minCoverage": 0.8,
-          "qualifyScore": 70,
-          "tradeToleranceSeconds": 30,
-          "candleToleranceSeconds": 30,
-          "deadlineSeconds": 300,
-          "earlySeconds": 120,
-          "priceRatio": 2,
-          "volumeRatio": 2,
-          "weights": {
-            "win": 0.4,
-            "early": 0.2,
-            "momentum": 0.4
-          },
-          "poolScope": "PARSED_BUY_POOL_ONLY",
-          "partialMinutes": "FULLY_CONTAINED",
-          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
-        },
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
-        "score_eligible_outcomes": 0,
-        "win_rate": null,
-        "early_entry_rate": null,
-        "momentum_rate": null,
-        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
-        "rejected": [],
-        "missing_reasons": [
-          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:33:09.950Z",
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "CvGgoUiELpSceMBLRgBJBkYxvELmvMoDc9eCefm9hhYZ",
-      "label": "GitHub unverified curation | PRUNED no on-chain history 2026-10-04",
-      "status": "PAUSED",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "policy": {
-          "version": "sspl-forward-gecko-1",
-          "start": 1791034118,
-          "minVerifiedOutcomes": 20,
-          "minCoverage": 0.8,
-          "qualifyScore": 70,
-          "tradeToleranceSeconds": 30,
-          "candleToleranceSeconds": 30,
-          "deadlineSeconds": 300,
-          "earlySeconds": 120,
-          "priceRatio": 2,
-          "volumeRatio": 2,
-          "weights": {
-            "win": 0.4,
-            "early": 0.2,
-            "momentum": 0.4
-          },
-          "poolScope": "PARSED_BUY_POOL_ONLY",
-          "partialMinutes": "FULLY_CONTAINED",
-          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
-        },
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
-        "score_eligible_outcomes": 0,
-        "win_rate": null,
-        "early_entry_rate": null,
-        "momentum_rate": null,
-        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
-        "rejected": [],
-        "missing_reasons": [
-          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:33:10.547Z",
-        "latest_buy_at": null,
-        "latest_sell_at": null,
-        "complete_buys": 0,
-        "complete_sells": 0,
-        "accounting_profit_status": "DATA_INCOMPLETE",
-        "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
-      }
-    },
-    {
-      "wallet_address": "Fe7SEekiKygziaEGVB6Jj2i88t8HSSPjVrUoE9N5TiN2",
-      "label": "GitHub unverified curation | PRUNED no on-chain history 2026-10-04",
-      "status": "PAUSED",
-      "score": null,
-      "win_rate": null,
-      "total_trades": 0,
-      "qualification": {
-        "policy": {
-          "version": "sspl-forward-gecko-1",
-          "start": 1791034118,
-          "minVerifiedOutcomes": 20,
-          "minCoverage": 0.8,
-          "qualifyScore": 70,
-          "tradeToleranceSeconds": 30,
-          "candleToleranceSeconds": 30,
-          "deadlineSeconds": 300,
-          "earlySeconds": 120,
-          "priceRatio": 2,
-          "volumeRatio": 2,
-          "weights": {
-            "win": 0.4,
-            "early": 0.2,
-            "momentum": 0.4
-          },
-          "poolScope": "PARSED_BUY_POOL_ONLY",
-          "partialMinutes": "FULLY_CONTAINED",
-          "launchBasis": "GECKO_POOL_CREATED_AT_PROXY"
-        },
-        "buy_count": 0,
-        "verified_outcomes": 0,
-        "coverage": null,
-        "coverage_denominator": "SOURCE_BOUND_COMPLETE_WINDOW_OUTCOMES_NOT_ALL_DETECTED_BUYS",
-        "score_eligible_outcomes": 0,
-        "win_rate": null,
-        "early_entry_rate": null,
-        "momentum_rate": null,
-        "early_basis": "GECKO_POOL_CREATED_AT_PROXY_NOT_TOKEN_LAUNCH",
-        "rejected": [],
-        "missing_reasons": [
-          "MIN_20_SCORE_ELIGIBLE_VERIFIED_OUTCOMES_OR_COVERAGE_MISSING"
-        ]
-      },
-      "watch_role": "STANDARD",
-      "primary_evidence": null,
-      "forward_baseline_at": null,
-      "queue": {},
-      "outcome_queue": {},
-      "scanner": {
-        "last_successful_scan_at": "2026-10-04T13:33:12.837Z",
         "latest_buy_at": null,
         "latest_sell_at": null,
         "complete_buys": 0,
@@ -50735,11 +50503,11 @@
   "coverage_capacity": {
     "request_start_spacing_seconds": 1.1,
     "max_wallet_reads_per_cycle": 60,
-    "wallet_total": 504,
+    "wallet_total": 500,
     "thousand_wallet_one_request_floor_seconds": 1100,
     "basis": "BOUNDED_ROTATING_COHORT_NOT_ALL_LIVE",
     "formal_gate_unchanged": true,
-    "active_baselines": 479,
+    "active_baselines": 486,
     "new_wallet_baseline_policy": "SPARE_BUDGET_UP_TO_60_FIXED_CYCLE_PLAN",
     "accounting_profit_status": "DATA_INCOMPLETE",
     "one_lakh_single_request_floor_hours": 30.55555555555556,
@@ -50762,7 +50530,7 @@
     }
   ],
   "pipeline": {
-    "baselines": 479,
+    "baselines": 486,
     "pending_transactions": 7138,
     "complete_buys": 2,
     "outcome_states": {
@@ -50778,19 +50546,19 @@
     "keyed_providers": [
       {
         "provider": "helius",
-        "reserved_used_units": 2517,
+        "reserved_used_units": 2521,
         "budget_limit_units": 950000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock",
-        "reserved_used_units": 40150,
+        "reserved_used_units": 40200,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock2",
-        "reserved_used_units": 31300,
+        "reserved_used_units": 31350,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
@@ -50802,18 +50570,18 @@
       },
       {
         "provider": "alchemy2",
-        "reserved_used_units": 21240,
+        "reserved_used_units": 21360,
         "budget_limit_units": 30000000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "quicknode1",
-        "reserved_used_units": 10380,
+        "reserved_used_units": 10440,
         "budget_limit_units": 9000000,
         "status": "BUDGET_AVAILABLE"
       }
     ],
-    "last_keyed_receipt": "2026-10-04T13:33:15.843Z"
+    "last_keyed_receipt": "2026-10-04T13:34:55.247Z"
   },
   "latest_buys": [
     {
