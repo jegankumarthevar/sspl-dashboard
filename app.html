@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#05070f"><title>JK Wallet Tracker</title>
+<style>
+:root{--bg:#05070f;--c:#0d1430;--c2:#121c42;--ln:#1d2a5c;--tx:#e9eeff;--mu:#8b97c7;--cy:#00f0ff;--gr:#39ff88;--rd:#ff4d6d;--yl:#ffd84a}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#1a0f3d 0,transparent 60%),var(--bg);color:var(--tx);font:15px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+body{padding:calc(14px + env(safe-area-inset-top)) 14px 40px;max-width:760px;margin:0 auto}
+h1{font-size:22px;margin:4px 0 2px}h1 b{color:var(--yl)}.sub{color:var(--mu);font-size:12px;display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--gr);box-shadow:0 0 10px var(--gr);animation:p 1.6s infinite}.dot.stale{background:var(--rd);box-shadow:0 0 10px var(--rd)}@keyframes p{50%{opacity:.35}}
+h2{font-size:12px;letter-spacing:.14em;color:var(--mu);margin:20px 0 8px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}@media(min-width:560px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:linear-gradient(160deg,var(--c2),var(--c));border:1px solid var(--ln);border-radius:16px;padding:13px;cursor:pointer;transition:transform .12s,border-color .2s;box-shadow:0 6px 24px #0007}
+.card:active{transform:scale(.97);border-color:var(--cy)}.card .k{color:var(--mu);font-size:12px}.card .v{font-size:24px;font-weight:700;margin:2px 0;letter-spacing:-.5px}.card .n{color:var(--mu);font-size:11px}
+.up{color:var(--gr)}.dn{color:var(--rd)}.yl{color:var(--yl)}.cy{color:var(--cy)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--c);border:1px solid var(--ln);border-radius:14px;padding:11px 13px;margin-bottom:8px;cursor:pointer}.row:active{border-color:var(--cy)}
+.row .l b{display:block;font-size:15px}.row .l span{color:var(--mu);font-size:11px}.row .r{text-align:right;font-weight:700}.row .r span{display:block;color:var(--mu);font-size:11px;font-weight:400}
+.bar{height:10px;border-radius:6px;background:#1a2347;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cy),var(--gr));transition:width .6s}
+.tag{font-size:10px;padding:2px 7px;border-radius:20px;border:1px solid var(--ln);color:var(--mu);margin-left:6px}
+.sheet{position:fixed;inset:0;background:#000a;display:none;z-index:9;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px)}.sheet.on{display:flex}
+.pane{background:#0a1030;border:1px solid var(--ln);border-radius:22px 22px 0 0;width:100%;max-width:760px;max-height:88vh;overflow:auto;padding:18px 16px calc(24px + env(safe-area-inset-bottom));animation:up .22s}@keyframes up{from{transform:translateY(40px);opacity:0}}
+.pane h3{margin:0 0 4px;font-size:20px}.x{float:right;background:#1a2347;border:0;color:var(--tx);border-radius:50%;width:34px;height:34px;font-size:16px}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid #16214d;font-size:14px}.kv span{color:var(--mu)}.kv b{text-align:right;word-break:break-all}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.links a,.btn{background:#14204f;border:1px solid var(--cy);color:var(--cy);padding:9px 13px;border-radius:12px;text-decoration:none;font-size:13px;font-weight:600}
+.empty{color:var(--mu);text-align:center;padding:18px;border:1px dashed var(--ln);border-radius:14px}
+.foot{color:var(--mu);font-size:11px;margin-top:22px;text-align:center}
+</style></head><body>
+<h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
+<div id="app"></div>
+<div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
+<script>
+let L=null,W=null;const $=s=>document.getElementById(s);
+const f=(n,d=2)=>n==null||isNaN(n)?'n/a':Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const usd=n=>n==null?'n/a':'$'+f(n);const sg=n=>(n>=0?'+':'')+f(n);
+const ago=s=>s<90?Math.max(0,Math.floor(s))+'s':s<5400?Math.floor(s/60)+'m':s<172800?Math.floor(s/3600)+'h':Math.floor(s/86400)+'d';
+const ist=t=>new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',day:'2-digit',month:'short',hour:'numeric',minute:'2-digit',second:'2-digit',hour12:true});
+const sh=a=>a?a.slice(0,4)+'...'+a.slice(-4):'?';const esc=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const coinLinks=ca=>`<a href="https://gmgn.ai/sol/token/${ca}" target="_blank" rel="noopener">GMGN</a><a href="https://dexscreener.com/solana/${ca}" target="_blank" rel="noopener">DexScreener</a><a href="https://birdeye.so/token/${ca}?chain=solana" target="_blank" rel="noopener">Birdeye</a><a href="https://solscan.io/token/${ca}" target="_blank" rel="noopener">Solscan</a><a href="https://pump.fun/coin/${ca}" target="_blank" rel="noopener">pump.fun</a>`;
+const walLinks=w=>`<a href="https://gmgn.ai/sol/address/${w}" target="_blank" rel="noopener">GMGN wallet</a><a href="https://solscan.io/account/${w}" target="_blank" rel="noopener">Solscan wallet</a>`;
+function open_(h){$('pane').innerHTML='<button class="x" onclick="closeS()">✕</button>'+h;$('sh').classList.add('on')}
+function closeS(){$('sh').classList.remove('on')}$('sh').onclick=e=>{if(e.target.id==='sh')closeS()};
+const kv=(a,b)=>`<div class="kv"><span>${a}</span><b>${b}</b></div>`;
+function callFor(ca){return (L.calls||[]).find(c=>c.ca===ca)}
+function coin(ca,extra){const c=callFor(ca)||{},p=(L.paper_layer.positions||[]).find(x=>x.ca===ca),h=(L.paper_layer.history||[]).find(x=>x.ca===ca);const e=p||h||{};
+ const name=esc(c.name||e.name||'UNKNOWN'),sym=esc(c.sym||e.sym||'?');const entry=e.entry||c.entry;const now=p?p.last:null;const m=p&&now&&entry?now/entry:(h?h.exit_mult:null);
+ let t=`<h3>${name} <span class="yl">$${sym}</span></h3><div class="sub">${esc(extra||'')}</div>`;
+ t+=kv('Contract',`<span style="font-size:12px">${ca}</span>`)+kv('Called entry price',entry?entry.toPrecision(4):'n/a');
+ if(p)t+=kv('Now',now?now.toPrecision(4):'n/a')+kv('Multiple',m?`<span class="${m>=1?'up':'dn'}">${f(m)}x</span>`:'n/a')+kv('Peak',f(p.max||1)+'x')+kv('Paper position','$'+(p.cost||20)+' open · TP 1.5x · SL 0.7x');
+ if(h)t+=kv('Paper result',`<span class="${h.pnl>=0?'up':'dn'}">${sg(h.pnl)} USD</span> · ${esc(h.why)}`)+kv('Exit multiple',h.exit_mult?f(h.exit_mult)+'x':'n/a')+kv('Closed',h.closed_at?ist(h.closed_at):'n/a');
+ if(c.sent_at)t+=kv('Call time (IST)',ist(c.block_time||c.sent_at))+kv('Market cap at call',c.mc?usd(c.mc,0):'n/a')+kv('Liquidity at call',c.liq?usd(c.liq,0):'n/a (pump.fun: none reported)')+kv('Wallet bought',c.amount_sol!=null?f(c.amount_sol)+' SOL':'n/a')+kv('Milestones hit',(c.hit||[]).length?c.hit.map(x=>x+'x').join(', '):'none yet');
+ const w=c.wallet||e.wallet,sig=c.sig||e.sig;if(w)t+=kv('Called by wallet',sh(w));
+ t+=`<div class="links">${coinLinks(ca)}${w?walLinks(w):''}${sig?`<a href="https://solscan.io/tx/${sig}" target="_blank" rel="noopener">Buy tx</a>`:''}</div><button class="btn" onclick="navigator.clipboard.writeText('${ca}');this.textContent='Copied ✓'">Copy contract</button>`;open_(t)}
+function row(ca,name,sym,sub,rt,rs,cls){return `<div class="row" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>${sub}</span></div><div class="r ${cls||''}">${rt}<span>${rs||''}</span></div></div>`}
+function pnlOf(p){const m=p.last&&p.entry?p.last/p.entry:1;return {m,v:p.cost*(m*0.98/1.02)-p.cost}}
+function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
+ const pnl=pl.equity-pl.start,pct=Math.max(0,Math.min(100,(pl.equity-pl.start)/(pl.goal-pl.start)*100));
+ let h=`<h2>Paper trading · $${pl.start} → $${pl.goal}</h2><div class="grid">
+ <div class="card" onclick="eqSheet()"><div class="k">Equity</div><div class="v ${pnl>=0?'up':'dn'}">${usd(pl.equity)}</div><div class="n">${sg(pnl)} vs $${pl.start}</div></div>
+ <div class="card" onclick="cashSheet()"><div class="k">Cash</div><div class="v">${usd(pl.cash)}</div><div class="n">free to deploy</div></div>
+ <div class="card" onclick="document.getElementById('open').scrollIntoView({behavior:'smooth'})"><div class="k">Open</div><div class="v cy">${pl.open}/15</div><div class="n">$20 each</div></div>
+ <div class="card" onclick="document.getElementById('closed').scrollIntoView({behavior:'smooth'})"><div class="k">Closed · W/L</div><div class="v">${pl.wins}/${pl.losses}</div><div class="n">realized <span class="${pl.realized>=0?'up':'dn'}">${sg(pl.realized)}</span></div></div></div>
+ <div class="card" style="margin-top:10px" onclick="goalSheet()"><div class="k">Goal progress ${usd(pl.equity)} / $${pl.goal} (${f(pct,0)}%)</div><div class="bar"><i style="width:${pct}%"></i></div></div>
+ <h2 id="open">Open positions (${pos.length})</h2>`;
+ h+=pos.length?pos.map(p=>{const q=pnlOf(p);return row(p.ca,p.name,p.sym,'peak '+f(p.max||1)+'x · held '+ago(Date.now()/1000-p.t),f(q.m)+'x',sg(q.v)+' USD',q.m>=1?'up':'dn')}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
+ h+=`<h2>Live center</h2><div class="grid g3">
+ <div class="card" onclick="walSheet()"><div class="k">Wallets</div><div class="v">${e.wallets_active??'n/a'}</div><div class="n">tracked</div></div>
+ <div class="card" onclick="detSheet()"><div class="k">BUY detected</div><div class="v">${d.BUY??0}</div><div class="n">SELL ${d.SELL??0}</div></div>
+ <div class="card" onclick="engSheet()"><div class="k">Engine</div><div class="v">${e.last_cycle_secs?e.last_cycle_secs+'s':'n/a'}</div><div class="n">per cycle · laptop</div></div></div>
+ <h2>NEW CALLS (${(L.calls||[]).length})</h2>`;
+ h+=(L.calls||[]).length?(L.calls||[]).slice().reverse().slice(0,40).map(c=>row(c.ca,c.name,c.sym,ist(c.block_time||c.sent_at)+' IST',f(c.multiple||1)+'x',c.mc?'MC '+usd(c.mc,0):'',(c.multiple||1)>=1?'up':'dn')).join(''):'<div class="empty">No calls yet.</div>';
+ h+=`<h2 id="closed">Closed trades (${hist.length})</h2>`;
+ h+=hist.length?hist.map(c=>{const r=c.ca?row(c.ca,c.name,c.sym,esc(c.why)+' · '+(c.closed_at?ist(c.closed_at):''),sg(c.pnl),'USD',c.pnl>=0?'up':'dn'):'';return r}).join(''):'<div class="empty">None yet.</div>';
+ h+=`<div class="foot">Paper money only. Assumed: ${esc(pl.assumptions||'')}. Skipped signals: ${pl.skipped||0}.<br>Tap anything for full data.</div>`;
+ $('app').innerHTML=h}
+function eqSheet(){const pl=L.paper_layer,pos=pl.positions||[],ex=pos.reduce((a,p)=>a+(p.cost||20),0);open_(`<h3>Equity</h3>`+kv('Equity',usd(pl.equity))+kv('Cash',usd(pl.cash))+kv('Open cost',usd(ex))+kv('Realized',sg(pl.realized)+' USD')+kv('Unrealized',sg(pl.equity-pl.cash-ex)+' USD')+kv('Start',usd(pl.start))+kv('Goal',usd(pl.goal)))}
+function cashSheet(){const pl=L.paper_layer;open_(`<h3>Cash ledger</h3>`+kv('Cash',usd(pl.cash))+kv('Max open',15)+kv('Per trade','$20')+kv('Rules','TP 1.5x · SL -30% · rug = full loss'))}
+function goalSheet(){const pl=L.paper_layer;open_(`<h3>Goal $${pl.start} → $${pl.goal}</h3>`+kv('Equity now',usd(pl.equity))+kv('Remaining',usd(pl.goal-pl.equity))+kv('Reached',pl.goal_reached?'YES':'not yet'))}
+function detSheet(){const d=(L.engine||{}).detections||{};open_(`<h3>Detections</h3>`+kv('BUY',d.BUY)+kv('SELL',d.SELL)+kv('Unclassified',d.UNKNOWN)+kv('Backlog',(L.engine||{}).pending_tx)+`<div class="sub" style="margin-top:10px">Called BUYs (on-time):</div>`+((L.calls||[]).slice().reverse().map(c=>row(c.ca,c.name,c.sym,ist(c.block_time||c.sent_at),'','')).join('')||'<div class="empty">none</div>'))}
+function engSheet(){const e=L.engine||{};open_(`<h3>Engine</h3>`+kv('Wallets tracked',e.wallets_active)+kv('Baselined',e.baselined)+kv('Backlog',e.pending_tx)+kv('Cycle',e.last_cycle_secs?e.last_cycle_secs+'s':'n/a')+kv('Host','Jk laptop, 24/7')+kv('Heartbeat',L.heartbeat_at||'n/a'))}
+async function walSheet(){open_('<h3>Tracked wallets</h3><div class="empty">loading...</div>');try{if(!W){const r=await fetch('dashboard-state.json?'+Date.now(),{cache:'no-store'});W=(await r.json()).wallets||[]}
+ $('pane').innerHTML='<button class="x" onclick="closeS()">✕</button><h3>Tracked wallets ('+W.length+')</h3>'+W.slice(0,300).map(w=>{const a=w.wallet_address;return `<div class="row"><div class="l"><b>${sh(a)}</b><span>${w.total_trades??0} trades · win ${w.win_rate!=null?Math.round(w.win_rate*100)+"%":"n/a"}</span></div><div class="r"><a class="btn" href="https://gmgn.ai/sol/address/${a}" target="_blank" rel="noopener">GMGN</a> <a class="btn" href="https://solscan.io/account/${a}" target="_blank" rel="noopener">Solscan</a></div></div>`}).join('')}catch(e){$('pane').innerHTML+='<div class="empty">wallet list unavailable</div>'}}
+async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render()}catch(e){}}
+setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at;$('age').textContent=(s>600?'STALE · ':'live · ')+'updated '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
+pull();setInterval(pull,8000);
+</script></body></html>
