@@ -266,7 +266,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='67';
+const BUILD='68';
 function chkBuild(){try{const b=L&&L.build;if(!b||String(b)===BUILD)return;const k='sspl_rl_'+b;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');const u=new URL(location.href);u.searchParams.set('b',b);u.searchParams.set('t',Date.now());location.replace(u.toString())}catch(e){}}
 const APIURL='https://api.github.com/repos/jegankumarthevar/sspl-dashboard/contents/live-signals.json';let APIET=null,APIREM=60,APIRST=0,APILAST=0;
 async function getAPI(){if(APIREM<=2)return null;if(APIREM<30){const left=Math.max(60,APIRST-Date.now()/1000);const gap=Math.max(4,left/Math.max(1,APIREM-1))*1000;if(Date.now()-APILAST<gap)return 'same'}APILAST=Date.now();const h={'Accept':'application/vnd.github.raw'};if(APIET)h['If-None-Match']=APIET;const r=await fetch(APIURL,{headers:h,cache:'no-store'});const rem=r.headers.get('x-ratelimit-remaining');if(rem!=null)APIREM=+rem;const rs=r.headers.get('x-ratelimit-reset');if(rs)APIRST=+rs;if(r.status===304)return 'same';if(!r.ok)return null;APIET=r.headers.get('etag');return await r.json()}
