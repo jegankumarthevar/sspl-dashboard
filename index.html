@@ -105,8 +105,8 @@ h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;heigh
 .fl.sep{width:auto!important}
 #hero.hup .fl{color:#22c55e!important}#hero.hdn .fl{color:#ef4444!important}
 #hero{position:relative}
-#bank{position:absolute;top:10px;right:12px;text-align:right;font-size:11px;line-height:1.25;color:#8b97c7;cursor:pointer;font-variant-numeric:tabular-nums}
-#bank b{display:block;font-size:15px;font-weight:700}
+#bank{position:static;display:flex;justify-content:flex-end;align-items:baseline;flex-wrap:wrap;gap:4px 10px;text-align:right;font-size:11px;line-height:1.3;color:#8b97c7;cursor:pointer;font-variant-numeric:tabular-nums;margin:0 0 6px}
+#bank b{display:inline;font-size:15px;font-weight:700}#bank i{font-style:normal;white-space:nowrap}
 #bank b.up{color:#22c55e}#bank b.dn{color:#ef4444}
 .cdt{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;padding:1px 6px;border:1px solid #334155;border-radius:8px;margin-left:4px;vertical-align:middle}
 /* v62 unified flat system: one card style everywhere */
@@ -206,7 +206,7 @@ function enhance(){document.querySelectorAll('[data-n]').forEach(el=>{const k=el
 
 const FL={s:'',els:[]};
 function bankVal(){const pl=L.paper_layer||{};const cs=pl.cycles||[];const b=pl.bank!=null?pl.bank:cs.reduce((a,c)=>a+(c.pnl||0),0);const cur=(pl.equity||0)-(pl.start||500);return {b:b,cur:cur,tot:b+cur,n:cs.length}}
-function bankUpdate(){if(!L||!L.paper_layer)return;const x=bankVal(),e=$('bank');if(!e)return;e.innerHTML='PROFIT BANK<b class="'+(x.b>=0?'up':'dn')+'">'+(x.b>=0?'+':'-')+'$'+f(Math.abs(x.b))+'</b>live '+(x.tot>=0?'+':'-')+'$'+f(Math.abs(x.tot))}
+function bankUpdate(){if(!L||!L.paper_layer)return;const x=bankVal(),e=$('bank');if(!e)return;e.innerHTML='<i>PROFIT BANK <b class="'+(x.b>=0?'up':'dn')+'">'+(x.b>=0?'+':'-')+'$'+f(Math.abs(x.b))+'</b></i><i>live '+(x.tot>=0?'+':'-')+'$'+f(Math.abs(x.tot))+'</i>'}
 function bankSheet(){const x=bankVal(),cs=(L.paper_layer.cycles||[]).slice().reverse();open_('<h3>Profit bank</h3><div class="sub">Every cycle starts at $500. A profit moves to the bank. A loss is topped up to $500 from the bank.</div>'+kv('Banked (closed cycles)',`<span class="${x.b>=0?'up':'dn'}">${sg(x.b)} USD</span>`)+kv('This cycle (live)',`<span class="${x.cur>=0?'up':'dn'}">${sg(x.cur)} USD</span>`)+kv('Total live',`<span class="${x.tot>=0?'up':'dn'}">${sg(x.tot)} USD</span>`)+(x.b<0?'<div class="sub">Bank is negative: net loss so far, nothing banked to draw from.</div>':'')+'<h3 style="margin-top:14px">By cycle</h3>'+cs.map(c=>kv('Cycle '+c.n,`<span class="${c.pnl>=0?'up':'dn'}">${c.pnl>=0?'to bank ':'from bank '}${sg(c.pnl)}</span>`)).join(''))}
 function heroUpdate(){bankUpdate();if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.equity;if(v==null)return;const str='$'+f(v),bd=$('board');
  if(FL.s.length!==str.length){bd.innerHTML=[...str].map(c=>`<div class="fl${/[0-9$]/.test(c)?'':' sep'}"><b>${c}</b></div>`).join('');FL.els=[...bd.children];FL.s=str.replace(/./g,' ')}
@@ -259,7 +259,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='62';
+const BUILD='63';
 function chkBuild(){try{const b=L&&L.build;if(!b||String(b)===BUILD)return;const k='sspl_rl_'+b;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');const u=new URL(location.href);u.searchParams.set('b',b);u.searchParams.set('t',Date.now());location.replace(u.toString())}catch(e){}}
 const APIURL='https://api.github.com/repos/jegankumarthevar/sspl-dashboard/contents/live-signals.json';let APIET=null,APIREM=60;
 async function getAPI(){if(APIREM<=6)return null;const h={'Accept':'application/vnd.github.raw'};if(APIET)h['If-None-Match']=APIET;const r=await fetch(APIURL,{headers:h,cache:'no-store'});const rem=r.headers.get('x-ratelimit-remaining');if(rem!=null)APIREM=+rem;if(r.status===304)return 'same';if(!r.ok)return null;APIET=r.headers.get('etag');return await r.json()}
