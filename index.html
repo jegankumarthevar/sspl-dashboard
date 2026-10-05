@@ -149,7 +149,7 @@ function closeS(){$('sh').classList.remove('on')}$('sh').onclick=e=>{if(e.target
 const cdTxt=x=>{const l=x-Date.now()/1000;return l>0?Math.floor(l/60)+':'+String(Math.floor(l%60)).padStart(2,'0'):'exit'};
 const kv=(a,b)=>`<div class="kv"><span>${a}</span><b>${b}</b></div>`;
 function callFor(ca){return (L.calls||[]).find(c=>c.ca===ca)}
-function coin(ca,extra){const c=callFor(ca)||{},p=(L.paper_layer.positions||[]).find(x=>x.ca===ca),h=(L.paper_layer.history||[]).find(x=>x.ca===ca)||[].concat(...(L.paper_layer.cycles||[]).map(cy=>cy.trades||[])).reverse().find(x=>x.ca===ca);const e=p||h||{};
+function coin(ca,extra){const c=callFor(ca)||{},p=(L.paper_layer.positions||[]).find(x=>x.ca===ca),h=p?null:(L.paper_layer.history||[]).find(x=>x.ca===ca)||[].concat(...(L.paper_layer.cycles||[]).map(cy=>cy.trades||[])).reverse().find(x=>x.ca===ca);const e=p||h||{};
  const name=esc(c.name||e.name||'UNKNOWN'),sym=esc(c.sym||e.sym||'?');const entry=e.entry||c.entry;const now=p?p.last:null;const m=p&&now&&entry?now/entry:(h?h.exit_mult:null);
  let t=`<h3>${name} <span class="yl">$${sym}</span></h3><div class="sub">${esc(extra||'')}</div>`;
  t+=kv('Contract',`<span style="font-size:12px">${ca}</span>`)+kv('Called entry price',entry?entry.toPrecision(4):'n/a');
@@ -269,7 +269,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='74';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='75';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
