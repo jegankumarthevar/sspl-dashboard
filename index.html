@@ -88,9 +88,30 @@ h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;heigh
 .dot{box-shadow:0 0 12px var(--gr),0 0 24px #39ff8866}
 .sheet .pane{background:linear-gradient(180deg,#0e1a4a,#080e28);box-shadow:0 -10px 50px #00f0ff22}
 @media(prefers-reduced-motion:reduce){body::before,#hero::before,h1 b{animation:none}}
-</style><style>.cyh{margin-bottom:0}.cybody{margin:4px 0 12px;padding:8px 10px;border:1px solid var(--ln);border-radius:12px;background:rgba(255,255,255,.03)}.cyt{padding:8px 2px;border-bottom:1px solid var(--ln)}.cyt:last-child{border:0}.cytl{display:flex;justify-content:space-between;font-size:14px}.cytm{color:var(--mu);font-size:11px;margin-top:3px;line-height:1.5}</style></head><body>
+</style><style>.cyh{margin-bottom:0}.cybody{margin:4px 0 12px;padding:8px 10px;border:1px solid var(--ln);border-radius:12px;background:rgba(255,255,255,.03)}.cyt{padding:8px 2px;border-bottom:1px solid var(--ln)}.cyt:last-child{border:0}.cytl{display:flex;justify-content:space-between;font-size:14px}.cytm{color:var(--mu);font-size:11px;margin-top:3px;line-height:1.5}</style><style>/* v59 flat clean look: no glow, no shadow, solid green/red */
+*{text-shadow:none!important;box-shadow:none!important;filter:none!important;animation-name:none!important}
+#hero::before{display:none!important}
+#hero,#hero.hup,#hero.hdn{background:#0b1226!important;border:1px solid #1d2a5c!important}
+#hero.hup{border-color:#22c55e55!important}#hero.hdn{border-color:#ef444455!important}
+#hero.hup .fl{color:#22c55e!important;background:#0f1a2e!important;border-color:#22c55e55!important}
+#hero.hdn .fl{color:#ef4444!important;background:#0f1a2e!important;border-color:#ef444455!important}
+.up,.pill.up,.card .v.up,.r.up,.chip.up{color:#22c55e!important;-webkit-text-fill-color:#22c55e!important;background:transparent!important}
+.dn,.pill.dn,.card .v.dn,.r.dn,.chip.dn{color:#ef4444!important;-webkit-text-fill-color:#ef4444!important;background:transparent!important}
+.pill.up{border-color:#22c55e55!important}.pill.dn{border-color:#ef444455!important}
+/* v60 plain digits: no tiles, no boxes, no lighting */
+#hero,#hero.hup,#hero.hdn{background:#080d1c!important;border:0!important;border-radius:14px!important}
+#hero .board{gap:0!important;perspective:none!important}
+.fl,#hero.hup .fl,#hero.hdn .fl{width:auto!important;height:auto!important;min-width:0!important;padding:0!important;border:0!important;border-radius:0!important;background:none!important;overflow:visible!important;line-height:1.15!important;font-size:clamp(44px,14vw,68px)!important;font-weight:700!important;font-variant-numeric:tabular-nums}
+.fl.sep{width:auto!important}
+#hero.hup .fl{color:#22c55e!important}#hero.hdn .fl{color:#ef4444!important}
+#hero{position:relative}
+#bank{position:absolute;top:10px;right:12px;text-align:right;font-size:11px;line-height:1.25;color:#8b97c7;cursor:pointer;font-variant-numeric:tabular-nums}
+#bank b{display:block;font-size:15px;font-weight:700}
+#bank b.up{color:#22c55e}#bank b.dn{color:#ef4444}
+.cdt{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;padding:1px 6px;border:1px solid #334155;border-radius:8px;margin-left:4px;vertical-align:middle}
+</style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
-<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
+<div id="hero" onclick="eqSheet()"><div id="bank" onclick="event.stopPropagation();bankSheet()"></div><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
 let L=null,W=null;const $=s=>document.getElementById(s);
@@ -109,7 +130,7 @@ function coin(ca,extra){const c=callFor(ca)||{},p=(L.paper_layer.positions||[]).
  const name=esc(c.name||e.name||'UNKNOWN'),sym=esc(c.sym||e.sym||'?');const entry=e.entry||c.entry;const now=p?p.last:null;const m=p&&now&&entry?now/entry:(h?h.exit_mult:null);
  let t=`<h3>${name} <span class="yl">$${sym}</span></h3><div class="sub">${esc(extra||'')}</div>`;
  t+=kv('Contract',`<span style="font-size:12px">${ca}</span>`)+kv('Called entry price',entry?entry.toPrecision(4):'n/a');
- if(p)t+=kv('Now',now?now.toPrecision(4):'n/a')+kv('Multiple',m?`<span class="${m>=1?'up':'dn'}">${f(m)}x</span>`:'n/a')+kv('Peak',f(p.max||1)+'x')+kv('Paper position','$'+(p.cost||20)+' open · TP 3.0x · SL 0.5x (-50%)');
+ if(p)t+=kv('Now',now?now.toPrecision(4):'n/a')+kv('Multiple',m?`<span class="${m>=1?'up':'dn'}">${f(m)}x</span>`:'n/a')+kv('Peak',f(p.max||1)+'x')+kv('Paper position','$'+(p.cost||20)+' open · TP 3.0x · SL 0.5x (-50%) · exits at first of 3x / -50% / its own 1h')+kv('1h clock left',`<span class="cdt" data-x="${p.t+3600}"></span>`);
  if(h)t+=kv('Paper result',`<span class="${h.pnl>=0?'up':'dn'}">${sg(h.pnl)} USD</span> · ${esc(h.why)}`)+kv('Exit multiple',h.exit_mult?f(h.exit_mult)+'x':'n/a')+kv('Closed',h.closed_at?ist(h.closed_at):'n/a');
  if(c.sent_at)t+=kv('Call time (IST)',ist(c.block_time||c.sent_at))+kv('Market cap at call',c.mc?usd(c.mc,0):'n/a')+kv('Liquidity at call',c.liq?usd(c.liq,0):'n/a (pump.fun: none reported)')+kv('Wallet bought',c.amount_sol!=null?f(c.amount_sol)+' SOL':'n/a')+kv('Milestones hit',(c.hit||[]).length?c.hit.map(x=>x+'x').join(', '):'none yet');
  const w=c.wallet||e.wallet,sig=c.sig||e.sig;if(w)t+=kv('Called by wallet',sh(w));
@@ -127,7 +148,7 @@ function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.det
  <div class="card" onclick="document.getElementById('closed').scrollIntoView({behavior:'smooth'})"><div class="k">Closed · W/L</div><div class="v">${pl.wins}/${pl.losses}</div><div class="n">realized <span class="${pl.realized>=0?'up':'dn'}" data-n="real" data-v="${pl.realized}" data-m="sg">${sg(pl.realized)}</span></div></div></div>
  <div class="card" style="margin-top:10px" onclick="goalSheet()"><div class="k">Goal progress ${usd(pl.equity)} / $${pl.goal} (${f(pct,0)}%)</div><div class="bar"><i style="width:${pct}%"></i></div></div>
  <h2 id="open">Open positions (${pos.length})</h2>`;
- h+=pos.length?pos.map(p=>{const q=pnlOf(p),pk=Math.max(p.max||1,q.m),sc=Math.max(3.2,pk*1.05);return `<div class="row pos" onclick="coin('${p.ca}')"><div class="l"><b>${esc(p.name)} <span class="yl">$${esc(p.sym)}</span></b><span>peak ${f(pk)}x · now ${f(q.m)}x · held ${ago(Date.now()/1000-p.t)} · <b class="cdp" data-x="${p.t+3600}"></b>${p.carried?' · <i style="color:#8ef">carried over</i>':''}</span><span style="font-size:11px;opacity:.85">exit at first of: 3x TP (${q.m>0?f((3/q.m-1)*100,0):'-'}% to go) · -50% SL (${q.m>0?f((1-0.5/q.m)*100,0):'-'}% away) · 1h at ${ist(p.t+3600)}</span><div class="pb" data-k="${p.ca}" data-cur="${q.m/sc*100}" data-pk="${pk/sc*100}" data-tp="${3/sc*100}" data-sl="${0.5/sc*100}" data-up="${q.m>=1?1:0}"><i class="cu"></i><i class="pk"></i><u class="tp"></u><u class="sl"></u></div></div><div class="r ${q.m>=1?'up':'dn'}"><em data-n="m-${p.ca}" data-v="${q.m}" data-m="x">${f(q.m)}x</em><span data-n="p-${p.ca}" data-v="${q.v}" data-m="sg" data-s=" USD">${sg(q.v)} USD</span></div></div>`}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
+ h+=pos.length?pos.map(p=>{const q=pnlOf(p),pk=Math.max(p.max||1,q.m),sc=Math.max(3.2,pk*1.05);return `<div class="row pos" onclick="coin('${p.ca}')"><div class="l"><b>${esc(p.name)} <span class="yl">$${esc(p.sym)}</span> <span class="cdt" data-x="${p.t+3600}"></span></b><span>peak ${f(pk)}x · now ${f(q.m)}x · held ${ago(Date.now()/1000-p.t)} · <b class="cdp" data-x="${p.t+3600}"></b>${p.carried?' · <i style="color:#8ef">carried over</i>':''}</span><span style="font-size:11px;opacity:.85">exit at first of: 3x TP (${q.m>0?f((3/q.m-1)*100,0):'-'}% to go) · -50% SL (${q.m>0?f((1-0.5/q.m)*100,0):'-'}% away) · 1h at ${ist(p.t+3600)}</span><div class="pb" data-k="${p.ca}" data-cur="${q.m/sc*100}" data-pk="${pk/sc*100}" data-tp="${3/sc*100}" data-sl="${0.5/sc*100}" data-up="${q.m>=1?1:0}"><i class="cu"></i><i class="pk"></i><u class="tp"></u><u class="sl"></u></div></div><div class="r ${q.m>=1?'up':'dn'}"><em data-n="m-${p.ca}" data-v="${q.m}" data-m="x">${f(q.m)}x</em><span data-n="p-${p.ca}" data-v="${q.v}" data-m="sg" data-s=" USD">${sg(q.v)} USD</span></div></div>`}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
  const prev=(pl.cycles||[]).slice(-1)[0]; 
  h+=`<h2 id="closed">Closed positions · cycle ${cy.n||'-'} (${hist.length})</h2>`;
  h+=hist.length?hist.map(c=>closedRow(c.ca,c.name,c.sym,c.t,c.closed_at,c.pnl,c.exit_mult,c.why)).join(''):'<div class="empty">None closed yet this cycle.</div>';
@@ -162,12 +183,16 @@ function enhance(){document.querySelectorAll('[data-n]').forEach(el=>{const k=el
  if(!first)document.body.classList.add('noanim');first=false}
 
 const FL={s:'',els:[]};
-function heroUpdate(){if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.equity;if(v==null)return;const str='$'+f(v),bd=$('board');
+function bankVal(){const pl=L.paper_layer||{};const cs=pl.cycles||[];const b=pl.bank!=null?pl.bank:cs.reduce((a,c)=>a+(c.pnl||0),0);const cur=(pl.equity||0)-(pl.start||500);return {b:b,cur:cur,tot:b+cur,n:cs.length}}
+function bankUpdate(){if(!L||!L.paper_layer)return;const x=bankVal(),e=$('bank');if(!e)return;e.innerHTML='PROFIT BANK<b class="'+(x.b>=0?'up':'dn')+'">'+(x.b>=0?'+':'-')+'$'+f(Math.abs(x.b))+'</b>live '+(x.tot>=0?'+':'-')+'$'+f(Math.abs(x.tot))}
+function bankSheet(){const x=bankVal(),cs=(L.paper_layer.cycles||[]).slice().reverse();open_('<h3>Profit bank</h3><div class="sub">Every cycle starts at $500. A profit moves to the bank. A loss is topped up to $500 from the bank.</div>'+kv('Banked (closed cycles)',`<span class="${x.b>=0?'up':'dn'}">${sg(x.b)} USD</span>`)+kv('This cycle (live)',`<span class="${x.cur>=0?'up':'dn'}">${sg(x.cur)} USD</span>`)+kv('Total live',`<span class="${x.tot>=0?'up':'dn'}">${sg(x.tot)} USD</span>`)+(x.b<0?'<div class="sub">Bank is negative: net loss so far, nothing banked to draw from.</div>':'')+'<h3 style="margin-top:14px">By cycle</h3>'+cs.map(c=>kv('Cycle '+c.n,`<span class="${c.pnl>=0?'up':'dn'}">${c.pnl>=0?'to bank ':'from bank '}${sg(c.pnl)}</span>`)).join(''))}
+function heroUpdate(){bankUpdate();if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.equity;if(v==null)return;const str='$'+f(v),bd=$('board');
  if(FL.s.length!==str.length){bd.innerHTML=[...str].map(c=>`<div class="fl${/[0-9$]/.test(c)?'':' sep'}"><b>${c}</b></div>`).join('');FL.els=[...bd.children];FL.s=str.replace(/./g,' ')}
  [...str].forEach((c,i)=>{const o=FL.s[i];if(o===c&&FL.els[i].firstChild.textContent===c)return;const el=FL.els[i],b=el.firstChild;
   if(!/[0-9]/.test(c)||!/[0-9]/.test(o)){b.textContent=c;return}
   const a=+o,z=+c;let seq=[],x=a;while(x!==z&&seq.length<10){x=(x+1)%10;seq.push(x)}
   seq.forEach((d,k)=>setTimeout(()=>{b.textContent=d;el.classList.remove('go');void el.offsetWidth;el.classList.add('go')},k*85))});
+ clearTimeout(FL.settle);FL.settle=setTimeout(()=>{[...str].forEach((c,i)=>{if(FL.els&&FL.els[i])FL.els[i].firstChild.textContent=c})},1000);
  FL.s=str;const pnl=v-pl.start;const upn=v>=pl.start;$('hero').className=upn?'hup':'hdn';$('hd').className='hd';$('hd').innerHTML='<span class="pill '+(upn?'up':'dn')+'"><i>'+(upn?'▲':'▼')+'</i>'+sg(pnl)+' USD</span><span class="vs">vs $'+pl.start+'</span>';$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · '+usd(Math.max(0,pl.goal-v))+' to go to $'+pl.goal}
 
 const hm=t=>new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:true}).toLowerCase();
@@ -191,12 +216,18 @@ function cycHist(){const cs=((L.paper_layer||{}).cycles||[]).slice().reverse();i
 return '<h2 id="cych">Cycle history ('+cs.length+')</h2>'+cs.map(c=>{const o=OPENC.has(c.n),tr=(c.trades||[]).slice().sort((a,b)=>(a.t||0)-(b.t||0)),why=c.goal_reached?'goal reached':'1h cycle end';
 const head=`<div class="row cyh" onclick="togC(${c.n})"><div class="l"><b>Cycle ${c.n} <span class="yl">${o?'▾':'▸'}</span></b><span>${dt12(c.start)} → ${dt12(c.closed_at)} · ${esc(why)} · ${c.entries||0} entries · W${c.wins||0}/L${c.losses||0}</span></div><div class="r ${c.pnl>=0?'up':'dn'}">${sg(c.pnl)} USD<span>end ${usd(c.end_usd)}</span></div></div>`;
 if(!o)return head;
-const body=tr.length?tr.map(t=>`<div class="cyt"><div class="cytl"><b>${esc(t.name||t.sym)} <span class="yl">$${esc(t.sym)}</span></b><span class="${t.pnl>=0?'up':'dn'}">${sg(t.pnl)} USD</span></div><div class="cytm">entry ${fpx(t.entry)} · in ${dt12(t.t)}<br>out ${dt12(t.closed_at)} · ${t.exit_mult?f(t.exit_mult)+'x · ':''}${esc(WHY[t.why]||t.why||'n/a')}${t.entry==null?'<br><i>entry price not recorded for this older cycle</i>':''}</div></div>`).join(''):'<div class="empty">No trades this cycle.</div>';
+const body=tr.length?tr.map(t=>`<div class="cyt" style="cursor:pointer" onclick="tradeSheet(${c.n},'${(t.ca||'').replace(/'/g,'')}',${t.t||0})"><div class="cytl"><b>${esc(t.name||t.sym)} <span class="yl">$${esc(t.sym)}</span></b><span class="${t.pnl>=0?'up':'dn'}">${sg(t.pnl)} USD</span></div><div class="cytm">entry ${fpx(t.entry)} · in ${dt12(t.t)}<br>out ${dt12(t.closed_at)} · ${t.exit_mult?f(t.exit_mult)+'x · ':''}${esc(WHY[t.why]||t.why||'n/a')}${t.entry==null?'<br><i>entry price not recorded for this older cycle</i>':''}</div></div>`).join(''):'<div class="empty">No trades this cycle.</div>';
 return head+'<div class="cybody">'+body+'</div>'}).join('')}
+function tradeSheet(n,ca,tt){const c=((L.paper_layer||{}).cycles||[]).find(x=>x.n===n)||{},t=(c.trades||[]).find(x=>(ca&&x.ca===ca&&(x.t||0)===tt)||(!ca&&(x.t||0)===tt))||(c.trades||[]).find(x=>x.ca===ca)||{};const cl=callFor(t.ca||ca)||{};const ad=t.ca||ca||'';
+ let h=`<h3>${esc(t.name||cl.name||t.sym||'UNKNOWN')} <span class="yl">$${esc(t.sym||cl.sym||'?')}</span></h3><div class="sub">Cycle ${n}</div>`;
+ h+=kv('Contract',ad?`<span style="font-size:12px">${ad}</span>`:'n/a')+kv('Called entry price',t.entry!=null?fpx(t.entry):'n/a')+kv('Paper result',`<span class="${t.pnl>=0?'up':'dn'}">${sg(t.pnl)} USD</span> · ${esc(WHY[t.why]||t.why||'n/a')}`)+kv('Exit multiple',t.exit_mult?f(t.exit_mult)+'x':'n/a')+kv('In',dt12(t.t))+kv('Out',dt12(t.closed_at));
+ if(cl.sent_at)h+=kv('Market cap at call',cl.mc?usd(cl.mc,0):'n/a')+kv('Liquidity at call',cl.liq?usd(cl.liq,0):'n/a');
+ const w=cl.wallet||t.wallet;if(w)h+=kv('Called by wallet',sh(w));
+ h+=`<div class="links">${ad?coinLinks(ad):''}${w?walLinks(w):''}</div>`+(ad?`<button class="btn" onclick="navigator.clipboard.writeText('${ad}');this.textContent='Copied ✓'">Copy contract</button>`:'');open_(h)}
 function closedRow(ca,name,sym,tin,tout,pnl,m,why){return `<div class="row" data-ca="${ca}" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>in ${hm2(tin)} → out ${hm2(tout)} · ${esc(String(why||'').replace(/_/g,' ').toLowerCase())}</span></div><div class="r ${pnl>=0?'up':'dn'}">${sg(pnl)} USD<span>${m?f(m)+'x':''}</span></div></div>`}
 function consist(){const pl=L.paper_layer||{},cy=pl.cycle||{},o=(pl.positions||[]).length,c=(pl.history||[]).length,age=Date.now()/1000-L.updated_at,ok=(cy.entries||0)+(cy.carried_in||0)===o+c;const el=$('cons');if(el)el.innerHTML=(ok?'<span class="up">✓ in sync with engine</span>':'<span class="dn">⚠ mismatch</span>')+` · entries ${cy.entries||0}${cy.carried_in?' + carried '+cy.carried_in:''} = open ${o} + closed ${c} · data ${ago(age)} old`}
 const render0=render;render=function(){const y=window.scrollY;render0();enhance();consist();heroUpdate();spark(L.paper_layer||{});window.scrollTo(0,y)};
-setInterval(()=>{document.querySelectorAll('.cdp').forEach(e=>{const l=(+e.dataset.x)-Date.now()/1000;e.textContent=l>0?'1h clock '+Math.floor(l/60)+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s left':'1h reached, exiting';e.style.color=l<300?'#ffb84d':'#8ef'});const bb=$('cdbar');if(bb){const s0=+bb.dataset.s,e0=+bb.dataset.e;if(e0>s0)bb.style.width=Math.max(0,Math.min(100,(Date.now()/1000-s0)/(e0-s0)*100))+'%'}const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
+setInterval(()=>{document.querySelectorAll('.cdt').forEach(e=>{const l=(+e.dataset.x)-Date.now()/1000;e.textContent=l>0?Math.floor(l/60)+':'+String(Math.floor(l%60)).padStart(2,'0'):'exit';e.style.color=l<300?'#f59e0b':'#94a3b8'});document.querySelectorAll('.cdp').forEach(e=>{const l=(+e.dataset.x)-Date.now()/1000;e.textContent=l>0?'1h clock '+Math.floor(l/60)+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s left':'1h reached, exiting';e.style.color=l<300?'#ffb84d':'#8ef'});const bb=$('cdbar');if(bb){const s0=+bb.dataset.s,e0=+bb.dataset.e;if(e0>s0)bb.style.width=Math.max(0,Math.min(100,(Date.now()/1000-s0)/(e0-s0)*100))+'%'}const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
 window.LIVEPX=window.LIVEPX||{};window.LPT=window.LPT||0;
 function overlay(){try{const pl=L&&L.paper_layer;if(!pl||!pl.positions)return;let ch=false;for(const p of pl.positions){const q=LIVEPX[p.ca];if(q&&q.t>(L.updated_at||0)&&q.px>0){p.last=q.px;p.max=Math.max(p.max||1,q.px/p.entry);ch=true}}
  if(ch){let v=0;for(const p of pl.positions){const m=p.last&&p.entry?p.last/p.entry:1;v+=p.cost*(m*0.98/1.02)-(p.basis||0)}pl.equity=pl.cash+v}}catch(e){}}
@@ -206,7 +237,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='58';
+const BUILD='61';
 function chkBuild(){try{const b=L&&L.build;if(!b||String(b)===BUILD)return;const k='sspl_rl_'+b;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');const u=new URL(location.href);u.searchParams.set('b',b);u.searchParams.set('t',Date.now());location.replace(u.toString())}catch(e){}}
 const APIURL='https://api.github.com/repos/jegankumarthevar/sspl-dashboard/contents/live-signals.json';let APIET=null,APIREM=60;
 async function getAPI(){if(APIREM<=6)return null;const h={'Accept':'application/vnd.github.raw'};if(APIET)h['If-None-Match']=APIET;const r=await fetch(APIURL,{headers:h,cache:'no-store'});const rem=r.headers.get('x-ratelimit-remaining');if(rem!=null)APIREM=+rem;if(r.status===304)return 'same';if(!r.ok)return null;APIET=r.headers.get('etag');return await r.json()}
