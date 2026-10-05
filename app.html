@@ -47,9 +47,15 @@ em{font-style:normal}.fu{animation:fu 1.4s}.fd{animation:fd 1.4s}
 .fl.go b{animation:flap .075s ease-in}
 @keyframes flap{0%{transform:rotateX(-88deg);opacity:.35}100%{transform:rotateX(0);opacity:1}}
 #hero .hd{font-size:15px;font-weight:700}#hero .hs{color:var(--mu);font-size:12px;margin-top:2px}
+
+#spk{margin:6px 6px 0;height:70px}#spk svg{width:100%;height:70px;display:block}
+.cpb{margin-top:8px}.cpb .bar{margin-top:0}.cpb .bar i{background:linear-gradient(90deg,#8b5cf6,var(--cy));transition:width 1s linear}
+.cpt{display:flex;justify-content:space-between;gap:8px;color:var(--mu);font-size:12px;margin-top:6px;flex-wrap:wrap}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}.chip{font-size:12px;padding:4px 10px;border-radius:20px;border:1px solid var(--ln);background:#0a1030;font-weight:600}
+.chip.up{border-color:#39ff8866}.chip.dn{border-color:#ff4d6d66}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
-<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div></div><div id="ping"></div><div id="app"></div>
+<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
 let L=null,W=null;const $=s=>document.getElementById(s);
@@ -78,7 +84,7 @@ function pnlOf(p){const m=p.last&&p.entry?p.last/p.entry:1;return {m,v:p.cost*(m
 function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
  const pnl=pl.equity-pl.start,pct=Math.max(0,Math.min(100,(pl.equity-pl.start)/(pl.goal-pl.start)*100));
  const cy=pl.cycle||{},left=cy.end?cy.end-Date.now()/1000:0;
- let h=`<h2>Cycle ${cy.n||'-'} · 1h rotation</h2><div class="card" onclick="cycleSheet()"><div class="k">${left>0?'Closes in':'Closing now'}</div><div class="v cy" id="cd" data-end="${cy.end||0}">${left>0?Math.floor(left/3600)+'h '+String(Math.floor(left%3600/60)).padStart(2,'0')+'m':'rotating...'}</div><div class="n">entries ${cy.entries??0}/${cy.max_entries||12} · each cycle restarts at $${pl.start}, closes on the hour with a full report</div></div>`;
+ let h=`<h2>Cycle ${cy.n||'-'} · 1h rotation</h2><div class="card" onclick="cycleSheet()"><div class="k">${left>0?'Closes in':'Closing now'}</div><div class="v cy" id="cd" data-end="${cy.end||0}">${left>0?Math.floor(left/3600)+'h '+String(Math.floor(left%3600/60)).padStart(2,'0')+'m':'rotating...'}</div>${cyBar(cy,pl)}<div class="n">entries ${cy.entries??0}/${cy.max_entries||12} · each cycle restarts at $${pl.start}, closes on the hour with a full report</div></div>`;
  h+=`<h2>Paper trading · $${pl.start} → $${pl.goal}</h2><div class="grid">
  <div class="card" onclick="eqSheet()"><div class="k">Equity</div><div class="v ${pnl>=0?'up':'dn'}" data-n="eq" data-v="${pl.equity}" data-m="usd">${usd(pl.equity)}</div><div class="n"><span data-n="pnl" data-v="${pnl}" data-m="sg">${sg(pnl)}</span> vs $${pl.start}</div></div>
  <div class="card" onclick="cashSheet()"><div class="k">Cash</div><div class="v" data-n="cash" data-v="${pl.cash}" data-m="usd">${usd(pl.cash)}</div><div class="n">free to deploy</div></div>
@@ -124,9 +130,19 @@ function heroUpdate(){if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.e
   if(!/[0-9]/.test(c)||!/[0-9]/.test(o)){b.textContent=c;return}
   const a=+o,z=+c;let seq=[],x=a;while(x!==z&&seq.length<10){x=(x+1)%10;seq.push(x)}
   seq.forEach((d,k)=>setTimeout(()=>{b.textContent=d;el.classList.remove('go');void el.offsetWidth;el.classList.add('go')},k*85))});
- FL.s=str;const pnl=v-pl.start;$('hd').className='hd '+(pnl>=0?'up':'dn');$('hd').textContent=(pnl>=0?'▲ ':'▼ ')+sg(pnl)+' USD vs $'+pl.start;$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · tap for ledger'}
-const render0=render;render=function(){const y=window.scrollY;render0();enhance();heroUpdate();window.scrollTo(0,y)};
-setInterval(()=>{const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
+ FL.s=str;const pnl=v-pl.start;$('hd').className='hd '+(pnl>=0?'up':'dn');$('hd').textContent=(pnl>=0?'▲ ':'▼ ')+sg(pnl)+' USD vs $'+pl.start;$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · '+usd(Math.max(0,pl.goal-v))+' to go to $'+pl.goal}
+
+const hm=t=>new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:true}).toLowerCase();
+function cyBar(cy,pl){const tot=(cy.end||0)-(cy.start||0),el=Date.now()/1000-(cy.start||0),pc=tot>0?Math.max(0,Math.min(100,el/tot*100)):0;
+ const chips=(pl.cycles||[]).slice(-6).map(r=>`<span class="chip ${r.pnl>=0?'up':'dn'}" onclick="event.stopPropagation();cycRep(${r.n})">C${r.n} ${sg(r.pnl)}</span>`).join('');
+ return `<div class="cpb"><div class="bar"><i id="cdbar" data-s="${cy.start||0}" data-e="${cy.end||0}" style="width:${pc}%"></i></div><div class="cpt"><span>${hm(cy.start)} → ${hm(cy.end)} IST</span><span>started at ${usd(pl.start)}</span></div>${chips?`<div class="chips"><span class="chip" style="border:0;padding-left:0;color:var(--mu)">Closed:</span>${chips}</div>`:''}</div>`}
+function spark(pl){const el=$('spk');if(!el)return;let d=(pl.eqs||[]).filter(x=>x&&x[0]);const cy=pl.cycle||{},st=pl.start;
+ d=d.filter(x=>x[0]>=(cy.start||0)-5);if(!d.length||d[0][0]>(cy.start||0)+60)d.unshift([cy.start||Date.now()/1000-1,st]);d.push([Math.max(Date.now()/1000,d[d.length-1][0]+1),pl.equity]);
+ const W=360,H=70,p=6,t0=d[0][0],t1=Math.max(cy.end||d[d.length-1][0],d[d.length-1][0]);const vs=d.map(x=>x[1]).concat([st]);let lo=Math.min(...vs),hi=Math.max(...vs);if(hi-lo<2){const m=(hi+lo)/2;lo=m-1;hi=m+1}
+ const X=t=>p+(t-t0)/(t1-t0||1)*(W-2*p),Y=v=>p+(hi-v)/(hi-lo)*(H-2*p);const pts=d.map(x=>X(x[0]).toFixed(1)+','+Y(x[1]).toFixed(1));const last=d[d.length-1],up=last[1]>=st,c=up?'#39ff88':'#ff4d6d';
+ el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".35"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs><line x1="0" x2="${W}" y1="${Y(st).toFixed(1)}" y2="${Y(st).toFixed(1)}" stroke="#8b97c7" stroke-opacity=".35" stroke-dasharray="3 4"/><polygon points="${X(t0).toFixed(1)},${H} ${pts.join(' ')} ${X(last[0]).toFixed(1)},${H}" fill="url(#sg)"/><polyline points="${pts.join(' ')}" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="4" fill="${c}"><animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/></circle></svg>`}
+const render0=render;render=function(){const y=window.scrollY;render0();enhance();heroUpdate();spark(L.paper_layer||{});window.scrollTo(0,y)};
+setInterval(()=>{const bb=$('cdbar');if(bb){const s0=+bb.dataset.s,e0=+bb.dataset.e;if(e0>s0)bb.style.width=Math.max(0,Math.min(100,(Date.now()/1000-s0)/(e0-s0)*100))+'%'}const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
 async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
 setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at;$('age').textContent=(s>600?'STALE · ':'live · ')+'updated '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
 pull();setInterval(pull,8000);
