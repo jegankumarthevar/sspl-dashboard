@@ -47,25 +47,9 @@ em{font-style:normal}.fu{animation:fu 1.4s}.fd{animation:fd 1.4s}
 .fl.go b{animation:flap .075s ease-in}
 @keyframes flap{0%{transform:rotateX(-88deg);opacity:.35}100%{transform:rotateX(0);opacity:1}}
 #hero .hd{font-size:15px;font-weight:700}#hero .hs{color:var(--mu);font-size:12px;margin-top:2px}
-
-#toasts{position:fixed;top:calc(8px + env(safe-area-inset-top));left:0;right:0;z-index:30;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none}
-.toast{pointer-events:auto;min-width:240px;max-width:92vw;padding:11px 16px;border-radius:16px;font-weight:700;font-size:15px;color:#fff;backdrop-filter:blur(8px);animation:tin .45s cubic-bezier(.2,1.4,.4,1),tout .5s 5.5s forwards;display:flex;align-items:center;gap:10px}
-.toast small{display:block;font-weight:500;opacity:.85;font-size:12px}
-.toast.o{background:#0a3a4aee;border:1px solid var(--cy);box-shadow:0 0 24px #00f0ff66}
-.toast.w{background:#0b4a2aee;border:1px solid var(--gr);box-shadow:0 0 24px #39ff8877}
-.toast.l{background:#4a0b1aee;border:1px solid var(--rd);box-shadow:0 0 24px #ff4d6d77}
-.toast i{font-style:normal;font-size:22px}
-@keyframes tin{from{transform:translateY(-40px) scale(.9);opacity:0}}@keyframes tout{to{transform:translateY(-30px);opacity:0}}
-.row.newpos{animation:np 1.2s 3,npb 0s;position:relative;border-color:var(--cy)}
-.row.newpos::after{content:"● NEW";position:absolute;right:12px;top:-8px;background:var(--cy);color:#001;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;animation:bl .8s infinite}
-@keyframes np{0%{box-shadow:0 0 0 0 #00f0ffaa;transform:scale(1.03);background:#0e3a55}70%{box-shadow:0 0 0 14px #00f0ff00}100%{box-shadow:0 0 0 0 #00f0ff00;transform:none}}
-@keyframes bl{50%{opacity:.35}}
-.row.clw{animation:cw 1.4s 3;border-color:var(--gr)}.row.cll{animation:cl 1.4s 3;border-color:var(--rd)}
-@keyframes cw{0%,100%{box-shadow:0 0 0 #0000}50%{box-shadow:0 0 22px #39ff88aa;background:#0b3a28}}
-@keyframes cl{0%,100%{box-shadow:0 0 0 #0000}50%{box-shadow:0 0 22px #ff4d6daa;background:#3a0b18}}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
-<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div></div><div id="toasts"></div><div id="ping"></div><div id="app"></div>
+<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div></div><div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
 let L=null,W=null;const $=s=>document.getElementById(s);
@@ -89,7 +73,7 @@ function coin(ca,extra){const c=callFor(ca)||{},p=(L.paper_layer.positions||[]).
  if(c.sent_at)t+=kv('Call time (IST)',ist(c.block_time||c.sent_at))+kv('Market cap at call',c.mc?usd(c.mc,0):'n/a')+kv('Liquidity at call',c.liq?usd(c.liq,0):'n/a (pump.fun: none reported)')+kv('Wallet bought',c.amount_sol!=null?f(c.amount_sol)+' SOL':'n/a')+kv('Milestones hit',(c.hit||[]).length?c.hit.map(x=>x+'x').join(', '):'none yet');
  const w=c.wallet||e.wallet,sig=c.sig||e.sig;if(w)t+=kv('Called by wallet',sh(w));
  t+=`<div class="links">${coinLinks(ca)}${w?walLinks(w):''}${sig?`<a href="https://solscan.io/tx/${sig}" target="_blank" rel="noopener">Buy tx</a>`:''}</div><button class="btn" onclick="navigator.clipboard.writeText('${ca}');this.textContent='Copied ✓'">Copy contract</button>`;open_(t)}
-function row(ca,name,sym,sub,rt,rs,cls){return `<div class="row" data-ca="${ca}" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>${sub}</span></div><div class="r ${cls||''}">${rt}<span>${rs||''}</span></div></div>`}
+function row(ca,name,sym,sub,rt,rs,cls){return `<div class="row" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>${sub}</span></div><div class="r ${cls||''}">${rt}<span>${rs||''}</span></div></div>`}
 function pnlOf(p){const m=p.last&&p.entry?p.last/p.entry:1;return {m,v:p.cost*(m*0.98/1.02)-p.cost}}
 function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
  const pnl=pl.equity-pl.start,pct=Math.max(0,Math.min(100,(pl.equity-pl.start)/(pl.goal-pl.start)*100));
@@ -102,7 +86,7 @@ function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.det
  <div class="card" onclick="document.getElementById('closed').scrollIntoView({behavior:'smooth'})"><div class="k">Closed · W/L</div><div class="v">${pl.wins}/${pl.losses}</div><div class="n">realized <span class="${pl.realized>=0?'up':'dn'}" data-n="real" data-v="${pl.realized}" data-m="sg">${sg(pl.realized)}</span></div></div></div>
  <div class="card" style="margin-top:10px" onclick="goalSheet()"><div class="k">Goal progress ${usd(pl.equity)} / $${pl.goal} (${f(pct,0)}%)</div><div class="bar"><i style="width:${pct}%"></i></div></div>
  <h2 id="open">Open positions (${pos.length})</h2>`;
- h+=pos.length?pos.map(p=>{const q=pnlOf(p),pk=Math.max(p.max||1,q.m),sc=Math.max(1.6,pk*1.05);return `<div class="row pos" data-ca="${p.ca}" data-pos="1" onclick="coin('${p.ca}')"><div class="l"><b>${esc(p.name)} <span class="yl">$${esc(p.sym)}</span></b><span>peak ${f(pk)}x · now ${f(q.m)}x · held ${ago(Date.now()/1000-p.t)}</span><div class="pb" data-k="${p.ca}" data-cur="${q.m/sc*100}" data-pk="${pk/sc*100}" data-tp="${1.5/sc*100}" data-sl="${0.7/sc*100}" data-up="${q.m>=1?1:0}"><i class="cu"></i><i class="pk"></i><u class="tp"></u><u class="sl"></u></div></div><div class="r ${q.m>=1?'up':'dn'}"><em data-n="m-${p.ca}" data-v="${q.m}" data-m="x">${f(q.m)}x</em><span data-n="p-${p.ca}" data-v="${q.v}" data-m="sg" data-s=" USD">${sg(q.v)} USD</span></div></div>`}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
+ h+=pos.length?pos.map(p=>{const q=pnlOf(p),pk=Math.max(p.max||1,q.m),sc=Math.max(1.6,pk*1.05);return `<div class="row pos" onclick="coin('${p.ca}')"><div class="l"><b>${esc(p.name)} <span class="yl">$${esc(p.sym)}</span></b><span>peak ${f(pk)}x · now ${f(q.m)}x · held ${ago(Date.now()/1000-p.t)}</span><div class="pb" data-k="${p.ca}" data-cur="${q.m/sc*100}" data-pk="${pk/sc*100}" data-tp="${1.5/sc*100}" data-sl="${0.7/sc*100}" data-up="${q.m>=1?1:0}"><i class="cu"></i><i class="pk"></i><u class="tp"></u><u class="sl"></u></div></div><div class="r ${q.m>=1?'up':'dn'}"><em data-n="m-${p.ca}" data-v="${q.m}" data-m="x">${f(q.m)}x</em><span data-n="p-${p.ca}" data-v="${q.v}" data-m="sg" data-s=" USD">${sg(q.v)} USD</span></div></div>`}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
  h+=`<h2>Live center</h2><div class="grid g3">
  <div class="card" onclick="walSheet()"><div class="k">Wallets</div><div class="v">${e.wallets_active??'n/a'}</div><div class="n">tracked</div></div>
  <div class="card" onclick="detSheet()"><div class="k">BUY detected</div><div class="v">${d.BUY??0}</div><div class="n">SELL ${d.SELL??0}</div></div>
@@ -110,7 +94,7 @@ function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.det
  <h2>NEW CALLS (${(L.calls||[]).length})</h2>`;
  h+=(L.calls||[]).length?(L.calls||[]).slice().reverse().slice(0,40).map(c=>row(c.ca,c.name,c.sym,ist(c.block_time||c.sent_at)+' IST',f(c.multiple||1)+'x',c.mc?'MC '+usd(c.mc,0):'',(c.multiple||1)>=1?'up':'dn')).join(''):'<div class="empty">No calls yet.</div>';
  h+=`<h2 id="closed">Closed this cycle (${hist.length})</h2>`;
- h+=hist.length?hist.map(c=>{const r=c.ca?row(c.ca,c.name,c.sym,esc(c.why)+' · '+(c.closed_at?ist(c.closed_at):''),sg(c.pnl),'USD',c.pnl>=0?'up':'dn').replace('<div class="row"','<div class="row" data-cl="'+c.ca+'|'+c.closed_at+'|'+(c.pnl>=0?1:0)+'"'):'';return r}).join(''):'<div class="empty">None yet.</div>';
+ h+=hist.length?hist.map(c=>{const r=c.ca?row(c.ca,c.name,c.sym,esc(c.why)+' · '+(c.closed_at?ist(c.closed_at):''),sg(c.pnl),'USD',c.pnl>=0?'up':'dn'):'';return r}).join(''):'<div class="empty">None yet.</div>';
  const cys=(pl.cycles||[]).slice().reverse(),days=(pl.days||[]).slice().reverse();
  h+=`<h2>Cycle reports (${cys.length})</h2>`+(cys.length?cys.map(r=>`<div class="row" onclick="cycRep(${r.n})"><div class="l"><b>Cycle ${r.n} <span class="tag">${r.wins}W / ${r.losses}L</span></b><span>${ist(r.start)} → ${ist(r.closed_at)} IST · ${r.entries} entries</span></div><div class="r ${r.pnl>=0?'up':'dn'}">${sg(r.pnl)}<span>end ${usd(r.end_usd)}</span></div></div>`).join(''):'<div class="empty">First report posts when cycle 2 closes.</div>');
  if(days.length)h+=`<h2>By day</h2>`+days.map(d=>`<div class="row" onclick="dayRep('${d.day}')"><div class="l"><b>${d.day}</b><span>${d.cycles} cycle(s) · ${d.cycle_wins} winning</span></div><div class="r ${d.pnl>=0?'up':'dn'}">${sg(d.pnl)}<span>USD</span></div></div>`).join('');
@@ -141,16 +125,7 @@ function heroUpdate(){if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.e
   const a=+o,z=+c;let seq=[],x=a;while(x!==z&&seq.length<10){x=(x+1)%10;seq.push(x)}
   seq.forEach((d,k)=>setTimeout(()=>{b.textContent=d;el.classList.remove('go');void el.offsetWidth;el.classList.add('go')},k*85))});
  FL.s=str;const pnl=v-pl.start;$('hd').className='hd '+(pnl>=0?'up':'dn');$('hd').textContent=(pnl>=0?'▲ ':'▼ ')+sg(pnl)+' USD vs $'+pl.start;$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · tap for ledger'}
-
-const SEEN={o:null,c:null};
-function toast(cls,ic,t,sub){const d=document.createElement('div');d.className='toast '+cls;d.innerHTML='<i>'+ic+'</i><div>'+t+'<small>'+sub+'</small></div>';d.onclick=()=>d.remove();$('toasts').appendChild(d);setTimeout(()=>d.remove(),6200);try{navigator.vibrate&&navigator.vibrate(cls==='o'?30:[30,40,30])}catch(e){}}
-function events(){const pl=L.paper_layer||{},pos=pl.positions||[],hist=pl.history||[];const o=new Set(pos.map(p=>p.ca)),c=new Set(hist.map(h=>h.ca+'|'+h.closed_at));
- if(SEEN.o){pos.filter(p=>!SEEN.o.has(p.ca)).forEach(p=>{toast('o','🟢','OPENED '+esc(p.name)+' $'+esc(p.sym),'$'+(p.cost||20)+' paper buy');const e=document.querySelector('.row[data-pos][data-ca="'+p.ca+'"]');if(e)e.classList.add('newpos');KEEP['p'+p.ca]=[Date.now()+3800,'newpos']});
-  hist.filter(h=>!SEEN.c.has(h.ca+'|'+h.closed_at)).forEach(h=>{const w=h.pnl>=0;toast(w?'w':'l',w?'✅':'🛑','CLOSED '+esc(h.name)+' '+sg(h.pnl)+' USD',esc(h.why)+(h.exit_mult?' · '+f(h.exit_mult)+'x':''));const e=document.querySelector('.row[data-cl^="'+h.ca+'|'+h.closed_at+'"]');if(e)e.classList.add(w?'clw':'cll');KEEP['c'+h.ca+'|'+h.closed_at]=[Date.now()+4200,w?'clw':'cll']})}
- else{}
- SEEN.o=o;SEEN.c=c;const now=Date.now();Object.keys(KEEP).forEach(k=>{const [u,cl]=KEEP[k];if(u<now){delete KEEP[k];return}const e=k[0]==='p'?document.querySelector('.row[data-pos][data-ca="'+k.slice(1)+'"]'):document.querySelector('.row[data-cl^="'+k.slice(1)+'"]');if(e)e.classList.add(cl)})}
-const KEEP={};
-const render0=render;render=function(){const y=window.scrollY;render0();enhance();heroUpdate();events();window.scrollTo(0,y)};
+const render0=render;render=function(){const y=window.scrollY;render0();enhance();heroUpdate();window.scrollTo(0,y)};
 setInterval(()=>{const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
 async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
 setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at;$('age').textContent=(s>600?'STALE · ':'live · ')+'updated '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
