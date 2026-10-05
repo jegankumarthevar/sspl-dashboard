@@ -21,9 +21,25 @@ h2{font-size:12px;letter-spacing:.14em;color:var(--mu);margin:20px 0 8px;text-tr
 .links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.links a,.btn{background:#14204f;border:1px solid var(--cy);color:var(--cy);padding:9px 13px;border-radius:12px;text-decoration:none;font-size:13px;font-weight:600}
 .empty{color:var(--mu);text-align:center;padding:18px;border:1px dashed var(--ln);border-radius:14px}
 .foot{color:var(--mu);font-size:11px;margin-top:22px;text-align:center}
+
+em{font-style:normal}.fu{animation:fu 1.4s}.fd{animation:fd 1.4s}
+@keyframes fu{0%{color:var(--gr);text-shadow:0 0 14px var(--gr);transform:scale(1.07)}100%{text-shadow:0 0 0 transparent;transform:none}}
+@keyframes fd{0%{color:var(--rd);text-shadow:0 0 14px var(--rd);transform:scale(1.07)}100%{text-shadow:0 0 0 transparent;transform:none}}
+[data-n]{display:inline-block;transform-origin:left center}.r [data-n],.r em{display:block}
+.pb{position:relative;height:8px;border-radius:5px;background:#1a2347;margin-top:7px;width:min(260px,62vw)}
+.pb i{position:absolute;top:0;left:0;height:100%;border-radius:5px;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.pb .cu{background:linear-gradient(90deg,#c0283f,var(--rd))}.pb[data-up="1"] .cu{background:linear-gradient(90deg,var(--cy),var(--gr))}
+.pb .pk{background:transparent;border-right:2px solid var(--yl);box-shadow:3px 0 8px var(--yl)}
+.pb u{position:absolute;top:-3px;width:1px;height:14px;background:#8b97c780}.pb .tp{background:#39ff8880}.pb .sl{background:#ff4d6d90}
+.card,.row{animation:in .45s both}@keyframes in{from{opacity:0;transform:translateY(8px)}}
+.noanim .card,.noanim .row{animation:none}
+.card:hover{border-color:var(--cy);box-shadow:0 6px 26px #00f0ff22}
+#ping{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--cy),var(--gr));z-index:20;box-shadow:0 0 10px var(--cy);opacity:0}
+#ping.go{animation:pg 1s}@keyframes pg{0%{width:0;opacity:1}80%{width:100%;opacity:1}100%{width:100%;opacity:0}}
+.bar i{box-shadow:0 0 12px var(--cy)}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
-<div id="app"></div>
+<div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
 let L=null,W=null;const $=s=>document.getElementById(s);
@@ -52,15 +68,15 @@ function pnlOf(p){const m=p.last&&p.entry?p.last/p.entry:1;return {m,v:p.cost*(m
 function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
  const pnl=pl.equity-pl.start,pct=Math.max(0,Math.min(100,(pl.equity-pl.start)/(pl.goal-pl.start)*100));
  const cy=pl.cycle||{},left=cy.end?cy.end-Date.now()/1000:0;
- let h=`<h2>Cycle ${cy.n||'-'} · 6h rotation</h2><div class="card" onclick="cycleSheet()"><div class="k">${left>0?'Closes in':'Closing now'}</div><div class="v cy">${left>0?Math.floor(left/3600)+'h '+String(Math.floor(left%3600/60)).padStart(2,'0')+'m':'rotating...'}</div><div class="n">entries ${cy.entries??0}/${cy.max_entries||12} · each cycle restarts at $${pl.start}, closes at 6h with a full report</div></div>`;
+ let h=`<h2>Cycle ${cy.n||'-'} · 6h rotation</h2><div class="card" onclick="cycleSheet()"><div class="k">${left>0?'Closes in':'Closing now'}</div><div class="v cy" id="cd" data-end="${cy.end||0}">${left>0?Math.floor(left/3600)+'h '+String(Math.floor(left%3600/60)).padStart(2,'0')+'m':'rotating...'}</div><div class="n">entries ${cy.entries??0}/${cy.max_entries||12} · each cycle restarts at $${pl.start}, closes at 6h with a full report</div></div>`;
  h+=`<h2>Paper trading · $${pl.start} → $${pl.goal}</h2><div class="grid">
- <div class="card" onclick="eqSheet()"><div class="k">Equity</div><div class="v ${pnl>=0?'up':'dn'}">${usd(pl.equity)}</div><div class="n">${sg(pnl)} vs $${pl.start}</div></div>
- <div class="card" onclick="cashSheet()"><div class="k">Cash</div><div class="v">${usd(pl.cash)}</div><div class="n">free to deploy</div></div>
- <div class="card" onclick="document.getElementById('open').scrollIntoView({behavior:'smooth'})"><div class="k">Open</div><div class="v cy">${pl.open}/15</div><div class="n">$20 each</div></div>
- <div class="card" onclick="document.getElementById('closed').scrollIntoView({behavior:'smooth'})"><div class="k">Closed · W/L</div><div class="v">${pl.wins}/${pl.losses}</div><div class="n">realized <span class="${pl.realized>=0?'up':'dn'}">${sg(pl.realized)}</span></div></div></div>
+ <div class="card" onclick="eqSheet()"><div class="k">Equity</div><div class="v ${pnl>=0?'up':'dn'}" data-n="eq" data-v="${pl.equity}" data-m="usd">${usd(pl.equity)}</div><div class="n"><span data-n="pnl" data-v="${pnl}" data-m="sg">${sg(pnl)}</span> vs $${pl.start}</div></div>
+ <div class="card" onclick="cashSheet()"><div class="k">Cash</div><div class="v" data-n="cash" data-v="${pl.cash}" data-m="usd">${usd(pl.cash)}</div><div class="n">free to deploy</div></div>
+ <div class="card" onclick="document.getElementById('open').scrollIntoView({behavior:'smooth'})"><div class="k">Open</div><div class="v cy"><span data-n="open" data-v="${pl.open}" data-m="int">${pl.open}</span>/15</div><div class="n">$20 each</div></div>
+ <div class="card" onclick="document.getElementById('closed').scrollIntoView({behavior:'smooth'})"><div class="k">Closed · W/L</div><div class="v">${pl.wins}/${pl.losses}</div><div class="n">realized <span class="${pl.realized>=0?'up':'dn'}" data-n="real" data-v="${pl.realized}" data-m="sg">${sg(pl.realized)}</span></div></div></div>
  <div class="card" style="margin-top:10px" onclick="goalSheet()"><div class="k">Goal progress ${usd(pl.equity)} / $${pl.goal} (${f(pct,0)}%)</div><div class="bar"><i style="width:${pct}%"></i></div></div>
  <h2 id="open">Open positions (${pos.length})</h2>`;
- h+=pos.length?pos.map(p=>{const q=pnlOf(p);return row(p.ca,p.name,p.sym,'peak '+f(p.max||1)+'x · held '+ago(Date.now()/1000-p.t),f(q.m)+'x',sg(q.v)+' USD',q.m>=1?'up':'dn')}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
+ h+=pos.length?pos.map(p=>{const q=pnlOf(p),pk=Math.max(p.max||1,q.m),sc=Math.max(1.6,pk*1.05);return `<div class="row pos" onclick="coin('${p.ca}')"><div class="l"><b>${esc(p.name)} <span class="yl">$${esc(p.sym)}</span></b><span>peak ${f(pk)}x · now ${f(q.m)}x · held ${ago(Date.now()/1000-p.t)}</span><div class="pb" data-k="${p.ca}" data-cur="${q.m/sc*100}" data-pk="${pk/sc*100}" data-tp="${1.5/sc*100}" data-sl="${0.7/sc*100}" data-up="${q.m>=1?1:0}"><i class="cu"></i><i class="pk"></i><u class="tp"></u><u class="sl"></u></div></div><div class="r ${q.m>=1?'up':'dn'}"><em data-n="m-${p.ca}" data-v="${q.m}" data-m="x">${f(q.m)}x</em><span data-n="p-${p.ca}" data-v="${q.v}" data-m="sg" data-s=" USD">${sg(q.v)} USD</span></div></div>`}).join(''):'<div class="empty">No open paper position. The next on-time NEW CALL opens a $20 paper buy.</div>';
  h+=`<h2>Live center</h2><div class="grid g3">
  <div class="card" onclick="walSheet()"><div class="k">Wallets</div><div class="v">${e.wallets_active??'n/a'}</div><div class="n">tracked</div></div>
  <div class="card" onclick="detSheet()"><div class="k">BUY detected</div><div class="v">${d.BUY??0}</div><div class="n">SELL ${d.SELL??0}</div></div>
@@ -84,7 +100,15 @@ function detSheet(){const d=(L.engine||{}).detections||{};open_(`<h3>Detections<
 function engSheet(){const e=L.engine||{};open_(`<h3>Engine</h3>`+kv('Wallets tracked',e.wallets_active)+kv('Baselined',e.baselined)+kv('Backlog',e.pending_tx)+kv('Cycle',e.last_cycle_secs?e.last_cycle_secs+'s':'n/a')+kv('Host','Jk laptop, 24/7')+kv('Heartbeat',L.heartbeat_at||'n/a'))}
 async function walSheet(){open_('<h3>Tracked wallets</h3><div class="empty">loading...</div>');try{if(!W){const r=await fetch('dashboard-state.json?'+Date.now(),{cache:'no-store'});W=(await r.json()).wallets||[]}
  $('pane').innerHTML='<button class="x" onclick="closeS()">✕</button><h3>Tracked wallets ('+W.length+')</h3>'+W.slice(0,300).map(w=>{const a=w.wallet_address;return `<div class="row"><div class="l"><b>${sh(a)}</b><span>${w.total_trades??0} trades · win ${w.win_rate!=null?Math.round(w.win_rate*100)+"%":"n/a"}</span></div><div class="r"><a class="btn" href="https://gmgn.ai/sol/address/${a}" target="_blank" rel="noopener">GMGN</a> <a class="btn" href="https://solscan.io/account/${a}" target="_blank" rel="noopener">Solscan</a></div></div>`}).join('')}catch(e){$('pane').innerHTML+='<div class="empty">wallet list unavailable</div>'}}
-async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render()}catch(e){}}
+
+const PV={};let first=true;
+const fmtN=(m,v,s)=>m==='usd'?usd(v):m==='sg'?sg(v)+(s||''):m==='x'?f(v)+'x':m==='int'?String(Math.round(v)):f(v);
+function enhance(){document.querySelectorAll('[data-n]').forEach(el=>{const k=el.dataset.n,v=+el.dataset.v,m=el.dataset.m,s=el.dataset.s||'';const p=PV[k];PV[k]=v;if(p===undefined||p===v||isNaN(v))return;const cls=v>p?'fu':'fd';el.classList.add(cls);const t0=performance.now();(function st(t){const x=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-x,3);el.textContent=fmtN(m,p+(v-p)*e,s);if(x<1)requestAnimationFrame(st)})(t0);setTimeout(()=>el.classList.remove(cls),1500)});
+ document.querySelectorAll('.pb').forEach(b=>{const k=b.dataset.k,cu=b.querySelector('.cu'),pk=b.querySelector('.pk'),tp=b.querySelector('.tp'),sl=b.querySelector('.sl');const pv=PV['pb'+k]||{c:0,p:0};PV['pb'+k]={c:+b.dataset.cur,p:+b.dataset.pk};cu.style.width=pv.c+'%';pk.style.width=pv.p+'%';tp.style.left=b.dataset.tp+'%';sl.style.left=b.dataset.sl+'%';requestAnimationFrame(()=>requestAnimationFrame(()=>{cu.style.width=b.dataset.cur+'%';pk.style.width=b.dataset.pk+'%'}))});
+ if(!first)document.body.classList.add('noanim');first=false}
+const render0=render;render=function(){const y=window.scrollY;render0();enhance();window.scrollTo(0,y)};
+setInterval(()=>{const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
+async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
 setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at;$('age').textContent=(s>600?'STALE · ':'live · ')+'updated '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
 pull();setInterval(pull,8000);
 </script></body></html>
