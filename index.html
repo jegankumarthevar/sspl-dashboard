@@ -11,7 +11,7 @@ h2{font-size:12px;letter-spacing:.14em;color:var(--mu);margin:20px 0 8px;text-tr
 .card:active{transform:scale(.97);border-color:var(--cy)}.card .k{color:var(--mu);font-size:12px}.card .v{font-size:24px;font-weight:700;margin:2px 0;letter-spacing:-.5px}.card .n{color:var(--mu);font-size:11px}
 .up{color:var(--gr)}.dn{color:var(--rd)}.yl{color:var(--yl)}.cy{color:var(--cy)}
 .row{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--c);border:1px solid var(--ln);border-radius:14px;padding:11px 13px;margin-bottom:8px;cursor:pointer}.row:active{border-color:var(--cy)}
-.row .l b{display:block;font-size:15px}.row .l span{color:var(--mu);font-size:11px}.row .r{text-align:right;font-weight:700}.row .r span{display:block;color:var(--mu);font-size:11px;font-weight:400}
+.row .l b{display:block;font-size:15px}.row .l span{color:var(--mu);font-size:11px}.row.pos .l>span{display:block;margin-top:2px;line-height:1.35}.row .r{text-align:right;font-weight:700}.row .r span{display:block;color:var(--mu);font-size:11px;font-weight:400}
 .bar{height:10px;border-radius:6px;background:#1a2347;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cy),var(--gr));transition:width .6s}
 .tag{font-size:10px;padding:2px 7px;border-radius:20px;border:1px solid var(--ln);color:var(--mu);margin-left:6px}
 .sheet{position:fixed;inset:0;background:#000a;display:none;z-index:9;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px)}.sheet.on{display:flex}
@@ -266,7 +266,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='72';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='73';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
