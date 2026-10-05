@@ -53,6 +53,41 @@ em{font-style:normal}.fu{animation:fu 1.4s}.fd{animation:fd 1.4s}
 .cpt{display:flex;justify-content:space-between;gap:8px;color:var(--mu);font-size:12px;margin-top:6px;flex-wrap:wrap}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}.chip{font-size:12px;padding:4px 10px;border-radius:20px;border:1px solid var(--ln);background:#0a1030;font-weight:600}
 .chip.up{border-color:#39ff8866}.chip.dn{border-color:#ff4d6d66}
+
+/* v43 premium visual pass */
+html{background:#04060f}
+body::before{content:"";position:fixed;inset:-20%;z-index:-1;background:radial-gradient(40% 30% at 15% 10%,#6d28d955,transparent 70%),radial-gradient(35% 28% at 90% 25%,#00f0ff33,transparent 70%),radial-gradient(40% 30% at 50% 100%,#39ff8826,transparent 70%);animation:aur 22s ease-in-out infinite alternate;filter:blur(30px)}
+@keyframes aur{to{transform:translate3d(-4%,3%,0) scale(1.1)}}
+h1 b{background:linear-gradient(90deg,#ffd84a,#ff9a3c,#ffd84a);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:200% 0}}
+h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;height:12px;border-radius:2px;background:linear-gradient(var(--cy),#8b5cf6)}
+.card,.row{background:linear-gradient(155deg,#16225a,#0d1434 60%);border-color:#26357a;box-shadow:0 8px 28px #0008,inset 0 1px 0 #ffffff14;transition:transform .18s,border-color .25s,box-shadow .25s}
+.card:hover,.row:hover{border-color:#00f0ff88;box-shadow:0 10px 32px #00f0ff1f,inset 0 1px 0 #ffffff22}
+.card .v{background:linear-gradient(180deg,#fff,#b9c6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card .v.up{background:linear-gradient(180deg,#b9ffd6,#39ff88);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 10px #39ff8855)}
+.card .v.dn{background:linear-gradient(180deg,#ffc0cc,#ff4d6d);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 10px #ff4d6d55)}
+.card .v.cy{background:linear-gradient(180deg,#d6fbff,#00f0ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 10px #00f0ff44)}
+.bar{box-shadow:inset 0 1px 3px #0008}.bar i{background:linear-gradient(90deg,#8b5cf6,var(--cy),var(--gr))}
+.tag{background:#ffffff0a;backdrop-filter:blur(6px)}
+#hero{position:relative;overflow:hidden;transition:box-shadow .6s,border-color .6s,background .6s}
+#hero::before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,#ffffff14 50%,transparent 60%);transform:translateX(-120%);animation:gl 7s ease-in-out infinite;pointer-events:none}
+@keyframes gl{55%,100%{transform:translateX(120%)}}
+#hero.hup{border-color:#39ff8888;background:radial-gradient(520px 200px at 50% 0,#39ff8826,transparent 70%),linear-gradient(160deg,#0e2a3a,#0a1430);box-shadow:0 12px 50px #39ff8826,0 0 0 1px #39ff8833,inset 0 0 50px #39ff8814}
+#hero.hdn{border-color:#ff4d6d88;background:radial-gradient(520px 200px at 50% 0,#ff4d6d26,transparent 70%),linear-gradient(160deg,#2a0f2a,#0a1030);box-shadow:0 12px 50px #ff4d6d26,0 0 0 1px #ff4d6d33,inset 0 0 50px #ff4d6d14}
+#hero.hup .fl{color:#4dff94;text-shadow:0 0 14px #39ff88,0 0 32px #39ff8888;border-color:#39ff8866;background:linear-gradient(#10382f,#0a1f26)}
+#hero.hdn .fl{color:#ff6b86;text-shadow:0 0 14px #ff4d6d,0 0 32px #ff4d6d88;border-color:#ff4d6d66;background:linear-gradient(#3a1230,#1f0a1e)}
+#hero .fl.sep{background:none;border:0}
+.fl{transition:color .6s,text-shadow .6s,border-color .6s,background .6s}
+#hero .hk{letter-spacing:.28em;font-size:11px;opacity:.85}
+.pill{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;padding:3px 10px;border-radius:20px;border:1px solid;backdrop-filter:blur(6px)}
+.pill i{font-style:normal;font-size:8px}
+.pill.up{color:#39ff88;border-color:#39ff8866;background:#39ff8814;text-shadow:0 0 8px #39ff8888}
+.pill.dn{color:#ff6b86;border-color:#ff4d6d66;background:#ff4d6d14;text-shadow:0 0 8px #ff4d6d88}
+#hero .vs{color:var(--mu);font-size:11px;margin-left:8px}#hero .hd{font-size:12px;margin-top:4px}
+.chip{background:#ffffff08;backdrop-filter:blur(6px)}
+.dot{box-shadow:0 0 12px var(--gr),0 0 24px #39ff8866}
+.sheet .pane{background:linear-gradient(180deg,#0e1a4a,#080e28);box-shadow:0 -10px 50px #00f0ff22}
+@media(prefers-reduced-motion:reduce){body::before,#hero::before,h1 b{animation:none}}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
 <div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
@@ -132,7 +167,7 @@ function heroUpdate(){if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.e
   if(!/[0-9]/.test(c)||!/[0-9]/.test(o)){b.textContent=c;return}
   const a=+o,z=+c;let seq=[],x=a;while(x!==z&&seq.length<10){x=(x+1)%10;seq.push(x)}
   seq.forEach((d,k)=>setTimeout(()=>{b.textContent=d;el.classList.remove('go');void el.offsetWidth;el.classList.add('go')},k*85))});
- FL.s=str;const pnl=v-pl.start;$('hd').className='hd '+(pnl>=0?'up':'dn');$('hd').textContent=(pnl>=0?'▲ ':'▼ ')+sg(pnl)+' USD vs $'+pl.start;$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · '+usd(Math.max(0,pl.goal-v))+' to go to $'+pl.goal}
+ FL.s=str;const pnl=v-pl.start;const upn=v>=pl.start;$('hero').className=upn?'hup':'hdn';$('hd').className='hd';$('hd').innerHTML='<span class="pill '+(upn?'up':'dn')+'"><i>'+(upn?'▲':'▼')+'</i>'+sg(pnl)+' USD</span><span class="vs">vs $'+pl.start+'</span>';$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · '+usd(Math.max(0,pl.goal-v))+' to go to $'+pl.goal}
 
 const hm=t=>new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:true}).toLowerCase();
 function cyBar(cy,pl){const tot=(cy.end||0)-(cy.start||0),el=Date.now()/1000-(cy.start||0),pc=tot>0?Math.max(0,Math.min(100,el/tot*100)):0;
