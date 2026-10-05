@@ -206,7 +206,13 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();overlay();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
+const BUILD='57';
+function chkBuild(){try{const b=L&&L.build;if(!b||String(b)===BUILD)return;const k='sspl_rl_'+b;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');const u=new URL(location.href);u.searchParams.set('b',b);u.searchParams.set('t',Date.now());location.replace(u.toString())}catch(e){}}
+const RAWLS='https://raw.githubusercontent.com/jegankumarthevar/sspl-dashboard/main/live-signals.json';
+async function getLS(){let j=null;try{const r=await fetch(RAWLS+'?'+Date.now(),{cache:'no-store'});if(r.ok)j=await r.json()}catch(e){}
+ try{const r2=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});const k=await r2.json();if(!j||(k.updated_at||0)>(j.updated_at||0))j=k}catch(e){}
+ return j}
+async function pull(){try{const j=await getLS();if(!j)return;if(L&&(j.updated_at||0)<(L.updated_at||0)){return}L=j;chkBuild();overlay();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
 setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at,pa=LPT?Date.now()/1000-LPT:null;$('age').textContent=(s>600?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
-pull();setInterval(pull,8000);
+pull();setInterval(pull,5000);
 </script></body></html>
