@@ -197,7 +197,16 @@ function closedRow(ca,name,sym,tin,tout,pnl,m,why){return `<div class="row" data
 function consist(){const pl=L.paper_layer||{},cy=pl.cycle||{},o=(pl.positions||[]).length,c=(pl.history||[]).length,age=Date.now()/1000-L.updated_at,ok=(cy.entries||0)===o+c;const el=$('cons');if(el)el.innerHTML=(ok?'<span class="up">✓ in sync with engine</span>':'<span class="dn">⚠ mismatch</span>')+` · entries ${cy.entries||0} = open ${o} + closed ${c} · data ${ago(age)} old`}
 const render0=render;render=function(){const y=window.scrollY;render0();enhance();consist();heroUpdate();spark(L.paper_layer||{});window.scrollTo(0,y)};
 setInterval(()=>{const bb=$('cdbar');if(bb){const s0=+bb.dataset.s,e0=+bb.dataset.e;if(e0>s0)bb.style.width=Math.max(0,Math.min(100,(Date.now()/1000-s0)/(e0-s0)*100))+'%'}const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
-async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
-setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at;$('age').textContent=(s>600?'STALE · ':'live · ')+'updated '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
+window.LIVEPX=window.LIVEPX||{};window.LPT=window.LPT||0;
+function overlay(){try{const pl=L&&L.paper_layer;if(!pl||!pl.positions)return;let ch=false;for(const p of pl.positions){const q=LIVEPX[p.ca];if(q&&q.t>(L.updated_at||0)&&q.px>0){p.last=q.px;p.max=Math.max(p.max||1,q.px/p.entry);ch=true}}
+ if(ch){let v=0;for(const p of pl.positions){const m=p.last&&p.entry?p.last/p.entry:1;v+=p.cost*(m*0.98/1.02)}pl.equity=pl.cash+v}}catch(e){}}
+async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((L.paper_layer.positions||[]).map(p=>p.ca))];if(!cas.length)return;
+ for(let i=0;i<cas.length;i+=30){const ch=cas.slice(i,i+30);const r=await fetch('https://api.dexscreener.com/tokens/v1/solana/'+ch.join(','),{cache:'no-store'});if(!r.ok)continue;const j=await r.json();const best={};
+  for(const pr of (Array.isArray(j)?j:[])){const a=pr.baseToken&&pr.baseToken.address,px=parseFloat(pr.priceUsd),lq=(pr.liquidity&&pr.liquidity.usd)||0;if(a&&px>0&&(!best[a]||lq>best[a].lq))best[a]={px,lq}}
+  const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
+ LPT=Date.now()/1000;overlay();render()}catch(e){}}
+setInterval(livePx,10000);
+async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();overlay();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
+setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at,pa=LPT?Date.now()/1000-LPT:null;$('age').textContent=(s>600?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
 pull();setInterval(pull,8000);
 </script></body></html>
