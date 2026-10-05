@@ -157,7 +157,7 @@ function coin(ca,extra){const c=callFor(ca)||{},p=(L.paper_layer.positions||[]).
  if(h)t+=kv('Paper result',`<span class="${h.pnl>=0?'up':'dn'}">${sg(h.pnl)} USD</span> · ${esc(h.why)}`)+kv('Exit multiple',h.exit_mult?f(h.exit_mult)+'x':'n/a')+kv('Closed',h.closed_at?ist(h.closed_at):'n/a');
  if(c.sent_at)t+=kv('Call time (IST)',ist(c.block_time||c.sent_at))+kv('Market cap at call',c.mc?usd(c.mc,0):'n/a')+kv('Liquidity at call',c.liq?usd(c.liq,0):'n/a (pump.fun: none reported)')+kv('Wallet bought',c.amount_sol!=null?f(c.amount_sol)+' SOL':'n/a')+kv('Milestones hit',(c.hit||[]).length?c.hit.map(x=>x+'x').join(', '):'none yet');
 if(e.t)t+=kv('Bought (IST)',ist(e.t)+' · $'+(e.cost||20)+' paper');
- if(h&&h.closed_at)t+=kv('Sold (IST)',ist(h.closed_at)+' · held '+ago(h.closed_at-(h.t||h.closed_at)))+kv('Exit price',h.exit_price?(+h.exit_price).toPrecision(4):'n/a')+kv('Exit reason',esc(h.why||'n/a'));else if(p)t+=kv('Sold (IST)','still open · latest exit '+ist(p.t+3600)+' (or '+TPX()+'x / -50%)');
+ if(h&&h.closed_at)t+=kv('Sold (IST)',ist(h.closed_at)+' · held '+ago(h.closed_at-(h.t||h.closed_at)))+kv('Exit price',(h.exit_price||(h.entry&&h.exit_mult?h.entry*h.exit_mult:0))?(+(h.exit_price||h.entry*h.exit_mult)).toPrecision(4):'n/a')+kv('Exit reason',esc(h.why||'n/a'));else if(p)t+=kv('Sold (IST)','still open · latest exit '+ist(p.t+3600)+' (or '+TPX()+'x / -50%)');
  const w=c.wallet||e.wallet,sig=c.sig||e.sig;if(w)t+=kv('Called by wallet',sh(w));
  t+=`<div class="links">${coinLinks(ca)}${w?walLinks(w):''}${sig?`<a href="https://solscan.io/tx/${sig}" target="_blank" rel="noopener">Buy tx</a>`:''}</div><button class="btn" onclick="navigator.clipboard.writeText('${ca}');this.textContent='Copied ✓'">Copy contract</button>`;open_(t)}
 function row(ca,name,sym,sub,rt,rs,cls){return `<div class="row" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>${sub}</span></div><div class="r ${cls||''}">${rt}<span>${rs||''}</span></div></div>`}
@@ -269,7 +269,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='75';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='76';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
