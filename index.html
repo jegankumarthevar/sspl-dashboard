@@ -109,6 +109,28 @@ h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;heigh
 #bank b{display:block;font-size:15px;font-weight:700}
 #bank b.up{color:#22c55e}#bank b.dn{color:#ef4444}
 .cdt{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;padding:1px 6px;border:1px solid #334155;border-radius:8px;margin-left:4px;vertical-align:middle}
+/* v62 unified flat system: one card style everywhere */
+:root{--cardbg:linear-gradient(160deg,#121c42,#0d1430);--cardbd:1px solid #1d2a5c}
+html,body{background:#05070f!important}
+body::before,body::after{display:none!important;content:none!important;animation:none!important}
+.card,.row,#hero,#hero.hup,#hero.hdn,.cybody,.empty{background:var(--cardbg)!important;border:var(--cardbd)!important;border-radius:14px!important;box-shadow:none!important;backdrop-filter:none!important}
+.empty{border-style:solid!important}
+.cybody{background:#0d1430!important;margin:4px 0 10px}
+.row,.cyh{margin-bottom:8px!important}
+.pane{background:#0a1030!important;border:var(--cardbd)!important;box-shadow:none!important}
+.kv{background:var(--cardbg);border:var(--cardbd)!important;border-radius:12px;padding:9px 12px!important;margin-bottom:7px}
+.links a,.btn{background:#0d1430!important;border:1px solid #1d2a5c!important;color:#00f0ff!important;border-radius:10px!important;box-shadow:none!important}
+.chip,.pill,.tag,.cdt{border-radius:10px!important;box-shadow:none!important;text-shadow:none!important;backdrop-filter:none!important}
+.chip{background:#0d1430!important;border:1px solid #1d2a5c!important;padding:3px 9px}
+.chip.up{border-color:#22c55e66!important}.chip.dn{border-color:#ef444466!important}
+.pill{background:#0d1430!important}
+.dot,.dot.stale{box-shadow:none!important}
+h2::before{background:#00f0ff!important;border-radius:1px}
+.pb i,.pb .cu,.pb[data-up="1"] .cu{background:#ef4444!important;box-shadow:none!important}.pb[data-up="1"] .cu{background:#22c55e!important}
+.pb .pk{box-shadow:none!important}
+.bar i{background:#00f0ff!important}
+.card:active,.row:active{transform:none!important}
+.sheet{backdrop-filter:none!important}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
 <div id="hero" onclick="eqSheet()"><div id="bank" onclick="event.stopPropagation();bankSheet()"></div><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
@@ -237,7 +259,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='61';
+const BUILD='62';
 function chkBuild(){try{const b=L&&L.build;if(!b||String(b)===BUILD)return;const k='sspl_rl_'+b;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');const u=new URL(location.href);u.searchParams.set('b',b);u.searchParams.set('t',Date.now());location.replace(u.toString())}catch(e){}}
 const APIURL='https://api.github.com/repos/jegankumarthevar/sspl-dashboard/contents/live-signals.json';let APIET=null,APIREM=60;
 async function getAPI(){if(APIREM<=6)return null;const h={'Accept':'application/vnd.github.raw'};if(APIET)h['If-None-Match']=APIET;const r=await fetch(APIURL,{headers:h,cache:'no-store'});const rem=r.headers.get('x-ratelimit-remaining');if(rem!=null)APIREM=+rem;if(r.status===304)return 'same';if(!r.ok)return null;APIET=r.headers.get('etag');return await r.json()}
