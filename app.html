@@ -51,7 +51,9 @@ function row(ca,name,sym,sub,rt,rs,cls){return `<div class="row" onclick="coin('
 function pnlOf(p){const m=p.last&&p.entry?p.last/p.entry:1;return {m,v:p.cost*(m*0.98/1.02)-p.cost}}
 function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
  const pnl=pl.equity-pl.start,pct=Math.max(0,Math.min(100,(pl.equity-pl.start)/(pl.goal-pl.start)*100));
- let h=`<h2>Paper trading · $${pl.start} → $${pl.goal}</h2><div class="grid">
+ const cy=pl.cycle||{},left=cy.end?cy.end-Date.now()/1000:0;
+ let h=`<h2>Cycle ${cy.n||'-'} · 6h rotation</h2><div class="card" onclick="cycleSheet()"><div class="k">${left>0?'Closes in':'Closing now'}</div><div class="v cy">${left>0?Math.floor(left/3600)+'h '+String(Math.floor(left%3600/60)).padStart(2,'0')+'m':'rotating...'}</div><div class="n">entries ${cy.entries??0}/${cy.max_entries||12} · each cycle restarts at $${pl.start}, closes at 6h with a full report</div></div>`;
+ h+=`<h2>Paper trading · $${pl.start} → $${pl.goal}</h2><div class="grid">
  <div class="card" onclick="eqSheet()"><div class="k">Equity</div><div class="v ${pnl>=0?'up':'dn'}">${usd(pl.equity)}</div><div class="n">${sg(pnl)} vs $${pl.start}</div></div>
  <div class="card" onclick="cashSheet()"><div class="k">Cash</div><div class="v">${usd(pl.cash)}</div><div class="n">free to deploy</div></div>
  <div class="card" onclick="document.getElementById('open').scrollIntoView({behavior:'smooth'})"><div class="k">Open</div><div class="v cy">${pl.open}/15</div><div class="n">$20 each</div></div>
@@ -65,10 +67,16 @@ function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.det
  <div class="card" onclick="engSheet()"><div class="k">Engine</div><div class="v">${e.last_cycle_secs?e.last_cycle_secs+'s':'n/a'}</div><div class="n">per cycle · laptop</div></div></div>
  <h2>NEW CALLS (${(L.calls||[]).length})</h2>`;
  h+=(L.calls||[]).length?(L.calls||[]).slice().reverse().slice(0,40).map(c=>row(c.ca,c.name,c.sym,ist(c.block_time||c.sent_at)+' IST',f(c.multiple||1)+'x',c.mc?'MC '+usd(c.mc,0):'',(c.multiple||1)>=1?'up':'dn')).join(''):'<div class="empty">No calls yet.</div>';
- h+=`<h2 id="closed">Closed trades (${hist.length})</h2>`;
+ h+=`<h2 id="closed">Closed this cycle (${hist.length})</h2>`;
  h+=hist.length?hist.map(c=>{const r=c.ca?row(c.ca,c.name,c.sym,esc(c.why)+' · '+(c.closed_at?ist(c.closed_at):''),sg(c.pnl),'USD',c.pnl>=0?'up':'dn'):'';return r}).join(''):'<div class="empty">None yet.</div>';
+ const cys=(pl.cycles||[]).slice().reverse(),days=(pl.days||[]).slice().reverse();
+ h+=`<h2>Cycle reports (${cys.length})</h2>`+(cys.length?cys.map(r=>`<div class="row" onclick="cycRep(${r.n})"><div class="l"><b>Cycle ${r.n} <span class="tag">${r.wins}W / ${r.losses}L</span></b><span>${ist(r.start)} → ${ist(r.closed_at)} IST · ${r.entries} entries</span></div><div class="r ${r.pnl>=0?'up':'dn'}">${sg(r.pnl)}<span>end ${usd(r.end_usd)}</span></div></div>`).join(''):'<div class="empty">First report posts when cycle 2 closes.</div>');
+ if(days.length)h+=`<h2>By day</h2>`+days.map(d=>`<div class="row" onclick="dayRep('${d.day}')"><div class="l"><b>${d.day}</b><span>${d.cycles} cycle(s) · ${d.cycle_wins} winning</span></div><div class="r ${d.pnl>=0?'up':'dn'}">${sg(d.pnl)}<span>USD</span></div></div>`).join('');
  h+=`<div class="foot">Paper money only. Assumed: ${esc(pl.assumptions||'')}. Skipped signals: ${pl.skipped||0}.<br>Tap anything for full data.</div>`;
  $('app').innerHTML=h}
+function cycleSheet(){const pl=L.paper_layer,cy=pl.cycle||{};open_(`<h3>Cycle ${cy.n}</h3>`+kv('Started (IST)',ist(cy.start))+kv('Closes (IST)',ist(cy.end))+kv('Entries',(cy.entries||0)+' / '+(cy.max_entries||12))+kv('Bankroll','$'+pl.start+' fresh each cycle')+kv('Per trade','$20 · TP 1.5x · SL -30% · rug = full loss')+kv('Hard cap','6 hours, everything closes at cycle end'))}
+function cycRep(n){const r=(L.paper_layer.cycles||[]).find(x=>x.n===n);if(!r)return;open_(`<h3>Cycle ${r.n} report</h3><div class="sub">${ist(r.start)} → ${ist(r.closed_at)} IST</div>`+kv('Total P/L',`<span class="${r.pnl>=0?'up':'dn'}">${sg(r.pnl)} USD</span>`)+kv('End balance',usd(r.end_usd))+kv('Entries',r.entries)+kv('Wins / Losses',r.wins+' / '+r.losses)+kv('Goal $800',r.goal_reached?'HIT':'not reached')+(r.trades||[]).slice().sort((a,b)=>b.pnl-a.pnl).map(t=>row(t.ca||'',t.name,t.sym,esc(t.why),sg(t.pnl),f(t.exit_mult)+'x',t.pnl>=0?'up':'dn')).join(''))}
+function dayRep(d){const rs=(L.paper_layer.cycles||[]).filter(r=>ist(r.closed_at)&&new Date(r.closed_at*1000).toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'})===d);open_(`<h3>${d}</h3>`+rs.map(r=>`<div class="row" onclick="cycRep(${r.n})"><div class="l"><b>Cycle ${r.n}</b><span>${r.wins}W / ${r.losses}L</span></div><div class="r ${r.pnl>=0?'up':'dn'}">${sg(r.pnl)}</div></div>`).join(''))}
 function eqSheet(){const pl=L.paper_layer,pos=pl.positions||[],ex=pos.reduce((a,p)=>a+(p.cost||20),0);open_(`<h3>Equity</h3>`+kv('Equity',usd(pl.equity))+kv('Cash',usd(pl.cash))+kv('Open cost',usd(ex))+kv('Realized',sg(pl.realized)+' USD')+kv('Unrealized',sg(pl.equity-pl.cash-ex)+' USD')+kv('Start',usd(pl.start))+kv('Goal',usd(pl.goal)))}
 function cashSheet(){const pl=L.paper_layer;open_(`<h3>Cash ledger</h3>`+kv('Cash',usd(pl.cash))+kv('Max open',15)+kv('Per trade','$20')+kv('Rules','TP 1.5x · SL -30% · rug = full loss'))}
 function goalSheet(){const pl=L.paper_layer;open_(`<h3>Goal $${pl.start} → $${pl.goal}</h3>`+kv('Equity now',usd(pl.equity))+kv('Remaining',usd(pl.goal-pl.equity))+kv('Reached',pl.goal_reached?'YES':'not yet'))}
