@@ -88,7 +88,7 @@ h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;heigh
 .dot{box-shadow:0 0 12px var(--gr),0 0 24px #39ff8866}
 .sheet .pane{background:linear-gradient(180deg,#0e1a4a,#080e28);box-shadow:0 -10px 50px #00f0ff22}
 @media(prefers-reduced-motion:reduce){body::before,#hero::before,h1 b{animation:none}}
-</style><style>.cyh{margin-bottom:0}.cybody{margin:4px 0 12px;padding:8px 10px;border:1px solid var(--ln);border-radius:12px;background:rgba(255,255,255,.03)}.cyt{padding:8px 2px;border-bottom:1px solid var(--ln)}.cyt:last-child{border:0}.cytl{display:flex;justify-content:space-between;font-size:14px}.cytm{color:var(--mu);font-size:11px;margin-top:3px;line-height:1.5}</style></head><body>
+</style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
 <div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
@@ -132,7 +132,6 @@ function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.det
  h+=`<h2 id="closed">Closed positions · cycle ${cy.n||'-'} (${hist.length})</h2>`;
  h+=hist.length?hist.map(c=>closedRow(c.ca,c.name,c.sym,c.t,c.closed_at,c.pnl,c.exit_mult,c.why)).join(''):'<div class="empty">None closed yet this cycle.</div>';
  if(prev&&(prev.trades||[]).length)h+=`<h2>Closed positions · cycle ${prev.n} (${prev.trades.length}) <span class="${prev.pnl>=0?'up':'dn'}">${sg(prev.pnl)}</span></h2>`+prev.trades.slice().sort((a,b)=>(a.closed_at||0)-(b.closed_at||0)).map(c=>closedRow(c.ca,c.name,c.sym,c.t,c.closed_at,c.pnl,c.exit_mult,c.why)).join('');
-  h+=cycHist();
   h+=`<h2>Live center</h2><div class="grid g3">
  <div class="card" onclick="walSheet()"><div class="k">Wallets</div><div class="v">${e.wallets_active??'n/a'}</div><div class="n">tracked</div></div>
  <div class="card" onclick="detSheet()"><div class="k">BUY detected</div><div class="v">${d.BUY??0}</div><div class="n">SELL ${d.SELL??0}</div></div>
@@ -181,18 +180,6 @@ function spark(pl){const el=$('spk');if(!el)return;let d=(pl.eqs||[]).filter(x=>
  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none"><defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".35"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs><line x1="0" x2="${W}" y1="${Y(st).toFixed(1)}" y2="${Y(st).toFixed(1)}" stroke="#8b97c7" stroke-opacity=".35" stroke-dasharray="3 4"/><polygon points="${X(t0).toFixed(1)},${H} ${pts.join(' ')} ${X(last[0]).toFixed(1)},${H}" fill="url(#sg)"/><polyline points="${pts.join(' ')}" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/><circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="4" fill="${c}"><animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/></circle></svg>`}
 
 const hm2=t=>t?new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',hour:'numeric',minute:'2-digit',hour12:true}).toLowerCase():'n/a';
-
-const WHY={TAKE_PROFIT:'take profit',STOP_LOSS:'stop loss -50%',RUG:'rug (liq under $3k / dead)',TIME_EXIT_1H:'1h timeout market sell',CYCLE_END_1H:'cycle end market sell'};
-const fpx=v=>v==null?'n/a':(v>=1?v.toFixed(4):v>=0.001?v.toFixed(6):v.toExponential(3));
-const dt12=t=>t?new Date(t*1000).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',day:'numeric',month:'short',hour:'numeric',minute:'2-digit',second:'2-digit',hour12:true}).toLowerCase():'n/a';
-window.OPENC=window.OPENC||new Set();
-function togC(n){OPENC.has(n)?OPENC.delete(n):OPENC.add(n);render()}
-function cycHist(){const cs=((L.paper_layer||{}).cycles||[]).slice().reverse();if(!cs.length)return '<h2>Cycle history</h2><div class="empty">No finished cycle yet. First close at the next IST hour.</div>';
-return '<h2 id="cych">Cycle history ('+cs.length+')</h2>'+cs.map(c=>{const o=OPENC.has(c.n),tr=(c.trades||[]).slice().sort((a,b)=>(a.t||0)-(b.t||0)),why=c.goal_reached?'goal reached':'1h cycle end';
-const head=`<div class="row cyh" onclick="togC(${c.n})"><div class="l"><b>Cycle ${c.n} <span class="yl">${o?'▾':'▸'}</span></b><span>${dt12(c.start)} → ${dt12(c.closed_at)} · ${esc(why)} · ${c.entries||0} entries · W${c.wins||0}/L${c.losses||0}</span></div><div class="r ${c.pnl>=0?'up':'dn'}">${sg(c.pnl)} USD<span>end ${usd(c.end_usd)}</span></div></div>`;
-if(!o)return head;
-const body=tr.length?tr.map(t=>`<div class="cyt"><div class="cytl"><b>${esc(t.name||t.sym)} <span class="yl">$${esc(t.sym)}</span></b><span class="${t.pnl>=0?'up':'dn'}">${sg(t.pnl)} USD</span></div><div class="cytm">entry ${fpx(t.entry)} · in ${dt12(t.t)}<br>out ${dt12(t.closed_at)} · ${t.exit_mult?f(t.exit_mult)+'x · ':''}${esc(WHY[t.why]||t.why||'n/a')}${t.entry==null?'<br><i>entry price not recorded for this older cycle</i>':''}</div></div>`).join(''):'<div class="empty">No trades this cycle.</div>';
-return head+'<div class="cybody">'+body+'</div>'}).join('')}
 function closedRow(ca,name,sym,tin,tout,pnl,m,why){return `<div class="row" data-ca="${ca}" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>in ${hm2(tin)} → out ${hm2(tout)} · ${esc(String(why||'').replace(/_/g,' ').toLowerCase())}</span></div><div class="r ${pnl>=0?'up':'dn'}">${sg(pnl)} USD<span>${m?f(m)+'x':''}</span></div></div>`}
 function consist(){const pl=L.paper_layer||{},cy=pl.cycle||{},o=(pl.positions||[]).length,c=(pl.history||[]).length,age=Date.now()/1000-L.updated_at,ok=(cy.entries||0)===o+c;const el=$('cons');if(el)el.innerHTML=(ok?'<span class="up">✓ in sync with engine</span>':'<span class="dn">⚠ mismatch</span>')+` · entries ${cy.entries||0} = open ${o} + closed ${c} · data ${ago(age)} old`}
 const render0=render;render=function(){const y=window.scrollY;render0();enhance();consist();heroUpdate();spark(L.paper_layer||{});window.scrollTo(0,y)};
