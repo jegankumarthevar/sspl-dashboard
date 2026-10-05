@@ -104,10 +104,14 @@ h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;heigh
 .fl,#hero.hup .fl,#hero.hdn .fl{width:auto!important;height:auto!important;min-width:0!important;padding:0!important;border:0!important;border-radius:0!important;background:none!important;overflow:visible!important;line-height:1.15!important;font-size:clamp(44px,14vw,68px)!important;font-weight:700!important;font-variant-numeric:tabular-nums}
 .fl.sep{width:auto!important}
 #hero.hup .fl{color:#22c55e!important}#hero.hdn .fl{color:#ef4444!important}
+#hero{position:relative}
+#bank{position:absolute;top:10px;right:12px;text-align:right;font-size:11px;line-height:1.25;color:#8b97c7;cursor:pointer;font-variant-numeric:tabular-nums}
+#bank b{display:block;font-size:15px;font-weight:700}
+#bank b.up{color:#22c55e}#bank b.dn{color:#ef4444}
 .cdt{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;padding:1px 6px;border:1px solid #334155;border-radius:8px;margin-left:4px;vertical-align:middle}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
-<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
+<div id="hero" onclick="eqSheet()"><div id="bank" onclick="event.stopPropagation();bankSheet()"></div><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
 let L=null,W=null;const $=s=>document.getElementById(s);
@@ -179,7 +183,10 @@ function enhance(){document.querySelectorAll('[data-n]').forEach(el=>{const k=el
  if(!first)document.body.classList.add('noanim');first=false}
 
 const FL={s:'',els:[]};
-function heroUpdate(){if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.equity;if(v==null)return;const str='$'+f(v),bd=$('board');
+function bankVal(){const pl=L.paper_layer||{};const cs=pl.cycles||[];const b=pl.bank!=null?pl.bank:cs.reduce((a,c)=>a+(c.pnl||0),0);const cur=(pl.equity||0)-(pl.start||500);return {b:b,cur:cur,tot:b+cur,n:cs.length}}
+function bankUpdate(){if(!L||!L.paper_layer)return;const x=bankVal(),e=$('bank');if(!e)return;e.innerHTML='PROFIT BANK<b class="'+(x.b>=0?'up':'dn')+'">'+(x.b>=0?'+':'-')+'$'+f(Math.abs(x.b))+'</b>live '+(x.tot>=0?'+':'-')+'$'+f(Math.abs(x.tot))}
+function bankSheet(){const x=bankVal(),cs=(L.paper_layer.cycles||[]).slice().reverse();open_('<h3>Profit bank</h3><div class="sub">Every cycle starts at $500. A profit moves to the bank. A loss is topped up to $500 from the bank.</div>'+kv('Banked (closed cycles)',`<span class="${x.b>=0?'up':'dn'}">${sg(x.b)} USD</span>`)+kv('This cycle (live)',`<span class="${x.cur>=0?'up':'dn'}">${sg(x.cur)} USD</span>`)+kv('Total live',`<span class="${x.tot>=0?'up':'dn'}">${sg(x.tot)} USD</span>`)+(x.b<0?'<div class="sub">Bank is negative: net loss so far, nothing banked to draw from.</div>':'')+'<h3 style="margin-top:14px">By cycle</h3>'+cs.map(c=>kv('Cycle '+c.n,`<span class="${c.pnl>=0?'up':'dn'}">${c.pnl>=0?'to bank ':'from bank '}${sg(c.pnl)}</span>`)).join(''))}
+function heroUpdate(){bankUpdate();if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.equity;if(v==null)return;const str='$'+f(v),bd=$('board');
  if(FL.s.length!==str.length){bd.innerHTML=[...str].map(c=>`<div class="fl${/[0-9$]/.test(c)?'':' sep'}"><b>${c}</b></div>`).join('');FL.els=[...bd.children];FL.s=str.replace(/./g,' ')}
  [...str].forEach((c,i)=>{const o=FL.s[i];if(o===c&&FL.els[i].firstChild.textContent===c)return;const el=FL.els[i],b=el.firstChild;
   if(!/[0-9]/.test(c)||!/[0-9]/.test(o)){b.textContent=c;return}
