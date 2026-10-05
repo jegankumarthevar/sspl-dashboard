@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-10-05T18:24:40.650437+00:00",
+  "exported_at": "2026-10-05T18:27:47.338965+00:00",
   "mode": "BOUNDED_OBSERVATION",
   "cash_usd": 500.0,
   "equity_usd": 500.0,
@@ -58,7 +58,7 @@
       "forward_baseline_at": "2026-10-04T13:04:49.568Z",
       "queue": {
         "COMPLETE": 1,
-        "PENDING": 32,
+        "PENDING": 35,
         "STALE_DROPPED_DATA_INCOMPLETE": 993,
         "UNSUPPORTED": 274
       },
@@ -422,8 +422,8 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:53.133Z",
       "queue": {
-        "COMPLETE": 178,
-        "PENDING": 8,
+        "COMPLETE": 180,
+        "PENDING": 11,
         "STALE_DROPPED_DATA_INCOMPLETE": 362,
         "UNSUPPORTED": 43
       },
@@ -431,9 +431,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:20:11.538Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791223617,
+        "latest_sell_at": 1791224831,
         "complete_buys": 0,
-        "complete_sells": 178,
+        "complete_sells": 180,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -966,7 +966,7 @@
       "queue": {
         "PENDING": 1,
         "STALE_DROPPED_DATA_INCOMPLETE": 821,
-        "UNSUPPORTED": 1906
+        "UNSUPPORTED": 1912
       },
       "outcome_queue": {},
       "scanner": {
@@ -1213,9 +1213,9 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:17.179Z",
       "queue": {
-        "PENDING": 25,
+        "PENDING": 27,
         "STALE_DROPPED_DATA_INCOMPLETE": 743,
-        "UNSUPPORTED": 462
+        "UNSUPPORTED": 464
       },
       "outcome_queue": {},
       "scanner": {
@@ -1458,7 +1458,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:20.436Z",
       "queue": {
-        "PENDING": 65,
+        "PENDING": 69,
         "STALE_DROPPED_DATA_INCOMPLETE": 357,
         "UNSUPPORTED": 40
       },
@@ -1639,9 +1639,9 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:22.733Z",
       "queue": {
-        "PENDING": 39,
+        "PENDING": 42,
         "STALE_DROPPED_DATA_INCOMPLETE": 1473,
-        "UNSUPPORTED": 633
+        "UNSUPPORTED": 636
       },
       "outcome_queue": {},
       "scanner": {
@@ -2072,7 +2072,7 @@
       "forward_baseline_at": "2026-10-04T09:47:27.089Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 1045,
-        "UNSUPPORTED": 509
+        "UNSUPPORTED": 511
       },
       "outcome_queue": {},
       "scanner": {
@@ -2432,7 +2432,7 @@
       "queue": {
         "PENDING": 1,
         "STALE_DROPPED_DATA_INCOMPLETE": 890,
-        "UNSUPPORTED": 708
+        "UNSUPPORTED": 720
       },
       "outcome_queue": {},
       "scanner": {
@@ -3040,7 +3040,7 @@
       "forward_baseline_at": "2026-10-04T09:10:27.891Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 2888,
-        "UNSUPPORTED": 1369
+        "UNSUPPORTED": 1370
       },
       "outcome_queue": {},
       "scanner": {
@@ -3589,7 +3589,7 @@
       "forward_baseline_at": "2026-10-04T09:47:38.041Z",
       "queue": {
         "COMPLETE": 206,
-        "PENDING": 8,
+        "PENDING": 9,
         "STALE_DROPPED_DATA_INCOMPLETE": 422,
         "UNSUPPORTED": 76
       },
@@ -4434,7 +4434,7 @@
       "forward_baseline_at": "2026-10-04T09:47:39.253Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 293,
-        "UNSUPPORTED": 225
+        "UNSUPPORTED": 228
       },
       "outcome_queue": {},
       "scanner": {
@@ -4497,7 +4497,7 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:40.259Z",
       "queue": {
-        "PENDING": 68,
+        "PENDING": 71,
         "STALE_DROPPED_DATA_INCOMPLETE": 1350,
         "UNSUPPORTED": 141
       },
@@ -4675,7 +4675,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:41.461Z",
       "queue": {
-        "PENDING": 13,
+        "PENDING": 16,
         "STALE_DROPPED_DATA_INCOMPLETE": 358,
         "UNSUPPORTED": 6
       },
@@ -5219,8 +5219,8 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:47.964Z",
       "queue": {
-        "COMPLETE": 329,
-        "PENDING": 27,
+        "COMPLETE": 330,
+        "PENDING": 28,
         "STALE_DROPPED_DATA_INCOMPLETE": 1033,
         "UNSUPPORTED": 208
       },
@@ -5882,7 +5882,7 @@
       "queue": {
         "PENDING": 4,
         "STALE_DROPPED_DATA_INCOMPLETE": 487,
-        "UNSUPPORTED": 1409
+        "UNSUPPORTED": 1417
       },
       "outcome_queue": {},
       "scanner": {
@@ -6007,18 +6007,18 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:50.261Z",
       "queue": {
-        "COMPLETE": 1047,
-        "PENDING": 115,
+        "COMPLETE": 1051,
+        "PENDING": 117,
         "STALE_DROPPED_DATA_INCOMPLETE": 2563,
-        "UNSUPPORTED": 923
+        "UNSUPPORTED": 924
       },
       "outcome_queue": {},
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:20:31.768Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791224681,
+        "latest_sell_at": 1791224792,
         "complete_buys": 0,
-        "complete_sells": 1048,
+        "complete_sells": 1051,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -6073,8 +6073,8 @@
       },
       "forward_baseline_at": "2026-10-04T09:47:51.247Z",
       "queue": {
-        "COMPLETE": 670,
-        "PENDING": 67,
+        "COMPLETE": 675,
+        "PENDING": 72,
         "STALE_DROPPED_DATA_INCOMPLETE": 1450,
         "UNSUPPORTED": 225
       },
@@ -6082,9 +6082,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:19:00.284Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791224605,
+        "latest_sell_at": 1791224841,
         "complete_buys": 0,
-        "complete_sells": 670,
+        "complete_sells": 675,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -6316,9 +6316,9 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:47:53.564Z",
       "queue": {
-        "PENDING": 5,
+        "PENDING": 6,
         "STALE_DROPPED_DATA_INCOMPLETE": 372,
-        "UNSUPPORTED": 180
+        "UNSUPPORTED": 181
       },
       "outcome_queue": {},
       "scanner": {
@@ -6379,7 +6379,7 @@
       "forward_baseline_at": "2026-10-04T09:47:55.766Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 29,
-        "UNSUPPORTED": 201
+        "UNSUPPORTED": 203
       },
       "outcome_queue": {},
       "scanner": {
@@ -6440,7 +6440,7 @@
       "forward_baseline_at": "2026-10-04T09:47:56.866Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 181,
-        "UNSUPPORTED": 42
+        "UNSUPPORTED": 43
       },
       "outcome_queue": {},
       "scanner": {
@@ -6504,7 +6504,7 @@
       "forward_baseline_at": "2026-10-04T09:47:57.975Z",
       "queue": {
         "COMPLETE": 139,
-        "PENDING": 6,
+        "PENDING": 7,
         "STALE_DROPPED_DATA_INCOMPLETE": 400,
         "UNSUPPORTED": 172
       },
@@ -6873,9 +6873,9 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:10:35.649Z",
       "queue": {
-        "PENDING": 35,
+        "PENDING": 37,
         "STALE_DROPPED_DATA_INCOMPLETE": 1287,
-        "UNSUPPORTED": 914
+        "UNSUPPORTED": 919
       },
       "outcome_queue": {},
       "scanner": {
@@ -7249,7 +7249,7 @@
       "forward_baseline_at": "2026-10-04T09:47:52.347Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 618,
-        "UNSUPPORTED": 951
+        "UNSUPPORTED": 953
       },
       "outcome_queue": {},
       "scanner": {
@@ -7489,8 +7489,8 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:02.318Z",
       "queue": {
-        "COMPLETE": 329,
-        "PENDING": 32,
+        "COMPLETE": 331,
+        "PENDING": 33,
         "STALE_DROPPED_DATA_INCOMPLETE": 1026,
         "UNSUPPORTED": 249
       },
@@ -7498,9 +7498,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:20:37.339Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791224362,
+        "latest_sell_at": 1791224760,
         "complete_buys": 0,
-        "complete_sells": 329,
+        "complete_sells": 331,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -7982,7 +7982,7 @@
       "queue": {
         "PENDING": 5,
         "STALE_DROPPED_DATA_INCOMPLETE": 825,
-        "UNSUPPORTED": 1680
+        "UNSUPPORTED": 1691
       },
       "outcome_queue": {},
       "scanner": {
@@ -8107,7 +8107,7 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:14.522Z",
       "queue": {
-        "COMPLETE": 188,
+        "COMPLETE": 189,
         "PENDING": 8,
         "STALE_DROPPED_DATA_INCOMPLETE": 401,
         "UNSUPPORTED": 70
@@ -8118,9 +8118,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:20:02.408Z",
         "latest_buy_at": 1791202763,
-        "latest_sell_at": 1791224421,
+        "latest_sell_at": 1791224779,
         "complete_buys": 4,
-        "complete_sells": 184,
+        "complete_sells": 185,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -8177,7 +8177,7 @@
       "queue": {
         "PENDING": 6,
         "STALE_DROPPED_DATA_INCOMPLETE": 674,
-        "UNSUPPORTED": 1588
+        "UNSUPPORTED": 1592
       },
       "outcome_queue": {},
       "scanner": {
@@ -8487,7 +8487,7 @@
       "forward_baseline_at": "2026-10-04T09:48:18.883Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 289,
-        "UNSUPPORTED": 366
+        "UNSUPPORTED": 374
       },
       "outcome_queue": {},
       "scanner": {
@@ -8674,9 +8674,9 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:23.285Z",
       "queue": {
-        "PENDING": 18,
+        "PENDING": 22,
         "STALE_DROPPED_DATA_INCOMPLETE": 1134,
-        "UNSUPPORTED": 578
+        "UNSUPPORTED": 581
       },
       "outcome_queue": {},
       "scanner": {
@@ -8861,8 +8861,8 @@
       },
       "forward_baseline_at": "2026-10-04T09:48:24.430Z",
       "queue": {
-        "COMPLETE": 286,
-        "PENDING": 15,
+        "COMPLETE": 287,
+        "PENDING": 16,
         "STALE_DROPPED_DATA_INCOMPLETE": 738,
         "UNSUPPORTED": 88
       },
@@ -8873,9 +8873,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:19:53.808Z",
         "latest_buy_at": 1791219701,
-        "latest_sell_at": 1791224202,
+        "latest_sell_at": 1791224818,
         "complete_buys": 14,
-        "complete_sells": 272,
+        "complete_sells": 273,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -9288,7 +9288,7 @@
       "forward_baseline_at": "2026-10-04T09:48:16.682Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 287,
-        "UNSUPPORTED": 355
+        "UNSUPPORTED": 363
       },
       "outcome_queue": {},
       "scanner": {
@@ -9709,8 +9709,8 @@
       },
       "forward_baseline_at": "2026-10-04T09:10:38.900Z",
       "queue": {
-        "COMPLETE": 494,
-        "PENDING": 2,
+        "COMPLETE": 495,
+        "PENDING": 3,
         "STALE_DROPPED_DATA_INCOMPLETE": 488,
         "UNSUPPORTED": 77
       },
@@ -9721,9 +9721,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:19:50.896Z",
         "latest_buy_at": 1791222287,
-        "latest_sell_at": 1791224438,
+        "latest_sell_at": 1791224824,
         "complete_buys": 56,
-        "complete_sells": 438,
+        "complete_sells": 439,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -9775,7 +9775,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:48:26.478Z",
       "queue": {
-        "PENDING": 39,
+        "PENDING": 41,
         "STALE_DROPPED_DATA_INCOMPLETE": 1230,
         "UNSUPPORTED": 11
       },
@@ -9900,7 +9900,7 @@
       "queue": {
         "PENDING": 27,
         "STALE_DROPPED_DATA_INCOMPLETE": 575,
-        "UNSUPPORTED": 926
+        "UNSUPPORTED": 932
       },
       "outcome_queue": {},
       "scanner": {
@@ -10322,7 +10322,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:17:17.765Z",
       "queue": {
-        "PENDING": 10,
+        "PENDING": 11,
         "STALE_DROPPED_DATA_INCOMPLETE": 378,
         "UNSUPPORTED": 13
       },
@@ -10506,9 +10506,9 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T09:10:40.045Z",
       "queue": {
-        "PENDING": 160,
+        "PENDING": 161,
         "STALE_DROPPED_DATA_INCOMPLETE": 2928,
-        "UNSUPPORTED": 2122
+        "UNSUPPORTED": 2130
       },
       "outcome_queue": {},
       "scanner": {
@@ -10817,7 +10817,7 @@
       "queue": {
         "PENDING": 6,
         "STALE_DROPPED_DATA_INCOMPLETE": 154,
-        "UNSUPPORTED": 315
+        "UNSUPPORTED": 316
       },
       "outcome_queue": {},
       "scanner": {
@@ -11309,9 +11309,9 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:29.234Z",
       "queue": {
-        "PENDING": 31,
+        "PENDING": 32,
         "STALE_DROPPED_DATA_INCOMPLETE": 952,
-        "UNSUPPORTED": 995
+        "UNSUPPORTED": 997
       },
       "outcome_queue": {},
       "scanner": {
@@ -11683,7 +11683,7 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:31.398Z",
       "queue": {
-        "PENDING": 57,
+        "PENDING": 67,
         "STALE_DROPPED_DATA_INCOMPLETE": 1642,
         "UNSUPPORTED": 107
       },
@@ -11750,7 +11750,7 @@
       "queue": {
         "PENDING": 124,
         "STALE_DROPPED_DATA_INCOMPLETE": 4060,
-        "UNSUPPORTED": 2478
+        "UNSUPPORTED": 2491
       },
       "outcome_queue": {},
       "scanner": {
@@ -12472,7 +12472,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:32.452Z",
       "queue": {
-        "PENDING": 156,
+        "PENDING": 170,
         "STALE_DROPPED_DATA_INCOMPLETE": 2603
       },
       "outcome_queue": {},
@@ -12777,7 +12777,7 @@
       "queue": {
         "PENDING": 17,
         "STALE_DROPPED_DATA_INCOMPLETE": 772,
-        "UNSUPPORTED": 212
+        "UNSUPPORTED": 214
       },
       "outcome_queue": {},
       "scanner": {
@@ -13456,7 +13456,7 @@
         "COMPLETE": 150,
         "PENDING": 14,
         "STALE_DROPPED_DATA_INCOMPLETE": 464,
-        "UNSUPPORTED": 168
+        "UNSUPPORTED": 169
       },
       "outcome_queue": {
         "DATA_INCOMPLETE": 1
@@ -13651,7 +13651,7 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:49.570Z",
       "queue": {
-        "PENDING": 136,
+        "PENDING": 152,
         "STALE_DROPPED_DATA_INCOMPLETE": 6107,
         "UNSUPPORTED": 53
       },
@@ -13771,9 +13771,9 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T10:01:47.857Z",
       "queue": {
-        "PENDING": 86,
+        "PENDING": 101,
         "STALE_DROPPED_DATA_INCOMPLETE": 1936,
-        "UNSUPPORTED": 484
+        "UNSUPPORTED": 488
       },
       "outcome_queue": {},
       "scanner": {
@@ -13838,7 +13838,7 @@
       "queue": {
         "PENDING": 13,
         "STALE_DROPPED_DATA_INCOMPLETE": 1205,
-        "UNSUPPORTED": 2080
+        "UNSUPPORTED": 2092
       },
       "outcome_queue": {},
       "scanner": {
@@ -14207,7 +14207,7 @@
       "queue": {
         "COMPLETE": 8,
         "STALE_DROPPED_DATA_INCOMPLETE": 279,
-        "UNSUPPORTED": 237
+        "UNSUPPORTED": 241
       },
       "outcome_queue": {},
       "scanner": {
@@ -14517,7 +14517,7 @@
       "queue": {
         "PENDING": 98,
         "STALE_DROPPED_DATA_INCOMPLETE": 2558,
-        "UNSUPPORTED": 4161
+        "UNSUPPORTED": 4191
       },
       "outcome_queue": {},
       "scanner": {
@@ -14581,6 +14581,7 @@
       "forward_baseline_at": "2026-10-04T10:01:45.811Z",
       "queue": {
         "COMPLETE": 115,
+        "PENDING": 1,
         "STALE_DROPPED_DATA_INCOMPLETE": 176,
         "UNSUPPORTED": 19
       },
@@ -14648,9 +14649,9 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:46.860Z",
       "queue": {
-        "PENDING": 11,
+        "PENDING": 12,
         "STALE_DROPPED_DATA_INCOMPLETE": 267,
-        "UNSUPPORTED": 322
+        "UNSUPPORTED": 323
       },
       "outcome_queue": {},
       "scanner": {
@@ -14772,7 +14773,7 @@
       "forward_baseline_at": "2026-10-04T10:01:49.105Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 299,
-        "UNSUPPORTED": 528
+        "UNSUPPORTED": 529
       },
       "outcome_queue": {},
       "scanner": {
@@ -15085,7 +15086,7 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:52.261Z",
       "queue": {
-        "PENDING": 32,
+        "PENDING": 36,
         "STALE_DROPPED_DATA_INCOMPLETE": 1142,
         "UNSUPPORTED": 334
       },
@@ -15150,9 +15151,9 @@
       },
       "forward_baseline_at": "2026-10-04T13:03:54.784Z",
       "queue": {
-        "PENDING": 62,
+        "PENDING": 63,
         "STALE_DROPPED_DATA_INCOMPLETE": 1120,
-        "UNSUPPORTED": 894
+        "UNSUPPORTED": 896
       },
       "outcome_queue": {},
       "scanner": {
@@ -15750,7 +15751,7 @@
       "forward_baseline_at": "2026-10-04T10:02:02.267Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 56,
-        "UNSUPPORTED": 29
+        "UNSUPPORTED": 30
       },
       "outcome_queue": {},
       "scanner": {
@@ -15815,7 +15816,7 @@
       "queue": {
         "PENDING": 27,
         "STALE_DROPPED_DATA_INCOMPLETE": 637,
-        "UNSUPPORTED": 808
+        "UNSUPPORTED": 814
       },
       "outcome_queue": {},
       "scanner": {
@@ -16482,7 +16483,7 @@
       "forward_baseline_at": "2026-10-04T10:02:04.364Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 385,
-        "UNSUPPORTED": 496
+        "UNSUPPORTED": 497
       },
       "outcome_queue": {},
       "scanner": {
@@ -16546,7 +16547,7 @@
       "forward_baseline_at": "2026-10-04T10:02:07.658Z",
       "queue": {
         "COMPLETE": 22,
-        "PENDING": 41,
+        "PENDING": 43,
         "STALE_DROPPED_DATA_INCOMPLETE": 742,
         "UNSUPPORTED": 19
       },
@@ -17217,7 +17218,7 @@
       "forward_baseline_at": "2026-10-04T10:02:20.884Z",
       "queue": {
         "COMPLETE": 126,
-        "PENDING": 10,
+        "PENDING": 11,
         "STALE_DROPPED_DATA_INCOMPLETE": 367,
         "UNSUPPORTED": 139
       },
@@ -17349,7 +17350,7 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:23.129Z",
       "queue": {
-        "PENDING": 18,
+        "PENDING": 19,
         "STALE_DROPPED_DATA_INCOMPLETE": 898,
         "UNSUPPORTED": 813
       },
@@ -17657,7 +17658,7 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:27.581Z",
       "queue": {
-        "PENDING": 86,
+        "PENDING": 90,
         "STALE_DROPPED_DATA_INCOMPLETE": 2629,
         "UNSUPPORTED": 331
       },
@@ -18153,7 +18154,7 @@
       "queue": {
         "PENDING": 13,
         "STALE_DROPPED_DATA_INCOMPLETE": 576,
-        "UNSUPPORTED": 391
+        "UNSUPPORTED": 393
       },
       "outcome_queue": {},
       "scanner": {
@@ -18944,7 +18945,7 @@
       "queue": {
         "PENDING": 6,
         "STALE_DROPPED_DATA_INCOMPLETE": 726,
-        "UNSUPPORTED": 1555
+        "UNSUPPORTED": 1556
       },
       "outcome_queue": {},
       "scanner": {
@@ -19935,7 +19936,7 @@
       "forward_baseline_at": "2026-10-04T13:04:09.132Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 301,
-        "UNSUPPORTED": 266
+        "UNSUPPORTED": 273
       },
       "outcome_queue": {},
       "scanner": {
@@ -20174,8 +20175,8 @@
       },
       "forward_baseline_at": "2026-10-04T10:02:46.342Z",
       "queue": {
-        "COMPLETE": 358,
-        "PENDING": 103,
+        "COMPLETE": 360,
+        "PENDING": 105,
         "STALE_DROPPED_DATA_INCOMPLETE": 3530,
         "UNSUPPORTED": 575
       },
@@ -20183,9 +20184,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:22:07.477Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791224648,
+        "latest_sell_at": 1791224829,
         "complete_buys": 0,
-        "complete_sells": 358,
+        "complete_sells": 360,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -20612,7 +20613,7 @@
       "queue": {
         "PENDING": 2,
         "STALE_DROPPED_DATA_INCOMPLETE": 2127,
-        "UNSUPPORTED": 3936
+        "UNSUPPORTED": 3960
       },
       "outcome_queue": {},
       "scanner": {
@@ -20849,9 +20850,9 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:04:56.871Z",
       "queue": {
-        "PENDING": 5,
+        "PENDING": 6,
         "STALE_DROPPED_DATA_INCOMPLETE": 755,
-        "UNSUPPORTED": 1112
+        "UNSUPPORTED": 1119
       },
       "outcome_queue": {},
       "scanner": {
@@ -21159,7 +21160,7 @@
       "forward_baseline_at": "2026-10-04T13:53:39.622Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 652,
-        "UNSUPPORTED": 1180
+        "UNSUPPORTED": 1194
       },
       "outcome_queue": {},
       "scanner": {
@@ -21285,7 +21286,7 @@
       "queue": {
         "PENDING": 14,
         "STALE_DROPPED_DATA_INCOMPLETE": 551,
-        "UNSUPPORTED": 947
+        "UNSUPPORTED": 953
       },
       "outcome_queue": {},
       "scanner": {
@@ -22489,7 +22490,7 @@
       "queue": {
         "PENDING": 2,
         "STALE_DROPPED_DATA_INCOMPLETE": 747,
-        "UNSUPPORTED": 543
+        "UNSUPPORTED": 551
       },
       "outcome_queue": {},
       "scanner": {
@@ -23157,9 +23158,9 @@
       "forward_baseline_at": "2026-10-04T13:14:13.913Z",
       "queue": {
         "COMPLETE": 13,
-        "PENDING": 133,
+        "PENDING": 135,
         "STALE_DROPPED_DATA_INCOMPLETE": 2112,
-        "UNSUPPORTED": 1509
+        "UNSUPPORTED": 1513
       },
       "outcome_queue": {},
       "scanner": {
@@ -23222,7 +23223,7 @@
       },
       "forward_baseline_at": "2026-10-04T13:05:00.588Z",
       "queue": {
-        "PENDING": 131,
+        "PENDING": 137,
         "STALE_DROPPED_DATA_INCOMPLETE": 2670,
         "UNSUPPORTED": 64
       },
@@ -23344,7 +23345,7 @@
       "queue": {
         "PENDING": 2,
         "STALE_DROPPED_DATA_INCOMPLETE": 789,
-        "UNSUPPORTED": 202
+        "UNSUPPORTED": 203
       },
       "outcome_queue": {},
       "scanner": {
@@ -23464,7 +23465,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:14:02.686Z",
       "queue": {
-        "COMPLETE": 81,
+        "COMPLETE": 82,
         "PENDING": 12,
         "STALE_DROPPED_DATA_INCOMPLETE": 354,
         "UNSUPPORTED": 11
@@ -23476,9 +23477,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T16:58:21.284Z",
         "latest_buy_at": 1791213938,
-        "latest_sell_at": 1791224398,
+        "latest_sell_at": 1791224688,
         "complete_buys": 3,
-        "complete_sells": 78,
+        "complete_sells": 79,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -23593,7 +23594,7 @@
       "forward_baseline_at": "2026-10-04T13:04:26.625Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 1466,
-        "UNSUPPORTED": 125
+        "UNSUPPORTED": 126
       },
       "outcome_queue": {},
       "scanner": {
@@ -24440,7 +24441,7 @@
       "queue": {
         "PENDING": 12,
         "STALE_DROPPED_DATA_INCOMPLETE": 959,
-        "UNSUPPORTED": 1624
+        "UNSUPPORTED": 1630
       },
       "outcome_queue": {},
       "scanner": {
@@ -24562,7 +24563,7 @@
       "forward_baseline_at": "2026-10-04T13:14:21.446Z",
       "queue": {
         "COMPLETE": 1,
-        "PENDING": 18,
+        "PENDING": 20,
         "STALE_DROPPED_DATA_INCOMPLETE": 654,
         "UNSUPPORTED": 4
       },
@@ -24624,8 +24625,8 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:53:35.894Z",
       "queue": {
-        "COMPLETE": 165,
-        "PENDING": 21,
+        "COMPLETE": 166,
+        "PENDING": 22,
         "STALE_DROPPED_DATA_INCOMPLETE": 492,
         "UNSUPPORTED": 1
       },
@@ -24633,9 +24634,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T16:30:59.867Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791224562,
+        "latest_sell_at": 1791224753,
         "complete_buys": 0,
-        "complete_sells": 165,
+        "complete_sells": 166,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -24876,7 +24877,7 @@
       "forward_baseline_at": "2026-10-04T09:10:56.437Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 3006,
-        "UNSUPPORTED": 4891
+        "UNSUPPORTED": 4931
       },
       "outcome_queue": {},
       "scanner": {
@@ -25053,7 +25054,7 @@
       "forward_baseline_at": "2026-10-04T13:14:32.817Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 945,
-        "UNSUPPORTED": 1224
+        "UNSUPPORTED": 1236
       },
       "outcome_queue": {},
       "scanner": {
@@ -25888,8 +25889,8 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:14:32.637Z",
       "queue": {
-        "COMPLETE": 51,
-        "PENDING": 4,
+        "COMPLETE": 52,
+        "PENDING": 5,
         "STALE_DROPPED_DATA_INCOMPLETE": 261,
         "UNSUPPORTED": 10
       },
@@ -25897,9 +25898,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T16:31:16.630Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791224210,
+        "latest_sell_at": 1791224791,
         "complete_buys": 0,
-        "complete_sells": 51,
+        "complete_sells": 52,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -26196,7 +26197,7 @@
       "forward_baseline_at": "2026-10-04T09:10:58.751Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 3111,
-        "UNSUPPORTED": 4256
+        "UNSUPPORTED": 4263
       },
       "outcome_queue": {},
       "scanner": {
@@ -26796,7 +26797,7 @@
       "forward_baseline_at": "2026-10-04T13:34:55.249Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 539,
-        "UNSUPPORTED": 617
+        "UNSUPPORTED": 618
       },
       "outcome_queue": {},
       "scanner": {
@@ -26919,7 +26920,7 @@
       "queue": {
         "PENDING": 2,
         "STALE_DROPPED_DATA_INCOMPLETE": 846,
-        "UNSUPPORTED": 269
+        "UNSUPPORTED": 270
       },
       "outcome_queue": {},
       "scanner": {
@@ -26982,9 +26983,9 @@
       },
       "forward_baseline_at": "2026-10-04T13:14:53.185Z",
       "queue": {
-        "PENDING": 62,
+        "PENDING": 68,
         "STALE_DROPPED_DATA_INCOMPLETE": 1462,
-        "UNSUPPORTED": 965
+        "UNSUPPORTED": 968
       },
       "outcome_queue": {},
       "scanner": {
@@ -27466,7 +27467,7 @@
       },
       "forward_baseline_at": "2026-10-04T13:04:38.730Z",
       "queue": {
-        "PENDING": 28,
+        "PENDING": 29,
         "STALE_DROPPED_DATA_INCOMPLETE": 532,
         "UNSUPPORTED": 419
       },
@@ -27773,7 +27774,7 @@
       "forward_baseline_at": "2026-10-04T13:14:51.268Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 620,
-        "UNSUPPORTED": 555
+        "UNSUPPORTED": 561
       },
       "outcome_queue": {},
       "scanner": {
@@ -27838,7 +27839,7 @@
       "queue": {
         "PENDING": 26,
         "STALE_DROPPED_DATA_INCOMPLETE": 546,
-        "UNSUPPORTED": 947
+        "UNSUPPORTED": 950
       },
       "outcome_queue": {},
       "scanner": {
@@ -28022,7 +28023,7 @@
       "queue": {
         "PENDING": 17,
         "STALE_DROPPED_DATA_INCOMPLETE": 490,
-        "UNSUPPORTED": 404
+        "UNSUPPORTED": 406
       },
       "outcome_queue": {},
       "scanner": {
@@ -28082,7 +28083,7 @@
       "primary_evidence": null,
       "forward_baseline_at": "2026-10-04T13:53:33.040Z",
       "queue": {
-        "PENDING": 62,
+        "PENDING": 68,
         "STALE_DROPPED_DATA_INCOMPLETE": 1682,
         "UNSUPPORTED": 13
       },
@@ -28209,7 +28210,7 @@
       "forward_baseline_at": "2026-10-04T13:15:01.845Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 673,
-        "UNSUPPORTED": 1404
+        "UNSUPPORTED": 1406
       },
       "outcome_queue": {},
       "scanner": {
@@ -28390,7 +28391,7 @@
       "queue": {
         "PENDING": 6,
         "STALE_DROPPED_DATA_INCOMPLETE": 289,
-        "UNSUPPORTED": 159
+        "UNSUPPORTED": 160
       },
       "outcome_queue": {},
       "scanner": {
@@ -28807,7 +28808,7 @@
       "forward_baseline_at": "2026-10-04T09:11:02.052Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 2389,
-        "UNSUPPORTED": 4789
+        "UNSUPPORTED": 4847
       },
       "outcome_queue": {},
       "scanner": {
@@ -28872,7 +28873,7 @@
       "queue": {
         "PENDING": 57,
         "STALE_DROPPED_DATA_INCOMPLETE": 1637,
-        "UNSUPPORTED": 1246
+        "UNSUPPORTED": 1248
       },
       "outcome_queue": {},
       "scanner": {
@@ -29238,7 +29239,7 @@
       },
       "forward_baseline_at": "2026-10-04T10:01:53.347Z",
       "queue": {
-        "PENDING": 131,
+        "PENDING": 141,
         "STALE_DROPPED_DATA_INCOMPLETE": 2052,
         "UNSUPPORTED": 44
       },
@@ -29302,7 +29303,7 @@
       "queue": {
         "PENDING": 2,
         "STALE_DROPPED_DATA_INCOMPLETE": 91,
-        "UNSUPPORTED": 109
+        "UNSUPPORTED": 111
       },
       "outcome_queue": {},
       "scanner": {
@@ -29484,7 +29485,7 @@
         "COMPLETE": 1,
         "PENDING": 24,
         "STALE_DROPPED_DATA_INCOMPLETE": 741,
-        "UNSUPPORTED": 84
+        "UNSUPPORTED": 85
       },
       "outcome_queue": {},
       "scanner": {
@@ -29786,7 +29787,7 @@
       "queue": {
         "PENDING": 55,
         "STALE_DROPPED_DATA_INCOMPLETE": 1408,
-        "UNSUPPORTED": 3722
+        "UNSUPPORTED": 3743
       },
       "outcome_queue": {},
       "scanner": {
@@ -29911,7 +29912,7 @@
       },
       "forward_baseline_at": "2026-10-04T13:35:01.011Z",
       "queue": {
-        "COMPLETE": 150,
+        "COMPLETE": 151,
         "PENDING": 12,
         "STALE_DROPPED_DATA_INCOMPLETE": 477,
         "UNSUPPORTED": 177
@@ -29920,9 +29921,9 @@
       "scanner": {
         "last_successful_scan_at": "2026-10-05T18:22:35.408Z",
         "latest_buy_at": null,
-        "latest_sell_at": 1791223971,
+        "latest_sell_at": 1791224703,
         "complete_buys": 0,
-        "complete_sells": 150,
+        "complete_sells": 151,
         "accounting_profit_status": "DATA_INCOMPLETE",
         "coverage": "BOUNDED_SAMPLES_NOT_EVERY_ENTRY"
       }
@@ -30222,7 +30223,7 @@
       "forward_baseline_at": "2026-10-04T13:19:22.746Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 963,
-        "UNSUPPORTED": 2537
+        "UNSUPPORTED": 2557
       },
       "outcome_queue": {},
       "scanner": {
@@ -30408,7 +30409,7 @@
       "forward_baseline_at": "2026-10-04T12:50:42.906Z",
       "queue": {
         "STALE_DROPPED_DATA_INCOMPLETE": 432,
-        "UNSUPPORTED": 678
+        "UNSUPPORTED": 679
       },
       "outcome_queue": {},
       "scanner": {
@@ -30623,30 +30624,9 @@
   },
   "activity": [
     {
-      "signature": "3GCHuGrHaAQ475xfbmwsg8BpM2gNUDpPRkqumuNyPtAsMKc9bF8Xrz7HKzn6LQMU5xzgyQU1sMJDVZZuZ2Y8LVER",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224681,
-      "direction": "SELL",
-      "mint_in": "3pxPbYQ4g5npJVXX9MhXvSwSPCB5VmKosHFiogxcPqfg",
-      "mint_out": "So11111111111111111111111111111111111111112",
-      "evidence_quality": "COMPLETE",
-      "reason_codes": "[]",
-      "trade": {
-        "token_mint": "3pxPbYQ4g5npJVXX9MhXvSwSPCB5VmKosHFiogxcPqfg",
-        "pool_address": "ACwA6R9KRX6yTFbLQenHcJfP1eF9EYgQRhJoD2UNcXAk",
-        "token_quantity_raw": "12765036154736",
-        "token_decimals": 6,
-        "sol_lamports": "951155956",
-        "curve_sol_lamports": "963195906",
-        "protocol_fee_lamports": "9150362",
-        "creator_fee_lamports": "2889588",
-        "transaction_fee_lamports": "130000"
-      }
-    },
-    {
-      "signature": "5Xzjx4czS9Z3SuXc5TbrK6gr5DspUUofKQoAN4K7oGjVwhiJ1fpTig29QDaSWQNowBjwZmiyuEQrYfsV7tA6jNyg",
-      "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
-      "block_time": 1791224681,
+      "signature": "4MGxbCvpZGKWe2AHFpbZDN582nPtr8h9PgbKEDqRM74XkXPMBPqTSew8oisbqdZCu4cTpCT6EUniUWbGvU1aCcvM",
+      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
+      "block_time": 1791224869,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -30655,317 +30635,9 @@
       "trade": null
     },
     {
-      "signature": "5fzFYSzHbRR7qv3FnxPauQ2PChecPiDv863M9xMsRYDganVGfbbiHvrcGBzJy7Pmu9ceXc8ZTpmkJDKW1YvrtC3f",
-      "wallet_address": "5ZG2GAM5Ybzx6RnpTdjyEwc2c8mubrttjCujwxMwUa6D",
-      "block_time": 1791224680,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "2bzsbMNmAaTFSXbXTcjNmXCYw4r3uCRtxFYD7J4jy6VWB5SPddTxyrFethzjnF2F7kUPbWA17FUk9iuQQ4cypsgm",
-      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
-      "block_time": 1791224680,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "5G5zuMU6mCrsQPwLnqmYgLmdB1aX1o3iYQx8yLJifgVybjM74gKkhMAkiijS96Qak8DPktrtpoasB2a2LsvXS9cM",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224680,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "dwQsyd62aJQtebsp7PxHk1yXxYmVwUNUctcd5RGCCGLMu2SzTNhh9UGpEZVw1dBViEYCj2gRfNKw7AxdcVmB5br",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224680,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
-      "trade": null
-    },
-    {
-      "signature": "4wKQE4jutbsbzFrA2Shdf6wac7KQFFvaKoYVJ9so43u7ozYWZawtQujBHA5E2uxMa9u1CeS9HbM5e1eNYqApX7iZ",
-      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
-      "block_time": 1791224678,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3QoTxyi7An4Ndt5DEevVkMDH73VPS4RhHP2J94z97wmvA7vX362QqQSc2aKgVams9wv3wnkMHtDxXWNgS3NDgWXs",
-      "wallet_address": "AEgTuy8Lg4wfnjm285mk3P2k1p39ofqNXk8b5VtYhdCs",
-      "block_time": 1791224677,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "4neSnRGaogotJqf73PNgR2w5Dp2hcG5tv3HPpDJrMdwm2ZU7nFTRfFkPUFtxxxP6gbrFHudHwyNQcNCoUDocknCE",
+      "signature": "5afdbqYDXE8uKXdk6itVjPL7FE1K9ArZdPkif11ZBnKy2WBTn4S6kZH4fhJUP2p8iFQErUeYKYrMRxbxUwxxmmEz",
       "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
-      "block_time": 1791224677,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "2p93tQs63Y56oXSeAw97xvVzcoQSUUd7WG5mcQFFc9fm8jcNS7ojRFC8r3A43Edt6NXdcQbSvZSFYcT9aJ1GfjC5",
-      "wallet_address": "HtJ9i3BsmakoqAQXXU74zGvPibRpspXETrtP9gZXvqFe",
-      "block_time": 1791224677,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "dkNFteifj6hrKv2DDiBm2TvVXDBHL1c1CFzTzwP9R6KPwK2TNjZ6f4CoUk9PojqapcRJ9ch2EtdRLu1HPmem3eo",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224677,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
-      "trade": null
-    },
-    {
-      "signature": "4xeMwTnRRx1hrCHATyjFADjiTFqYuEjaEuLCt2oBRJ65n71Uhx6Q9TSLtM3zrbJytCHQcEcajRnDQjXAtWUN1MwJ",
-      "wallet_address": "Bgcrbz4BvTdajCbRgAKbwVU4hQcHPYy9Nk5rL9xpA8eu",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "3YidkmF6hz8RqftJTyGjfY6dzwXR3gPArfdpMDzq13EvkBmwBMSv2LHuUDjbVbPad7jYhtgHEy9hRCUyf3iG21u5",
-      "wallet_address": "8T4XXALtGjvJytQ2zvFSBaZYexxqd1fzpC1n8ATSbkWc",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "5ojFryFsERKay9BwzA97jZd7xe4G51967NG7RFsN9B6xTVMBJu6DxByhQENG7sHXveaar7n5MXPpnLGgJDBhiGdR",
-      "wallet_address": "HL9rRBGSQRaeCqCXtFcraHBkx2mLBHnGEQpNqiPpuk3b",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "3N7VvX59GLvSpbCxaVNyYEFGYDFXhT1gxEx4ATLpGPoNkdZbcfZN69cVwgwh9ce9bKrNnNz8AsEipA9KfZUwBSfW",
-      "wallet_address": "HtJ9i3BsmakoqAQXXU74zGvPibRpspXETrtP9gZXvqFe",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "mFTgfYQB37iYLuVM62mnEsDKqthxKjqfaFA4HW29CE8zKEhhkCcYudvgy7hXw1pyKg9SoTWRRRKEGtHwivX9sa1",
-      "wallet_address": "FiFawHqxeTVBhv6YbqbLwDVuvokRpPUM1bNwAyxhGc6W",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "5hhSdSnrNCSD5u53QFyXhwd5JNzT1mTJJm5aCiauyVANzQ43fUQkNhc3DxmZUyoHsbdNS1gs83RUfYGxHiuqzMW6",
-      "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "5fGUYYiGqMfDVweY63es5aFVqeWzsV5fHiZPTkyLjqQ1zTJhsGRQf6Gv65uB1UjKoTvw6qSoeo9qLho2RWx1rQ3Q",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
-      "trade": null
-    },
-    {
-      "signature": "n6ooGuzWZxNptK5TxbpZHKiyE2L8gonW6FiHv4XCd8yJronnyt2uyhriBuB9NpQGM4jP3zCucTZycJZsdVbvmc3",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "4ie3PWKQj8dKPMbC4nipwKuv2RoMVC7nFeSo9c1BUfQQeTascRcJQZPwjBBTHUah92SaNnsPfAYJ3kXMqnYQK2mH",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224676,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "5CeTsmz6gUVdNyUK5bj4fuzZFHcE4fDT7Gss4fU4QywQyiwKjvpyBoCcFPFTDVAPNLcNMuNhmukaDydAFKuPPATH",
-      "wallet_address": "6YC4BiqyxYku1g6VE33Me2b8ZuXdcArkt1RAYsLz6erL",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "4nfHj6huVL34TTq5G5B6TfEesmWvs5Ya1F4ZNqmF8zZ8TExFSu7mBSjjcVtg2Mmsur475h3qd6xGKUWC5ogBkhF1",
-      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4LjD7pkvUhhTsfDVkXpjEwMTfiEBBa6qU73GhbnrWES29ujaA4xwSbxyYmpJAw5DRyzoZ53muEqWijtnWi1rmSHv",
-      "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "2sL1ju13XJ8HpeL9oDpfsNi1y5uRpCuf5TQEE2RwgmxepueqjAdddBo1btJmcUFLV7S3DZ5x1dLHFjzjjcZCVbww",
-      "wallet_address": "HvJi28GXR2yWgDg1bewcvTV9yficRvgTnrdcc78kCFEF",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "mFeJ5FyRrGugekhKVZLF2tEqy5WSiGZu6rAN3BUugBBDbxq5JtcG37p1wJ6Jx7No5s14Zwo2n4hb7f6whKGwN7M",
-      "wallet_address": "DSk51Zm9yE7BefbKbTY36Bx7Tfx93PEJSRpXrzqhy91k",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "4Nzu4H6QAbwhRdS7fx6Md1yXDH53RSrzy4sFTHDqZHrFGUYAD1H832JHWoTGZE276KxfAc4zaihSwvEjzPtigDX4",
-      "wallet_address": "Ecmuu7qcuX4WMzXU6CTryuKsMURyDidAKS8J1554L92X",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "3MXjrn2rXcZwzBRqPVmVwvXTD6Yr41na9v38cN3ESHY7QE6oHpeSBZgMvMgYcftWKMSMEP53FsDDVL4csnfizs3S",
-      "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "21FKE8FcxJJr7ETwYmwefZ2BdScXeWZvNdkwykEnCQ2E68NuWLUhR6vS8qruYV5kNQ6whTgNFszFd6FGyBmmyndC",
-      "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "62D2wB19ELodgyamHv4U7QyFn5LDcz3KV43VVakjKUGUtNMwULsWmWvMqcGSQYXYq647Weswe9ko55Nq2g2mbydM",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "2whKHHNaQbyNUS15e973MFonRcDF28exVWwow6PTmRgiqgmQDB59f7g3iofSyambQGZoyrypfm2zsRiZU5s4DHE1",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224675,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "yq9WxEGavBgZ6za6W5fYDT1oGpU38FsrBu1sFTbz8aXzm7JEmznnz4WhcSq2uuEjFVowubyNbYWrsj4wgouKB5h",
-      "wallet_address": "6Us8oi5bSN6eJgY9RndjWCyN113RwLDQxDESDdDQ9sZy",
-      "block_time": 1791224674,
+      "block_time": 1791224868,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -30974,20 +30646,20 @@
       "trade": null
     },
     {
-      "signature": "2cGiQr9or9tNHHEEeQtQJZ71VNucds5TC6Lcbs44o6kpiVdg3gM1CeXv3AsAZb8RpgGKqsxJt9cqSC6vjQJr2pSk",
-      "wallet_address": "6Us8oi5bSN6eJgY9RndjWCyN113RwLDQxDESDdDQ9sZy",
-      "block_time": 1791224674,
+      "signature": "5pHzPJt1VaHifucPS6h81x2B7RW6eGmeTHuBSDX1j5wojU3j7JWrEC6J9W2EFjgaVww4oPhueYec2sCJjvud5cBx",
+      "wallet_address": "9999huSCf6QpepPHQVFLZ9smhsbwkV4XWPLboiy9qqRj",
+      "block_time": 1791224868,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
       "trade": null
     },
     {
-      "signature": "4L7XQhDNrSYDtdcTrXHnwpCg7yUJPXUZHrSFXTg9HqyErjHCZX9MwxdafsMCXrdYnDyRHGuu2D3VKwQeB4RtUve3",
+      "signature": "2mqDbRmqkkvKBbAD1rZ2f7vUCXqzGqKBXJQ6c1x27gigLVzcTJuoaMNpu8JYyZmSsgNynb5pqTjF8kqfiuXxsMtg",
       "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
-      "block_time": 1791224674,
+      "block_time": 1791224867,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -30996,64 +30668,9 @@
       "trade": null
     },
     {
-      "signature": "4gR6RE9DdEghkTbyWxQ5PK46c9emZDJoXiJqwNAZi6zegKGg7wSN3LxizcNbL64D6R9xXu3hZCcu5pGFwuCWJTPC",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224673,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "4fHNwgYzBLV2UmifvWokGiS4HaTxhiKjTVMZXpAAMzBrpX2AbSLjDYjQw3MprMMmxnLesUyJ8PaKSsgsrTWmuNzm",
-      "wallet_address": "Ecmuu7qcuX4WMzXU6CTryuKsMURyDidAKS8J1554L92X",
-      "block_time": 1791224673,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "k6HQmoSDQqCzDdV43ibHzNtpgffZibVfgBMcy58uWWXyNxDGAscWPE5b6LW8tVJ8pq7yQZoCaeGQncaCvyDZW7V",
-      "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
-      "block_time": 1791224673,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "4EbLspHNCh26fD7RXveKA6K6MgDPafa22pLDHhYXcVvMCa2Vo1z7QCwpqhi2MLsPBDHWcH6fpySuc4oXXK12baxG",
-      "wallet_address": "5BFuw7KyK5ryyvBwv4uJYwwNMnXPqGJGcf6okqtnhmFJ",
-      "block_time": 1791224673,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "77bL8kQfDAGHF3rb3Ste7hpnWdxyn1DcpwcTRcCtEGTa75aQSfUPqJFuxYck5PzF8q1WgQXPvuNoX8f9NxVRBRH",
+      "signature": "4J2zJyp2KfCPSnjMvwypuAAwrnAfj5ygJN7ErM4myZpDAr98jCwhjfD4DrCpDPhvuzmHFay1b3ucGy7oerrSRjwr",
       "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
-      "block_time": 1791224673,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "5HWSzhXr9vLAhFMR4DFy6S2pwajuHm4i8KR9ABVViZEyTzAQQ6Xc4DVS42FSsAQeAufh4epaK2sukKgeQopibBQo",
-      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
-      "block_time": 1791224672,
+      "block_time": 1791224863,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31062,9 +30679,9 @@
       "trade": null
     },
     {
-      "signature": "5vLwDyDEKhxRJS2v2s7YnMrenABYfjQXM746BnBaBXmWVbkYkGmiKhruxsUJcnGRttxTMnajPGpYmnqhSyLkcJh9",
-      "wallet_address": "6YC4BiqyxYku1g6VE33Me2b8ZuXdcArkt1RAYsLz6erL",
-      "block_time": 1791224672,
+      "signature": "4nLy6sRh1eY1XtU3Lp3Xqq3daC2ppVWHrSTf8XUM4WEKBtPoVK7S33a7rarqJrw9RiNDF6tYrYyHG4gi28pdXnPj",
+      "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
+      "block_time": 1791224863,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31073,42 +30690,9 @@
       "trade": null
     },
     {
-      "signature": "5o6EkLmkVKBDRoPxpd4ku9oW2dXFJs34qEMXZqumYYroCtjPatpQr4mUKPTBhKaUJhtsZeDz278CTt3q3vz7c8iA",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224672,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "rQ67bfBh5kDRcKxFrMkur7XafTPANiYAncBn8h9KLxnpCKg4PXR8K1YEp82HiRorkxyWfhpabMjLEzEL6ZsvMA9",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224672,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
-      "trade": null
-    },
-    {
-      "signature": "5VkvkPnLgPrsvQcRn7btiyjbPwrj3jYCPKrgv5q4Qnjswxj5prbidmqJZBeyrLa94kP8voWoXSwuJwvAjyJmSamg",
-      "wallet_address": "Bgcrbz4BvTdajCbRgAKbwVU4hQcHPYy9Nk5rL9xpA8eu",
-      "block_time": 1791224671,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "3vZcmfKEm4WvBM7hMha7Q5fDNzPYVioGXPa7ja8rNecvgad5nCkaSFCuBg2gbJSnZBa15GJbN3MK1iGdrUD1gtzN",
-      "wallet_address": "FiFawHqxeTVBhv6YbqbLwDVuvokRpPUM1bNwAyxhGc6W",
-      "block_time": 1791224671,
+      "signature": "3N4hCYmoHsioWVDNqBHV7PDDebpgZDyYtvz7HFUR3guT268yXwkTVGrUvZMD5pYVpXfce5CJVDyPPNTBnoCFNnaq",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224861,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31117,9 +30701,9 @@
       "trade": null
     },
     {
-      "signature": "2dtx5ZccYL1NQFLYyu2WkEt6UXijF2mEf8K5t5V7XJDQt6NqBSrJdL6KYhSRSm3oehrYiuADTnWfuhmzRXRtv8gw",
+      "signature": "mNXVMc8tHtcdBhFvzY9PzTVFDotrtg4PtaqNGTPYKVR67QZVETTQUV5Mjf1rbRX7iCixhhjx9UXCKZqUDvirL3D",
       "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
-      "block_time": 1791224671,
+      "block_time": 1791224861,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31128,9 +30712,9 @@
       "trade": null
     },
     {
-      "signature": "3AYSajYU8tRcSqKTmmgBgprcCEm1m4jetVMNEfvcgEQZrdHCbkE69Mxhv6WAVfR9QybqKDnvozyXnPNM4AEMNfo",
-      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
-      "block_time": 1791224670,
+      "signature": "5jYCfpgon4BSjYYFt9oXPXof8eE1jWoS8rSVPrYLQnh55ZNW68VziF5qYDS8DZn84uHRtGA6ck2rsCPqzgunukK",
+      "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
+      "block_time": 1791224860,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31139,20 +30723,64 @@
       "trade": null
     },
     {
-      "signature": "5Mf8MAHhSJXZBg8mr5o4gnPffm4qKMUEJVLXUW1ZjGVae5qzyC2PuLGeczAVgJvkaWH6Gn12ckWL87dQ3SjhRdvp",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224670,
+      "signature": "2NGD1TcuVRu5dkQXmbm7ztXis1w6Qgv4PaNbfTXusNks8CePxeQ6mXMcmkaoaqFpCFAsCAbSo73KYNu5B2o4WpMf",
+      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
+      "block_time": 1791224859,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
       "trade": null
     },
     {
-      "signature": "9DtEbqpDZB2aTBPzbp6FB9QuGEpu4zTcC1fvSKndNo4W3M7PDPyZLtgEWkV5UCSPTpNTkDaHPXyeBZX1xXeihPt",
-      "wallet_address": "HvJi28GXR2yWgDg1bewcvTV9yficRvgTnrdcc78kCFEF",
-      "block_time": 1791224670,
+      "signature": "48DCyexpZe8MdLQECDEtt6cSum9Nddbb9KLMYobYZNybokypTxxR9pGCWq4Bonaxohr54qwhGKtcnr7Uf3txqtaD",
+      "wallet_address": "9bwHbhAEDTWgF8NMdxZkJLwooDcy3fshSxGanGWeskHC",
+      "block_time": 1791224858,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "5D2ivvXgBfi1jW24GqrnwRtbp4o3SFzqU4qqnkQMp8DMkwue1cmDunpzd1rd627hnfSNPM3fjg8kv76LY9rXiuQK",
+      "wallet_address": "AEgTuy8Lg4wfnjm285mk3P2k1p39ofqNXk8b5VtYhdCs",
+      "block_time": 1791224857,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4KBuaRd5j74xnnM9JwiheSYkdyVeSyYSXxwCYQsXg9vK7jGCA7ysQPP3z7NtYz6EXTKy9osNRLczwzpmjxcC5BpD",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224857,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2nA8YWzeySXLLGJx7ztQtX6HgGmKS2ipp9oeW1VbV9W4fzbFFeUDRZLyYnaSFmu2zfRGB7YTgiyEuMwFv3HRmstN",
+      "wallet_address": "EWdAgcTdywcj5JxK4PEB4wN9zW2vtJDDrZcjbCUo3QaL",
+      "block_time": 1791224856,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "58NcsSFjVo447kuXzKGNcdHVWCBiFzkafiG1SyRgfgz2m1QCxscgRZuYfLS4nnqNn5jX1SKcJDmJHZNPd3yyALXb",
+      "wallet_address": "2pcL7kT6wK1Qh8Kp3HAkaDDQzhu4PHrnWmspqs1oqXmb",
+      "block_time": 1791224854,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31161,41 +30789,20 @@
       "trade": null
     },
     {
-      "signature": "3yNtNvL8bAj8CSczncZf3arwijDgMbVJx8pU5WrS37MRXr17VyRxZKDd5Q2wmPTjppV7cSyjRVH6MFKQzLgHBgnj",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224669,
-      "direction": "SELL",
-      "mint_in": "nMt5zVi5Vtd9UHpoBVKb3m9sL9u4ytpNuLzUSR3UQjs",
-      "mint_out": "So11111111111111111111111111111111111111112",
-      "evidence_quality": "COMPLETE",
-      "reason_codes": "[]",
-      "trade": {
-        "token_mint": "nMt5zVi5Vtd9UHpoBVKb3m9sL9u4ytpNuLzUSR3UQjs",
-        "pool_address": "HsenK6Wk5ucKx1CZdMfVGVH3e8X3qBwcL9G8Cta8aXQb",
-        "token_quantity_raw": "10175415643551",
-        "token_decimals": 6,
-        "sol_lamports": "822688790",
-        "curve_sol_lamports": "833102573",
-        "protocol_fee_lamports": "7914475",
-        "creator_fee_lamports": "2499308",
-        "transaction_fee_lamports": "130000"
-      }
-    },
-    {
-      "signature": "5P6hNAhqAQqi7JxwnP3Y1git9iGddf6rjVfeEgJMbgit8dRsVZn3y32A56ZdseVgjQCdYEkB4qqRHVr1VhLfGSNg",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224669,
+      "signature": "5efnXyYgFtdyc7zHVgfyr1RPbVHEp7gBXXcnzK8bQVVazNKHC9L3Eb4DSoUEGnX2iCumFYdeNsqXqCsmdjf92RDF",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224853,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
       "trade": null
     },
     {
-      "signature": "4My3rm2rMGJMQzmfCsedVe4efTC1STw5xjZpzVgBdLBxErPbXNsAEYjsFgPFNMLeP72hEqyyuTRKMZ1T8oLiaTSW",
+      "signature": "2Bk4sbeQAb37DcxrS4bMT8aUYqfc54XtGJ9xBpg3prP9i3EyqEnK94bGxgZzrpWo5tDaGRwgqnrsL2pG7QmTb42j",
       "wallet_address": "7FPqg7MpJwvGneBPvkBrCDjAvZhFnAvoiUw9LF91nsN",
-      "block_time": 1791224668,
+      "block_time": 1791224853,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31204,20 +30811,42 @@
       "trade": null
     },
     {
-      "signature": "2a79nXC6ourYPHVd98DZ6mSwJNqTZBmtcyZscEmNVgRRCHHS1HVwKim1iYjaugwX9jXn2AnCitW12KqfWaYCKoqQ",
-      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
-      "block_time": 1791224668,
+      "signature": "4LSdRA68EJiRJJTbTaCvaSUbmLQdvFdceHjrcfidXF1u5stb6h32EiHa1SParEv5VCZo52GTREKxf5EKPztx3WEV",
+      "wallet_address": "1411K8uz43Mp3bv5TShPX4PsZPD7iwidruzo4gLBNnBT",
+      "block_time": 1791224852,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2nmPBUpyp2DpSXwaxVX63DNENwsipLMc6kTfpdRefWLNtJLzEqaYED4QF1iUPWTnatHnYWqzDUfRn77jrPPBqyKq",
+      "wallet_address": "FZU56d9iPqohXM5XBrYYBZLi2UoUnZT4V5Qf2631tEzb",
+      "block_time": 1791224852,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
+      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
       "trade": null
     },
     {
-      "signature": "EQnpBCZBRfGsxzL4LmA56Bh1ydfpsXr2Wm2XAkYv55pn9sq6y8ZYajcFzJzBwde7b42x6FL7VBdggEKiy7vPdJQ",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224667,
+      "signature": "5N2HEqLahPk4pqyDcWRL5wgMnHHfZSkdGLFtp8HD1kqQgVvF9ijvthmKZVdx9D3VhbWSGnVHuc6pNwG7hfzWf53c",
+      "wallet_address": "7W8SEZv79hk4445o56Fd6RzhbUsozkzGXi8vkc7vNRr8",
+      "block_time": 1791224852,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "64vmo6csxCub43maLhWxRm2bEDe4ctX46M57UwhYnVmwf31Yy6FhSNiE4Brm88CgVRqrXqiNCmFTKBNjeqMeM4hU",
+      "wallet_address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+      "block_time": 1791224852,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31226,9 +30855,9 @@
       "trade": null
     },
     {
-      "signature": "2zpdsmrAAM6Xo2R1o3S4iCqZEjuHtoqyttNiQEJmcGvnYSrwP5yKMRyHc8ZJXnVAxhvCpTE8d8vzvcKqsEGhzTwR",
-      "wallet_address": "FeqP1rvy8LFgazENBMazjtTUF5PwDX4ZTcmM7Pz5yoUk",
-      "block_time": 1791224666,
+      "signature": "5MSt5y2mdjF1ZqABnbUhJgdUq4P8yw4Domxa34Av73xgriA18b2uKsNadQnpimGvq2gkLfxW3VRqDdBcJAUmR1JM",
+      "wallet_address": "2pcL7kT6wK1Qh8Kp3HAkaDDQzhu4PHrnWmspqs1oqXmb",
+      "block_time": 1791224851,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31237,63 +30866,250 @@
       "trade": null
     },
     {
-      "signature": "2ewSc3EY5sdnQnEytiZHdU5FPwD8UGWqzk7CgNkT8sfYvuYFywm3mukw2YaPN9iJJ4vD2aSDYD3sY3ggJwAimsc7",
-      "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
-      "block_time": 1791224666,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "4TcPxkSg7mWDmECkh9sz4Ys8rzEoUiHTC2jNnaQek93fzJvR7XhJotUSAhuFPXEoLmY7efPdToG8VUs6as9Ej74f",
-      "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
-      "block_time": 1791224666,
+      "signature": "24mT5dTgLVKQbdCPAiSRcRJdPSsLg6s1xs8xN5wxhHowyM4WbsYX4vjVwAe95xhpF6ARUibgodedCFtvmuVRHuAg",
+      "wallet_address": "2iSMjjhBhsRmxBTvp4ZiZkMv7baQjm5r1CYVM7nPSs5E",
+      "block_time": 1791224850,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
       "trade": null
     },
     {
-      "signature": "21aGXR7i3HUeBVDxgAN7kcFQP7TmtkkA8Z7wsJn1g4bMD8WUnY1W462hk14sCNdsv8aAstHtYAFvTCLum1D7KZNV",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224666,
+      "signature": "4YK6fW6fxfxzYZDXzy1qpBuwSJp4Mk1XYovLcVSEK49ZYms3Dnb8tHSB83j192z7nE7ToP7v1EDUhidsSjh5wV2u",
+      "wallet_address": "311BetvUQ2PWt7eNKsWKBYFKDQ78XARikKSd1rp2Hwvy",
+      "block_time": 1791224849,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "44PPHsePAhMpMyNtw59kKNaBBrkZRnt1Phgtw8AnvkhtmYSn5Tc4RyjwpMrnzXqTgDig4HvmL2NVWcBGyxivMmqh",
+      "wallet_address": "EDGEKeUNA3b7L5F9BcoyvptqHAKSLi9c5JxHwFKvuNLc",
+      "block_time": 1791224849,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "4ZKQzoNoBpx1g2erCx7aQ8J5fme37Nk6hDsoYFM6cVNRyThhZS73YifBkGnzih2ccxfW6TboVaKLXU2ULCWk9WWD",
+      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
+      "block_time": 1791224848,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5EUd5iBzciHsUcDvXke1tUd2s7ykiEfw9rCH9VmroKF4LiHmn3trkheJ3XXtTYdaZYS7CiwUyGDVJdysepMLFsg9",
+      "wallet_address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+      "block_time": 1791224848,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "3cGJU5AGGW9FeW7nHQpo362RKwkdGSHHuh9tqtntWQ3SGiDZJbt3qsRm8LrCbCNRPHyLy9CYeK5HLL5NXhLTBWkh",
+      "wallet_address": "9999huSCf6QpepPHQVFLZ9smhsbwkV4XWPLboiy9qqRj",
+      "block_time": 1791224848,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "trade": null
+    },
+    {
+      "signature": "4tmb14q6Zat4ZcyRyDVXNCwwCywy46YkcyYnt7TMM5B3iZrKvUESbinDVXf7GFYWXwnrX4uSS5pu8bEaHN1n5Lav",
+      "wallet_address": "EDGEKeUNA3b7L5F9BcoyvptqHAKSLi9c5JxHwFKvuNLc",
+      "block_time": 1791224847,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "yW917cbUkiBwxcmDf8u8Zhs3aLcqBHdSyMEb8gMfZnSvx2Y6RvfRwYUorVxma2vrStJCPZQYgQMtesUYo34zLEN",
+      "wallet_address": "9bwHbhAEDTWgF8NMdxZkJLwooDcy3fshSxGanGWeskHC",
+      "block_time": 1791224846,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2j9ezhEnJdSuHxEzNZaKxRjDicD9xCJT4u89SqE8JNAzWxegphNS5y3addxgGyv5girCz5zpJnBE6wtLvcHMWNgt",
+      "wallet_address": "8m9dUFZ316wAce2ScRSNtZCc159JDWzwWVjN18hJESv3",
+      "block_time": 1791224846,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
+      "trade": null
+    },
+    {
+      "signature": "5uMprnj89cnMHa9B8Y7rzzyLbyAHqNvSqNe9A37iAxj6126JeQpCe9cMSt7SgPLkMB8eHD8K5L6h7j3T2NS3NBka",
+      "wallet_address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+      "block_time": 1791224846,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "3jwaHGb2yJLs9cXFG2S8trd2aqRxCLBYLCTMPg7VkqTi4y5Pt5BFDWDXgjvyv7vRNnUX815V4Hyaa1FJoQtyShV1",
+      "wallet_address": "3SJHbVjvdpMYGthDLkDKjJox4gHA4VhoMeNReiwBHB43",
+      "block_time": 1791224845,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "3Xi53Qb9nu3FjGTCj88AEaLK8LVsJGd2oSFoeRKvnwgYpvfiHathe6oTm8eKV34HAbZWJfGzTPn8QYuG69FNY2wz",
+      "wallet_address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+      "block_time": 1791224844,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "319CkisC4uYvgGb9TsQZkBH6LrMyz5GyrPcspfiwsJB5VXLpYZtkUzvoHNrWPAu9Ftk525uvEHWyDLcfcikpwwR3",
+      "wallet_address": "56e2PjxqjQLh1Ew2mQVRQovZWWjErtPdjkkJvhwBSFHy",
+      "block_time": 1791224844,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2QCE2xWYW5aekLUej7rB8PKDTPqBHvxtFkos4tZekbEPzeRZVLirJVFV2X61HxyFFRRUfm6ws2rW43CJK4y3KCkE",
+      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
+      "block_time": 1791224844,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "3SggcTL2S1nkofrqDD2zApV8jaLRAsDevGia1x5RthgaEM6qRCRh2i7GoEsaALgjmGpFistRTz9o8ZoZuodQGzn6",
+      "wallet_address": "311BetvUQ2PWt7eNKsWKBYFKDQ78XARikKSd1rp2Hwvy",
+      "block_time": 1791224844,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4mkMgNePcseZQYbtLZiY5Benc1mhAAAow4hoVPXy4bMShjFXoQqos84SsuD6kWMmwjCG38yYMaxKJi3B7BTUv6ew",
+      "wallet_address": "EDGEKeUNA3b7L5F9BcoyvptqHAKSLi9c5JxHwFKvuNLc",
+      "block_time": 1791224844,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "qVuUsUvJvoc5atLM8VfQtipxKjUMs3sdEVUuoiziPvQHUSdYCLrjjy8qKUuHcuSu6weiHiBxDfmhmnRQ5FMvCSG",
+      "wallet_address": "B9LwKidP6Tg1w9zqvTkACK2UKGwZYatGv7FqkqvLUSLE",
+      "block_time": 1791224843,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "2TSVvPaJkBY9zVMPLb4nhTFXD5DcEQH2cxqoHPVay1bv51XhdSrPBad9r3PwnKoHVLgnLCdxBw9vbxPtRF3YvYtY",
+      "wallet_address": "7W8SEZv79hk4445o56Fd6RzhbUsozkzGXi8vkc7vNRr8",
+      "block_time": 1791224843,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "5ZkKqjV7W36VAB3n2ZZFgPtdBdhbTEHKHazs5fHaxdgCsByEbEXAjAqjXMHVX6nL1oX57dnzW8spDBguwxstEyDq",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224842,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2mvoyE6x3mUqPhDEx8tvndHHD76wYWdJFQqbPurB8JVDqAfYzMMxoAM4Yp3b3UqNKBuhJ6Ub6oKyH8pmwufbprc2",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224841,
       "direction": "SELL",
-      "mint_in": "3pxPbYQ4g5npJVXX9MhXvSwSPCB5VmKosHFiogxcPqfg",
+      "mint_in": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
       "mint_out": "So11111111111111111111111111111111111111112",
       "evidence_quality": "COMPLETE",
       "reason_codes": "[]",
       "trade": {
-        "token_mint": "3pxPbYQ4g5npJVXX9MhXvSwSPCB5VmKosHFiogxcPqfg",
-        "pool_address": "ACwA6R9KRX6yTFbLQenHcJfP1eF9EYgQRhJoD2UNcXAk",
-        "token_quantity_raw": "12386007925552",
+        "token_mint": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+        "pool_address": "46SzZPKwSmLQ3asNh8S3QAZ7Sf34RHBai91ftmteVrRw",
+        "token_quantity_raw": "2931685580579",
         "token_decimals": 6,
-        "sol_lamports": "997574385",
-        "curve_sol_lamports": "1010201910",
-        "protocol_fee_lamports": "9596919",
-        "creator_fee_lamports": "3030606",
-        "transaction_fee_lamports": "130000"
+        "sol_lamports": "96647690",
+        "curve_sol_lamports": "97871080",
+        "protocol_fee_lamports": "929776",
+        "creator_fee_lamports": "293614",
+        "transaction_fee_lamports": "53800"
       }
     },
     {
-      "signature": "3dQsAr4KpA2PNKUxCKoYQhW7V8C7x3Lz682fFCZu6EiFG7bvQ4NndqQpNeoa1piJp4sLaQ8qnehDWFVtpViKdyUp",
-      "wallet_address": "AUrkH8jWtG7our71fSYqCp524BAJuf5Tampe267wfyFA",
-      "block_time": 1791224666,
+      "signature": "4EEmXXSMeoB1iMvNTkVuSTta8jSYmzaLAS54SafQhvTcPme4y6LHeHKVtedbfVbjPryLbbXzAGWBtK3DJ5U8S58c",
+      "wallet_address": "Ecmuu7qcuX4WMzXU6CTryuKsMURyDidAKS8J1554L92X",
+      "block_time": 1791224841,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
       "trade": null
     },
     {
-      "signature": "5BrBZofCkeFDLV1E285c56m5ZXLeFrLzJZbC4uETg4Bh8wn3Nn19p5upTqs4ZUCiHR6y4s2vSpi4EeGy5kJyVg6b",
-      "wallet_address": "HL9rRBGSQRaeCqCXtFcraHBkx2mLBHnGEQpNqiPpuk3b",
-      "block_time": 1791224665,
+      "signature": "5oq4PibFpZVqhpa7DirawUGHeTJLeewCAov6YN2fLYH1e2zhGkEYJsikFJn9ZswEBQw5RGY8eafhNvSi7gh4XArA",
+      "wallet_address": "2iSMjjhBhsRmxBTvp4ZiZkMv7baQjm5r1CYVM7nPSs5E",
+      "block_time": 1791224841,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31302,31 +31118,9 @@
       "trade": null
     },
     {
-      "signature": "CopTcwE1FQboqoUipX9nuuWcTMiRS34SgneEcWX32ef5TQ7M3ePt5mHQi13qAPPBEqBup7QVBK4NEq9QDireuMt",
-      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
-      "block_time": 1791224665,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "2MEmoit59YGBec3ap1vxRroLRD3iQSS2c8VhNeNVf4AD2toZFRoR3PmqouFQUycM8kgHvgohDgbmv54a8VBEHR86",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224665,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
-      "trade": null
-    },
-    {
-      "signature": "3T2hwFkj9NkaXvzBwvHPqNaDEWFwzfaA4PY2k9wZJEbDa8Uxezffk2sHnubUSfs23FBi25MxhRCNa6EPyWF26drE",
+      "signature": "2sXFj1UhV291pe6MiWyDP88r2e8kCnfc1a2UGDLnpo7K5KWhAMZHjTxNv71gHxFBqHAoghMrdMRGAjiC3dnRVHbD",
       "wallet_address": "77wS9zZHJ57AXR2QvkX8Fu8iqUPBbYvUnJ2irb36QyTG",
-      "block_time": 1791224664,
+      "block_time": 1791224841,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31335,20 +31129,20 @@
       "trade": null
     },
     {
-      "signature": "4QMsuSV61YbebTzcrmLTMi9oeCDFRAbNWJ3o6ypgU9EWZuonC9sJJWYYvfojpEmMgzALJYMcSNvSUA9rrcSP5KWL",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224664,
+      "signature": "2EfLe36oJisNTDfB25gnncA5oPqaYg9VJrYx5ESkneuckqWhzR8GDL4tFDMgbnqXAbe993EpnwZ2m1s6FLhMZ7hY",
+      "wallet_address": "AN7qfwgXCgL1ftnMLF3AUou5zEWJ5RgBf2f8YW1YyWWN",
+      "block_time": 1791224841,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
       "trade": null
     },
     {
-      "signature": "2dBnckDLqE2Q5qRbuBRvBBkiTwwqc8teyTZQ16JM3wu2WACWKVXyMsjWtut7SyZFhu4kitFcqQDHkHDnN2oNNawQ",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224664,
+      "signature": "PJ11gAt1NRYWDnfwKhooHHkbmGNiub17DzZgmjnpZkKmgPuC5f9H4517L2gsGhgArtUyP96prjLBXHHyhoWMFsH",
+      "wallet_address": "EDGEKeUNA3b7L5F9BcoyvptqHAKSLi9c5JxHwFKvuNLc",
+      "block_time": 1791224840,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31357,9 +31151,20 @@
       "trade": null
     },
     {
-      "signature": "3DBBY7VUkiohx7p6SFvKwGhW98NdDUuLea4nGBcutXUpHZtF7FSCoGpY1BNb36ug1qVtpK5LNsP4TXHEGjymrU4Z",
-      "wallet_address": "76rdHqaie4ooQ8ErhAgDyeifgVYauG2tBG2ofroNj6SG",
-      "block_time": 1791224664,
+      "signature": "5rMuaQhrDkhpf3jg2fk97sFfdGFTzRtekznBt1Xv1kxcSWSLG19BmbZs5YcQYFbuCsVvKtM4qrpo5KJ8n9HJnLkE",
+      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
+      "block_time": 1791224840,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
+      "trade": null
+    },
+    {
+      "signature": "T41phgt7r2KFbnymqC3ohPqnWkGVk7dpQjxvwHoMH5Zi92ojGvni8hePMtrXVxw2fRyaF4tLmEV9yx3Hw87s6re",
+      "wallet_address": "2iSMjjhBhsRmxBTvp4ZiZkMv7baQjm5r1CYVM7nPSs5E",
+      "block_time": 1791224839,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31368,9 +31173,30 @@
       "trade": null
     },
     {
-      "signature": "H7aKK7EgYfA8EpMxCRBLZdVK6DMNK7ayNNvXCwqA1PxZ5nwLQBnEhj1jtndL2tS2HJtwhPsL787rMEu82RENaxL",
-      "wallet_address": "76rdHqaie4ooQ8ErhAgDyeifgVYauG2tBG2ofroNj6SG",
-      "block_time": 1791224663,
+      "signature": "4Hwqvgxj2J6z2NBgr86EDgtafTVVjVPvKUYmTv43RTrNWDuVETZETnFJgvwzaKrrK4RjBRUJneg3qVHyrJNkU4bZ",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224839,
+      "direction": "SELL",
+      "mint_in": "kmPrp6WCPMugdQUt417qu5GUbCWReR1MvTABtgMcDee",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "kmPrp6WCPMugdQUt417qu5GUbCWReR1MvTABtgMcDee",
+        "pool_address": "F81v9Mmc4gPsGN5ZLLwC6fz6kD64dMEhip3E3cbii3H8",
+        "token_quantity_raw": "177631549012",
+        "token_decimals": 6,
+        "sol_lamports": "18657553",
+        "curve_sol_lamports": "18893726",
+        "protocol_fee_lamports": "179491",
+        "creator_fee_lamports": "56682",
+        "transaction_fee_lamports": "14900"
+      }
+    },
+    {
+      "signature": "5DUbAaNAzqMUbNh2NKbUY5CfdJo2k3JQMCQirfWiLsGg3aD11hi67iopu15y7FKVtY296n9Z9zcFbmh73bkoU6XH",
+      "wallet_address": "5xFhXswZ7ncwEoKfhRYuoajJ6YYmFAvuL5pumo9FAxJm",
+      "block_time": 1791224839,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31379,31 +31205,9 @@
       "trade": null
     },
     {
-      "signature": "4ENrJTP7VuQLcxQ17txn2urDz7zRUN9ySuZ3pq1qdH85Akv66MJ4CfHs6sgipaPjnAxrVa8YEgy36Ywmx1oMNcnW",
-      "wallet_address": "HTgVVGboxX2Dsn6b6bXAXgqGT1SkxSgENuRQF5FrCiAD",
-      "block_time": 1791224663,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
-      "trade": null
-    },
-    {
-      "signature": "5mzWravw2PvKU64hu4JurrAARAKkh3aRaLR6W942pcRxvfKqCpSMW6dhJpK3HjfoDHdxbrFQQeqYsJWsB1csHUb9",
-      "wallet_address": "AUrkH8jWtG7our71fSYqCp524BAJuf5Tampe267wfyFA",
-      "block_time": 1791224663,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
-      "trade": null
-    },
-    {
-      "signature": "2AZNrFQ9gxKVvTybNHEYoPCJawfr2utzFvcknoXDgEThX368GaYp3xtwYV5QryGxsZx8XjQK38bAtgCxqmG2jTFs",
-      "wallet_address": "9bwHbhAEDTWgF8NMdxZkJLwooDcy3fshSxGanGWeskHC",
-      "block_time": 1791224662,
+      "signature": "4HPQ71foGmSdKWru2uRpNeHXeNF8Tvtuv3i48wkWKuH1CfspQSy8pwPGEvaNtuRQfhVU6BLC7tMvDAWFLhnus3Ti",
+      "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
+      "block_time": 1791224839,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31412,9 +31216,152 @@
       "trade": null
     },
     {
-      "signature": "4drxLSpVWmxSnJNj4eL9Qb5VARAHUwsbfcs6hzVuJr22ASi7JE5Xt3TQvqZVDrY7kLc4meiyMAS7Sq2omNXvX7n2",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224662,
+      "signature": "2zUZS5YqmDcdTQfdARNfP2iFw15fPmDpHZxuQnfzMMpmJBy8muE1pyHvwWW4BYhwMzv4JvbfUCqAVXwoJf39Bhcg",
+      "wallet_address": "8tEjj2KwGBJwHWnQ36LYnkgUNUyrDzTKzNqJdHQ1nHiJ",
+      "block_time": 1791224837,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "2nHfASktoMCrKk8JJag35HZudJLrbVmdEB7vsGvVzQ2BE5szsQwkbARnQ57ghHHkwFCV5fJ2xxRSZEiGk3u14TG9",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224837,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4quTtRJpJmHTiM8w437UCLVBdTHXXSk8EoXTtkX68L4VMt8H6jzz56m5TePQDUCtsKspKeV5H8S33YkzSR1wZYWw",
+      "wallet_address": "AEgTuy8Lg4wfnjm285mk3P2k1p39ofqNXk8b5VtYhdCs",
+      "block_time": 1791224837,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "45zNgYxKVcTC1eQasxJ63Ah1p46gFAuiHo4tsNxmGgTvsuHNw2CH8d8MRqybNPHVpy7uZwQFTsoKjKRHjWndJJV3",
+      "wallet_address": "9bwHbhAEDTWgF8NMdxZkJLwooDcy3fshSxGanGWeskHC",
+      "block_time": 1791224837,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "53dCSURfUqFxS4U6pZUBQp237E148Zsbk6fX6qr78vJSDND5kpKHvYTuM6LHL1wsDoRL7QgcZfVVALDobw6zrK3n",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224837,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "5NVSxJGuG2LfajWspgofaSUSdB8zugQky24EYYmhb9EJZkZn2z4Fnho3C3fGtNqsoYooTzj71j5FCoW3AVtQCkeC",
+      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
+      "block_time": 1791224837,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "5pXpEjzGj96G7LmgKdUSUYkycqjWWTpzKus4dVmFQ4BT8UTaAgyADb8Ac6Hp4aZnbwMtkn6XnsTgEvGQiUfpK1w6",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224836,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2Tpt5Vf1N4knbWitFVq5fQ5tfo4Rq6M9VgHWrKZBeadDvVPWbApbPYMvLJBqgTt8qHF2jHH5G47RVZAHX8234yPy",
+      "wallet_address": "9bwHbhAEDTWgF8NMdxZkJLwooDcy3fshSxGanGWeskHC",
+      "block_time": 1791224835,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2fLkrCivBpP6MmKM81138JMkiJgr1VPmSCYjrwY5H31q2wRvquW9kwLaZ7SFXYhaephvKRVvrk1WAcxKLTXnz7Mq",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224835,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4d9djzpC6P14DN8xgYU6awiFU9EHxWxmYEreHw92g3h39RC93nyqQQFejNRtrKY4wCGvvWkc3bLsGkseAchQSViq",
+      "wallet_address": "7W8SEZv79hk4445o56Fd6RzhbUsozkzGXi8vkc7vNRr8",
+      "block_time": 1791224835,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4fopP6dVTKbLyyKyjiQ6jmQU5bzKLEpkveBwVTAQRVLLgpuGP9QLGguGg3pujMRTExSE8Km7cBzpgXwsfcLvYh3s",
+      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
+      "block_time": 1791224835,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "YocNnc6iML1QV5Sbe6JzeNk4y7XzdSx66VvG2MCF1D8YEjSihdeQG7HPuWmr7Jhdwrhs9vKMoP3cUuBWKsHrJ8X",
+      "wallet_address": "37V1znU2AxgHM67xjwHdvtg7ASKEii7nQU9kp5FM8PXN",
+      "block_time": 1791224834,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "22adrAcj9XsoURiBvPjbnUShmGVE9mJ8sxez4KtiydpGbhrEJuV1ygkCStDYhDRP2akiMuHWTTAzoQmPU13QnZdn",
+      "wallet_address": "9999huSCf6QpepPHQVFLZ9smhsbwkV4XWPLboiy9qqRj",
+      "block_time": 1791224834,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "trade": null
+    },
+    {
+      "signature": "2g5hRJkdSp95LwQLvLGVBYmUu5XgZgesDqKZRzw6oFxEfpTe6y8RRhWubL73RjyoAsCuhksDhgGmvSkjdB8pH2et",
+      "wallet_address": "FZU56d9iPqohXM5XBrYYBZLi2UoUnZT4V5Qf2631tEzb",
+      "block_time": 1791224834,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31423,107 +31370,9 @@
       "trade": null
     },
     {
-      "signature": "1dgAisAmMUP6UkQySxGq2rHFGgAtbwxC4cHSJFf78irMEvZu77rfzXfMRypjAGB9FQCnK3A15VkDWitPPptUW8L",
-      "wallet_address": "76rdHqaie4ooQ8ErhAgDyeifgVYauG2tBG2ofroNj6SG",
-      "block_time": 1791224661,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3cCXdDshURbpNk7Ud2rS5vJfoXD8n3StUjCcnTPhUJMGY2sQiNg9L61x8bxdkQidLtRfkXZ8AkEEAB6JC66WN7Ke",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224661,
-      "direction": "SELL",
-      "mint_in": "C3TxWbNRozzu648GUZLTTkueMEHTfQMUWpGYPHZqVdCd",
-      "mint_out": "So11111111111111111111111111111111111111112",
-      "evidence_quality": "COMPLETE",
-      "reason_codes": "[]",
-      "trade": {
-        "token_mint": "C3TxWbNRozzu648GUZLTTkueMEHTfQMUWpGYPHZqVdCd",
-        "pool_address": "9dTUuG35t5zeAqcGj2PZHMXx5s4aFjpMbbctLi4fzZjh",
-        "token_quantity_raw": "12136030244306",
-        "token_decimals": 6,
-        "sol_lamports": "1419550316",
-        "curve_sol_lamports": "1437519308",
-        "protocol_fee_lamports": "13656434",
-        "creator_fee_lamports": "4312558",
-        "transaction_fee_lamports": "130000"
-      }
-    },
-    {
-      "signature": "3e64WNcsVwgEy2fiA94vwW54yLvjbv4WYR1NkXaetfFiaNaiqfXxXKobFsf8Wq8ZNBzXNSAbL14pBsE3tUi7pw4p",
-      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
-      "block_time": 1791224660,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "3p1eYir4moMiBTv8Ny6BmGfEzM1JKgVThUYNkvgsrW4JqkUiY9j924m33sckYjR7f2vBQ8KtFmMq5wGEc9EJp4oZ",
-      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
-      "block_time": 1791224660,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "3X71UY3Zfg66qE5igxFKurVvyJeRa9CeQshcfERkAJFjeuDbmnXNzRU351MPYscwiKb9FJ6jP8TBLYaJ6GdSitrA",
-      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
-      "block_time": 1791224660,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "4DssMTBkrnaZFni8KnKzzHsca3FhBuwccuLzCEDDbTv97R7gqBrdMxMfXN4aBrQLm6k9BufYy6h2FzLrQfXVWTdk",
-      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
-      "block_time": 1791224660,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "4V2eZgdjtWTsyehUQJdRUdQPH5L8Ey8CPzfCPJZDf11eFVC8Co2yqE9Xicmsfg9CTMNm2VVXXozkp5N1TVMvhivk",
-      "wallet_address": "76rdHqaie4ooQ8ErhAgDyeifgVYauG2tBG2ofroNj6SG",
-      "block_time": 1791224659,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "3XZW1g1PNBW1UCxnLS3zP1Da5ANLZtPNwsm3K8kES2ddEoAwtoYJVdnCSN7LYAxWJ4QkvrKu7bZoJD8YoufHWg25",
-      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
-      "block_time": 1791224656,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "2CvYdnv7nMa344sz5FCWM6HGUMqNnmiqzYfYYWgRX2h4Uc5FfVcoecR9L4nZV1R66TFpuWTchT57Uod7NMaX7Ncr",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224655,
+      "signature": "dNJoVhvnydbJfwWPFMoPg5tLhoBNAVHY7nAd4nbF9uDxHrPSGHyki71P3CKEYjsfBVX1QJXze9WqmHvEALpTjj4",
+      "wallet_address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+      "block_time": 1791224834,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31532,53 +31381,9 @@
       "trade": null
     },
     {
-      "signature": "271h7cSspRNqV729ZH85AgBpiCfwkHws5PzKqeWaByuje2HqN8dJXjtd9LPQaVLg4wUEpTeL4h6ESgGgt8QtpkDM",
-      "wallet_address": "FZU56d9iPqohXM5XBrYYBZLi2UoUnZT4V5Qf2631tEzb",
-      "block_time": 1791224654,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "3BcJxf9tCumdsxtxZ31XDrTip6uYkpitAAh6nGw7rmRTmfRRCCP5Kw3quoLFrLB1W4abk1eDzkPKpLSDTinDzFPG",
-      "wallet_address": "76rdHqaie4ooQ8ErhAgDyeifgVYauG2tBG2ofroNj6SG",
-      "block_time": 1791224654,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "5Q2FvdvjbVa8gZvPRF4CodQpruomxQzDkq15YarTjg2nEdRdg1cqjEbiT92Njb1LcuhdzpVPMEozeUc69P9MnfXY",
-      "wallet_address": "76rdHqaie4ooQ8ErhAgDyeifgVYauG2tBG2ofroNj6SG",
-      "block_time": 1791224654,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "4gC91V1rZp6mfF84x2YAWyowi4nw6pHhwRePokEXazPEmVb8mWiU9TNZkLBdbYwtnGw9ipFu2CStuu82fwsBFvvA",
-      "wallet_address": "3pk5yRhwwFdvDBrBuuC5CRorVafHG2EQmzNEYy8Ny2K6",
-      "block_time": 1791224654,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
-      "trade": null
-    },
-    {
-      "signature": "36E5Uzrmi3QKJiiMXBEzVmS5u25grZSPmj6NdEpwxL61sLvxWyFBhsH8pwcnEHfVNo3kBnt3QgebQ8sE5fcHhHPq",
-      "wallet_address": "HxcdEi6CWzQtPCmM8E2maEZ3oYVGZxESqCWU1iPzmhVW",
-      "block_time": 1791224653,
+      "signature": "4doqrhFeHnuhE3oKBbKejVe8oqjLzvwvwXvyfcemCeKDjTmXTH8in1MqtvVrq9MhLtVaq8E8DPHH2yNYMimG2f4q",
+      "wallet_address": "EDGEKeUNA3b7L5F9BcoyvptqHAKSLi9c5JxHwFKvuNLc",
+      "block_time": 1791224834,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31587,63 +31392,129 @@
       "trade": null
     },
     {
-      "signature": "3pWXUNKz5LdjuZQ3ZaqNgujSzg8UsKJWCDnFiiuDN3HGR7oQow2z6jkhEUX7yTJa4EiJTsL4RNPWQV1Qo8UAg46n",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224653,
+      "signature": "62Tu8zdPbpkq8Mq1pxvzVWpzgVLiARqYpxuoHZZeSBCAVuLM4SYWcjNxYje5nHm8wrKGwgk2HDmLje9XSYGiBeYF",
+      "wallet_address": "HVE8996rtqG8N2sCNaTJZdLBbKW2SrSg2uXjJtNqPGDJ",
+      "block_time": 1791224833,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "3LBxXAydaVofhXwb22rC6hyVMmAvpBttXR5pofdvrxND4iua5k6QSxyuYaabbkhWAxvzvNtotVbn3vQ52v7ngUSc",
+      "wallet_address": "Hv3fPDH9bd1VNK1BjRQyjCYUK9HrXwLGfJ37mEeUJdrJ",
+      "block_time": 1791224832,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
       "trade": null
     },
     {
-      "signature": "5hPbGATY2D6rXrWizwVHqQ997MWgGKt9mEkoohuSNWsYSDoD4P3jUckhVmqWWau5xamWjVjG9o5QAU5RXx4UBZWN",
-      "wallet_address": "3pk5yRhwwFdvDBrBuuC5CRorVafHG2EQmzNEYy8Ny2K6",
-      "block_time": 1791224653,
+      "signature": "5nLNnqJLvhgL9UKn6fesAPPmV883zVWdDXrbGWvTDEVJT9FrS9cdyPAvV9ZaNLah1t4fsaCo1hUTsxUQHznmdp8J",
+      "wallet_address": "8DS2pqspcQkTBmnkSqbXHsUH3fvwwJfM1mG9brPpzMDD",
+      "block_time": 1791224832,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
       "trade": null
     },
     {
-      "signature": "5FWHiJ3va6pukyjBXYRhPqHr5xExcDR4PMn9dLy17yWgmgtuGLq1nwWk6ho3LTRJpkZAZWK2PBtiPk2y3CQwmj4D",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224652,
+      "signature": "NEGoXgrqHfps9JSTibpEcq5YwVvxyunMrjetNAouSpaiq3JyFUhZUWVJP2DUQZ33q7MwQ98qdEXyyumpZN5fLj2",
+      "wallet_address": "Eeg5a3hKMZX8CYhHnwY6dVqK6PNxjVeuKtjK47PuZQvb",
+      "block_time": 1791224832,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "u9Bg9YK6SdEQcabCpqKp44HbYFCfJvy54yoDeW5ssP1KJ5uhGntifysxCNPmjjsdSYTwD7D7TU2wGQTyLFioBnf",
+      "wallet_address": "haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq",
+      "block_time": 1791224832,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
+      "trade": null
+    },
+    {
+      "signature": "4S6otyBteG2u7kFhpD9NqSTrRZjkRVrxFDTetz37Sf999VoDRTQbbbXKhVipuACL8j8C954BUWD7jcF5y6BYGmcT",
+      "wallet_address": "8DS2pqspcQkTBmnkSqbXHsUH3fvwwJfM1mG9brPpzMDD",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "2iJeTDSiYaLTpkEnVvVWq3T3KPqtiyjL7v5ayXEhzC9cwm6KZhgVtncMUcns5WDztpYfDZuB99mLhnhECN1AUrjM",
+      "wallet_address": "Eeg5a3hKMZX8CYhHnwY6dVqK6PNxjVeuKtjK47PuZQvb",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "9i3dvZJwYCpUNU2niQ4okxZtRKLF2YnRevuFPXw99rvS1LSRUJDZQu7VGp2UJm6k6yg6hyVxsRxL84pqPn5TDVC",
+      "wallet_address": "2EHc2w1qfNgLWsHodXwEhfsDA5pkQBWrFPizJyr8Cad4",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2sqJBRfLK2xvQxAaVucERe2rpx8VyA6RkvFhWzgu2QL3fGHKFTVH7mzKzxNTAovHJVkT4mRyZWkvstQPkMvKZsdH",
+      "wallet_address": "Hv3fPDH9bd1VNK1BjRQyjCYUK9HrXwLGfJ37mEeUJdrJ",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "6PXStkE5mRFR6DQ3RLyF9GuL9y8MiRnKCJ2WCxsW7wPL36yigM1J9vu7LpjqZQrfNj7rZjLvt91xi8ZtHrpuGb8",
+      "wallet_address": "2EHc2w1qfNgLWsHodXwEhfsDA5pkQBWrFPizJyr8Cad4",
+      "block_time": 1791224831,
       "direction": "SELL",
-      "mint_in": "Ex342KBZfX57PWBmDye7St8v8AharfvMon2p6RhebFgf",
+      "mint_in": "B2q8L3b4qZdJ8uaMA1pjAwHQhTW5u5JSgx7xNWy2pump",
       "mint_out": "So11111111111111111111111111111111111111112",
       "evidence_quality": "COMPLETE",
       "reason_codes": "[]",
       "trade": {
-        "token_mint": "Ex342KBZfX57PWBmDye7St8v8AharfvMon2p6RhebFgf",
-        "pool_address": "Da5LoEEdeXBhVxXubx6ZyfWxweQoRjf56jhCmLeQmnm8",
-        "token_quantity_raw": "11070299603132",
+        "token_mint": "B2q8L3b4qZdJ8uaMA1pjAwHQhTW5u5JSgx7xNWy2pump",
+        "pool_address": "4yxsWvwytgdcjgh4WUC1bqPec6Pau5FU6gTXxKQQ8RZU",
+        "token_quantity_raw": "8676978821365",
         "token_decimals": 6,
-        "sol_lamports": "1134798283",
-        "curve_sol_lamports": "1149162819",
-        "protocol_fee_lamports": "10917047",
-        "creator_fee_lamports": "3447489",
-        "transaction_fee_lamports": "130000"
+        "sol_lamports": "317348930",
+        "curve_sol_lamports": "321366007",
+        "protocol_fee_lamports": "3052978",
+        "creator_fee_lamports": "964099",
+        "transaction_fee_lamports": "105000"
       }
     },
     {
-      "signature": "5FNuX4LezU4ibzz9APU7dWUixAidnyZtVCHR483dVohbouQxZHBLsLaAT3Xmi1pjztDEbq1xdY8YUYmUaboqUpGM",
-      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
-      "block_time": 1791224650,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
-      "trade": null
-    },
-    {
-      "signature": "3UBokNCnZMM3e1KqQ5vGdNSDirwxPj49HE5CYrHuiYLTaFD1s7bEshfoCz1c9fAk4Ji2rMFYH4zr7L2ghD5KCcDH",
+      "signature": "iwRnMeppJG3hBwGekjc9Qs6Ydf5ht5ga1T3hHgvsSk4xVqkDPxwkL5TzJgPSrKH3LYi36oGdavoqqLwueKPo6QB",
       "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
-      "block_time": 1791224649,
+      "block_time": 1791224831,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31652,9 +31523,86 @@
       "trade": null
     },
     {
-      "signature": "5EKpk3Q5GMj1ZSDm1FnKzBjs9J5pi7rhL3rxGCZA7ymaXwFBpV2ipkG6X1jCKLyU35dr6heC6pszw77ssLTFrSNw",
-      "wallet_address": "AEgTuy8Lg4wfnjm285mk3P2k1p39ofqNXk8b5VtYhdCs",
-      "block_time": 1791224648,
+      "signature": "3Nfghkzjt3kwj6JQs8XrA6e97FE2gb54jtzr86Ntuv9s9CVGN85tj9aRJVMsVcUGzwTsrykYGCQLvswuhinbzCA4",
+      "wallet_address": "nya666pQkP3PzWxi7JngU3rRMHuc7zbLK8c8wxQ4qpT",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "GRAz2Pc6Q2Ro4kHtoVDVZ3FYreWoWuL3LKvDCr855YZLhSHcu7U6kBocqevzYb8oKS6cBenCzoje2Sn2DQMheVW",
+      "wallet_address": "EDGEKeUNA3b7L5F9BcoyvptqHAKSLi9c5JxHwFKvuNLc",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "5P5T9xJCaZwfmeNBkqSr8ZybA8gRUbfpXZ8TdPvTTiA4Zwj1H1fn5hU7f85sArij2B2H8s5z43xq688fnYdsYqRb",
+      "wallet_address": "GJvewfRjqTUPtx6WsBSUnaFbdgXwgXnWfpDyLm65T4YA",
+      "block_time": 1791224831,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"JUPITER_ROUTED_ADAPTER_NOT_VALIDATED\"]",
+      "trade": null
+    },
+    {
+      "signature": "2Edw247D7U3NbJ9aSJHeRYbNnrjffyatrwLP96tKZnzz4zZutwvJD1kay3yjzCzYLfMkUzpiQC9rfZuU8hXw5EqK",
+      "wallet_address": "Eeg5a3hKMZX8CYhHnwY6dVqK6PNxjVeuKtjK47PuZQvb",
+      "block_time": 1791224830,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "4RiKaBLZYuYNXg1ciXAdMCLcdXBDcTnCWA7FU12HLfuLK6TpYS4FVir6qTxgQLPifa4yM3cEWs81X7CKVnQnRpPz",
+      "wallet_address": "Hv3fPDH9bd1VNK1BjRQyjCYUK9HrXwLGfJ37mEeUJdrJ",
+      "block_time": 1791224830,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "2qYNV9pZTuc54FJM5n1F9bAXsN2rBdhJHYec8by5EVfuwTzF772SHpCtpm6Rpf9HLSZzBAhxA5Y4m84fojTMBxy7",
+      "wallet_address": "8DS2pqspcQkTBmnkSqbXHsUH3fvwwJfM1mG9brPpzMDD",
+      "block_time": 1791224830,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "trade": null
+    },
+    {
+      "signature": "2Pwq6Ycwc45b3Fh3U6gj12RcTB6svjpnDZQ9X44eaNPK71zqCj11Zm9NTJe91K2NsrrPyBAUugdKnCuypT2tAq1Q",
+      "wallet_address": "5xFhXswZ7ncwEoKfhRYuoajJ6YYmFAvuL5pumo9FAxJm",
+      "block_time": 1791224830,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"MULTI_TRADE\"]",
+      "trade": null
+    },
+    {
+      "signature": "3JDzWW7iGjkhtwQvkJZo4AZY6FaiyrpmKW3Y7ohvTZ43j1NzdiwEmh5R9xHo5zGg67Qa5pcd7sYdVhqcGb6Ys5xh",
+      "wallet_address": "37V1znU2AxgHM67xjwHdvtg7ASKEii7nQU9kp5FM8PXN",
+      "block_time": 1791224830,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31663,106 +31611,85 @@
       "trade": null
     },
     {
-      "signature": "4ak2PRGBxVnMnyKHzx57gDuDD9HniUgUAqpBV9pzGaKDqC1SsWVcTs4AtBkhpbNzFXMzEonUNZrr5dVKMKAaLMYH",
+      "signature": "4mZvgeXdJKxuScpimHDLHzrRU2HfpqSWBH5ggbdZWSVUy6WbmbZ7w8X5BfJ56FLePd4CChPv7CtBFbhKfJKRWedZ",
+      "wallet_address": "2iSMjjhBhsRmxBTvp4ZiZkMv7baQjm5r1CYVM7nPSs5E",
+      "block_time": 1791224830,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"MULTI_TRADE\"]",
+      "trade": null
+    },
+    {
+      "signature": "UeMmEhToLLj1R4HA1KCAisHeeXtSPGTjEip1tkuFeLSozovPQ51aprtNM8z5RvGZjShoQFLTs7w4Koi8ehwNpqd",
+      "wallet_address": "apexpDoPm9ypJ97YoUk6eNiZHZWqqq3Ktgfmv94QAov",
+      "block_time": 1791224830,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4sP7tCTL1q867RKtbGx8zSAT7NRd9b8dW2qE8Be2GeFXym5Dj6Kok5McXZo8s1JSFriXZgCjuD2vtupcrpNrWN61",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224829,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "3wR1ubxbx5qFH7p1GvpYHX9BeX8Gfj3XF2JjNKVxSGkCDCcZFVTKJ8p3RmPZpEqUDf8emPEH5AzFBvFSXwGHzH9x",
       "wallet_address": "DxhpC9c4kGkYJR34xUrfFeDx9vwb6yoHUMWrTCZybwtH",
-      "block_time": 1791224648,
+      "block_time": 1791224829,
       "direction": "SELL",
-      "mint_in": "2BWLCEqQN2UDxxBb5YR2WvKdhYrWCLyFAaW2yutQpump",
+      "mint_in": "BTpzx57ncntc5bU1hETHaweKS84DgwxMCLCAUtMRpump",
       "mint_out": "So11111111111111111111111111111111111111112",
       "evidence_quality": "COMPLETE",
       "reason_codes": "[]",
       "trade": {
-        "token_mint": "2BWLCEqQN2UDxxBb5YR2WvKdhYrWCLyFAaW2yutQpump",
-        "pool_address": "78orpCQxQwYQhkfn4EddUFWX1xtHXdvsT9GU6m1X1oPa",
-        "token_quantity_raw": "52011953058919",
+        "token_mint": "BTpzx57ncntc5bU1hETHaweKS84DgwxMCLCAUtMRpump",
+        "pool_address": "6HU15aDaQNXXWxfN4MVDj6h8tdmLBn35cGmMxPag7o7H",
+        "token_quantity_raw": "56851614198178",
         "token_decimals": 6,
-        "sol_lamports": "1710984891",
-        "curve_sol_lamports": "1732642928",
-        "protocol_fee_lamports": "16460108",
-        "creator_fee_lamports": "5197929",
+        "sol_lamports": "1668228209",
+        "curve_sol_lamports": "1689345023",
+        "protocol_fee_lamports": "16048778",
+        "creator_fee_lamports": "5068036",
         "transaction_fee_lamports": "15000"
       }
     },
     {
-      "signature": "3ZhLo6mVBnc8jPA1MezQhpX8czYMX6fzSeQakG6EFUiJbdoZsDPaG1kRbj1biLdmfCUyxCVxrCGNpdnbM4GnrpXB",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224647,
+      "signature": "3cAmVRCtjm1rK9RCbeq42Sc3Qw2qpQGBA5YimVbvKEYTmGDGfBGaHBmrggUNZM7Tks8FWyhSUz4V8jbp2W369ewE",
+      "wallet_address": "2pcL7kT6wK1Qh8Kp3HAkaDDQzhu4PHrnWmspqs1oqXmb",
+      "block_time": 1791224828,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "DATA_INCOMPLETE",
+      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "2ghLsfWH8qsqmkQHT5YLj3DTj5KwnfpemF91Fgw5GPw6vK7E5ME7UZmTBLedALyio1A4mYwNEDEdMT1scXsx2H5F",
+      "wallet_address": "2pcL7kT6wK1Qh8Kp3HAkaDDQzhu4PHrnWmspqs1oqXmb",
+      "block_time": 1791224828,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
+      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
       "trade": null
     },
     {
-      "signature": "2gBFCVAgoChWL2oxR8Vnei9JYwhoY6psrmPmWMmveWa4GigutRdkfvhrNUJf3p6r9mf61XwiHveMwU2XHxt2davG",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224647,
-      "direction": "SELL",
-      "mint_in": "3pxPbYQ4g5npJVXX9MhXvSwSPCB5VmKosHFiogxcPqfg",
-      "mint_out": "So11111111111111111111111111111111111111112",
-      "evidence_quality": "COMPLETE",
-      "reason_codes": "[]",
-      "trade": {
-        "token_mint": "3pxPbYQ4g5npJVXX9MhXvSwSPCB5VmKosHFiogxcPqfg",
-        "pool_address": "ACwA6R9KRX6yTFbLQenHcJfP1eF9EYgQRhJoD2UNcXAk",
-        "token_quantity_raw": "15154613773058",
-        "token_decimals": 6,
-        "sol_lamports": "766073420",
-        "curve_sol_lamports": "775770553",
-        "protocol_fee_lamports": "7369821",
-        "creator_fee_lamports": "2327312",
-        "transaction_fee_lamports": "130000"
-      }
-    },
-    {
-      "signature": "4HmNUpGvgXcx1rsVUgpyJvGGWU2eyeBJm8QdwfkQtuuUVA421nmikPrhwfQ6XdtZ8QwBt517Ujyt8gr8VGBXfNrg",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224646,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "3vgPCcVEai99eiSPoAmLdZQHDqH21zwFugvxnbEL6bF3uNNwqT1VuiQmiTzuHkAQsJkhZfKQ1asF4DeLNK15UvPU",
-      "wallet_address": "6bD2YsuNF2MjMdYiLHRzmHswx3BzmtRgkFhJuBF6czBs",
-      "block_time": 1791224646,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "UNSUPPORTED",
-      "reason_codes": "[\"INSTRUCTION_LAYOUT\"]",
-      "trade": null
-    },
-    {
-      "signature": "xYmsb3aixXpR8EwZSnkE6c9oiTRpnAKefY5reyy5N2UTYPQru2ijHyBuhzsjEWH1jR6czkV1Zsy3ixniGpcikyG",
-      "wallet_address": "8eftoRDpRcjkrT6VZ1HPSB1mJfE9SdgkNKqid58F5XKi",
-      "block_time": 1791224645,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "3tEVbjkQYoyYqcQoafJcBERfxsPGZhjmyZ3vsm33hAtT1aCQ5BvLKg5wNiLTjKJ1a33xk828HyRcpcsUHdL99c3D",
-      "wallet_address": "DxhpC9c4kGkYJR34xUrfFeDx9vwb6yoHUMWrTCZybwtH",
-      "block_time": 1791224645,
-      "direction": "UNKNOWN",
-      "mint_in": null,
-      "mint_out": null,
-      "evidence_quality": "DATA_INCOMPLETE",
-      "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
-      "trade": null
-    },
-    {
-      "signature": "3VpaDKbsiDzF3Hcf9RRkqAuJM7oRuCqqpaQSMn6THMdzj3txquBYtqNC8ga5EgdQFABspLBygbUb5XJiXzCHpVxq",
-      "wallet_address": "3pk5yRhwwFdvDBrBuuC5CRorVafHG2EQmzNEYy8Ny2K6",
-      "block_time": 1791224644,
+      "signature": "2GLbrPUzejPxXDEFkx82VrNmcfaq8SPJzBT1Bm5CiPc2i8ZuMdbLLHh8e5xS8x2n7J6WXquE2ehv1YMB7cebnJaZ",
+      "wallet_address": "37V1znU2AxgHM67xjwHdvtg7ASKEii7nQU9kp5FM8PXN",
+      "block_time": 1791224828,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
@@ -31771,35 +31698,79 @@
       "trade": null
     },
     {
-      "signature": "3htvrPwL1FNJpav3e2TQ5soV5egWQTUBXQK48RwyrdHrni2BfvrzhnJ37kZd4Sj8mC4mpo4BrPTE1d8ZUPgkVdLs",
-      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
-      "block_time": 1791224644,
-      "direction": "SELL",
-      "mint_in": "5FPaMrwE1tdyVwf7UH2xTNr6KxXBjDUSZEQmjkJ48tyx",
-      "mint_out": "So11111111111111111111111111111111111111112",
-      "evidence_quality": "COMPLETE",
-      "reason_codes": "[]",
-      "trade": {
-        "token_mint": "5FPaMrwE1tdyVwf7UH2xTNr6KxXBjDUSZEQmjkJ48tyx",
-        "pool_address": "AMTKFYLE99JHzPXK5gmNgXaS8v6myMeQtu7pwxJ1fpsL",
-        "token_quantity_raw": "6187088108156",
-        "token_decimals": 6,
-        "sol_lamports": "1207579999",
-        "curve_sol_lamports": "1222865823",
-        "protocol_fee_lamports": "11617226",
-        "creator_fee_lamports": "3668598",
-        "transaction_fee_lamports": "130000"
-      }
+      "signature": "5PXvFR4RBnFz4JzwuEJT78hX3p7SAMvvWofuY1y8H18agxVV6rHwvD1Fb9bPRhyw7TJ5v7XkLnccNDDMphdAmQwS",
+      "wallet_address": "6Us8oi5bSN6eJgY9RndjWCyN113RwLDQxDESDdDQ9sZy",
+      "block_time": 1791224828,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ACCOUNT_SETUP_CLOSE_OR_OTHER_SIDE_EFFECT\"]",
+      "trade": null
     },
     {
-      "signature": "4viuMJ1oKmKr23tHuqMQWtqaiGvbPiMa8vxyD4r1qFm1APNnQvB1J9YyYNWzBZmA8HJcbw2TG5JpLnExvpeos1qQ",
-      "wallet_address": "AowTUid5daQr9EqwazF7hDm3jBTQSisv6LaHGhQL8k92",
-      "block_time": 1791224643,
+      "signature": "5rgjJ8DyqK3NCoaPV9e9xS2uJRBh9PT5CRNrrBfnkDhgjrXqRDG32nQgnz95u4ow6JpbHBEpriJWDqYx5ZB9iYei",
+      "wallet_address": "EWdAgcTdywcj5JxK4PEB4wN9zW2vtJDDrZcjbCUo3QaL",
+      "block_time": 1791224828,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "trade": null
+    },
+    {
+      "signature": "36uhmQAMTfLvxGzWAPgV8eGw2J4eNdLNbVzjAXBFmN6XztiNJacSaEuPmzT3WDPhqL2DMXbrWFs8iFypPFHPXrM5",
+      "wallet_address": "9999huSCf6QpepPHQVFLZ9smhsbwkV4XWPLboiy9qqRj",
+      "block_time": 1791224828,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_UNKNOWN_PROGRAM\"]",
+      "trade": null
+    },
+    {
+      "signature": "3vTppFLYojCchwDdCmVS3zUPKg7v9DmiHD9fwS7po6CQndsFiBDGcUn4x1iFVo3VP5pGTV3KotSxAWHvwXFweZzv",
+      "wallet_address": "AMDEmVocLtN5ji2gBY7BrmSHEyM5vt6TGszBbg4crMXg",
+      "block_time": 1791224828,
       "direction": "UNKNOWN",
       "mint_in": null,
       "mint_out": null,
       "evidence_quality": "DATA_INCOMPLETE",
       "reason_codes": "[\"MISSING_MATCHING_PREPOST_NO_ZERO_INFERENCE\"]",
+      "trade": null
+    },
+    {
+      "signature": "4SYAx4yJzSg9Yx3ZqJG8bjEVXRBB2r6HAZ9kTExuy5rpJpX1KQXvtX7wkjX4CSQzQDjoEttwVwBZgH4tdiUVrzGR",
+      "wallet_address": "2EHc2w1qfNgLWsHodXwEhfsDA5pkQBWrFPizJyr8Cad4",
+      "block_time": 1791224827,
+      "direction": "SELL",
+      "mint_in": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+        "pool_address": "46SzZPKwSmLQ3asNh8S3QAZ7Sf34RHBai91ftmteVrRw",
+        "token_quantity_raw": "9938596918008",
+        "token_decimals": 6,
+        "sol_lamports": "321225938",
+        "curve_sol_lamports": "325292090",
+        "protocol_fee_lamports": "3090275",
+        "creator_fee_lamports": "975877",
+        "transaction_fee_lamports": "105000"
+      }
+    },
+    {
+      "signature": "uv6KsorWy757w5SNuTqJ9rhXtiHXbmgtQ1nLKH7hRuT2Fjkxs5x5QS6wqYEKhdSA9BFecjsJwn9AHK5Qdu84Tiq",
+      "wallet_address": "6bD2YsuNF2MjMdYiLHRzmHswx3BzmtRgkFhJuBF6czBs",
+      "block_time": 1791224827,
+      "direction": "UNKNOWN",
+      "mint_in": null,
+      "mint_out": null,
+      "evidence_quality": "UNSUPPORTED",
+      "reason_codes": "[\"ROUTED_OR_NON_SWAP_PROGRAMS\"]",
       "trade": null
     },
     {
@@ -33174,6 +33145,447 @@
     }
   ],
   "coin_activity": [
+    {
+      "signature": "2mvoyE6x3mUqPhDEx8tvndHHD76wYWdJFQqbPurB8JVDqAfYzMMxoAM4Yp3b3UqNKBuhJ6Ub6oKyH8pmwufbprc2",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224841,
+      "direction": "SELL",
+      "mint_in": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+        "pool_address": "46SzZPKwSmLQ3asNh8S3QAZ7Sf34RHBai91ftmteVrRw",
+        "token_quantity_raw": "2931685580579",
+        "token_decimals": 6,
+        "sol_lamports": "96647690",
+        "curve_sol_lamports": "97871080",
+        "protocol_fee_lamports": "929776",
+        "creator_fee_lamports": "293614",
+        "transaction_fee_lamports": "53800"
+      }
+    },
+    {
+      "signature": "4Hwqvgxj2J6z2NBgr86EDgtafTVVjVPvKUYmTv43RTrNWDuVETZETnFJgvwzaKrrK4RjBRUJneg3qVHyrJNkU4bZ",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224839,
+      "direction": "SELL",
+      "mint_in": "kmPrp6WCPMugdQUt417qu5GUbCWReR1MvTABtgMcDee",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "kmPrp6WCPMugdQUt417qu5GUbCWReR1MvTABtgMcDee",
+        "pool_address": "F81v9Mmc4gPsGN5ZLLwC6fz6kD64dMEhip3E3cbii3H8",
+        "token_quantity_raw": "177631549012",
+        "token_decimals": 6,
+        "sol_lamports": "18657553",
+        "curve_sol_lamports": "18893726",
+        "protocol_fee_lamports": "179491",
+        "creator_fee_lamports": "56682",
+        "transaction_fee_lamports": "14900"
+      }
+    },
+    {
+      "signature": "6PXStkE5mRFR6DQ3RLyF9GuL9y8MiRnKCJ2WCxsW7wPL36yigM1J9vu7LpjqZQrfNj7rZjLvt91xi8ZtHrpuGb8",
+      "wallet_address": "2EHc2w1qfNgLWsHodXwEhfsDA5pkQBWrFPizJyr8Cad4",
+      "block_time": 1791224831,
+      "direction": "SELL",
+      "mint_in": "B2q8L3b4qZdJ8uaMA1pjAwHQhTW5u5JSgx7xNWy2pump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "B2q8L3b4qZdJ8uaMA1pjAwHQhTW5u5JSgx7xNWy2pump",
+        "pool_address": "4yxsWvwytgdcjgh4WUC1bqPec6Pau5FU6gTXxKQQ8RZU",
+        "token_quantity_raw": "8676978821365",
+        "token_decimals": 6,
+        "sol_lamports": "317348930",
+        "curve_sol_lamports": "321366007",
+        "protocol_fee_lamports": "3052978",
+        "creator_fee_lamports": "964099",
+        "transaction_fee_lamports": "105000"
+      }
+    },
+    {
+      "signature": "3wR1ubxbx5qFH7p1GvpYHX9BeX8Gfj3XF2JjNKVxSGkCDCcZFVTKJ8p3RmPZpEqUDf8emPEH5AzFBvFSXwGHzH9x",
+      "wallet_address": "DxhpC9c4kGkYJR34xUrfFeDx9vwb6yoHUMWrTCZybwtH",
+      "block_time": 1791224829,
+      "direction": "SELL",
+      "mint_in": "BTpzx57ncntc5bU1hETHaweKS84DgwxMCLCAUtMRpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "BTpzx57ncntc5bU1hETHaweKS84DgwxMCLCAUtMRpump",
+        "pool_address": "6HU15aDaQNXXWxfN4MVDj6h8tdmLBn35cGmMxPag7o7H",
+        "token_quantity_raw": "56851614198178",
+        "token_decimals": 6,
+        "sol_lamports": "1668228209",
+        "curve_sol_lamports": "1689345023",
+        "protocol_fee_lamports": "16048778",
+        "creator_fee_lamports": "5068036",
+        "transaction_fee_lamports": "15000"
+      }
+    },
+    {
+      "signature": "4SYAx4yJzSg9Yx3ZqJG8bjEVXRBB2r6HAZ9kTExuy5rpJpX1KQXvtX7wkjX4CSQzQDjoEttwVwBZgH4tdiUVrzGR",
+      "wallet_address": "2EHc2w1qfNgLWsHodXwEhfsDA5pkQBWrFPizJyr8Cad4",
+      "block_time": 1791224827,
+      "direction": "SELL",
+      "mint_in": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump",
+        "pool_address": "46SzZPKwSmLQ3asNh8S3QAZ7Sf34RHBai91ftmteVrRw",
+        "token_quantity_raw": "9938596918008",
+        "token_decimals": 6,
+        "sol_lamports": "321225938",
+        "curve_sol_lamports": "325292090",
+        "protocol_fee_lamports": "3090275",
+        "creator_fee_lamports": "975877",
+        "transaction_fee_lamports": "105000"
+      }
+    },
+    {
+      "signature": "5LbaAKU88tDVV4gmpiZ36sUF4Hv1pzTTpKVxPwoeSfSfYLKHbvrECWtWnKsvNMpD3RyYH3jSL6ce4mhKq1LpNuxk",
+      "wallet_address": "82skHJXp9MHsW1FMjYvnivy39DXPPcy2xrw6saFoU7XL",
+      "block_time": 1791224824,
+      "direction": "SELL",
+      "mint_in": "EwQmXt17gM6RfJQ4puTpC3KVEyWhZJ8NGs11CGEpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "EwQmXt17gM6RfJQ4puTpC3KVEyWhZJ8NGs11CGEpump",
+        "pool_address": "J2bQRS7hPL4UTsx6cspbHncpackxoxPKCopxUDhGc86Q",
+        "token_quantity_raw": "1537212637368",
+        "token_decimals": 6,
+        "sol_lamports": "280417424",
+        "curve_sol_lamports": "283967013",
+        "protocol_fee_lamports": "2697687",
+        "creator_fee_lamports": "851902",
+        "transaction_fee_lamports": "75000"
+      }
+    },
+    {
+      "signature": "ycGRxrt5gKwbxuyxCXwHDVC6rv2yfzgGuU7u4FoyWhwh2UFMBX82Wf6n6A74r8LP4EbM53mFQSaMqyZUswx4GB1",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224823,
+      "direction": "SELL",
+      "mint_in": "Exday3DFohJpzT6uFwwXycyXivMQhJ76f1pU8G1bpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "Exday3DFohJpzT6uFwwXycyXivMQhJ76f1pU8G1bpump",
+        "pool_address": "8oLeAkDwyYwb3cRKKw92syLwxipi3zRCFNfKoy8ComXc",
+        "token_quantity_raw": "137693377017",
+        "token_decimals": 6,
+        "sol_lamports": "14064928",
+        "curve_sol_lamports": "14242966",
+        "protocol_fee_lamports": "135309",
+        "creator_fee_lamports": "42729",
+        "transaction_fee_lamports": "12500"
+      }
+    },
+    {
+      "signature": "2H9pVjMhYGHopNg3LkdwCx9c4KgMFtZ33ZwBqGzeJmc1ukBJDHxEXpdFrRNRoFy5uijYEnbrzHfhzWfXczbjrYdz",
+      "wallet_address": "7Xfz4aqJ84kuLvWs7xKz3jvLVqdZaijDRZicmDzc9HuB",
+      "block_time": 1791224818,
+      "direction": "SELL",
+      "mint_in": "DHRycNaSWQVhumxyKQSrQ3HE7ioUzvYbyjGjucZXpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "DHRycNaSWQVhumxyKQSrQ3HE7ioUzvYbyjGjucZXpump",
+        "pool_address": "2G4PkW395BSas2E3KGzUymuCgy5nyZjNMBdi4CFxHLLL",
+        "token_quantity_raw": "23366483955565",
+        "token_decimals": 6,
+        "sol_lamports": "833419026",
+        "curve_sol_lamports": "843968635",
+        "protocol_fee_lamports": "8017703",
+        "creator_fee_lamports": "2531906",
+        "transaction_fee_lamports": "20000"
+      }
+    },
+    {
+      "signature": "5E28JdMDdxprYX6xZgT9reKhwGW8FyPAKD2NjSgt88BX65EH2ECw34uWygPECvEKCnXa4aUtdeHJdDLDCunPLNX",
+      "wallet_address": "DxhpC9c4kGkYJR34xUrfFeDx9vwb6yoHUMWrTCZybwtH",
+      "block_time": 1791224804,
+      "direction": "SELL",
+      "mint_in": "9VJVxWAsESaExHWsWghnkpd34gHeiVwWt9G4jtUYcjAv",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "9VJVxWAsESaExHWsWghnkpd34gHeiVwWt9G4jtUYcjAv",
+        "pool_address": "iCCmGXDuNWKBkFPC4zG53vaSL6huptimDSKwewoAmeR",
+        "token_quantity_raw": "44354240670492",
+        "token_decimals": 6,
+        "sol_lamports": "1284985937",
+        "curve_sol_lamports": "1301251583",
+        "protocol_fee_lamports": "12361891",
+        "creator_fee_lamports": "3903755",
+        "transaction_fee_lamports": "15000"
+      }
+    },
+    {
+      "signature": "62aLr9E9QVUr4TdaxNDh5Ag5jbwJUdSxYaofDTs4rvmdEbV9aoSnsdG8qZf3sEU37o2E9u8ZaKWFjf6EmUfU586a",
+      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
+      "block_time": 1791224792,
+      "direction": "SELL",
+      "mint_in": "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft",
+        "pool_address": "3di3GQk3925MT1ha9RhmhfLc7qjHyYS9tW829F3GLgAw",
+        "token_quantity_raw": "6730540384768",
+        "token_decimals": 6,
+        "sol_lamports": "1912211871",
+        "curve_sol_lamports": "1936417086",
+        "protocol_fee_lamports": "18395963",
+        "creator_fee_lamports": "5809252",
+        "transaction_fee_lamports": "130000"
+      }
+    },
+    {
+      "signature": "4MBShKvXLn4bpK69RPGvvob8xNQUZMtWPNL64HA7HJrwpmEahAtF1pE8hpALAQgKnAZPTLav6zrdNuDgaKDDXM6c",
+      "wallet_address": "GqbQENzZ4HYfPjs9VgGkW3dhwr34FHLDQ6zmEqHbGs1j",
+      "block_time": 1791224791,
+      "direction": "SELL",
+      "mint_in": "Ex342KBZfX57PWBmDye7St8v8AharfvMon2p6RhebFgf",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "Ex342KBZfX57PWBmDye7St8v8AharfvMon2p6RhebFgf",
+        "pool_address": "Da5LoEEdeXBhVxXubx6ZyfWxweQoRjf56jhCmLeQmnm8",
+        "token_quantity_raw": "7506165929433",
+        "token_decimals": 6,
+        "sol_lamports": "684641139",
+        "curve_sol_lamports": "693307484",
+        "protocol_fee_lamports": "6586422",
+        "creator_fee_lamports": "2079923",
+        "transaction_fee_lamports": "3005000"
+      }
+    },
+    {
+      "signature": "4ddghnpis92VA48SWSk2BMj2bc5dZEZEmHEtquxNiryU8UskZEPhhEeGipqmVd1sdZUoGT2tn5AsPiM58rXRDPvM",
+      "wallet_address": "7EAji2sxaQCgVYxuNfZN6YkYhka1AvvmgT6zZUo5n91z",
+      "block_time": 1791224779,
+      "direction": "SELL",
+      "mint_in": "AMMsrDZkSPxENn7x1QmQChD1r9ysJzGMdC3kRB11pump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "AMMsrDZkSPxENn7x1QmQChD1r9ysJzGMdC3kRB11pump",
+        "pool_address": "8e5936AC3mrNCq12hcPCwpADwiyKnMZmN2Q8tbWRWsGS",
+        "token_quantity_raw": "13026768849468",
+        "token_decimals": 6,
+        "sol_lamports": "435212327",
+        "curve_sol_lamports": "440721345",
+        "protocol_fee_lamports": "4186853",
+        "creator_fee_lamports": "1322165",
+        "transaction_fee_lamports": "20000"
+      }
+    },
+    {
+      "signature": "4RZ3CCaD6ruV5ukLLvFpwEurGiRQ1nApg87GA2Skhxb7pwXWB1Ptq14w7rW3Yq2nenS7m4cPHWjuezvgxoZvJk5S",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224770,
+      "direction": "SELL",
+      "mint_in": "FJf4G9wadw1ATa79rax9Z6SCDftRBDyy5t27zHvvpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "FJf4G9wadw1ATa79rax9Z6SCDftRBDyy5t27zHvvpump",
+        "pool_address": "9Sg9k8EK1Twu8sGuGRsfMaYk2CaZjnU7oeEF6nqkbxgk",
+        "token_quantity_raw": "2589826682022",
+        "token_decimals": 6,
+        "sol_lamports": "88395296",
+        "curve_sol_lamports": "89514225",
+        "protocol_fee_lamports": "850386",
+        "creator_fee_lamports": "268543",
+        "transaction_fee_lamports": "49100"
+      }
+    },
+    {
+      "signature": "2THxwqrPmoq1Z9sRSun5VQGY7YeJxRW4U35URx8RJhTqYNY5ykx1mttG2dDu873hqiFfaSpDm7nC7pnD6Gte4ZW8",
+      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
+      "block_time": 1791224766,
+      "direction": "SELL",
+      "mint_in": "4uxC8Sk1tyiaE9NGnpxDWmeeqtFUsuEk58qvdGrgpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "4uxC8Sk1tyiaE9NGnpxDWmeeqtFUsuEk58qvdGrgpump",
+        "pool_address": "5jwxyPbX9Qz1YAhPxTfqybqrGhVoNKCTs5xAPnsq6HiF",
+        "token_quantity_raw": "10570536274040",
+        "token_decimals": 6,
+        "sol_lamports": "1078889642",
+        "curve_sol_lamports": "1092546474",
+        "protocol_fee_lamports": "10379192",
+        "creator_fee_lamports": "3277640",
+        "transaction_fee_lamports": "130000"
+      }
+    },
+    {
+      "signature": "5aEWS3ASovbDEXYn3mKcDDMjc8QNmy61uSkmCStn2Jo73DP5ZnC4E1as3xmKgEb4CpQ3DkofJvzfirZzh8pxohjd",
+      "wallet_address": "6sfsvDJMTb5bjrdxyaACg1CoRHUfDkpJ8G7Ax2TVzYy2",
+      "block_time": 1791224760,
+      "direction": "SELL",
+      "mint_in": "en4LpgaRsFib2qoeEbNX26on21hfD5qZPvYSUmXpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "en4LpgaRsFib2qoeEbNX26on21hfD5qZPvYSUmXpump",
+        "pool_address": "7HA9Gngt5yfRFvHFxm6eErdk5suvjBUMo8TSe6czZooa",
+        "token_quantity_raw": "16296993198650",
+        "token_decimals": 6,
+        "sol_lamports": "623240632",
+        "curve_sol_lamports": "631129755",
+        "protocol_fee_lamports": "5995733",
+        "creator_fee_lamports": "1893390",
+        "transaction_fee_lamports": "5900"
+      }
+    },
+    {
+      "signature": "66TLdLjqykrdKc2xB8za6jSked6dSkzLiRuyLDD7xTaRQbWbsnVwv71fHHm4dYzwoJnDJbvydW4KW7jNpxSuKsmS",
+      "wallet_address": "67LwNGrukVFFcA1XZQ9U8ddZGCBuPvPHgMxw81AeRtQ7",
+      "block_time": 1791224758,
+      "direction": "SELL",
+      "mint_in": "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft",
+        "pool_address": "3di3GQk3925MT1ha9RhmhfLc7qjHyYS9tW829F3GLgAw",
+        "token_quantity_raw": "158443945560",
+        "token_decimals": 6,
+        "sol_lamports": "12850902",
+        "curve_sol_lamports": "13013572",
+        "protocol_fee_lamports": "123629",
+        "creator_fee_lamports": "39041",
+        "transaction_fee_lamports": "14900"
+      }
+    },
+    {
+      "signature": "5CFgaviReBeJuy6cZmDDQhMYWy5XT13k341V34ieApvuD9Xh9kkpdiqq2x7qmFiJUUNpd581ZVsksmRf8f1M4PFK",
+      "wallet_address": "6sfsvDJMTb5bjrdxyaACg1CoRHUfDkpJ8G7Ax2TVzYy2",
+      "block_time": 1791224758,
+      "direction": "SELL",
+      "mint_in": "en4LpgaRsFib2qoeEbNX26on21hfD5qZPvYSUmXpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "en4LpgaRsFib2qoeEbNX26on21hfD5qZPvYSUmXpump",
+        "pool_address": "7HA9Gngt5yfRFvHFxm6eErdk5suvjBUMo8TSe6czZooa",
+        "token_quantity_raw": "10864662132432",
+        "token_decimals": 6,
+        "sol_lamports": "416920782",
+        "curve_sol_lamports": "422198261",
+        "protocol_fee_lamports": "4010884",
+        "creator_fee_lamports": "1266595",
+        "transaction_fee_lamports": "5900"
+      }
+    },
+    {
+      "signature": "4BBLiTyDZxqieMBGCRZUdFdhWQguw4JfX1X6wDLBzCbehwnHUJTi9TSX1FMN8X8vswwTrEi9qnaHb4GaAJ2RSFdZ",
+      "wallet_address": "GBRTiNiiRexYESkgfadjrQEwiKdx8SkzThojCQYT4u5i",
+      "block_time": 1791224753,
+      "direction": "SELL",
+      "mint_in": "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft",
+        "pool_address": "3di3GQk3925MT1ha9RhmhfLc7qjHyYS9tW829F3GLgAw",
+        "token_quantity_raw": "640774233548",
+        "token_decimals": 6,
+        "sol_lamports": "62854375",
+        "curve_sol_lamports": "63650002",
+        "protocol_fee_lamports": "604676",
+        "creator_fee_lamports": "190951",
+        "transaction_fee_lamports": "156500"
+      }
+    },
+    {
+      "signature": "3YsfUL7iMFyLWE3DZsBqiBDU16bnAn2uzJKm4yvh2XFySAHDatwqjTujDmVZXvLTXxYazWxjDECuCQe7ha9kTaBg",
+      "wallet_address": "jmemehQbZXX7QqNE7Eyi81MdTZw6cEAT6TU4Kinwtru",
+      "block_time": 1791224703,
+      "direction": "SELL",
+      "mint_in": "3AZoxx7e3RdVnqZ8ibFXqEMCqqdjKE5dUR2PPQea7XF1",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "3AZoxx7e3RdVnqZ8ibFXqEMCqqdjKE5dUR2PPQea7XF1",
+        "pool_address": "6xpAfCidy9sgFfPiws99Ad1HGiKm52cbZ6iCbNTznira",
+        "token_quantity_raw": "35504309488387",
+        "token_decimals": 6,
+        "sol_lamports": "1036834281",
+        "curve_sol_lamports": "1049958767",
+        "protocol_fee_lamports": "9974609",
+        "creator_fee_lamports": "3149877",
+        "transaction_fee_lamports": "105000"
+      }
+    },
+    {
+      "signature": "2mcQBgRZHcPwd2JC43iByRrb9fWPhppWFMe76h5FeZhfeaQKgZBTDAFNvMJEkh73aK63uCCYVg4nTnteFiq9KUpB",
+      "wallet_address": "64hP97Bwr5PubotcTeGgfhkFrGiLVVxT2kVo9M9b4AEz",
+      "block_time": 1791224702,
+      "direction": "SELL",
+      "mint_in": "5FPaMrwE1tdyVwf7UH2xTNr6KxXBjDUSZEQmjkJ48tyx",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "5FPaMrwE1tdyVwf7UH2xTNr6KxXBjDUSZEQmjkJ48tyx",
+        "pool_address": "AMTKFYLE99JHzPXK5gmNgXaS8v6myMeQtu7pwxJ1fpsL",
+        "token_quantity_raw": "10386470543408",
+        "token_decimals": 6,
+        "sol_lamports": "1171690998",
+        "curve_sol_lamports": "1186522531",
+        "protocol_fee_lamports": "11271965",
+        "creator_fee_lamports": "3559568",
+        "transaction_fee_lamports": "130000"
+      }
+    },
+    {
+      "signature": "aLwRdxB1xJLrRKBcMHp7w8F4wA3gMb3CVCr3RVSZVW7iKUU37Q5cmw226PErbwsKVGV8G5mFHpXJugVZJZbE4vy",
+      "wallet_address": "FeqP1rvy8LFgazENBMazjtTUF5PwDX4ZTcmM7Pz5yoUk",
+      "block_time": 1791224688,
+      "direction": "SELL",
+      "mint_in": "6E5aRVYi9818u9Da4PvEszV6cnQzLDsHFhcjF95fpump",
+      "mint_out": "So11111111111111111111111111111111111111112",
+      "evidence_quality": "COMPLETE",
+      "reason_codes": "[]",
+      "trade": {
+        "token_mint": "6E5aRVYi9818u9Da4PvEszV6cnQzLDsHFhcjF95fpump",
+        "pool_address": "4zcM6SqMRYifa3FRm79qH84LjEBxtHJ6AKzjgNRGrQKg",
+        "token_quantity_raw": "11329476120122",
+        "token_decimals": 6,
+        "sol_lamports": "349886252",
+        "curve_sol_lamports": "354315193",
+        "protocol_fee_lamports": "3365995",
+        "creator_fee_lamports": "1062946",
+        "transaction_fee_lamports": "105000"
+      }
+    },
     {
       "signature": "5A736oB1H2ARXTvw8gBiSyKAXvPg3KeJAiH5CiVDCgHcxRzucjwsFTS5fcAZDWZnBpM9zYw3mHHnZ6XB8NDP8emf",
       "wallet_address": "5ZG2GAM5Ybzx6RnpTdjyEwc2c8mubrttjCujwxMwUa6D",
@@ -301812,6 +302224,7 @@
     "3A6Mq1vPqTPqNDDe4zga6QbLmZaa6U3SkQnVCXCppump": "2026-10-05T10:35:05.546Z",
     "3AJamXZfCxynzZMu2wTWFw5nmPxskGajRmmvwVi3bB3a": "2026-10-05T17:42:37.830Z",
     "3AKEZWHwzPEQefzBxxUuxfheuuvrJN3yicqiqXxopump": "2026-10-05T06:41:19.630Z",
+    "3AZoxx7e3RdVnqZ8ibFXqEMCqqdjKE5dUR2PPQea7XF1": "2026-10-05T18:25:04.979Z",
     "3AhHWp3cbpYcEuBFa6PfG5u8HpiAMFw3KHAn2Gpbpump": "2026-10-04T18:54:31.030Z",
     "3BCsaDxQmQxMpVWjNQB2PF6rGP6qNLm6yJaPHGCMpump": "2026-10-05T13:45:51.908Z",
     "3BDHQnWeLWZb8RGaEL43RPo4QykKkFomYuXBVb1CzHsS": "2026-10-05T16:22:51.895Z",
@@ -303262,6 +303675,7 @@
     "8gW5ireBgVb7C16mivVyDP3jYho5AV2Bb2Cpq829wt38": "2026-10-05T11:08:16.695Z",
     "8gkFhCf6MRTx1LprzVwYD8YAnNE5Q8jPxnphAZRou3YF": "2026-10-04T19:03:48.200Z",
     "8hJXM5PRBbT1bj1WUaT9FK33s4idqUy8Y5GTZu47pump": "2026-10-05T17:19:17.252Z",
+    "8hPQV5THuZ7DPjusqpaNgF1cRStZxw9umfsKByvuEGft": "2026-10-05T18:25:54.898Z",
     "8hUc2ZZj1nmMT6DbVGwfmCY67vbCKs6Uwqt7L2vXqvf2": "2026-10-05T18:05:09.531Z",
     "8ha6qq8KqvwX72H6rKSjGPt2kSR37YZMkpDfvhhWpiN8": "2026-10-04T11:10:49.602Z",
     "8hmK38Wbqs4yLmBE8FCLbMvujRxVdnKC1ZjQmKpYpump": "2026-10-05T14:08:06.867Z",
@@ -303465,6 +303879,7 @@
     "9UAqwxJw6RKazsXgdiSnhjx2QbVe48up2DcAZvn3QRRZ": "2026-10-05T10:12:18.437Z",
     "9UDh7XSgTnzcge6EzexGk25AweXNBvTvDrdTsMw7pump": "2026-10-05T07:36:30.622Z",
     "9UUjPXy7aENpx13hJN2LjJoG1kUfUkXVkU5FmNKXz3YQ": "2026-10-05T11:13:55.480Z",
+    "9VJVxWAsESaExHWsWghnkpd34gHeiVwWt9G4jtUYcjAv": "2026-10-05T18:26:45.853Z",
     "9VP3myiVtFu5DJKxuV1kunmFdRmhZYNtPZcMyqLpump": "2026-10-04T17:42:43.271Z",
     "9VmJ6CkwpShoENZHsgf9FvWybRn2j8DDSCXj1aA6pump": "2026-10-04T17:09:55.369Z",
     "9Vq5QSHSHYtqPuVVRKFJeGjgA2jQ9VNw1dPLY9pbu6Y7": "2026-10-05T11:54:46.519Z",
@@ -303668,6 +304083,7 @@
     "ALCpmzQsUnDUzrw4risKTNb9mKhSdLsJhhJ7Bkhcpump": "2026-10-05T09:28:50.474Z",
     "ALXss1UFFLXhZNiNkZGX2jpTcBL6EAVjZv1MrwjHpump": "2026-10-04T17:50:33.537Z",
     "AM1iiydUz1XcReyjxXYMHJzuDchjFPKgVqbacvTnpump": "2026-10-04T11:48:13.018Z",
+    "AMMsrDZkSPxENn7x1QmQChD1r9ysJzGMdC3kRB11pump": "2026-10-05T18:26:20.894Z",
     "AMXhggVyYeFW7mocJgauajknRhfkZb37krWJ9ELcoY6d": "2026-10-05T10:16:41.007Z",
     "AMZG19REE6ox6amFWVE7iSzei1oZzHVF49xNopWBfBKo": "2026-10-05T07:01:28.190Z",
     "AMdx2McE8iaHRKSyXRtdtBDAYdxCpHaw3XCELDddpump": "2026-10-04T17:54:27.622Z",
@@ -303841,6 +304257,7 @@
     "B2SZnNqUYUppyxuCszBMyeXrzhFLhQUkTfutuJd9qaNh": "2026-10-04T18:03:05.172Z",
     "B2UUdVqppteMFLV6SKHvuhYifiPhixJA4PeAJDWxpump": "2026-10-05T13:58:44.123Z",
     "B2WCxWps69JzPMfjXE4MKpMkgiTgLcat1JGGpYzpXVjX": "2026-10-05T18:11:16.527Z",
+    "B2q8L3b4qZdJ8uaMA1pjAwHQhTW5u5JSgx7xNWy2pump": "2026-10-05T18:27:14.831Z",
     "B3CRjdqkc8Dm3bzKVt4XrRsBJA6um41RH8homceqpump": "2026-10-05T14:01:01.462Z",
     "B3MNjdsvmKxdwZc8UmfGzBbBRiUkJyx1KEY2Dq9WT8yJ": "2026-10-05T06:13:18.863Z",
     "B3Tr37Hkw8saiMcu4Foa1i7ekpUaQwFMyE16X4xgpump": "2026-10-05T17:58:02.287Z",
@@ -303939,6 +304356,7 @@
     "BSsBr6G8LutUCe9743TdDutqPKDm9sjbq6wUSCV3yz5q": "2026-10-05T12:52:59.284Z",
     "BSyqefHkAhKWKDzPmt8CAAVrD5YJiU2rDeo4BhZLthiP": "2026-10-05T13:38:53.378Z",
     "BTMrkcskqSKBahfCPz796tghgqRkFme7c5EfPHQ3pump": "2026-10-05T17:39:55.653Z",
+    "BTpzx57ncntc5bU1hETHaweKS84DgwxMCLCAUtMRpump": "2026-10-05T18:27:11.523Z",
     "BTqbjkWYmMMat5kXDRqTUS9Np4XgUfLaMSDTRkFZpump": "2026-10-04T16:55:49.050Z",
     "BTr1HgdQcBcxWdYtEKh7d1Qr3w2wzqAadZEmEJmyGgjw": "2026-10-05T11:42:38.571Z",
     "BTsYVMGKHnEQDnatCbFP7yAvryrM2VNQPgbsR4sSpump": "2026-10-05T17:10:54.669Z",
@@ -304402,6 +304820,7 @@
     "DGS7dex1CPXS199keZAdsawbbsmWb91sV9DGQ9UQJK97": "2026-10-04T18:53:15.478Z",
     "DHGRdY6HK8BeFDqqbDxsj6sYRnQPU88bF8MPr6SVR5hK": "2026-10-05T06:26:03.627Z",
     "DHLLrEYi76N2LdgQRhXshc1gRUTAruk491Kbonsypump": "2026-10-05T15:56:53.208Z",
+    "DHRycNaSWQVhumxyKQSrQ3HE7ioUzvYbyjGjucZXpump": "2026-10-05T18:27:00.535Z",
     "DHWFnooNZiYJKXLc9S2jSrq8BrJB4t8cNNHLS4rRF8na": "2026-10-05T13:54:34.661Z",
     "DHavmeRmwmUC1UJ2yjX4FX8q48yiegkMmxKKoGU3pump": "2026-10-05T13:52:09.314Z",
     "DHiBRKnhAo1CYdhtarvRHvFhp8pEe7BBjxm7ZgKQnxV4": "2026-10-05T05:59:52.620Z",
@@ -304848,6 +305267,7 @@
     "Evqf8gwQ9iW3fAqrrf6ZC8fT99t6Ybm7f5GQCm6Qpump": "2026-10-05T04:33:36.324Z",
     "EvqnYdwYR44R46s19nff4oyL3ma21Sw2ixs5Wv821j4M": "2026-10-05T07:41:18.289Z",
     "EwBXuf1Wp6txRPrb6545iU7TkL62mryqMP3dy7Dbpump": "2026-10-05T14:24:40.522Z",
+    "EwQmXt17gM6RfJQ4puTpC3KVEyWhZJ8NGs11CGEpump": "2026-10-05T18:27:07.569Z",
     "EwYvd9Bjgr6kG2CtHLbSV2aninHnMdeaMfp96tMtxgfg": "2026-10-04T19:42:05.725Z",
     "EwZXj1WBChhYUxLGe5sVFNbqotvh43NFz4xL2q8eHEPU": "2026-10-04T19:31:49.062Z",
     "EwacDPLun6B7vM2tm88s3wbQdvvsUzzCUddPNCFvpump": "2026-10-05T10:25:00.657Z",
@@ -304855,6 +305275,7 @@
     "Ex342KBZfX57PWBmDye7St8v8AharfvMon2p6RhebFgf": "2026-10-05T18:23:27.421Z",
     "ExB1GJygX6dwfYFCwqDDYnJgXGXforcZZ4C7SCCxv81L": "2026-10-04T16:55:49.567Z",
     "ExBGkKEQ8kwq8DgJ5KXk3AN5oz5GaiNAuPkmPsZMpump": "2026-10-05T05:40:19.244Z",
+    "Exday3DFohJpzT6uFwwXycyXivMQhJ76f1pU8G1bpump": "2026-10-05T18:27:05.208Z",
     "Exfwms7yFJXkKzdwiCuTut1HTTFnaCRX7eP4Dp79pump": "2026-10-05T12:15:48.830Z",
     "ExhPhEaDkKbCD8CTCG5ea6eH2rNKfAcPLfRMAh7wpump": "2026-10-05T13:55:29.271Z",
     "EyHCwdo5SydF1Dy7Fb6jmMMwuGiqHWouXs7wDZJpqp6r": "2026-10-04T18:44:32.694Z",
@@ -304954,6 +305375,7 @@
     "FJJmXPLFKn3UDBToxicPxGssNrmCadBajCfoFzPSpump": "2026-10-04T19:46:54.541Z",
     "FJKETZwo9UQ6XrjjZhb9Dp2B8ZiEHLTdHsC4Qe5QKvpX": "2026-10-04T17:42:36.322Z",
     "FJdeM5TeJDFZGKhEaSCDDy694MeKiHoGR5Apksg4pump": "2026-10-05T13:33:25.024Z",
+    "FJf4G9wadw1ATa79rax9Z6SCDftRBDyy5t27zHvvpump": "2026-10-05T18:26:11.552Z",
     "FJtXBJtBTvQK3ED36uqkg2GRyquL7YMoLTaex9QH1oru": "2026-10-05T12:25:27.173Z",
     "FJvNPGgiBrDAZJPxRGpJY1EymPQpDrjFK8RrAgdSpump": "2026-10-05T17:17:16.079Z",
     "FK2Y6BaM32wCmFTTjo8DuvmpJiK3PPKdAw8pAJJzpump": "2026-10-05T16:26:11.974Z",
@@ -305822,6 +306244,7 @@
     "eHNdJDPFqGR3Ggov9D3Mvtfx1QF66yn4Rj14kqypump": "2026-10-05T06:41:30.672Z",
     "eU6k26xREmJ34MeD3k2VYUn3iVNJUvYWNTU6wiZpump": "2026-10-05T09:44:14.127Z",
     "efXACmNEsWGfKNT6uAom83jqpGdnv19fxoAqwK3pump": "2026-10-05T18:03:27.351Z",
+    "en4LpgaRsFib2qoeEbNX26on21hfD5qZPvYSUmXpump": "2026-10-05T18:26:00.384Z",
     "eqQNu9v7tVT9Um68ZacakyAt5FpGApe9XcW2mjXpump": "2026-10-05T10:05:43.315Z",
     "f3UgR4KzMAJb1jHAin8hE24VRdPBFbob7pJBvk6pump": "2026-10-04T11:10:55.896Z",
     "f6VXmiyYkVTH94fif6TApXM5PYh5CH3mRToBF53pump": "2026-10-05T05:59:25.798Z",
@@ -305857,6 +306280,7 @@
     "kLVZNcHG7CLVjFFC7sWhUm4vDUxhHLnoYsZLv4URbZU": "2026-10-05T16:55:28.972Z",
     "kRLbsGNBCvtRSeUz5q6ePcet2JgqLcXXSC1omJepump": "2026-10-05T08:51:26.819Z",
     "kVjdNFiitrAQX5UBTywTEZUw9NYhALTKZoDVycZpump": "2026-10-05T15:37:29.604Z",
+    "kmPrp6WCPMugdQUt417qu5GUbCWReR1MvTABtgMcDee": "2026-10-05T18:27:20.868Z",
     "kntrct9U7DfJqb9n3uPmAWvC5Bd3STfjs5oqt1zokcc": "2026-10-04T17:22:17.911Z",
     "mCtnPAVeDD9PJMx1jcjuJywgQQYUTawnZpBSGTmpump": "2026-10-05T06:12:33.528Z",
     "meme9Fpz4nc7hMP5wCkoqPm64TTjAyWdBLxsHaHKvjp": "2026-10-05T07:28:21.944Z",
@@ -305865,6 +306289,7 @@
     "mmbaUtNKYxPeBwz5bomNADz83KMKKP5GzSuRVpNpump": "2026-10-05T11:25:43.057Z",
     "n2t9fvQp3VnsymM4wVQLshophmaEDt1hKcNyFM8WMEZ": "2026-10-05T05:16:38.710Z",
     "n5VrMg6BnoTGo3HXZVzrs29m9TojPbdeDaY2ddFpump": "2026-10-05T12:18:22.629Z",
+    "n7c8ku5nU3sM6u1LSRKJ8ED8f8QxNKkLTbKpiDfpump": "2026-10-05T18:27:09.075Z",
     "n9tVgpEGtQQzs5yUg3zhbpoPcvTF526zC1eh3fNpump": "2026-10-05T12:54:02.453Z",
     "nGdSFY4Vh4FSdC9axTRJhsUDLkjRCQ88Sytf6Papump": "2026-10-04T19:02:30.489Z",
     "nGnezHtet4dUwWXNJbD2cyJXnYSMorvceyhujdVpump": "2026-10-05T15:09:51.193Z",
@@ -310247,7 +310672,7 @@
   ],
   "pipeline": {
     "baselines": 501,
-    "pending_transactions": 4495,
+    "pending_transactions": 4646,
     "complete_buys": 137,
     "outcome_states": {
       "DATA_INCOMPLETE": 13,
@@ -310263,19 +310688,19 @@
     "keyed_providers": [
       {
         "provider": "helius",
-        "reserved_used_units": 10932,
+        "reserved_used_units": 10956,
         "budget_limit_units": 950000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock",
-        "reserved_used_units": 5400,
+        "reserved_used_units": 5500,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "getblock2",
-        "reserved_used_units": 5250,
+        "reserved_used_units": 5350,
         "budget_limit_units": 50000,
         "status": "BUDGET_AVAILABLE"
       },
@@ -310287,54 +310712,54 @@
       },
       {
         "provider": "alchemy2",
-        "reserved_used_units": 314960,
+        "reserved_used_units": 315880,
         "budget_limit_units": 30000000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "quicknode1",
-        "reserved_used_units": 113070,
+        "reserved_used_units": 113400,
         "budget_limit_units": 9000000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack1",
-        "reserved_used_units": 36001,
+        "reserved_used_units": 36146,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack2",
-        "reserved_used_units": 35958,
+        "reserved_used_units": 36104,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack3",
-        "reserved_used_units": 35937,
+        "reserved_used_units": 36083,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack4",
-        "reserved_used_units": 35932,
+        "reserved_used_units": 36078,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "chainstack5",
-        "reserved_used_units": 35922,
+        "reserved_used_units": 36068,
         "budget_limit_units": 2500000,
         "status": "BUDGET_AVAILABLE"
       },
       {
         "provider": "quicknode2",
-        "reserved_used_units": 92340,
+        "reserved_used_units": 92670,
         "budget_limit_units": 9000000,
         "status": "BUDGET_AVAILABLE"
       }
     ],
-    "last_keyed_receipt": "2026-10-05T18:23:15.330Z"
+    "last_keyed_receipt": "2026-10-05T18:31:25.134Z"
   },
   "latest_buys": [
     {
