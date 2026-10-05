@@ -37,19 +37,9 @@ em{font-style:normal}.fu{animation:fu 1.4s}.fd{animation:fd 1.4s}
 #ping{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--cy),var(--gr));z-index:20;box-shadow:0 0 10px var(--cy);opacity:0}
 #ping.go{animation:pg 1s}@keyframes pg{0%{width:0;opacity:1}80%{width:100%;opacity:1}100%{width:100%;opacity:0}}
 .bar i{box-shadow:0 0 12px var(--cy)}
-
-#hero{margin:6px 0 4px;text-align:center;cursor:pointer;padding:16px 8px 14px;border-radius:22px;background:radial-gradient(500px 160px at 50% 0,#1b2a6a55,transparent 70%),linear-gradient(160deg,#101a44,#0a1030);border:1px solid var(--ln);box-shadow:0 10px 40px #0009,inset 0 0 40px #00f0ff10}
-#hero .hk{color:var(--mu);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
-#hero .board{display:flex;justify-content:center;gap:4px;margin:10px 0 6px;perspective:600px}
-.fl{position:relative;width:clamp(30px,10.2vw,52px);height:clamp(46px,15vw,76px);border-radius:8px;background:linear-gradient(#1a2150,#10163c);border:1px solid #2a3a7c;color:#fff;font:700 clamp(34px,11.5vw,58px)/clamp(46px,15vw,76px) -apple-system,Segoe UI,Roboto,sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px #000a;overflow:hidden}
-.fl.sep{width:clamp(14px,4vw,22px);background:none;border:0;box-shadow:none}
-.fl b{display:block;transform-origin:50% 50%}
-.fl.go b{animation:flap .075s ease-in}
-@keyframes flap{0%{transform:rotateX(-88deg);opacity:.35}100%{transform:rotateX(0);opacity:1}}
-#hero .hd{font-size:15px;font-weight:700}#hero .hs{color:var(--mu);font-size:12px;margin-top:2px}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
-<div id="hero" onclick="eqSheet()"><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div></div><div id="ping"></div><div id="app"></div>
+<div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
 let L=null,W=null;const $=s=>document.getElementById(s);
@@ -116,16 +106,7 @@ const fmtN=(m,v,s)=>m==='usd'?usd(v):m==='sg'?sg(v)+(s||''):m==='x'?f(v)+'x':m==
 function enhance(){document.querySelectorAll('[data-n]').forEach(el=>{const k=el.dataset.n,v=+el.dataset.v,m=el.dataset.m,s=el.dataset.s||'';const p=PV[k];PV[k]=v;if(p===undefined||p===v||isNaN(v))return;const cls=v>p?'fu':'fd';el.classList.add(cls);const t0=performance.now();(function st(t){const x=Math.min(1,(t-t0)/1100),e=1-Math.pow(1-x,3);el.textContent=fmtN(m,p+(v-p)*e,s);if(x<1)requestAnimationFrame(st)})(t0);setTimeout(()=>el.classList.remove(cls),1500)});
  document.querySelectorAll('.pb').forEach(b=>{const k=b.dataset.k,cu=b.querySelector('.cu'),pk=b.querySelector('.pk'),tp=b.querySelector('.tp'),sl=b.querySelector('.sl');const pv=PV['pb'+k]||{c:0,p:0};PV['pb'+k]={c:+b.dataset.cur,p:+b.dataset.pk};cu.style.width=pv.c+'%';pk.style.width=pv.p+'%';tp.style.left=b.dataset.tp+'%';sl.style.left=b.dataset.sl+'%';requestAnimationFrame(()=>requestAnimationFrame(()=>{cu.style.width=b.dataset.cur+'%';pk.style.width=b.dataset.pk+'%'}))});
  if(!first)document.body.classList.add('noanim');first=false}
-
-const FL={s:'',els:[]};
-function heroUpdate(){if(!L||!L.paper_layer)return;const pl=L.paper_layer,v=pl.equity;if(v==null)return;const str='$'+f(v),bd=$('board');
- if(FL.s.length!==str.length){bd.innerHTML=[...str].map(c=>`<div class="fl${/[0-9$]/.test(c)?'':' sep'}"><b>${c}</b></div>`).join('');FL.els=[...bd.children];FL.s=str.replace(/./g,' ')}
- [...str].forEach((c,i)=>{const o=FL.s[i];if(o===c&&FL.els[i].firstChild.textContent===c)return;const el=FL.els[i],b=el.firstChild;
-  if(!/[0-9]/.test(c)||!/[0-9]/.test(o)){b.textContent=c;return}
-  const a=+o,z=+c;let seq=[],x=a;while(x!==z&&seq.length<10){x=(x+1)%10;seq.push(x)}
-  seq.forEach((d,k)=>setTimeout(()=>{b.textContent=d;el.classList.remove('go');void el.offsetWidth;el.classList.add('go')},k*85))});
- FL.s=str;const pnl=v-pl.start;$('hd').className='hd '+(pnl>=0?'up':'dn');$('hd').textContent=(pnl>=0?'▲ ':'▼ ')+sg(pnl)+' USD vs $'+pl.start;$('hs').textContent='Cash '+usd(pl.cash)+' · '+pl.open+' open · tap for ledger'}
-const render0=render;render=function(){const y=window.scrollY;render0();enhance();heroUpdate();window.scrollTo(0,y)};
+const render0=render;render=function(){const y=window.scrollY;render0();enhance();window.scrollTo(0,y)};
 setInterval(()=>{const c=$('cd');if(!c)return;const l=(+c.dataset.end)-Date.now()/1000;c.textContent=l>0?Math.floor(l/3600)+'h '+String(Math.floor(l%3600/60)).padStart(2,'0')+'m '+String(Math.floor(l%60)).padStart(2,'0')+'s':'rotating...'},1000);
 async function pull(){try{const r=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});L=await r.json();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
 setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at;$('age').textContent=(s>600?'STALE · ':'live · ')+'updated '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
