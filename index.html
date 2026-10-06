@@ -269,16 +269,16 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='76';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='77';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
 const APIURL='https://api.github.com/repos/jegankumarthevar/sspl-dashboard/contents/live-signals.json';let APIET=null,APIREM=60,APIRST=0,APILAST=0;
 async function getAPI(){if(APIREM<=2)return null;if(APIREM<30){const left=Math.max(60,APIRST-Date.now()/1000);const gap=Math.max(4,left/Math.max(1,APIREM-1))*1000;if(Date.now()-APILAST<gap)return 'same'}APILAST=Date.now();const h={'Accept':'application/vnd.github.raw'};if(APIET)h['If-None-Match']=APIET;const r=await fetch(APIURL,{headers:h,cache:'no-store'});const rem=r.headers.get('x-ratelimit-remaining');if(rem!=null)APIREM=+rem;const rs=r.headers.get('x-ratelimit-reset');if(rs)APIRST=+rs;if(r.status===304)return 'same';if(!r.ok)return null;APIET=r.headers.get('etag');return await r.json()}
 async function getLS(){let j=null;try{j=await getAPI()}catch(e){}
- if(j==='same')return 'same';if(j&&j.updated_at)return j;
- try{const r2=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});return await r2.json()}catch(e){return null}}
+ if(j==='same')return 'same';if(j&&j.updated_at){window.SRC='api';return j}
+ try{const r2=await fetch('live-signals.json?'+Date.now(),{cache:'no-store'});window.SRC='cdn';return await r2.json()}catch(e){return null}}
 async function pull(){try{const j=await getLS();if(!j||j==='same')return;if(L&&(j.updated_at||0)<(L.updated_at||0)){return}L=j;chkBuild();overlay();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
-setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at,pa=LPT?Date.now()/1000-LPT:null;$('age').textContent=(s>600?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>600?' stale':'')},1000);
+setInterval(()=>{if(!L)return;const s=Date.now()/1000-L.updated_at,pa=LPT?Date.now()/1000-LPT:null,cd=(window.SRC==='cdn'),lim=cd?1200:600;$('age').textContent=(s>lim?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+(cd?'engine data up to '+ago(s)+' old (cached copy, not a stall)':'engine '+ago(s)+' ago');$('dot').className='dot'+(s>lim?' stale':'')},1000);
 pull();setInterval(pull,4000);
 </script></body></html>
