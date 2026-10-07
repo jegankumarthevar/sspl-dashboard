@@ -88,7 +88,9 @@ h2{display:flex;align-items:center;gap:8px}h2::before{content:"";width:3px;heigh
 .dot{box-shadow:0 0 12px var(--gr),0 0 24px #39ff8866}
 .sheet .pane{background:linear-gradient(180deg,#0e1a4a,#080e28);box-shadow:0 -10px 50px #00f0ff22}
 @media(prefers-reduced-motion:reduce){body::before,#hero::before,h1 b{animation:none}}
-</style><style>.cyh{margin-bottom:0}.cybody{margin:4px 0 12px;padding:8px 10px;border:1px solid var(--ln);border-radius:12px;background:rgba(255,255,255,.03)}.cyt{padding:8px 2px;border-bottom:1px solid var(--ln)}.cyt:last-child{border:0}.cytl{display:flex;justify-content:space-between;font-size:14px}.cytm{color:var(--mu);font-size:11px;margin-top:3px;line-height:1.5}</style><style>/* v59 flat clean look: no glow, no shadow, solid green/red */
+.wallet-open{display:block;width:100%;min-height:62px;margin:14px 0 18px;padding:12px 16px;text-align:left;background:#102647;color:#8cf4ff;border:1px solid #2cb8cf;border-radius:16px;font-size:19px;font-weight:800;cursor:pointer}.wallet-open span{display:block;margin-top:5px;color:#c7d9f2;font-size:13px;font-weight:400}.x{position:sticky;top:0;z-index:2;min-width:44px;min-height:44px}
+</style><style>.cyh{margin-bottom:0}.cybody{margin:4px 0 12px;padding:8px 10px;border:1px solid var(--ln);border-radius:12px;background:rgba(255,255,255,.03)}.cyt{padding:8px 2px;border-bottom:1px solid var(--ln)}.cyt:last-child{border:0}.cytl{display:flex;justify-content:space-between;font-size:14px}.cytm{color:var(--mu);font-size:11px;margin-top:3px;line-height:1.5}.wallet-open{display:block;width:100%;min-height:62px;margin:14px 0 18px;padding:12px 16px;text-align:left;background:#102647;color:#8cf4ff;border:1px solid #2cb8cf;border-radius:16px;font-size:19px;font-weight:800;cursor:pointer}.wallet-open span{display:block;margin-top:5px;color:#c7d9f2;font-size:13px;font-weight:400}.x{position:sticky;top:0;z-index:2;min-width:44px;min-height:44px}
+</style><style>/* v59 flat clean look: no glow, no shadow, solid green/red */
 *{text-shadow:none!important;box-shadow:none!important;filter:none!important;animation-name:none!important}
 #hero::before{display:none!important}
 #hero,#hero.hup,#hero.hdn{background:#0b1226!important;border:1px solid #1d2a5c!important}
@@ -131,8 +133,10 @@ h2::before{background:#00f0ff!important;border-radius:1px}
 .bar i{background:#00f0ff!important}
 .card:active,.row:active{transform:none!important}
 .sheet{backdrop-filter:none!important}
+.wallet-open{display:block;width:100%;min-height:62px;margin:14px 0 18px;padding:12px 16px;text-align:left;background:#102647;color:#8cf4ff;border:1px solid #2cb8cf;border-radius:16px;font-size:19px;font-weight:800;cursor:pointer}.wallet-open span{display:block;margin-top:5px;color:#c7d9f2;font-size:13px;font-weight:400}.x{position:sticky;top:0;z-index:2;min-width:44px;min-height:44px}
 </style></head><body>
 <h1>JK <b>Wallet Tracker</b></h1><div class="sub"><i class="dot" id="dot"></i><span id="age">connecting...</span><span class="tag">SOL · PAPER ONLY</span></div>
+<button id="walletOpen" type="button" class="wallet-open" onclick="walSheet()">500 WALLETS 👀<span id="walletHint">Observed hits + discovery · tap to open</span></button>
 <div id="hero" onclick="eqSheet()"><div id="bank" onclick="event.stopPropagation();bankSheet()"></div><div class="hk">Equity · paper</div><div class="board" id="board"></div><div class="hd" id="hd"></div><div class="hs" id="hs"></div><div id="spk"></div></div><div id="ping"></div><div id="app"></div>
 <div class="sheet" id="sh"><div class="pane" id="pane"></div></div>
 <script>
@@ -162,7 +166,7 @@ if(e.t)t+=kv('Bought (IST)',ist(e.t)+' · $'+(e.cost||20)+' paper');
  t+=`<div class="links">${coinLinks(ca)}${w?walLinks(w):''}${sig?`<a href="https://solscan.io/tx/${sig}" target="_blank" rel="noopener">Buy tx</a>`:''}</div><button class="btn" onclick="navigator.clipboard.writeText('${ca}');this.textContent='Copied ✓'">Copy contract</button>`;open_(t)}
 function row(ca,name,sym,sub,rt,rs,cls){return `<div class="row" onclick="coin('${ca}')"><div class="l"><b>${esc(name)} <span class="yl">$${esc(sym)}</span></b><span>${sub}</span></div><div class="r ${cls||''}">${rt}<span>${rs||''}</span></div></div>`}
 function pnlOf(p){const m=p.last&&p.entry?p.last/p.entry:1;return {m,v:p.cost*(m*0.98/1.02)-p.cost}}
-function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
+function render(){if(!L)return;const wr=L.winners?.stats?.ranking24;$('walletHint').textContent=wr?.watchlist_verified?wr.selected_hits+' observed-hit + '+wr.selected_discovery+' discovery · tap to open':'Observed hits + discovery · tap to open';const pl=L.paper_layer||{},e=L.engine||{},d=e.detections||{};const pos=pl.positions||[],hist=(pl.history||[]).slice().reverse();
  const pnl=pl.equity-pl.start,pct=Math.max(0,Math.min(100,(pl.equity-pl.start)/(pl.goal-pl.start)*100));
  const cy=pl.cycle||{},left=cy.end?cy.end-Date.now()/1000:0;
  let h=`<h2>Cycle ${dn(cy.n)||'-'} · ${dday(cy.n)} · 1h rotation</h2><div class="card" onclick="cycleSheet()"><div class="k">${left>0?'Closes in':'Closing now'}</div><div class="v cy" id="cd" data-end="${cy.end||0}">${left>0?Math.floor(left/3600)+'h '+String(Math.floor(left%3600/60)).padStart(2,'0')+'m':'rotating...'}</div>${cyBar(cy,pl)}<div class="n">new entries ${cy.entries??0}${cy.carried_in?' · '+cy.carried_in+' carried in':''} · open ${pos.length}/${pl.max_open||12} · each coin exits on its own 1h clock · hourly report restarts at $${pl.start}</div></div>`;
@@ -269,7 +273,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='80';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='81';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
