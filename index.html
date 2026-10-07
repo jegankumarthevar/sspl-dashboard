@@ -201,7 +201,7 @@ function eqSheet(){const pl=L.paper_layer,pos=pl.positions||[],ex=pos.reduce((a,
 function cashSheet(){const pl=L.paper_layer;open_(`<h3>Cash ledger</h3>`+kv('Cash',usd(pl.cash))+kv('Max open',(pl.max_open||12))+kv('Per trade','$20')+kv('Rules','TP '+TPX()+'x · SL -50% · rug (liq under $3k) = full loss'))}
 function goalSheet(){const pl=L.paper_layer;open_(`<h3>Goal $${pl.start} → $${pl.goal}</h3>`+kv('Equity now',usd(pl.equity))+kv('Remaining',usd(pl.goal-pl.equity))+kv('Reached',pl.goal_reached?'YES':'not yet'))}
 function detSheet(){const d=(L.engine||{}).detections||{};open_(`<h3>Detections</h3>`+kv('BUY',d.BUY)+kv('SELL',d.SELL)+kv('Unclassified',d.UNKNOWN)+kv('Backlog',(L.engine||{}).pending_tx)+`<div class="sub" style="margin-top:10px">Called BUYs (on-time):</div>`+((L.calls||[]).slice().reverse().map(c=>row(c.ca,c.name,c.sym,ist(c.block_time||c.sent_at),'','')).join('')||'<div class="empty">none</div>'))}
-function engSheet(){const e=L.engine||{};open_(`<h3>Engine</h3>`+kv('Wallets tracked',e.wallets_active)+kv('Baselined',e.baselined)+kv('Backlog',e.pending_tx)+kv('Cycle',e.last_cycle_secs?e.last_cycle_secs+'s':'n/a')+kv('Host','Jk laptop, 24/7')+kv('Engine last seen',L.engine_seen_at?new Date(L.engine_seen_at*1000).toISOString():'n/a')+kv('Main cycle completed',L.heartbeat_at||'n/a'))}
+function engSheet(){const e=L.engine||{};open_(`<h3>Engine</h3>`+kv('Wallets tracked',e.wallets_active)+kv('Baselined',e.baselined)+kv('Backlog',e.pending_tx)+kv('Cycle',e.last_cycle_secs?e.last_cycle_secs+'s':'n/a')+kv('Host','Jk laptop, 24/7')+kv('Engine last seen',L.engine_seen_at>1?new Date(L.engine_seen_at*1000).toISOString():'unavailable')+kv('Main cycle completed',L.heartbeat_at||'n/a'))}
 async function walSheet(){const r=L.winners?.stats?.ranking24;if(r?.watchlist_verified&&r.watchlist){open_('<h3>500 watched wallets</h3><div class="empty">'+r.selected_hits+' observed hit · '+r.selected_discovery+' discovery<br>Rolling 24h known-wallet ranking. Partial observed history, not global performance. Paper TP is not real wallet profit.</div>'+r.watchlist.map(w=>`<div class="row"><div class="l"><b>${sh(w.wallet)}</b><span>${w.tier==='OBSERVED_HIT'?'OBSERVED HIT':'DISCOVERY · unproven'} · ${w.observed_events} events<br>matched SOL P/L ${f(w.realized_sol_pnl,4)} · paper TP ${w.paper_tp}</span></div><div class="r"><a class="btn" href="https://gmgn.ai/sol/address/${w.wallet}" target="_blank" rel="noopener">GMGN</a></div></div>`).join(''));return;}open_('<h3>Tracked wallets</h3><div class="empty">New ranking is waiting for verified watch-list data. Current live monitoring stays unchanged.</div>');}
 
 
@@ -273,7 +273,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='81';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='82';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
@@ -283,6 +283,6 @@ async function getLS(){let j=null;try{j=await getAPI()}catch(e){}
  if(j==='same')return 'same';if(j&&j.updated_at)return j;
  try{const r2=await fetch('https://raw.githubusercontent.com/jegankumarthevar/sspl-dashboard/live/live-signals.json?t='+Date.now(),{cache:'no-store'});return await r2.json()}catch(e){return null}}
 async function pull(){try{const j=await getLS();if(!j||j==='same')return;if(L&&(j.updated_at||0)<(L.updated_at||0)){return}L=j;chkBuild();overlay();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
-setInterval(()=>{if(!L)return;const seen=L.engine_seen_at||L.updated_at,s=Date.now()/1000-seen,pa=LPT?Date.now()/1000-LPT:null;$('age').textContent=(s>(L.engine_seen_at?180:600)?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>(L.engine_seen_at?180:600)?' stale':'')},1000);
+setInterval(()=>{if(!L)return;const seen=Number(L.engine_seen_at),now=Date.now()/1000;if(!Number.isFinite(seen)||seen<=1||seen>now){$('age').textContent='UNKNOWN · engine last-seen unavailable';$('dot').className='dot stale';return;}const s=now-seen,pa=LPT?now-LPT:null;$('age').textContent=(s>180?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>180?' stale':'')},1000);
 pull();setInterval(pull,4000);
 </script></body></html>
