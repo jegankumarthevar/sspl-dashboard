@@ -269,7 +269,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='78';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='79';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
@@ -279,6 +279,6 @@ async function getLS(){let j=null;try{j=await getAPI()}catch(e){}
  if(j==='same')return 'same';if(j&&j.updated_at)return j;
  try{const r2=await fetch('https://raw.githubusercontent.com/jegankumarthevar/sspl-dashboard/live/live-signals.json?t='+Date.now(),{cache:'no-store'});return await r2.json()}catch(e){return null}}
 async function pull(){try{const j=await getLS();if(!j||j==='same')return;if(L&&(j.updated_at||0)<(L.updated_at||0)){return}L=j;chkBuild();overlay();render();const g=$('ping');g.classList.remove('go');void g.offsetWidth;g.classList.add('go')}catch(e){}}
-setInterval(()=>{if(!L)return;const seen=L.engine_seen_at||L.updated_at,s=Date.now()/1000-seen,pa=LPT?Date.now()/1000-LPT:null;$('age').textContent=(s>(L.engine_seen_at?90:600)?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>(L.engine_seen_at?90:600)?' stale':'')},1000);
+setInterval(()=>{if(!L)return;const seen=L.engine_seen_at||L.updated_at,s=Date.now()/1000-seen,pa=LPT?Date.now()/1000-LPT:null;$('age').textContent=(s>(L.engine_seen_at?180:600)?'STALE · ':'live · ')+(pa!=null&&pa<60?'prices '+ago(pa)+' ago · ':'')+'engine '+ago(s)+' ago';$('dot').className='dot'+(s>(L.engine_seen_at?180:600)?' stale':'')},1000);
 pull();setInterval(pull,4000);
 </script></body></html>
