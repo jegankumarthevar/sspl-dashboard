@@ -180,7 +180,7 @@ function render(){if(!L)return;const pl=L.paper_layer||{},e=L.engine||{},d=e.det
  if(prev&&(prev.trades||[]).length)h+=`<h2>Closed positions · cycle ${prev.n} (${prev.trades.length}) <span class="${prev.pnl>=0?'up':'dn'}">${sg(prev.pnl)}</span></h2>`+prev.trades.slice().sort((a,b)=>(a.closed_at||0)-(b.closed_at||0)).map(c=>closedRow(c.ca,c.name,c.sym,c.t,c.closed_at,c.pnl,c.exit_mult,c.why)).join('');
   h+=cycHist();
   h+=`<h2>Live center</h2><div class="grid g3">
- <div class="card" onclick="walSheet()"><div class="k">Wallets</div><div class="v">${e.wallets_active??'n/a'}</div><div class="n">tracked</div></div>
+ <div class="card" onclick="walSheet()"><div class="k">Wallets</div><div class="v">${e.wallets_active??'n/a'}</div><div class="n">${L.winners?.stats?.ranking24?.watchlist_verified?L.winners.stats.ranking24.selected_hits+" observed hit · "+L.winners.stats.ranking24.selected_discovery+" discovery":"tracked"}</div></div>
  <div class="card" onclick="detSheet()"><div class="k">BUY detected</div><div class="v">${d.BUY??0}</div><div class="n">SELL ${d.SELL??0}</div></div>
  <div class="card" onclick="engSheet()"><div class="k">Engine</div><div class="v">${e.last_cycle_secs?e.last_cycle_secs+'s':'n/a'}</div><div class="n">per cycle · laptop</div></div></div>
  <h2>NEW CALLS (${(L.calls||[]).length})</h2>`;
@@ -198,8 +198,8 @@ function cashSheet(){const pl=L.paper_layer;open_(`<h3>Cash ledger</h3>`+kv('Cas
 function goalSheet(){const pl=L.paper_layer;open_(`<h3>Goal $${pl.start} → $${pl.goal}</h3>`+kv('Equity now',usd(pl.equity))+kv('Remaining',usd(pl.goal-pl.equity))+kv('Reached',pl.goal_reached?'YES':'not yet'))}
 function detSheet(){const d=(L.engine||{}).detections||{};open_(`<h3>Detections</h3>`+kv('BUY',d.BUY)+kv('SELL',d.SELL)+kv('Unclassified',d.UNKNOWN)+kv('Backlog',(L.engine||{}).pending_tx)+`<div class="sub" style="margin-top:10px">Called BUYs (on-time):</div>`+((L.calls||[]).slice().reverse().map(c=>row(c.ca,c.name,c.sym,ist(c.block_time||c.sent_at),'','')).join('')||'<div class="empty">none</div>'))}
 function engSheet(){const e=L.engine||{};open_(`<h3>Engine</h3>`+kv('Wallets tracked',e.wallets_active)+kv('Baselined',e.baselined)+kv('Backlog',e.pending_tx)+kv('Cycle',e.last_cycle_secs?e.last_cycle_secs+'s':'n/a')+kv('Host','Jk laptop, 24/7')+kv('Engine last seen',L.engine_seen_at?new Date(L.engine_seen_at*1000).toISOString():'n/a')+kv('Main cycle completed',L.heartbeat_at||'n/a'))}
-async function walSheet(){open_('<h3>Tracked wallets</h3><div class="empty">loading...</div>');try{if(!W){const r=await fetch('dashboard-state.json?'+Date.now(),{cache:'no-store'});W=(await r.json()).wallets||[]}
- $('pane').innerHTML='<button class="x" onclick="closeS()">✕</button><h3>Tracked wallets ('+W.length+')</h3>'+W.slice(0,300).map(w=>{const a=w.wallet_address;return `<div class="row"><div class="l"><b>${sh(a)}</b><span>${w.total_trades??0} trades · win ${w.win_rate!=null?Math.round(w.win_rate*100)+"%":"n/a"}</span></div><div class="r"><a class="btn" href="https://gmgn.ai/sol/address/${a}" target="_blank" rel="noopener">GMGN</a> <a class="btn" href="https://solscan.io/account/${a}" target="_blank" rel="noopener">Solscan</a></div></div>`}).join('')}catch(e){$('pane').innerHTML+='<div class="empty">wallet list unavailable</div>'}}
+async function walSheet(){const r=L.winners?.stats?.ranking24;if(r?.watchlist_verified&&r.watchlist){open_('<h3>500 watched wallets</h3><div class="empty">'+r.selected_hits+' observed hit · '+r.selected_discovery+' discovery<br>Rolling 24h known-wallet ranking. Partial observed history, not global performance. Paper TP is not real wallet profit.</div>'+r.watchlist.map(w=>`<div class="row"><div class="l"><b>${sh(w.wallet)}</b><span>${w.tier==='OBSERVED_HIT'?'OBSERVED HIT':'DISCOVERY · unproven'} · ${w.observed_events} events<br>matched SOL P/L ${f(w.realized_sol_pnl,4)} · paper TP ${w.paper_tp}</span></div><div class="r"><a class="btn" href="https://gmgn.ai/sol/address/${w.wallet}" target="_blank" rel="noopener">GMGN</a></div></div>`).join(''));return;}open_('<h3>Tracked wallets</h3><div class="empty">New ranking is waiting for verified watch-list data. Current live monitoring stays unchanged.</div>');}
+
 
 const PV={};let first=true;
 const fmtN=(m,v,s)=>m==='usd'?usd(v):m==='sg'?sg(v)+(s||''):m==='x'?f(v)+'x':m==='int'?String(Math.round(v)):f(v);
@@ -269,7 +269,7 @@ async function livePx(){try{if(!L||!L.paper_layer)return;const cas=[...new Set((
   const now=Date.now()/1000;for(const a in best)LIVEPX[a]={px:best[a].px,t:now}}
  LPT=Date.now()/1000;overlay();render()}catch(e){}}
 setInterval(livePx,10000);
-const BUILD='79';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
+const BUILD='80';const TPV=()=>Date.now()/1000>=1791221400?1.5:3;const TPX=()=>String(TPV());
 function chkBuild(){}
 async function selfCheck(){try{const r=await fetch(location.pathname+'?_='+Date.now(),{cache:'no-store'});if(!r.ok)return;const m=/const BUILD='(\d+)'/.exec(await r.text());if(!m)return;const n=+m[1];if(n<=+BUILD)return;const k='sspl_pv_'+n;if(sessionStorage.getItem(k))return;sessionStorage.setItem(k,'1');location.replace(location.pathname+'?v='+n+'&t='+Date.now())}catch(e){}}
 setInterval(selfCheck,60000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)selfCheck()});setTimeout(selfCheck,3000);
