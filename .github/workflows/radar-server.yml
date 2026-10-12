@@ -1,0 +1,95 @@
+name: Radar R3 periodic paper scanner
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+    inputs:
+      synthetic:
+        description: 'Send clearly labeled synthetic relay proof (no trade)'
+        type: boolean
+        default: true
+permissions: {}
+concurrency:
+  # Infra must use this same group for any other custom Pages deployment.
+  group: radar-pages-site
+  cancel-in-progress: false
+jobs:
+  scanner:
+    # Keep cron disabled until manual proof, inbox receipt and hosted hash verified.
+    if: github.event_name == 'workflow_dispatch' || vars.RADAR_CRON_ENABLED == 'true'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Assert main and public free-runner scope
+        env:
+          IS_PRIVATE: ${{ github.event.repository.private }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          test "$IS_PRIVATE" = false
+          test "$DEFAULT_BRANCH" = main
+      - name: Exact engine tests
+        run: node radar-r2/server/test.cjs
+      - name: Scan and persist before any relay disclosure
+        run: node radar-r2/server/runner.cjs scan '${{ github.run_id }}'
+      - name: Commit ledger before POST
+        run: |
+          git config user.name 'radar-paper-bot'
+          git config user.email 'radar-paper-bot@users.noreply.github.com'
+          git add radar-r2/server-ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Radar paper scan [skip ci]'
+            git push
+          fi
+      - name: Synthetic server relay proof
+        if: github.event_name == 'workflow_dispatch' && inputs.synthetic
+        run: node radar-r2/server/runner.cjs synthetic '${{ github.run_id }}'
+      - name: Push pending paper events
+        run: node radar-r2/server/runner.cjs push '${{ github.run_id }}'
+      - name: Commit relay state even after failure
+        if: always()
+        run: |
+          git add radar-r2/server-ledger.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Radar relay outbox status [skip ci]'
+            git push
+          fi
+      - name: Stage entire existing public site
+        if: always()
+        run: |
+          mkdir -p _public_site
+          rsync -a ./ _public_site/ \
+            --exclude='.git/' --exclude='.github/' --exclude='_public_site/' \
+            --exclude='node_modules/' --exclude='server/' --exclude='*.log' \
+            --exclude='*.pem' --exclude='.env*' --exclude='*TEST_OUTPUT*' \
+            --exclude='*REPORT*' --exclude='LOCAL_*' --exclude='DASHBOARD_TEST_*' \
+            --exclude='*.zip' --exclude='*.tmp'
+          test -f _public_site/radar-r2/index.html
+          test -f _public_site/radar-r2/server-ledger.json
+      - name: Upload complete site including post-scan ledger
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _public_site
+  deploy:
+    if: always() && needs.scanner.result != 'skipped'
+    needs: scanner
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy complete same-link site
+        id: deployment
+        uses: actions/deploy-pages@v4
