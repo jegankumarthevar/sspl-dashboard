@@ -180,7 +180,9 @@
             "PENDING",
             "ATTEMPTING",
             "PENDING_RETRY",
-            "RELAY_ACCEPTED"
+            "RELAY_ACCEPTED",
+            "LEDGER_COMMITTED",
+            "EXPIRED_TRANSPORT_REMOVED"
           ]
         },
         "attempts": {
