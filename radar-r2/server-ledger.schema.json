@@ -15,10 +15,16 @@
   ],
   "properties": {
     "schema": {
-      "const": 1
+      "enum": [
+        1,
+        2
+      ]
     },
     "engine": {
-      "const": "R2.3-exact-core"
+      "enum": [
+        "R2.3-exact-core",
+        "R3.1-limit-minus20"
+      ]
     },
     "engineState": {
       "type": "object",
@@ -149,12 +155,16 @@
         "side": {
           "enum": [
             "BUY",
-            "SELL"
+            "SELL",
+            "LIMIT_PLACED",
+            "ORDER_EXPIRED"
           ]
         },
         "entry": {
-          "type": "number",
-          "exclusiveMinimum": 0
+          "type": [
+            "number",
+            "null"
+          ]
         },
         "exit": {
           "type": [
@@ -188,6 +198,61 @@
         "attempts": {
           "type": "integer",
           "minimum": 0
+        },
+        "eventType": {
+          "enum": [
+            "LIMIT_PLACED",
+            "BUY",
+            "SELL",
+            "ORDER_EXPIRED"
+          ]
+        },
+        "signalPrice": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "limitPrice": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "links": {
+          "type": "object",
+          "required": [
+            "dexscreener",
+            "gmgn",
+            "solscan",
+            "binance"
+          ],
+          "properties": {
+            "dexscreener": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "gmgn": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "solscan": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "binance": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
         }
       }
     }
