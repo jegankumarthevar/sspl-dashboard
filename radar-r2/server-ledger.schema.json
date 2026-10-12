@@ -1,0 +1,193 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "R3 server paper envelope",
+  "type": "object",
+  "required": [
+    "schema",
+    "engine",
+    "engineState",
+    "events",
+    "testEvents",
+    "processedRuns",
+    "lastRun",
+    "relay",
+    "summary"
+  ],
+  "properties": {
+    "schema": {
+      "const": 1
+    },
+    "engine": {
+      "const": "R2.3-exact-core"
+    },
+    "engineState": {
+      "type": "object",
+      "description": "Runtime uses original schema3 plus continuous ledger validation and cash reconciliation.",
+      "required": [
+        "schema",
+        "tokens",
+        "settings",
+        "portfolio",
+        "autoPaper"
+      ],
+      "properties": {
+        "schema": {
+          "const": 3
+        },
+        "autoPaper": {
+          "type": "object",
+          "required": [
+            "version",
+            "start",
+            "entry",
+            "maxPositions",
+            "cash",
+            "positions",
+            "trades",
+            "seen",
+            "realized"
+          ],
+          "properties": {
+            "version": {
+              "const": "continuous-paper-1"
+            },
+            "start": {
+              "const": 200
+            },
+            "entry": {
+              "const": 20
+            },
+            "maxPositions": {
+              "const": 6
+            },
+            "cash": {
+              "type": "number",
+              "minimum": 0
+            },
+            "positions": {
+              "type": "array",
+              "maxItems": 6
+            },
+            "trades": {
+              "type": "array"
+            },
+            "seen": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "realized": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "testEvents": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/event"
+      }
+    },
+    "processedRuns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lastRun": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "relay": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "required": [
+        "id",
+        "paper",
+        "coin",
+        "mint",
+        "side",
+        "entry",
+        "exit",
+        "pnl",
+        "timestamp",
+        "reason",
+        "delivery",
+        "attempts"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "paper": {
+          "const": true
+        },
+        "coin": {
+          "type": "string"
+        },
+        "mint": {
+          "type": "string",
+          "pattern": "^[1-9A-HJ-NP-Za-km-z]{32,44}$"
+        },
+        "side": {
+          "enum": [
+            "BUY",
+            "SELL"
+          ]
+        },
+        "entry": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "exit": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "pnl": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "delivery": {
+          "enum": [
+            "PENDING",
+            "ATTEMPTING",
+            "PENDING_RETRY",
+            "RELAY_ACCEPTED"
+          ]
+        },
+        "attempts": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}
