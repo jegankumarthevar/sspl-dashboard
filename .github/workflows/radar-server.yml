@@ -3,11 +3,6 @@ on:
   schedule:
     - cron: '7,22,37,52 * * * *'
   workflow_dispatch:
-    inputs:
-      synthetic:
-        description: 'Send clearly labeled synthetic relay proof (no trade)'
-        type: boolean
-        default: true
 permissions: {}
 concurrency:
   # Infra must use this same group for any other custom Pages deployment.
@@ -38,28 +33,15 @@ jobs:
           test "$DEFAULT_BRANCH" = main
       - name: Exact engine tests
         run: node radar-r2/server/test.cjs
-      - name: Scan and persist before any relay disclosure
+      - name: Scan and persist paper events
         run: node radar-r2/server/runner.cjs scan '${{ github.run_id }}'
-      - name: Commit ledger before POST
+      - name: Commit complete append-only paper ledger
         run: |
           git config user.name 'radar-paper-bot'
           git config user.email 'radar-paper-bot@users.noreply.github.com'
           git add radar-r2/server-ledger.json
           if ! git diff --cached --quiet; then
             git commit -m 'Radar paper scan [skip ci]'
-            git push
-          fi
-      - name: Synthetic server relay proof
-        if: github.event_name == 'workflow_dispatch' && inputs.synthetic
-        run: node radar-r2/server/runner.cjs synthetic '${{ github.run_id }}'
-      - name: Push pending paper events
-        run: node radar-r2/server/runner.cjs push '${{ github.run_id }}'
-      - name: Commit relay state even after failure
-        if: always()
-        run: |
-          git add radar-r2/server-ledger.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Radar relay outbox status [skip ci]'
             git push
           fi
       - name: Stage entire existing public site
