@@ -62616,7 +62616,23 @@
     "latestSlot": 455968036
   },
   "events": [],
-  "testEvents": [],
+  "testEvents": [
+    {
+      "id": "synthetic-r3-38219030958",
+      "paper": true,
+      "coin": "SYNTHETIC SERVER WIRING TEST - NOT A TRADE",
+      "mint": "So11111111111111111111111111111111111111112",
+      "side": "BUY",
+      "entry": 1,
+      "exit": null,
+      "pnl": null,
+      "timestamp": "2026-10-12T07:42:13.203Z",
+      "reason": "SYNTHETIC_TEST_ONLY",
+      "delivery": "PENDING_RETRY",
+      "attempts": 1,
+      "lastError": "Non-JSON relay response"
+    }
+  ],
   "processedRuns": [
     "38219030958"
   ],
@@ -62629,7 +62645,9 @@
     "status": "SCAN_COMPLETE / UNKNOWN GATES STILL BLOCK"
   },
   "relay": {
-    "status": "NOT_TESTED"
+    "at": "2026-10-12T07:42:13.389Z",
+    "status": "PUSH: FAILED",
+    "error": "Non-JSON relay response"
   },
   "summary": {
     "cash": 200,
