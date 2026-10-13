@@ -32,8 +32,12 @@ jobs:
           test "$IS_PRIVATE" = false
           test "$DEFAULT_BRANCH" = main
       - name: Exact engine tests
-        run: node radar-r2/server/test.cjs
+        run: |
+          node radar-r2/server/test.cjs
+          node radar-r2/server/evidence-test.cjs
       - name: Scan and persist paper events
+        env:
+          RADAR_HELIUS_API_KEY: ${{ secrets.RADAR_HELIUS_API_KEY }}
         run: node radar-r2/server/runner.cjs scan '${{ github.run_id }}'
       - name: Commit complete append-only paper ledger
         run: |
