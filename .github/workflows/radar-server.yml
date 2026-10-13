@@ -40,6 +40,7 @@ jobs:
           node radar-r2/server/pool-test.cjs
           node radar-r2/server/wallet-test.cjs
           node radar-r2/server/native-test.cjs
+          node radar-r2/server/ungated-test.cjs
       - name: Scan and persist paper events
         env:
           RADAR_HELIUS_API_KEY: ${{ secrets.RADAR_HELIUS_API_KEY }}
