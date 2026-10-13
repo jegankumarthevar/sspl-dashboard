@@ -31,10 +31,13 @@ jobs:
         run: |
           test "$IS_PRIVATE" = false
           test "$DEFAULT_BRANCH" = main
+      - name: Install pinned read-only PDA dependency
+        run: npm ci --prefix radar-r2 --ignore-scripts
       - name: Exact engine tests
         run: |
           node radar-r2/server/test.cjs
           node radar-r2/server/evidence-test.cjs
+          node radar-r2/server/pool-test.cjs
       - name: Scan and persist paper events
         env:
           RADAR_HELIUS_API_KEY: ${{ secrets.RADAR_HELIUS_API_KEY }}
