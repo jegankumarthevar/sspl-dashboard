@@ -1,0 +1,44 @@
+name: Early buy frontend only (no scanner)
+on:
+  push:
+    paths: ['early-buy/**', '.github/workflows/early-buy-pages.yml']
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: radar-pages-site
+  cancel-in-progress: false
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Stage existing public site without running old engine
+        run: |
+          mkdir -p _site
+          rsync -a ./ _site/ --exclude='.git/' --exclude='.github/' --exclude='_site/' --exclude='node_modules/' --exclude='server/' --exclude='*.log' --exclude='*.pem' --exclude='.env*' --exclude='*.zip' --exclude='*.tmp' --exclude='recovery-archive/' --exclude='early-buy/src/' --exclude='early-buy/test/'
+          python3 - <<'PY'
+          import gzip,pathlib
+          checkpoint=pathlib.Path('_site/radar-r2/server-ledger.json.gz')
+          if checkpoint.exists(): pathlib.Path('_site/radar-r2/server-ledger.json').write_bytes(gzip.decompress(checkpoint.read_bytes()))
+          PY
+          test -f _site/early-buy/index.html
+          test -f _site/radar-r2/index.html
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: site
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
