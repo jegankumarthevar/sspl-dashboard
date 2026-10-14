@@ -14,7 +14,7 @@ def get(url):
  return urllib.request.urlopen(req,timeout=60).read()
 # Include any old-workflow runs that completed while repair files were being installed.
 current=json.loads(get('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?per_page=100'))['workflow_runs']
-runs=[{'id':r['id'],'url':r['html_url']} for r in current if r['created_at']>'2026-10-13T21:00:00Z' and str(r['id'])!=os.environ.get('GITHUB_RUN_ID') and r['status']=='completed']
+runs=[{'id':r['id'],'url':r['html_url']} for r in current if r.get('path')=='.github/workflows/radar-server.yml' and r['created_at']>'2026-10-13T21:00:00Z' and str(r['id'])!=os.environ.get('GITHUB_RUN_ID') and r['status']=='completed']
 for run in reversed(runs):
  rid=str(run['id']);arts=json.loads(get('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+rid+'/artifacts'))['artifacts']
  art=next(a for a in arts if a['name']=='github-pages')
