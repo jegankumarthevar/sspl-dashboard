@@ -9,15 +9,22 @@ base=json.loads((ROOT/'server-ledger.json').read_text());basebudget=dict(base['e
 def compact(v):
  p=v['engineState']['autoPaper'];return {'events':v['events'],'processedRuns':v['processedRuns'],'lastRun':v['lastRun'],'engineState':{'autoPaper':p,'tokens':{o['mint']:v['engineState']['tokens'][o['mint']] for o in p['limitPolicy']['orders']}}}
 versions=[compact(base)];del base;manifest=[];archive=ROOT/'recovery-archive';archive.mkdir(exist_ok=True)
+class SafeRedirect(urllib.request.HTTPRedirectHandler):
+ def redirect_request(self,req,fp,code,msg,headers,newurl):
+  new=super().redirect_request(req,fp,code,msg,headers,newurl)
+  if urllib.parse.urlparse(newurl).hostname!='api.github.com':new.remove_header('Authorization')
+  return new
+opener=urllib.request.build_opener(SafeRedirect())
 def get(url):
  req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
- return urllib.request.urlopen(req,timeout=60).read()
+ return opener.open(req,timeout=60).read()
 # Include any old-workflow runs that completed while repair files were being installed.
 current=json.loads(get('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs?per_page=100'))['workflow_runs']
 runs=[{'id':r['id'],'url':r['html_url']} for r in current if r.get('path')=='.github/workflows/radar-server.yml' and r['created_at']>'2026-10-13T21:00:00Z' and str(r['id'])!=os.environ.get('GITHUB_RUN_ID') and r['status']=='completed']
 for run in reversed(runs):
  rid=str(run['id']);arts=json.loads(get('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+rid+'/artifacts'))['artifacts']
- art=next(a for a in arts if a['name']=='github-pages')
+ art=next((a for a in arts if a['name']=='github-pages'),None)
+ if art is None:continue
  z=zipfile.ZipFile(io.BytesIO(get(art['archive_download_url'])));t=tarfile.open(fileobj=io.BytesIO(z.read('artifact.tar')))
  m=next(m for m in t.getmembers() if m.name.endswith('radar-r2/server-ledger.json'));raw=t.extractfile(m).read();v=json.loads(raw)
  if v['lastRun']['id']!=rid:raise RuntimeError('Artifact/run mismatch '+rid)
