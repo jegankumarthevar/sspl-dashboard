@@ -14,8 +14,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch' || vars.RADAR_CRON_ENABLED == 'true'
     permissions:
       contents: write
+      actions: read
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,6 +42,10 @@ jobs:
           node radar-r2/server/wallet-test.cjs
           node radar-r2/server/native-test.cjs
           node radar-r2/server/ungated-test.cjs
+      - name: Recover divergent deployed history once, preserving original IDs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 radar-r2/server/recover-20261014.py
       - name: Scan and persist paper events
         env:
           RADAR_HELIUS_API_KEY: ${{ secrets.RADAR_HELIUS_API_KEY }}
@@ -49,13 +54,19 @@ jobs:
         run: |
           git config user.name 'radar-paper-bot'
           git config user.email 'radar-paper-bot@users.noreply.github.com'
-          git add radar-r2/server-ledger.json
+          git rm --cached --ignore-unmatch radar-r2/server-ledger.json
+          git add radar-r2/server-ledger.json.gz radar-r2/recovery-20261014.json radar-r2/recovery-archive
+          test "$(wc -c < radar-r2/server-ledger.json.gz)" -lt 90000000
           if ! git diff --cached --quiet; then
             git commit -m 'Radar paper scan [skip ci]'
-            git push
+            git fetch origin main
+            # Never merge a stale ledger over a newer head. Serial workflow group owns scans.
+            test "$(git rev-parse HEAD^)" = "$(git rev-parse origin/main)"
+            git push origin HEAD:main
+            test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$(git rev-parse HEAD)"
           fi
       - name: Stage entire existing public site
-        if: always()
+        if: success()
         run: |
           mkdir -p _public_site
           rsync -a ./ _public_site/ \
@@ -63,16 +74,16 @@ jobs:
             --exclude='node_modules/' --exclude='server/' --exclude='*.log' \
             --exclude='*.pem' --exclude='.env*' --exclude='*TEST_OUTPUT*' \
             --exclude='*REPORT*' --exclude='LOCAL_*' --exclude='DASHBOARD_TEST_*' \
-            --exclude='*.zip' --exclude='*.tmp'
+            --exclude='*.zip' --exclude='*.tmp' --exclude='recovery-archive/'
           test -f _public_site/radar-r2/index.html
           test -f _public_site/radar-r2/server-ledger.json
       - name: Upload complete site including post-scan ledger
-        if: always()
+        if: success()
         uses: actions/upload-pages-artifact@v3
         with:
           path: _public_site
   deploy:
-    if: always() && needs.scanner.result != 'skipped'
+    if: needs.scanner.result == 'success'
     needs: scanner
     runs-on: ubuntu-latest
     permissions:
