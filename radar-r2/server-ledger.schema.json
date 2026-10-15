@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "R3 server paper envelope",
+  "title": "R4 discovery paper envelope with preserved legacy experiment",
   "type": "object",
   "required": [
     "schema",
@@ -23,7 +23,10 @@
     "engine": {
       "enum": [
         "R2.3-exact-core",
-        "R3.1-limit-minus20"
+        "R3.1-limit-minus20",
+        "R3.2-strict-evidence-limit-minus20",
+        "R3.3-ungated4-recorded-limit-minus20",
+        "R4-discovery-paper-500-10-50-hold"
       ]
     },
     "engineState": {
@@ -76,6 +79,65 @@
             },
             "trades": {
               "type": "array"
+            },
+            "seen": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "realized": {
+              "type": "number"
+            }
+          }
+        },
+        "discoveryPaper": {
+          "type": "object",
+          "required": [
+            "version",
+            "start",
+            "entry",
+            "maxPositions",
+            "cash",
+            "positions",
+            "trades",
+            "seen",
+            "realized",
+            "stopRatio",
+            "takeProfit"
+          ],
+          "properties": {
+            "version": {
+              "const": "discovery-paper-500-10-50-v1"
+            },
+            "start": {
+              "const": 500
+            },
+            "entry": {
+              "const": 10
+            },
+            "maxPositions": {
+              "const": 50
+            },
+            "stopRatio": {
+              "const": 0.5
+            },
+            "takeProfit": {
+              "type": "null"
+            },
+            "cash": {
+              "type": "number",
+              "minimum": 0
+            },
+            "positions": {
+              "type": "array",
+              "maxItems": 50
+            },
+            "trades": {
+              "type": "array"
+            },
+            "outcomes": {
+              "type": "object"
             },
             "seen": {
               "type": "array",
@@ -256,5 +318,25 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "engine": {
+            "const": "R4-discovery-paper-500-10-50-hold"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "engineState": {
+            "required": [
+              "discoveryPaper"
+            ]
+          }
+        }
+      }
+    }
+  ]
 }
