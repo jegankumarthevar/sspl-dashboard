@@ -126,7 +126,10 @@
               "const": 0.5
             },
             "takeProfit": {
-              "type": "null"
+              "enum": [
+                null,
+                3
+              ]
             },
             "cash": {
               "type": "number",
