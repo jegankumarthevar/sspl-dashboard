@@ -108,7 +108,10 @@
           ],
           "properties": {
             "version": {
-              "const": "discovery-paper-500-10-50-v1"
+              "enum": [
+                "discovery-paper-500-10-50-v1",
+                "discovery-paper-500-10-50-v2-fresh"
+              ]
             },
             "start": {
               "const": 500
