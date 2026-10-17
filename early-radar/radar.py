@@ -101,7 +101,7 @@ def security(c,mint):
         best=max(mk,key=lambda x:x["lp"].get("lpLockedUSD") or x["lp"].get("quoteUSD") or 0)["lp"]
         pct=best.get("lpLockedPct")
         if pct is None: out.append(chk("lp_lock","UNKNOWN","lpLockedPct missing","rugcheck"))
-        else: out.append(chk("lp_lock","PASS" if pct>=CFG["min_lp_locked_pct"] else "FAIL",f"lpLockedPct={pct} lockedUSD={best.get('lpLockedUSD')} lockers={list((j.get('lockers') or {}).keys())[:2]}","rugcheck",True,"lock/burn as reported by RugCheck; not independently verified on-chain; unlock dates unknown"))
+        else: out.append(chk("lp_lock","PASS" if pct>=CFG["min_lp_locked_pct"] else "FAIL",f"lpLockedPct={pct} lockedUSD={best.get('lpLockedUSD')} lockers={(list(j['lockers'].keys())[:2] if isinstance(j.get('lockers'),dict) else (len(j['lockers']) if isinstance(j.get('lockers'),list) else None))}","rugcheck",True,"lock/burn as reported by RugCheck; not independently verified on-chain; unlock dates unknown"))
     return out
 def market(c,mint):
     j,m=fetch(c,"dex_pairs",f"https://api.dexscreener.com/latest/dex/tokens/{mint}")
@@ -141,7 +141,12 @@ def run(limit=15):
     order=[m for grp in itertools.zip_longest(*bysrc.values()) for m in grp if m]
     for mint in order[:limit]:
         if not out[mint].get("mint_format_valid"): continue
-        t0=time.time();chs=security(c,mint);mk=market(c,mint);age=int(time.time()-t0)
+        t0=time.time()
+        try: chs=security(c,mint)
+        except Exception as e: chs=[chk('security_engine','UNKNOWN',f'unexpected provider shape: {type(e).__name__}','internal')]
+        try: mk=market(c,mint)
+        except Exception as e: mk={'status':'UNKNOWN','reason':f'market parse error {type(e).__name__}','fetched_at':utc()}
+        age=int(time.time()-t0)
         st,rs=decide(mint,chs,mk,0)
         c.execute("insert into decisions values(?,?,?,?,?,?)",(utc(),mint,st,None,json.dumps(rs),json.dumps(chs)));c.commit()
         a=alert(c,mint,st,rs,mk) if st=="QUALIFIED CANDIDATE" else "n/a"
