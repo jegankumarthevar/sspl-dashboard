@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": 1792263987421,
-  "generatedAtIso": "2026-10-17T19:06:27.421Z",
+  "generatedAt": 1792265550974,
+  "generatedAtIso": "2026-10-17T19:32:30.974Z",
   "source": {
     "name": "Dexscreener",
     "boostsLatest": "https://api.dexscreener.com/token-boosts/latest/v1",
@@ -19,8 +19,8 @@
     "Pump multiple is from the first quote this watcher observed, not launch price or realized profit."
   ],
   "stats": {
-    "tracked": 51,
-    "currentBoosted": 28,
+    "tracked": 53,
+    "currentBoosted": 30,
     "alerts": 2,
     "apiCalls": 5
   },
@@ -42,16 +42,16 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792240721658,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00001076,
       "firstQuoteAt": 1792240721658,
-      "currentQuoteUsd": 0.00002874,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00002874,
-      "maxQuoteAt": 1792263987421,
-      "currentMultiple": 2.671003717472119,
-      "maxMultiple": 2.671003717472119,
+      "currentQuoteUsd": 0.00002915,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00002915,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 2.7091078066914496,
+      "maxMultiple": 2.7091078066914496,
       "alerts": [
         {
           "level": "2x",
@@ -64,15 +64,15 @@
         "pairAddress": "3VseAp4pwN3xqv8F6NVNoiHNsCgFAP5N3K8dYGE5inZi",
         "dexId": "pumpfun",
         "url": "https://dexscreener.com/solana/3vseap4pwn3xqv8f6nvnoihnscgfap5n3k8dyge5inzi",
-        "priceUsd": 0.00002874,
+        "priceUsd": 0.00002915,
         "liquidityUsd": null,
-        "fdv": 28742.26,
-        "marketCap": 28742.26,
+        "fdv": 29150.5,
+        "marketCap": 29150.5,
         "pairCreatedAt": 1791683651000,
         "priceChange": {
-          "h1": 101,
-          "h6": 176,
-          "h24": 291
+          "h1": 54.06,
+          "h6": 180,
+          "h24": 297
         },
         "txns": {
           "m5": {
@@ -81,21 +81,21 @@
           },
           "h1": {
             "buys": 32,
-            "sells": 10
+            "sells": 7
           },
           "h6": {
-            "buys": 47,
+            "buys": 49,
             "sells": 24
           },
           "h24": {
-            "buys": 94,
+            "buys": 96,
             "sells": 55
           }
         },
         "volume": {
-          "h24": 9053.86,
-          "h6": 5849.39,
-          "h1": 3884.77,
+          "h24": 9119.46,
+          "h6": 5914.99,
+          "h1": 2659.44,
           "m5": 0
         }
       }
@@ -133,55 +133,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00004186,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00006836,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00006796,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00007965,
       "maxQuoteAt": 1792252704223,
-      "currentMultiple": 1.6330625895843287,
+      "currentMultiple": 1.623506927854754,
       "maxMultiple": 1.9027711419015765,
       "alerts": [],
       "pair": {
         "pairAddress": "EDjt1EqFX2xbLmJDqYr2whCS3vZRH2bRXg2bMQXPaFw4",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/edjt1eqfx2xblmjdqyr2whcs3vzrh2brxg2bmqxpafw4",
-        "priceUsd": 0.00006836,
-        "liquidityUsd": 21739.14,
-        "fdv": 65382,
-        "marketCap": 65382,
+        "priceUsd": 0.00006796,
+        "liquidityUsd": 21665.14,
+        "fdv": 64998,
+        "marketCap": 64998,
         "pairCreatedAt": 1792026717000,
         "priceChange": {
-          "m5": 11.59,
-          "h1": -3.12,
-          "h6": 63.05,
-          "h24": 381
+          "m5": 0.75,
+          "h1": -5.74,
+          "h6": 90.94,
+          "h24": 438
         },
         "txns": {
           "m5": {
-            "buys": 12,
-            "sells": 3
+            "buys": 2,
+            "sells": 1
           },
           "h1": {
-            "buys": 60,
-            "sells": 38
+            "buys": 55,
+            "sells": 40
           },
           "h6": {
-            "buys": 485,
-            "sells": 290
+            "buys": 489,
+            "sells": 292
           },
           "h24": {
-            "buys": 1647,
-            "sells": 913
+            "buys": 1657,
+            "sells": 921
           }
         },
         "volume": {
-          "h24": 87184.1,
-          "h6": 29581.45,
-          "h1": 3647.01,
-          "m5": 700
+          "h24": 87575.98,
+          "h6": 29137.92,
+          "h1": 3566.4,
+          "m5": 44.04
         }
       }
     },
@@ -208,124 +208,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792257761582,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00002504,
       "firstQuoteAt": 1792260385439,
-      "currentQuoteUsd": 0.00003195,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00003985,
-      "maxQuoteAt": 1792262262102,
-      "currentMultiple": 1.275958466453674,
-      "maxMultiple": 1.5914536741214056,
+      "currentQuoteUsd": 0.0000419,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.0000419,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.6733226837060704,
+      "maxMultiple": 1.6733226837060704,
       "alerts": [],
       "pair": {
         "pairAddress": "GqmzUJuDfAtm1u3wSTRyRsRNa5ZAFUTvmCjvhFDNSXeW",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/gqmzujudfatm1u3wstryrsrna5zafutvmcjvhfdnsxew",
-        "priceUsd": 0.00003195,
-        "liquidityUsd": 14075.9,
-        "fdv": 29368,
-        "marketCap": 29368,
+        "priceUsd": 0.0000419,
+        "liquidityUsd": 16406.91,
+        "fdv": 38514,
+        "marketCap": 38514,
         "pairCreatedAt": 1792259930000,
         "priceChange": {
-          "m5": 6.24,
-          "h1": -7.19,
-          "h6": -31.07,
-          "h24": -31.07
+          "m5": -8.87,
+          "h1": -15.48,
+          "h6": -9.61,
+          "h24": -9.61
         },
         "txns": {
           "m5": {
-            "buys": 19,
-            "sells": 18
+            "buys": 3,
+            "sells": 5
           },
           "h1": {
-            "buys": 730,
-            "sells": 429
+            "buys": 242,
+            "sells": 202
           },
           "h6": {
-            "buys": 856,
-            "sells": 556
+            "buys": 949,
+            "sells": 637
           },
           "h24": {
-            "buys": 856,
-            "sells": 556
+            "buys": 949,
+            "sells": 637
           }
         },
         "volume": {
-          "h24": 69659.75,
-          "h6": 69659.75,
-          "h1": 50545.47,
-          "m5": 1892.63
-        }
-      }
-    },
-    {
-      "address": "SAtoZGJkh4Eid9EQZYXWnCNVn5asZrWZLouBMX1SHi1",
-      "chainId": "solana",
-      "name": "Satoshi",
-      "symbol": "Satoshi",
-      "description": "",
-      "icon": "lzIcQxgRba1S5nVB",
-      "url": "https://dexscreener.com/solana/satozgjkh4eid9eqzyxwncnvn5aszrwzloubmx1shi1",
-      "links": [],
-      "boosts": {
-        "latest": false,
-        "top": true,
-        "amount": null,
-        "totalAmount": 100
-      },
-      "currentlyBoosted": true,
-      "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
-      "firstQuoteUsd": 0.00004455,
-      "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00006281,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00006281,
-      "maxQuoteAt": 1792263987421,
-      "currentMultiple": 1.4098765432098768,
-      "maxMultiple": 1.4098765432098768,
-      "alerts": [],
-      "pair": {
-        "pairAddress": "7jTCpYho9RJhCn9ZyrLPjwGWkacGhJVdzL2cZni3UdUh",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/7jtcpyho9rjhcn9zyrlpjwgwkacghjvdzl2czni3uduh",
-        "priceUsd": 0.00006281,
-        "liquidityUsd": 20912.24,
-        "fdv": 60360,
-        "marketCap": 60360,
-        "pairCreatedAt": 1792096328000,
-        "priceChange": {
-          "m5": 5.49,
-          "h1": 14.52,
-          "h6": 44.87,
-          "h24": 77.94
-        },
-        "txns": {
-          "m5": {
-            "buys": 9,
-            "sells": 3
-          },
-          "h1": {
-            "buys": 37,
-            "sells": 36
-          },
-          "h6": {
-            "buys": 188,
-            "sells": 135
-          },
-          "h24": {
-            "buys": 775,
-            "sells": 614
-          }
-        },
-        "volume": {
-          "h24": 77623.38,
-          "h6": 18799.92,
-          "h1": 7680.98,
-          "m5": 181.4
+          "h24": 81681.08,
+          "h6": 81681.08,
+          "h1": 25550.43,
+          "m5": 547.7
         }
       }
     },
@@ -357,55 +288,124 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00002067,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00002866,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00002866,
-      "maxQuoteAt": 1792263987421,
-      "currentMultiple": 1.3865505563618772,
-      "maxMultiple": 1.3865505563618772,
+      "currentQuoteUsd": 0.00003118,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00003118,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.5084663763909048,
+      "maxMultiple": 1.5084663763909048,
       "alerts": [],
       "pair": {
         "pairAddress": "E1vtqtvsTnQkEJv8U6tLarDcw1z745zW76Euoeos9XpK",
         "dexId": "pumpfun",
         "url": "https://dexscreener.com/solana/e1vtqtvstnqkejv8u6tlardcw1z745zw76euoeos9xpk",
-        "priceUsd": 0.00002866,
+        "priceUsd": 0.00003118,
         "liquidityUsd": null,
-        "fdv": 28668.28,
-        "marketCap": 28668.28,
+        "fdv": 31184.69,
+        "marketCap": 31184.69,
         "pairCreatedAt": 1792186611000,
         "priceChange": {
-          "m5": 1.43,
-          "h1": 5.67,
-          "h6": 30.61,
-          "h24": 798
+          "m5": -0.53,
+          "h1": 23.76,
+          "h6": 43.32,
+          "h24": 877
         },
         "txns": {
           "m5": {
-            "buys": 13,
-            "sells": 4
+            "buys": 3,
+            "sells": 3
           },
           "h1": {
-            "buys": 62,
-            "sells": 31
+            "buys": 80,
+            "sells": 40
           },
           "h6": {
-            "buys": 548,
-            "sells": 302
+            "buys": 545,
+            "sells": 303
           },
           "h24": {
-            "buys": 1600,
-            "sells": 929
+            "buys": 1640,
+            "sells": 952
           }
         },
         "volume": {
-          "h24": 99622.6,
-          "h6": 36250.95,
-          "h1": 1852.64,
-          "m5": 91.99
+          "h24": 101369.17,
+          "h6": 34562.64,
+          "h1": 2451.26,
+          "m5": 43.83
+        }
+      }
+    },
+    {
+      "address": "SAtoZGJkh4Eid9EQZYXWnCNVn5asZrWZLouBMX1SHi1",
+      "chainId": "solana",
+      "name": "Satoshi",
+      "symbol": "Satoshi",
+      "description": "",
+      "icon": "lzIcQxgRba1S5nVB",
+      "url": "https://dexscreener.com/solana/satozgjkh4eid9eqzyxwncnvn5aszrwzloubmx1shi1",
+      "links": [],
+      "boosts": {
+        "latest": false,
+        "top": true,
+        "amount": null,
+        "totalAmount": 100
+      },
+      "currentlyBoosted": true,
+      "firstSeenAt": 1792233777615,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.00004455,
+      "firstQuoteAt": 1792233777615,
+      "currentQuoteUsd": 0.0000601,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00006281,
+      "maxQuoteAt": 1792263987421,
+      "currentMultiple": 1.3490460157126825,
+      "maxMultiple": 1.4098765432098768,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "7jTCpYho9RJhCn9ZyrLPjwGWkacGhJVdzL2cZni3UdUh",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/7jtcpyho9rjhcn9zyrlpjwgwkacghjvdzl2czni3uduh",
+        "priceUsd": 0.0000601,
+        "liquidityUsd": 20409.82,
+        "fdv": 57756,
+        "marketCap": 57756,
+        "pairCreatedAt": 1792096328000,
+        "priceChange": {
+          "m5": -6.11,
+          "h1": -2.94,
+          "h6": 33.71,
+          "h24": 21.49
+        },
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 1
+          },
+          "h1": {
+            "buys": 33,
+            "sells": 13
+          },
+          "h6": {
+            "buys": 190,
+            "sells": 134
+          },
+          "h24": {
+            "buys": 741,
+            "sells": 587
+          }
+        },
+        "volume": {
+          "h24": 74004.03,
+          "h6": 18894.55,
+          "h1": 1158.34,
+          "m5": 2.59
         }
       }
     },
@@ -442,31 +442,31 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792252704223,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.0004478,
       "firstQuoteAt": 1792252704223,
-      "currentQuoteUsd": 0.0005508,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0004545,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0005705,
       "maxQuoteAt": 1792257761582,
-      "currentMultiple": 1.2300133988387674,
+      "currentMultiple": 1.0149620366234926,
       "maxMultiple": 1.2740062527914249,
       "alerts": [],
       "pair": {
         "pairAddress": "G7QKTr9Lr3pF44Kp6ALkW8sExiGDXbG2JaJtzRtUKK15",
         "dexId": "raydium",
         "url": "https://dexscreener.com/solana/g7qktr9lr3pf44kp6alkw8sexigdxbg2jajtzrtukk15",
-        "priceUsd": 0.0005508,
-        "liquidityUsd": 106511.69,
-        "fdv": 550852,
-        "marketCap": 550852,
+        "priceUsd": 0.0004545,
+        "liquidityUsd": 94345.15,
+        "fdv": 454501,
+        "marketCap": 454501,
         "pairCreatedAt": 1790519021000,
         "priceChange": {
-          "m5": 0.3,
-          "h1": 2.15,
-          "h6": 44.98,
-          "h24": 58.61
+          "m5": -2.53,
+          "h1": -16.87,
+          "h6": 10.56,
+          "h24": 48.95
         },
         "txns": {
           "m5": {
@@ -475,22 +475,22 @@
           },
           "h1": {
             "buys": 0,
-            "sells": 9
+            "sells": 20
           },
           "h6": {
-            "buys": 329,
-            "sells": 174
+            "buys": 327,
+            "sells": 171
           },
           "h24": {
             "buys": 454,
-            "sells": 267
+            "sells": 278
           }
         },
         "volume": {
-          "h24": 70804.6,
-          "h6": 52196.15,
-          "h1": 224.57,
-          "m5": 49.87
+          "h24": 72923.1,
+          "h6": 55362.53,
+          "h1": 3588.68,
+          "m5": 16.85
         }
       }
     },
@@ -527,55 +527,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.0002132,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.0001956,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0001786,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0002628,
       "maxQuoteAt": 1792252704223,
-      "currentMultiple": 0.9174484052532833,
+      "currentMultiple": 0.8377110694183865,
       "maxMultiple": 1.2326454033771106,
       "alerts": [],
       "pair": {
         "pairAddress": "CxPdeNZn9XTfRZ3Ab6dBmsRygLNCjo41ztH7UuV1eNh3",
         "dexId": "raydium",
         "url": "https://dexscreener.com/solana/cxpdenzn9xtfrz3ab6dbmsryglncjo41zth7uuv1enh3",
-        "priceUsd": 0.0001956,
-        "liquidityUsd": 38208.77,
-        "fdv": 195628,
-        "marketCap": 195628,
+        "priceUsd": 0.0001786,
+        "liquidityUsd": 36527.01,
+        "fdv": 178610,
+        "marketCap": 178610,
         "pairCreatedAt": 1792164392000,
         "priceChange": {
-          "m5": -0.02,
-          "h1": 9.27,
-          "h6": 13.57,
-          "h24": -3.34
+          "m5": -0.03,
+          "h1": -0.48,
+          "h6": -10.15,
+          "h24": -17.9
         },
         "txns": {
           "m5": {
-            "buys": 1,
+            "buys": 0,
             "sells": 1
           },
           "h1": {
-            "buys": 24,
-            "sells": 24
+            "buys": 21,
+            "sells": 25
           },
           "h6": {
-            "buys": 283,
-            "sells": 291
+            "buys": 253,
+            "sells": 280
           },
           "h24": {
-            "buys": 1395,
-            "sells": 1434
+            "buys": 1362,
+            "sells": 1396
           }
         },
         "volume": {
-          "h24": 136931.11,
-          "h6": 27022.88,
-          "h1": 2539.52,
-          "m5": 4.59
+          "h24": 133502.33,
+          "h6": 25544.23,
+          "h1": 2760.95,
+          "m5": 3.18
         }
       }
     },
@@ -607,214 +607,133 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792246114952,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.0001194,
       "firstQuoteAt": 1792246114952,
-      "currentQuoteUsd": 0.0001445,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0001412,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0001445,
       "maxQuoteAt": 1792263987421,
-      "currentMultiple": 1.210217755443886,
+      "currentMultiple": 1.1825795644891122,
       "maxMultiple": 1.210217755443886,
       "alerts": [],
       "pair": {
         "pairAddress": "FVWfAEANVt2VzCShusFRfNKu3negBLgAj8gky6tpoRne",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/fvwfaeanvt2vzcshusfrfnku3negblgaj8gky6tporne",
-        "priceUsd": 0.0001445,
-        "liquidityUsd": 31767.05,
-        "fdv": 142096,
-        "marketCap": 142096,
+        "priceUsd": 0.0001412,
+        "liquidityUsd": 31387.81,
+        "fdv": 138916,
+        "marketCap": 138916,
         "pairCreatedAt": 1792183792000,
         "priceChange": {
-          "m5": 0.07,
-          "h1": 5.38,
-          "h6": 14.46,
-          "h24": 64.11
-        },
-        "txns": {
-          "m5": {
-            "buys": 2029,
-            "sells": 85
-          },
-          "h1": {
-            "buys": 6416,
-            "sells": 1188
-          },
-          "h6": {
-            "buys": 6512,
-            "sells": 7217
-          },
-          "h24": {
-            "buys": 48646,
-            "sells": 63410
-          }
-        },
-        "volume": {
-          "h24": 465711.34,
-          "h6": 8449.89,
-          "h1": 792.8,
-          "m5": 58.58
-        }
-      }
-    },
-    {
-      "address": "6jijW4Ne924kqj8XYLKXFrhpeHy5y2qxoKgGzJHQpump",
-      "chainId": "solana",
-      "name": "Pluto",
-      "symbol": "Pluto",
-      "description": "PLUTO AI — The AI That Controls Your Computer.\n\nPLUTO is an autonomous AI desktop assistant designed to turn your voice into real actions on your computer. Unlike traditional AI chatbots, Pluto can see your screen, control your mouse and keyboard, open applications, browse the internet, write code, and execute complex tasks.",
-      "icon": "F-iciWnPljYVbKPN",
-      "url": "https://dexscreener.com/solana/6jijw4ne924kqj8xylkxfrhpehy5y2qxokggzjhqpump",
-      "links": [
-        {
-          "url": "https://plutohey.com/",
-          "type": null,
-          "label": null
-        },
-        {
-          "url": "https://x.com/PLUTOhay",
-          "type": "twitter",
-          "label": null
-        }
-      ],
-      "boosts": {
-        "latest": false,
-        "top": true,
-        "amount": null,
-        "totalAmount": 10
-      },
-      "currentlyBoosted": true,
-      "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
-      "firstQuoteUsd": 0.0000316,
-      "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00002215,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00003629,
-      "maxQuoteAt": 1792235410724,
-      "currentMultiple": 0.7009493670886076,
-      "maxMultiple": 1.1484177215189872,
-      "alerts": [],
-      "pair": {
-        "pairAddress": "BP7ndYyafQkZhWzuST2iiGFZGbWgSRGuCXCyRDAW8SPc",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/bp7ndyyafqkzhwzust2iigfzgbwgsrgucxcyrdaw8spc",
-        "priceUsd": 0.00002215,
-        "liquidityUsd": null,
-        "fdv": 22151.9,
-        "marketCap": 22151.9,
-        "pairCreatedAt": 1791999965000,
-        "priceChange": {
-          "m5": -8.39,
-          "h1": -14.29,
-          "h6": -24.14,
-          "h24": -13.25
+          "m5": 0.16,
+          "h1": 3.01,
+          "h6": 12.49,
+          "h24": 60.43
         },
         "txns": {
           "m5": {
             "buys": 2,
-            "sells": 5
+            "sells": 83
           },
           "h1": {
-            "buys": 36,
-            "sells": 25
+            "buys": 7787,
+            "sells": 1189
           },
           "h6": {
-            "buys": 274,
-            "sells": 241
+            "buys": 7881,
+            "sells": 7208
           },
           "h24": {
-            "buys": 1477,
-            "sells": 1084
+            "buys": 50021,
+            "sells": 63928
           }
         },
         "volume": {
-          "h24": 117827.03,
-          "h6": 24162.47,
-          "h1": 3500.46,
-          "m5": 462.36
+          "h24": 465949.4,
+          "h6": 7837.89,
+          "h1": 911.14,
+          "m5": 20.55
         }
       }
     },
     {
-      "address": "2e3zQiA8JWeDjjVeuqzv9X1Q3aqRRaPqL8UYEbxVpump",
+      "address": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
       "chainId": "solana",
-      "name": "Nubi",
-      "symbol": "NUBI",
-      "description": "Prompt to launch. The era of launchbots are here.",
-      "icon": "Ye9PG8bgYTjXQ7k7",
-      "url": "https://dexscreener.com/solana/2e3zqia8jwedjjveuqzv9x1q3aqrrapql8uyebxvpump",
+      "name": "Cartoon Money",
+      "symbol": "CBUCKS",
+      "description": "Someone asked AI to build a game the entire crypto space would love. So it recreated the crypto world for us to own. 🪙 Built & controlled by Agentic AI.",
+      "icon": "2bajn2a05AdQGV-4",
+      "url": "https://dexscreener.com/solana/dtcicpcktkeah7tdeztym3hxeohaomibdyjhmyxzpump",
       "links": [
         {
-          "url": "https://nubilaunch.online",
+          "url": "https://cartoon-money.com/",
           "type": null,
           "label": null
         },
         {
-          "url": "https://x.com/NubiLaunchSOL",
+          "url": "https://x.com/cartoonmoney_ai",
           "type": "twitter",
           "label": null
         }
       ],
       "boosts": {
-        "latest": false,
-        "top": true,
-        "amount": null,
-        "totalAmount": 500
+        "latest": true,
+        "top": false,
+        "amount": 10,
+        "totalAmount": 10
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
-      "firstQuoteUsd": 0.0009032,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.0006253,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.000004053,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.0009912,
-      "maxQuoteAt": 1792235410724,
-      "currentMultiple": 0.004487378210806023,
-      "maxMultiple": 1.0974313551815766,
+      "currentQuoteUsd": 0.0007497,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.0007497,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.1989445066368143,
+      "maxMultiple": 1.1989445066368143,
       "alerts": [],
       "pair": {
-        "pairAddress": "265GQ6QKcEGwNCWsL8CsJzD3iDDRuzwj7K9Pa7vst73M",
+        "pairAddress": "B4Cp45PGifVM5FAXfh6AeV8QZ3eUNQnqGBw7KuC7MHnB",
         "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/265gq6qkcegwncwsl8csjzd3iddruzwj7k9pa7vst73m",
-        "priceUsd": 0.000004053,
-        "liquidityUsd": 4483.36,
-        "fdv": 4037,
-        "marketCap": 4037,
-        "pairCreatedAt": 1792182807000,
+        "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
+        "priceUsd": 0.0007497,
+        "liquidityUsd": 86662.85,
+        "fdv": 707145,
+        "marketCap": 707145,
+        "pairCreatedAt": 1791311393000,
         "priceChange": {
-          "m5": -1.31,
-          "h1": 1.16,
-          "h6": -98.62,
-          "h24": -92.89
+          "h1": 2.84,
+          "h6": 21.36,
+          "h24": 41.07
         },
         "txns": {
           "m5": {
             "buys": 0,
-            "sells": 1
+            "sells": 0
           },
           "h1": {
-            "buys": 5,
-            "sells": 2
+            "buys": 70,
+            "sells": 22
           },
           "h6": {
-            "buys": 12252,
-            "sells": 15599
+            "buys": 216,
+            "sells": 122
           },
           "h24": {
-            "buys": 158171,
-            "sells": 80671
+            "buys": 760,
+            "sells": 501
           }
         },
         "volume": {
-          "h24": 6881192.54,
-          "h6": 435877.44,
-          "h1": 13.3,
+          "h24": 99330.39,
+          "h6": 30610.09,
+          "h1": 7485.52,
           "m5": 0
         }
       }
@@ -852,55 +771,213 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792251096023,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.0000681,
       "firstQuoteAt": 1792251096023,
-      "currentQuoteUsd": 0.00007361,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.000074,
-      "maxQuoteAt": 1792252704223,
-      "currentMultiple": 1.0809104258443465,
-      "maxMultiple": 1.0866372980910426,
+      "currentQuoteUsd": 0.00008008,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00008008,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.1759177679882526,
+      "maxMultiple": 1.1759177679882526,
       "alerts": [],
       "pair": {
         "pairAddress": "8kPjMnBnYTsQLAZJ79UTfyh5fQUWWwwVAjRDisBzQn4",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/8kpjmnbnytsqlazj79utfyh5fquwwwwvajrdisbzqn4",
-        "priceUsd": 0.00007361,
-        "liquidityUsd": 21609.93,
-        "fdv": 71605,
-        "marketCap": 71605,
+        "priceUsd": 0.00008008,
+        "liquidityUsd": 22661.47,
+        "fdv": 77903,
+        "marketCap": 77903,
         "pairCreatedAt": 1792249951000,
         "priceChange": {
-          "m5": 1.2,
-          "h1": 4.13,
-          "h6": 19.97,
-          "h24": 19.97
+          "m5": -4.26,
+          "h1": 45.01,
+          "h6": 30.52,
+          "h24": 30.52
         },
         "txns": {
           "m5": {
             "buys": 31,
-            "sells": 17
+            "sells": 27
           },
           "h1": {
-            "buys": 173,
-            "sells": 188
+            "buys": 254,
+            "sells": 246
           },
           "h6": {
-            "buys": 1685,
-            "sells": 1354
+            "buys": 1846,
+            "sells": 1476
           },
           "h24": {
-            "buys": 1685,
-            "sells": 1354
+            "buys": 1846,
+            "sells": 1476
           }
         },
         "volume": {
-          "h24": 120643.29,
-          "h6": 120643.29,
-          "h1": 16157.38,
-          "m5": 1113.47
+          "h24": 140707.75,
+          "h6": 140707.75,
+          "h1": 30578.29,
+          "m5": 2288.86
+        }
+      }
+    },
+    {
+      "address": "6jijW4Ne924kqj8XYLKXFrhpeHy5y2qxoKgGzJHQpump",
+      "chainId": "solana",
+      "name": "Pluto",
+      "symbol": "Pluto",
+      "description": "PLUTO AI — The AI That Controls Your Computer.\n\nPLUTO is an autonomous AI desktop assistant designed to turn your voice into real actions on your computer. Unlike traditional AI chatbots, Pluto can see your screen, control your mouse and keyboard, open applications, browse the internet, write code, and execute complex tasks.",
+      "icon": "F-iciWnPljYVbKPN",
+      "url": "https://dexscreener.com/solana/6jijw4ne924kqj8xylkxfrhpehy5y2qxokggzjhqpump",
+      "links": [
+        {
+          "url": "https://plutohey.com/",
+          "type": null,
+          "label": null
+        },
+        {
+          "url": "https://x.com/PLUTOhay",
+          "type": "twitter",
+          "label": null
+        }
+      ],
+      "boosts": {
+        "latest": false,
+        "top": true,
+        "amount": null,
+        "totalAmount": 10
+      },
+      "currentlyBoosted": true,
+      "firstSeenAt": 1792233777615,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.0000316,
+      "firstQuoteAt": 1792233777615,
+      "currentQuoteUsd": 0.00002232,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00003629,
+      "maxQuoteAt": 1792235410724,
+      "currentMultiple": 0.7063291139240506,
+      "maxMultiple": 1.1484177215189872,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "BP7ndYyafQkZhWzuST2iiGFZGbWgSRGuCXCyRDAW8SPc",
+        "dexId": "pumpfun",
+        "url": "https://dexscreener.com/solana/bp7ndyyafqkzhwzust2iigfzgbwgsrgucxcyrdaw8spc",
+        "priceUsd": 0.00002232,
+        "liquidityUsd": null,
+        "fdv": 22321.92,
+        "marketCap": 22321.92,
+        "pairCreatedAt": 1791999965000,
+        "priceChange": {
+          "h1": -17.6,
+          "h6": -27.02,
+          "h24": 7.99
+        },
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 1
+          },
+          "h1": {
+            "buys": 35,
+            "sells": 23
+          },
+          "h6": {
+            "buys": 268,
+            "sells": 240
+          },
+          "h24": {
+            "buys": 1441,
+            "sells": 1051
+          }
+        },
+        "volume": {
+          "h24": 113684.8,
+          "h6": 23598.46,
+          "h1": 3238.87,
+          "m5": 0.21
+        }
+      }
+    },
+    {
+      "address": "2e3zQiA8JWeDjjVeuqzv9X1Q3aqRRaPqL8UYEbxVpump",
+      "chainId": "solana",
+      "name": "Nubi",
+      "symbol": "NUBI",
+      "description": "Prompt to launch. The era of launchbots are here.",
+      "icon": "Ye9PG8bgYTjXQ7k7",
+      "url": "https://dexscreener.com/solana/2e3zqia8jwedjjveuqzv9x1q3aqrrapql8uyebxvpump",
+      "links": [
+        {
+          "url": "https://nubilaunch.online",
+          "type": null,
+          "label": null
+        },
+        {
+          "url": "https://x.com/NubiLaunchSOL",
+          "type": "twitter",
+          "label": null
+        }
+      ],
+      "boosts": {
+        "latest": false,
+        "top": true,
+        "amount": null,
+        "totalAmount": 500
+      },
+      "currentlyBoosted": true,
+      "firstSeenAt": 1792233777615,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.0009032,
+      "firstQuoteAt": 1792233777615,
+      "currentQuoteUsd": 0.000004056,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.0009912,
+      "maxQuoteAt": 1792235410724,
+      "currentMultiple": 0.004490699734278122,
+      "maxMultiple": 1.0974313551815766,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "265GQ6QKcEGwNCWsL8CsJzD3iDDRuzwj7K9Pa7vst73M",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/265gq6qkcegwncwsl8csjzd3iddruzwj7k9pa7vst73m",
+        "priceUsd": 0.000004056,
+        "liquidityUsd": 4486.36,
+        "fdv": 4039,
+        "marketCap": 4039,
+        "pairCreatedAt": 1792182807000,
+        "priceChange": {
+          "h1": 1.22,
+          "h6": -98.22,
+          "h24": -92.89
+        },
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h1": {
+            "buys": 5,
+            "sells": 3
+          },
+          "h6": {
+            "buys": 8287,
+            "sells": 14187
+          },
+          "h24": {
+            "buys": 158171,
+            "sells": 80672
+          }
+        },
+        "volume": {
+          "h24": 6881193.09,
+          "h6": 333194.33,
+          "h1": 13.85,
+          "m5": 0
         }
       }
     },
@@ -927,30 +1004,30 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792256190375,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.000003942,
       "firstQuoteAt": 1792256190375,
-      "currentQuoteUsd": 0.000003991,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.000003783,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000004248,
       "maxQuoteAt": 1792260385439,
-      "currentMultiple": 1.0124302384576358,
+      "currentMultiple": 0.9596651445966515,
       "maxMultiple": 1.0776255707762556,
       "alerts": [],
       "pair": {
         "pairAddress": "4YyoDWsqpYVZrHXwNUztZfScHtn5aRpwQKYSXwfhsVNx",
         "dexId": "pumpfun",
         "url": "https://dexscreener.com/solana/4yyodwsqpyvzrhxwnuztzfschtn5arpwqkysxwfhsvnx",
-        "priceUsd": 0.000003991,
+        "priceUsd": 0.000003783,
         "liquidityUsd": null,
-        "fdv": 3991.44,
-        "marketCap": 3991.44,
+        "fdv": 3783.97,
+        "marketCap": 3783.97,
         "pairCreatedAt": 1792249402000,
         "priceChange": {
-          "h1": -6.04,
-          "h6": 28.38,
-          "h24": 28.38
+          "h1": -9.38,
+          "h6": 21.7,
+          "h24": 21.7
         },
         "txns": {
           "m5": {
@@ -958,22 +1035,22 @@
             "sells": 0
           },
           "h1": {
-            "buys": 7,
-            "sells": 10
+            "buys": 3,
+            "sells": 6
           },
           "h6": {
             "buys": 96,
-            "sells": 93
+            "sells": 94
           },
           "h24": {
             "buys": 96,
-            "sells": 93
+            "sells": 94
           }
         },
         "volume": {
-          "h24": 7851.28,
-          "h6": 7851.28,
-          "h1": 546.24,
+          "h24": 7944.23,
+          "h6": 7944.23,
+          "h1": 225.64,
           "m5": 0
         }
       }
@@ -1006,55 +1083,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00013,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00014,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0001277,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00014,
       "maxQuoteAt": 1792263987421,
-      "currentMultiple": 1.0769230769230769,
+      "currentMultiple": 0.9823076923076923,
       "maxMultiple": 1.0769230769230769,
       "alerts": [],
       "pair": {
         "pairAddress": "psEVxbyorPSLZ55VNJsbAW7A1YAnPDsymyJijp1CuJz",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/psevxbyorpslz55vnjsbaw7a1yanpdsymyjijp1cujz",
-        "priceUsd": 0.00014,
-        "liquidityUsd": 31512.91,
-        "fdv": 136499,
-        "marketCap": 136499,
+        "priceUsd": 0.0001277,
+        "liquidityUsd": 30040.84,
+        "fdv": 124459,
+        "marketCap": 124459,
         "pairCreatedAt": 1792201705000,
         "priceChange": {
-          "m5": -0.93,
-          "h1": 9.9,
-          "h6": 22.97,
-          "h24": 238
+          "m5": -2.53,
+          "h1": -2.27,
+          "h6": -1.61,
+          "h24": 208
         },
         "txns": {
           "m5": {
-            "buys": 2,
-            "sells": 6
+            "buys": 52,
+            "sells": 55
           },
           "h1": {
-            "buys": 581,
-            "sells": 537
+            "buys": 491,
+            "sells": 464
           },
           "h6": {
-            "buys": 976,
-            "sells": 887
+            "buys": 1210,
+            "sells": 1114
           },
           "h24": {
-            "buys": 7342,
-            "sells": 6522
+            "buys": 7596,
+            "sells": 6757
           }
         },
         "volume": {
-          "h24": 638712.9,
-          "h6": 67082.94,
-          "h1": 39156,
-          "m5": 299.43
+          "h24": 656128.53,
+          "h6": 83210.08,
+          "h1": 33255.97,
+          "m5": 3608.75
         }
       }
     },
@@ -1091,55 +1168,135 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.0008646,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.0007175,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0006966,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000897,
       "maxQuoteAt": 1792246114952,
-      "currentMultiple": 0.8298635207032155,
+      "currentMultiple": 0.8056904927133935,
       "maxMultiple": 1.037473976405274,
       "alerts": [],
       "pair": {
         "pairAddress": "12jc1DzJpzbCDaKuM4brAKh9jcFry2TLG1FfGsL4ftCG",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/12jc1dzjpzbcdakum4brakh9jcfry2tlg1ffgsl4ftcg",
-        "priceUsd": 0.0007175,
-        "liquidityUsd": 84442.63,
-        "fdv": 691407,
-        "marketCap": 691407,
+        "priceUsd": 0.0006966,
+        "liquidityUsd": 83170.52,
+        "fdv": 671182,
+        "marketCap": 671182,
         "pairCreatedAt": 1791314731000,
         "priceChange": {
-          "m5": -0.64,
-          "h1": -0.27,
-          "h6": -16.1,
-          "h24": -11.86
+          "m5": -0.11,
+          "h1": 0.2,
+          "h6": -15.4,
+          "h24": -19.34
         },
         "txns": {
           "m5": {
-            "buys": 71,
-            "sells": 26
+            "buys": 72,
+            "sells": 29
           },
           "h1": {
-            "buys": 1064,
-            "sells": 402
+            "buys": 1036,
+            "sells": 406
           },
           "h6": {
-            "buys": 6382,
-            "sells": 2393
+            "buys": 6320,
+            "sells": 2353
           },
           "h24": {
-            "buys": 22114,
-            "sells": 9478
+            "buys": 22061,
+            "sells": 9412
           }
         },
         "volume": {
-          "h24": 230450.89,
-          "h6": 46039.53,
-          "h1": 8622.91,
-          "m5": 153
+          "h24": 221316.63,
+          "h6": 40866.51,
+          "h1": 6088.56,
+          "m5": 31.26
+        }
+      }
+    },
+    {
+      "address": "HKZDfZnkHZxd9agRDNPyDv4iT6LmAurJnpRtj9wpump",
+      "chainId": "solana",
+      "name": "Make No Mistakes",
+      "symbol": "MISTAKE",
+      "description": "",
+      "icon": "S3VS6ZPJzJ-72iRm",
+      "url": "https://dexscreener.com/solana/hkzdfznkhzxd9agrdnpydv4it6lmaurjnprtj9wpump",
+      "links": [
+        {
+          "url": "https://x.com/nomistakesfun",
+          "type": "twitter",
+          "label": null
+        },
+        {
+          "url": "https://mistakes.fun/",
+          "type": null,
+          "label": null
+        }
+      ],
+      "boosts": {
+        "latest": true,
+        "top": true,
+        "amount": 10,
+        "totalAmount": 10
+      },
+      "currentlyBoosted": true,
+      "firstSeenAt": 1792260385439,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.003514,
+      "firstQuoteAt": 1792260385439,
+      "currentQuoteUsd": 0.003641,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.003641,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.0361411496869664,
+      "maxMultiple": 1.0361411496869664,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "867dKvaCcyRrUDP66bqNXbujXfjaxsNB9wTpc4CmBdAD",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/867dkvaccyrrudp66bqnxbujxfjaxsnb9wtpc4cmbdad",
+        "priceUsd": 0.003641,
+        "liquidityUsd": 213060.12,
+        "fdv": 3506347,
+        "marketCap": 3506347,
+        "pairCreatedAt": 1789093171000,
+        "priceChange": {
+          "m5": -1.81,
+          "h1": 2.94,
+          "h6": 20.88,
+          "h24": 13.02
+        },
+        "txns": {
+          "m5": {
+            "buys": 5,
+            "sells": 8
+          },
+          "h1": {
+            "buys": 78,
+            "sells": 88
+          },
+          "h6": {
+            "buys": 306,
+            "sells": 343
+          },
+          "h24": {
+            "buys": 1135,
+            "sells": 1288
+          }
+        },
+        "volume": {
+          "h24": 257074.33,
+          "h6": 52301.52,
+          "h1": 10645.14,
+          "m5": 823.81
         }
       }
     },
@@ -1166,55 +1323,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792254433053,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00002025,
       "firstQuoteAt": 1792254433053,
-      "currentQuoteUsd": 0.00001651,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00001549,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00002066,
       "maxQuoteAt": 1792256190375,
-      "currentMultiple": 0.8153086419753086,
+      "currentMultiple": 0.7649382716049382,
       "maxMultiple": 1.0202469135802468,
       "alerts": [],
       "pair": {
         "pairAddress": "Dwa6rS2NamcK7tuNJE9R9CjjQzu27pddsuCEBkkznzUJ",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/dwa6rs2namck7tunje9r9cjjqzu27pddsucebkkznzuj",
-        "priceUsd": 0.00001651,
-        "liquidityUsd": 10113.54,
-        "fdv": 16085,
-        "marketCap": 16085,
+        "priceUsd": 0.00001549,
+        "liquidityUsd": 9735.43,
+        "fdv": 15083,
+        "marketCap": 15083,
         "pairCreatedAt": 1792168738000,
         "priceChange": {
-          "m5": -3.99,
-          "h1": -10.93,
-          "h6": 40.82,
-          "h24": -92.9
+          "m5": -0.29,
+          "h1": -11.43,
+          "h6": -18.48,
+          "h24": -90.81
         },
         "txns": {
           "m5": {
-            "buys": 2,
+            "buys": 0,
             "sells": 3
           },
           "h1": {
-            "buys": 53,
-            "sells": 23
+            "buys": 50,
+            "sells": 22
           },
           "h6": {
-            "buys": 463,
-            "sells": 178
+            "buys": 420,
+            "sells": 180
           },
           "h24": {
-            "buys": 3903,
-            "sells": 2906
+            "buys": 3096,
+            "sells": 2411
           }
         },
         "volume": {
-          "h24": 265631.63,
-          "h6": 12723.66,
-          "h1": 1454.49,
-          "m5": 137.25
+          "h24": 192161.6,
+          "h6": 11104.33,
+          "h1": 587.29,
+          "m5": 7.2
         }
       }
     },
@@ -1246,12 +1403,12 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00001761,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000008833,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00001796,
       "maxQuoteAt": 1792234202244,
       "currentMultiple": 0.5015900056785917,
@@ -1267,8 +1424,8 @@
         "marketCap": 8833.69,
         "pairCreatedAt": null,
         "priceChange": {
-          "h1": -0.2,
-          "h6": -18.63,
+          "h1": 0.4,
+          "h6": 6.43,
           "h24": 64.43
         },
         "txns": {
@@ -1278,11 +1435,11 @@
           },
           "h1": {
             "buys": 2,
-            "sells": 2
+            "sells": 0
           },
           "h6": {
-            "buys": 60,
-            "sells": 70
+            "buys": 51,
+            "sells": 51
           },
           "h24": {
             "buys": 1384,
@@ -1291,89 +1448,9 @@
         },
         "volume": {
           "h24": 84614.97,
-          "h6": 5126.59,
-          "h1": 36.36,
+          "h6": 3588.06,
+          "h1": 8.25,
           "m5": 0
-        }
-      }
-    },
-    {
-      "address": "HKZDfZnkHZxd9agRDNPyDv4iT6LmAurJnpRtj9wpump",
-      "chainId": "solana",
-      "name": "Make No Mistakes",
-      "symbol": "MISTAKE",
-      "description": "",
-      "icon": "S3VS6ZPJzJ-72iRm",
-      "url": "https://dexscreener.com/solana/hkzdfznkhzxd9agrdnpydv4it6lmaurjnprtj9wpump",
-      "links": [
-        {
-          "url": "https://x.com/nomistakesfun",
-          "type": "twitter",
-          "label": null
-        },
-        {
-          "url": "https://mistakes.fun/",
-          "type": null,
-          "label": null
-        }
-      ],
-      "boosts": {
-        "latest": true,
-        "top": false,
-        "amount": 10,
-        "totalAmount": 10
-      },
-      "currentlyBoosted": true,
-      "firstSeenAt": 1792260385439,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
-      "firstQuoteUsd": 0.003514,
-      "firstQuoteAt": 1792260385439,
-      "currentQuoteUsd": 0.003563,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.003563,
-      "maxQuoteAt": 1792263987421,
-      "currentMultiple": 1.0139442231075697,
-      "maxMultiple": 1.0139442231075697,
-      "alerts": [],
-      "pair": {
-        "pairAddress": "867dKvaCcyRrUDP66bqNXbujXfjaxsNB9wTpc4CmBdAD",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/867dkvaccyrrudp66bqnxbujxfjaxsnb9wtpc4cmbdad",
-        "priceUsd": 0.003563,
-        "liquidityUsd": 210769.16,
-        "fdv": 3431988,
-        "marketCap": 3431988,
-        "pairCreatedAt": 1789093171000,
-        "priceChange": {
-          "m5": -1.04,
-          "h1": 2.26,
-          "h6": 14.7,
-          "h24": 10.47
-        },
-        "txns": {
-          "m5": {
-            "buys": 5,
-            "sells": 8
-          },
-          "h1": {
-            "buys": 74,
-            "sells": 79
-          },
-          "h6": {
-            "buys": 288,
-            "sells": 329
-          },
-          "h24": {
-            "buys": 1121,
-            "sells": 1275
-          }
-        },
-        "volume": {
-          "h24": 254113.26,
-          "h6": 52405.06,
-          "h1": 8188.17,
-          "m5": 414.6
         }
       }
     },
@@ -1430,29 +1507,30 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00001324,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00001226,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0000124,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00001324,
       "maxQuoteAt": 1792233777615,
-      "currentMultiple": 0.9259818731117824,
+      "currentMultiple": 0.9365558912386707,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "A7dPgUPsoEEG56ZopxsfyqvvMJ3tdAXM1ub86wEEFUJm",
         "dexId": "pumpfun",
         "url": "https://dexscreener.com/solana/a7dpgupsoeeg56zopxsfyqvvmj3tdaxm1ub86weefujm",
-        "priceUsd": 0.00001226,
+        "priceUsd": 0.0000124,
         "liquidityUsd": null,
-        "fdv": 12269.24,
-        "marketCap": 12269.24,
+        "fdv": 12404.22,
+        "marketCap": 12404.22,
         "pairCreatedAt": 1791112534000,
         "priceChange": {
-          "h6": -1.45,
-          "h24": -1.25
+          "h1": 1.1,
+          "h6": -0.37,
+          "h24": -0.16
         },
         "txns": {
           "m5": {
@@ -1460,22 +1538,22 @@
             "sells": 0
           },
           "h1": {
-            "buys": 0,
+            "buys": 1,
             "sells": 0
           },
           "h6": {
-            "buys": 1,
+            "buys": 2,
             "sells": 5
           },
           "h24": {
-            "buys": 14,
+            "buys": 15,
             "sells": 18
           }
         },
         "volume": {
-          "h24": 2159.7,
-          "h6": 90.93,
-          "h1": 0,
+          "h24": 2178.44,
+          "h6": 109.68,
+          "h1": 18.74,
           "m5": 0
         }
       }
@@ -1513,55 +1591,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00009579,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00001617,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00001538,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00009579,
       "maxQuoteAt": 1792233777615,
-      "currentMultiple": 0.1688067647979956,
+      "currentMultiple": 0.1605595573650694,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "8TVM7UJXk3PZnUj1tPzxYyNbqhsEyKEqPyHVbp5gY3aQ",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/8tvm7ujxk3pznuj1tpzxyynbqhseykeqpyhvbp5gy3aq",
-        "priceUsd": 0.00001617,
-        "liquidityUsd": 9793.84,
-        "fdv": 15632,
-        "marketCap": 15632,
+        "priceUsd": 0.00001538,
+        "liquidityUsd": 9504.28,
+        "fdv": 14868,
+        "marketCap": 14868,
         "pairCreatedAt": 1792224821000,
         "priceChange": {
-          "m5": -16.94,
-          "h1": -32.11,
-          "h6": -68.48,
-          "h24": -62.48
+          "m5": -0.69,
+          "h1": -13.08,
+          "h6": -65.54,
+          "h24": -64.32
         },
         "txns": {
           "m5": {
-            "buys": 11,
-            "sells": 17
+            "buys": 4,
+            "sells": 2
           },
           "h1": {
-            "buys": 81,
-            "sells": 83
+            "buys": 71,
+            "sells": 63
           },
           "h6": {
-            "buys": 929,
-            "sells": 861
+            "buys": 852,
+            "sells": 787
           },
           "h24": {
-            "buys": 14816,
-            "sells": 10620
+            "buys": 14846,
+            "sells": 10639
           }
         },
         "volume": {
-          "h24": 992571.25,
-          "h6": 56325.02,
-          "h1": 3898.43,
-          "m5": 999.68
+          "h24": 993614.23,
+          "h6": 50312.68,
+          "h1": 2999.47,
+          "m5": 81.7
         }
       }
     },
@@ -1586,129 +1664,62 @@
         }
       ],
       "boosts": {
-        "latest": true,
+        "latest": false,
         "top": true,
-        "amount": 50,
+        "amount": null,
         "totalAmount": 50
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792235410724,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00004175,
       "firstQuoteAt": 1792235410724,
-      "currentQuoteUsd": 0.00001945,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00001657,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00004175,
       "maxQuoteAt": 1792235410724,
-      "currentMultiple": 0.4658682634730539,
+      "currentMultiple": 0.39688622754491015,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "13LeuoNjw9zcAygmsWuZQ1VsySnva4HRr8F84iEP6vVB",
         "dexId": "meteora",
         "url": "https://dexscreener.com/solana/13leuonjw9zcaygmswuzq1vsysnva4hrr8f84iep6vvb",
-        "priceUsd": 0.00001945,
-        "liquidityUsd": 11747.03,
-        "fdv": 17949,
-        "marketCap": 17949,
+        "priceUsd": 0.00001657,
+        "liquidityUsd": 10839.42,
+        "fdv": 15293,
+        "marketCap": 15293,
         "pairCreatedAt": 1792163662000,
         "priceChange": {
-          "m5": 2.67,
-          "h1": -16.59,
-          "h6": -38.48,
-          "h24": -80.5
+          "m5": 2.87,
+          "h1": -30.76,
+          "h6": -56.52,
+          "h24": -79.93
         },
         "txns": {
           "m5": {
-            "buys": 2,
-            "sells": 0
-          },
-          "h1": {
-            "buys": 11,
-            "sells": 8
-          },
-          "h6": {
-            "buys": 228,
-            "sells": 208
-          },
-          "h24": {
-            "buys": 1603,
-            "sells": 1248
-          }
-        },
-        "volume": {
-          "h24": 190456.54,
-          "h6": 26390.79,
-          "h1": 1054.19,
-          "m5": 46.21
-        }
-      }
-    },
-    {
-      "address": "9H8iVVQycrmhMRQTFie6ZrdUgid8iye7Z78pJrn8pump",
-      "chainId": "solana",
-      "name": "SOLBRO",
-      "symbol": "SOLBRO",
-      "description": "",
-      "icon": "",
-      "url": "https://dexscreener.com/solana/9h8ivvqycrmhmrqtfie6zrdugid8iye7z78pjrn8pump",
-      "links": [],
-      "boosts": {
-        "latest": true,
-        "top": false,
-        "amount": 10,
-        "totalAmount": 10
-      },
-      "currentlyBoosted": true,
-      "firstSeenAt": 1792238652020,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
-      "firstQuoteUsd": 0.000003463,
-      "firstQuoteAt": 1792238652020,
-      "currentQuoteUsd": 0.00000305,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.000003463,
-      "maxQuoteAt": 1792238652020,
-      "currentMultiple": 0.8807392434305515,
-      "maxMultiple": 1,
-      "alerts": [],
-      "pair": {
-        "pairAddress": "n7aqnRJgAwvqGqTrRsZdU6tg8v6eF57CpA6GnaaQTYb",
-        "dexId": "pumpfun",
-        "url": "https://dexscreener.com/solana/n7aqnrjgawvqgqtrrszdu6tg8v6ef57cpa6gnaaqtyb",
-        "priceUsd": 0.00000305,
-        "liquidityUsd": null,
-        "fdv": 3050.51,
-        "marketCap": 3050.51,
-        "pairCreatedAt": 1791659487000,
-        "priceChange": {
-          "h6": -4.96,
-          "h24": 0.66
-        },
-        "txns": {
-          "m5": {
-            "buys": 0,
-            "sells": 0
-          },
-          "h1": {
-            "buys": 0,
-            "sells": 0
-          },
-          "h6": {
             "buys": 1,
-            "sells": 2
+            "sells": 1
+          },
+          "h1": {
+            "buys": 18,
+            "sells": 14
+          },
+          "h6": {
+            "buys": 213,
+            "sells": 207
           },
           "h24": {
-            "buys": 13,
-            "sells": 15
+            "buys": 1465,
+            "sells": 1159
           }
         },
         "volume": {
-          "h24": 1166.44,
-          "h6": 228.4,
-          "h1": 0,
-          "m5": 0
+          "h24": 177559.22,
+          "h6": 25403.24,
+          "h1": 2086.25,
+          "m5": 83.57
         }
       }
     },
@@ -1735,55 +1746,54 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792240721658,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.000187,
       "firstQuoteAt": 1792240721658,
-      "currentQuoteUsd": 0.0001342,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0001294,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000187,
       "maxQuoteAt": 1792240721658,
-      "currentMultiple": 0.7176470588235295,
+      "currentMultiple": 0.6919786096256685,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "5WBYceMmszMxy2CxLTtcHLGefL3Y3kfvAqMasdTLFNv8",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/5wbycemmszmxy2cxlttchlgefl3y3kfvaqmasdtlfnv8",
-        "priceUsd": 0.0001342,
-        "liquidityUsd": 31546.61,
-        "fdv": 129414,
-        "marketCap": 129414,
+        "priceUsd": 0.0001294,
+        "liquidityUsd": 30956.47,
+        "fdv": 124784,
+        "marketCap": 124784,
         "pairCreatedAt": 1790605787000,
         "priceChange": {
-          "m5": -0.67,
-          "h1": -1.31,
-          "h6": -24.69,
-          "h24": -43.87
+          "h1": 3.41,
+          "h6": -31.94,
+          "h24": -43.89
         },
         "txns": {
           "m5": {
             "buys": 0,
-            "sells": 1
+            "sells": 0
           },
           "h1": {
-            "buys": 54,
-            "sells": 67
+            "buys": 48,
+            "sells": 40
           },
           "h6": {
-            "buys": 383,
+            "buys": 373,
             "sells": 271
           },
           "h24": {
-            "buys": 771,
-            "sells": 589
+            "buys": 740,
+            "sells": 560
           }
         },
         "volume": {
-          "h24": 91402.66,
-          "h6": 41218.27,
-          "h1": 7601.62,
-          "m5": 44.64
+          "h24": 84927.26,
+          "h6": 40194.3,
+          "h1": 6797.84,
+          "m5": 0
         }
       }
     },
@@ -1804,60 +1814,61 @@
       ],
       "boosts": {
         "latest": true,
-        "top": true,
+        "top": false,
         "amount": 10,
         "totalAmount": 10
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792256190375,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00006667,
       "firstQuoteAt": 1792256190375,
-      "currentQuoteUsd": 0.00006146,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00005598,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00006667,
       "maxQuoteAt": 1792256190375,
-      "currentMultiple": 0.9218539073046348,
+      "currentMultiple": 0.8396580170991451,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "9dsiuydk5EFRCLk6VEywY95Nn3jjGbdWNijuACf1PXuA",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/9dsiuydk5efrclk6veywy95nn3jjgbdwnijuacf1pxua",
-        "priceUsd": 0.00006146,
-        "liquidityUsd": 25685.42,
-        "fdv": 60316,
-        "marketCap": 60316,
+        "priceUsd": 0.00005598,
+        "liquidityUsd": 24426.72,
+        "fdv": 54943,
+        "marketCap": 54943,
         "pairCreatedAt": 1791826718000,
         "priceChange": {
-          "h1": 7.13,
-          "h6": 0.36,
-          "h24": -41.09
+          "m5": -3.15,
+          "h1": -2.2,
+          "h6": -10.24,
+          "h24": -37.99
         },
         "txns": {
           "m5": {
             "buys": 0,
-            "sells": 0
+            "sells": 2
           },
           "h1": {
             "buys": 14,
-            "sells": 17
+            "sells": 20
           },
           "h6": {
-            "buys": 187,
-            "sells": 256
+            "buys": 130,
+            "sells": 183
           },
           "h24": {
-            "buys": 1253,
-            "sells": 1357
+            "buys": 1007,
+            "sells": 1129
           }
         },
         "volume": {
-          "h24": 135212.38,
-          "h6": 13198.53,
-          "h1": 1698.06,
-          "m5": 0
+          "h24": 94779.99,
+          "h6": 11946.73,
+          "h1": 2054.96,
+          "m5": 223.47
         }
       }
     },
@@ -1899,55 +1910,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792257761582,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00008252,
       "firstQuoteAt": 1792257761582,
-      "currentQuoteUsd": 0.00007449,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0000778,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00008252,
       "maxQuoteAt": 1792257761582,
-      "currentMultiple": 0.9026902569074163,
+      "currentMultiple": 0.9428017450315074,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "HGLSAK3nVLzAZPBMiqrkV52cmZhNVrwVQuzpSnCSYAkw",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/hglsak3nvlzazpbmiqrkv52cmzhnvrwvquzpsncsyakw",
-        "priceUsd": 0.00007449,
-        "liquidityUsd": 22143.44,
-        "fdv": 71326,
-        "marketCap": 71326,
+        "priceUsd": 0.0000778,
+        "liquidityUsd": 22664.59,
+        "fdv": 74495,
+        "marketCap": 74495,
         "pairCreatedAt": 1791419584000,
         "priceChange": {
-          "m5": -0.92,
-          "h1": -3.31,
-          "h6": -32.06,
-          "h24": -9.07
+          "m5": -0.25,
+          "h1": 3.29,
+          "h6": -29.04,
+          "h24": -5.03
         },
         "txns": {
           "m5": {
-            "buys": 0,
-            "sells": 1
+            "buys": 2,
+            "sells": 0
           },
           "h1": {
-            "buys": 4,
-            "sells": 15
+            "buys": 9,
+            "sells": 9
           },
           "h6": {
-            "buys": 92,
+            "buys": 98,
             "sells": 67
           },
           "h24": {
-            "buys": 142,
+            "buys": 148,
             "sells": 146
           }
         },
         "volume": {
-          "h24": 23804.47,
-          "h6": 10328.88,
-          "h1": 509.92,
-          "m5": 108.6
+          "h24": 24072.85,
+          "h6": 10597.25,
+          "h1": 501.46,
+          "m5": 75.79
         }
       }
     },
@@ -1984,12 +1995,12 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792257761582,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.0001014,
       "firstQuoteAt": 1792257761582,
       "currentQuoteUsd": 0.0001014,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0001014,
       "maxQuoteAt": 1792257761582,
       "currentMultiple": 1,
@@ -2005,9 +2016,9 @@
         "marketCap": 98281,
         "pairCreatedAt": 1788542411000,
         "priceChange": {
-          "h1": 2.2,
+          "h1": 2.82,
           "h6": 5.88,
-          "h24": -18.95
+          "h24": -6.31
         },
         "txns": {
           "m5": {
@@ -2015,22 +2026,22 @@
             "sells": 0
           },
           "h1": {
-            "buys": 6,
-            "sells": 11
+            "buys": 5,
+            "sells": 0
           },
           "h6": {
             "buys": 34,
             "sells": 21
           },
           "h24": {
-            "buys": 52,
-            "sells": 52
+            "buys": 50,
+            "sells": 47
           }
         },
         "volume": {
-          "h24": 6849.12,
+          "h24": 5820.94,
           "h6": 1215.78,
-          "h1": 189.02,
+          "h1": 24.58,
           "m5": 0
         }
       }
@@ -2068,12 +2079,12 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792259339642,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.000006111,
       "firstQuoteAt": 1792259339642,
       "currentQuoteUsd": 0.000005652,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000006111,
       "maxQuoteAt": 1792259339642,
       "currentMultiple": 0.9248895434462446,
@@ -2089,9 +2100,9 @@
         "marketCap": 5652.16,
         "pairCreatedAt": 1791131487000,
         "priceChange": {
-          "h1": -1.72,
-          "h6": -17.1,
-          "h24": -33.25
+          "h1": 0.28,
+          "h6": -16.27,
+          "h24": -31.08
         },
         "txns": {
           "m5": {
@@ -2099,22 +2110,22 @@
             "sells": 0
           },
           "h1": {
-            "buys": 2,
-            "sells": 1
+            "buys": 1,
+            "sells": 0
           },
           "h6": {
-            "buys": 14,
-            "sells": 15
+            "buys": 13,
+            "sells": 14
           },
           "h24": {
-            "buys": 158,
-            "sells": 137
+            "buys": 156,
+            "sells": 133
           }
         },
         "volume": {
-          "h24": 3463.24,
-          "h6": 955.72,
-          "h1": 88.31,
+          "h24": 3231.17,
+          "h6": 893.42,
+          "h1": 0.73,
           "m5": 0
         }
       }
@@ -2147,55 +2158,55 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792259339642,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.00003802,
       "firstQuoteAt": 1792259339642,
-      "currentQuoteUsd": 0.00002132,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00002014,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00003802,
       "maxQuoteAt": 1792259339642,
-      "currentMultiple": 0.560757496054708,
+      "currentMultiple": 0.5297211993687533,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "BXri6fmCqeEVt2rTooDi8EV8nTfLpqNg64MKKMAXqoZY",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/bxri6fmcqeevt2rtoodi8ev8ntflpqng64mkkmaxqozy",
-        "priceUsd": 0.00002132,
-        "liquidityUsd": 10710.56,
-        "fdv": 20351,
-        "marketCap": 20351,
+        "priceUsd": 0.00002014,
+        "liquidityUsd": 10351.19,
+        "fdv": 19222,
+        "marketCap": 19222,
         "pairCreatedAt": 1792258637000,
         "priceChange": {
-          "m5": 1.69,
-          "h1": -18.3,
-          "h6": -49.36,
-          "h24": -49.36
+          "m5": -3.05,
+          "h1": -20.24,
+          "h6": -52.17,
+          "h24": -52.17
         },
         "txns": {
           "m5": {
-            "buys": 13,
-            "sells": 15
+            "buys": 8,
+            "sells": 18
           },
           "h1": {
-            "buys": 476,
-            "sells": 423
+            "buys": 261,
+            "sells": 251
           },
           "h6": {
-            "buys": 2282,
-            "sells": 1980
+            "buys": 2362,
+            "sells": 2054
           },
           "h24": {
-            "buys": 2282,
-            "sells": 1980
+            "buys": 2362,
+            "sells": 2054
           }
         },
         "volume": {
-          "h24": 132470.69,
-          "h6": 132470.69,
-          "h1": 29909.1,
-          "m5": 529.77
+          "h24": 138147.71,
+          "h6": 138147.71,
+          "h1": 20343.47,
+          "m5": 1033.31
         }
       }
     },
@@ -2232,55 +2243,240 @@
       },
       "currentlyBoosted": true,
       "firstSeenAt": 1792263987421,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
       "firstQuoteUsd": 0.000009917,
       "firstQuoteAt": 1792263987421,
-      "currentQuoteUsd": 0.000009917,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.000003957,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000009917,
       "maxQuoteAt": 1792263987421,
-      "currentMultiple": 1,
+      "currentMultiple": 0.3990117979227589,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "AdCTFmCv89KsP4XXtUBq7x3Yn5Hdn9Cr9fL33efEiRxJ",
         "dexId": "pumpfun",
         "url": "https://dexscreener.com/solana/adctfmcv89ksp4xxtubq7x3yn5hdn9cr9fl33efeirxj",
-        "priceUsd": 0.000009917,
+        "priceUsd": 0.000003957,
         "liquidityUsd": null,
-        "fdv": 9917.84,
-        "marketCap": 9917.84,
+        "fdv": 3957.94,
+        "marketCap": 3957.94,
         "pairCreatedAt": 1792261763000,
         "priceChange": {
-          "m5": -8.73,
-          "h1": 212,
-          "h6": 212,
-          "h24": 212
+          "m5": -2.17,
+          "h1": -80.79,
+          "h6": 24.52,
+          "h24": 24.52
         },
         "txns": {
           "m5": {
-            "buys": 31,
-            "sells": 45
+            "buys": 1,
+            "sells": 6
           },
           "h1": {
-            "buys": 784,
-            "sells": 581
+            "buys": 690,
+            "sells": 579
           },
           "h6": {
-            "buys": 784,
-            "sells": 581
+            "buys": 849,
+            "sells": 679
           },
           "h24": {
-            "buys": 784,
-            "sells": 581
+            "buys": 849,
+            "sells": 679
           }
         },
         "volume": {
-          "h24": 67768.23,
-          "h6": 67768.23,
-          "h1": 67768.23,
-          "m5": 2912.76
+          "h24": 73996.39,
+          "h6": 73996.39,
+          "h1": 58117.96,
+          "m5": 63.13
+        }
+      }
+    },
+    {
+      "address": "4qH8A5GxvRMZgpRFjXASc6U9HAoEzKeUqxY2dPB7pump",
+      "chainId": "solana",
+      "name": "Grok Mascot",
+      "symbol": "Groklet",
+      "description": "Token based on Grok's Official Mascot 👽 | Named & Confirmed by Grok Himself 4/17/2025 💚 Groklet is described as a curious teal alien explorer with a , who loves the Earth and pizza. Building a brand, not just a meme. Grok created Groklet as a way to represent himself in physical form.\n\nWe are pursuing Video Games, a Mini-series, educational AI tools for kids, and are pioneering the IP flywheel, a system that supports local artists thru merch collaborations, as well as token holders thru a buyback-and-burn system. \n\nThe trademark for Groklet has been published and is passed the period of opposition :)\n\nNot Affiliated with SpacexAI or Grok",
+      "icon": "vMgQT0MJrnr87TkG",
+      "url": "https://dexscreener.com/solana/4qh8a5gxvrmzgprfjxasc6u9haoezkeuqxy2dpb7pump",
+      "links": [
+        {
+          "url": "https://groklet.us.kg",
+          "type": null,
+          "label": null
+        },
+        {
+          "url": "https://www.groklet.myshopify.com",
+          "type": null,
+          "label": null
+        },
+        {
+          "url": "https://x.com/GrokletFanClub",
+          "type": "twitter",
+          "label": null
+        },
+        {
+          "url": "https://t.me/grokletfanclub",
+          "type": "telegram",
+          "label": null
+        },
+        {
+          "url": "https://www.tiktok.com/@grokletfanclub",
+          "type": "tiktok",
+          "label": null
+        },
+        {
+          "url": "https://www.instagram.com/grokletfanclub/",
+          "type": "instagram",
+          "label": null
+        },
+        {
+          "url": "https://www.reddit.com/r/Groklet/",
+          "type": "reddit",
+          "label": null
+        }
+      ],
+      "boosts": {
+        "latest": true,
+        "top": false,
+        "amount": 10,
+        "totalAmount": 10
+      },
+      "currentlyBoosted": true,
+      "firstSeenAt": 1792265550974,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.0001623,
+      "firstQuoteAt": 1792265550974,
+      "currentQuoteUsd": 0.0001623,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.0001623,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1,
+      "maxMultiple": 1,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "7oDjba4hZozvNWboKSRwFetStnM4iA5WiTKwFr1Lsy8t",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/7odjba4hzozvnwboksrwfetstnm4ia5witkwfr1lsy8t",
+        "priceUsd": 0.0001623,
+        "liquidityUsd": 40020.09,
+        "fdv": 159257,
+        "marketCap": 159257,
+        "pairCreatedAt": 1750018382000,
+        "priceChange": {
+          "m5": -1.84,
+          "h1": 47.92,
+          "h6": 65.92,
+          "h24": 32.06
+        },
+        "txns": {
+          "m5": {
+            "buys": 4,
+            "sells": 9
+          },
+          "h1": {
+            "buys": 61,
+            "sells": 114
+          },
+          "h6": {
+            "buys": 132,
+            "sells": 194
+          },
+          "h24": {
+            "buys": 476,
+            "sells": 536
+          }
+        },
+        "volume": {
+          "h24": 40832.53,
+          "h6": 14189.39,
+          "h1": 8662.48,
+          "m5": 1035.48
+        }
+      }
+    },
+    {
+      "address": "BG35ZgNeSoSw36cQv58kMahU82wfYwzeNYoRNiwMVent",
+      "chainId": "solana",
+      "name": "Ventrion Protocol",
+      "symbol": "Ventrion",
+      "description": "Ventrion allows anyone to tokenize their existing or future Venture. This is the coin funding that mission.",
+      "icon": "Ou3jDOaB261qWJOJ",
+      "url": "https://dexscreener.com/solana/bg35zgnesosw36cqv58kmahu82wfywzenyorniwmvent",
+      "links": [
+        {
+          "url": "http://ventrion.fun/",
+          "type": null,
+          "label": null
+        },
+        {
+          "url": "https://x.com/VentrionLabs",
+          "type": "twitter",
+          "label": null
+        }
+      ],
+      "boosts": {
+        "latest": true,
+        "top": true,
+        "amount": 50,
+        "totalAmount": 50
+      },
+      "currentlyBoosted": true,
+      "firstSeenAt": 1792265550974,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792265550974,
+      "firstQuoteUsd": 0.00008339,
+      "firstQuoteAt": 1792265550974,
+      "currentQuoteUsd": 0.00008339,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00008339,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1,
+      "maxMultiple": 1,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "9CNx8716x6SJVLW8bAW4TPD3JcCHJzYHLPbqNFwqS5AQ",
+        "dexId": "pumpswap",
+        "url": "https://dexscreener.com/solana/9cnx8716x6sjvlw8baw4tpd3jcchjzyhlpbqnfwqs5aq",
+        "priceUsd": 0.00008339,
+        "liquidityUsd": 23304.66,
+        "fdv": 80207,
+        "marketCap": 80207,
+        "pairCreatedAt": 1792261845000,
+        "priceChange": {
+          "m5": -15.18,
+          "h1": 36.01,
+          "h6": 90.29,
+          "h24": 90.29
+        },
+        "txns": {
+          "m5": {
+            "buys": 51,
+            "sells": 51
+          },
+          "h1": {
+            "buys": 1740,
+            "sells": 1447
+          },
+          "h6": {
+            "buys": 2253,
+            "sells": 1819
+          },
+          "h24": {
+            "buys": 2253,
+            "sells": 1819
+          }
+        },
+        "volume": {
+          "h24": 269346.07,
+          "h6": 269346.07,
+          "h1": 188489.03,
+          "m5": 5224.81
         }
       }
     },
@@ -2307,15 +2503,15 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792262262102,
       "firstQuoteUsd": 0.0009282,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.001816,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.001858,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.002305,
       "maxQuoteAt": 1792249388854,
-      "currentMultiple": 1.9564748976513682,
+      "currentMultiple": 2.0017237664296488,
       "maxMultiple": 2.4833010127127775,
       "alerts": [
         {
@@ -2329,40 +2525,40 @@
         "pairAddress": "CnHqem7jPbjA5p2xHBGPHQG7E9NkZWcQr9q6R9YWb7zf",
         "dexId": "raydium",
         "url": "https://dexscreener.com/solana/cnhqem7jpbja5p2xhbgphqg7e9nkzwcqr9q6r9ywb7zf",
-        "priceUsd": 0.001816,
-        "liquidityUsd": 133696.34,
-        "fdv": 1816962,
-        "marketCap": 1816962,
+        "priceUsd": 0.001858,
+        "liquidityUsd": 135276.76,
+        "fdv": 1858561,
+        "marketCap": 1858561,
         "pairCreatedAt": 1792171840000,
         "priceChange": {
-          "m5": -11,
-          "h1": 15.04,
-          "h6": 74.04,
-          "h24": 906
+          "m5": 8.07,
+          "h1": 10.67,
+          "h6": 139,
+          "h24": 595
         },
         "txns": {
           "m5": {
-            "buys": 33,
-            "sells": 32
+            "buys": 13,
+            "sells": 14
           },
           "h1": {
-            "buys": 625,
-            "sells": 617
+            "buys": 582,
+            "sells": 525
           },
           "h6": {
-            "buys": 6933,
-            "sells": 6114
+            "buys": 7017,
+            "sells": 6136
           },
           "h24": {
-            "buys": 19648,
-            "sells": 15355
+            "buys": 19417,
+            "sells": 15220
           }
         },
         "volume": {
-          "h24": 3468807.65,
-          "h6": 1481472.07,
-          "h1": 141758.77,
-          "m5": 6894.77
+          "h24": 3456712.18,
+          "h6": 1492456.38,
+          "h1": 118818.13,
+          "m5": 4056.44
         }
       }
     },
@@ -2404,55 +2600,54 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792249388854,
       "firstQuoteUsd": 0.00001775,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00002514,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00002698,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00003113,
       "maxQuoteAt": 1792252704223,
-      "currentMultiple": 1.4163380281690139,
+      "currentMultiple": 1.5199999999999998,
       "maxMultiple": 1.7538028169014084,
       "alerts": [],
       "pair": {
         "pairAddress": "7q6dKvUPtWepxUmGBuMj5REugtaBQwb4jXHzGZy88jZn",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/7q6dkvuptwepxumgbumj5reugtabqwb4jxhzgzy88jzn",
-        "priceUsd": 0.00002514,
-        "liquidityUsd": 12783.15,
-        "fdv": 22484,
-        "marketCap": 22484,
+        "priceUsd": 0.00002698,
+        "liquidityUsd": 13310.25,
+        "fdv": 24136,
+        "marketCap": 24136,
         "pairCreatedAt": 1791873221000,
         "priceChange": {
-          "m5": 3.23,
-          "h1": 30.63,
-          "h6": 84.93,
-          "h24": 463
+          "h1": 40.59,
+          "h6": 115,
+          "h24": 504
         },
         "txns": {
           "m5": {
-            "buys": 4,
+            "buys": 0,
             "sells": 0
           },
           "h1": {
-            "buys": 29,
-            "sells": 32
+            "buys": 41,
+            "sells": 47
           },
           "h6": {
-            "buys": 362,
-            "sells": 332
+            "buys": 364,
+            "sells": 349
           },
           "h24": {
-            "buys": 873,
-            "sells": 836
+            "buys": 891,
+            "sells": 857
           }
         },
         "volume": {
-          "h24": 49620.39,
-          "h6": 27092.37,
-          "h1": 1627.71,
-          "m5": 113.66
+          "h24": 50406.43,
+          "h6": 27646.21,
+          "h1": 2096.58,
+          "m5": 0
         }
       }
     },
@@ -2479,30 +2674,30 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792262262102,
       "firstQuoteUsd": 0.00003904,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00002838,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00002879,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00006334,
       "maxQuoteAt": 1792251096023,
-      "currentMultiple": 0.7269467213114754,
+      "currentMultiple": 0.7374487704918034,
       "maxMultiple": 1.622438524590164,
       "alerts": [],
       "pair": {
         "pairAddress": "HErYH7bfYntTKXfkpv7GkghryTpw57X6SPsBUi7pepKL",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/heryh7bfynttkxfkpv7gkghrytpw57x6spsbui7pepkl",
-        "priceUsd": 0.00002838,
-        "liquidityUsd": 13092.45,
-        "fdv": 27055,
-        "marketCap": 27055,
+        "priceUsd": 0.00002879,
+        "liquidityUsd": 13202.84,
+        "fdv": 27448,
+        "marketCap": 27448,
         "pairCreatedAt": 1792224552000,
         "priceChange": {
-          "h1": -0.01,
-          "h6": -52.29,
-          "h24": -38.93
+          "h1": -1.32,
+          "h6": -52.27,
+          "h24": -38.04
         },
         "txns": {
           "m5": {
@@ -2514,18 +2709,18 @@
             "sells": 11
           },
           "h6": {
-            "buys": 176,
-            "sells": 284
+            "buys": 133,
+            "sells": 242
           },
           "h24": {
-            "buys": 1014,
-            "sells": 1188
+            "buys": 1018,
+            "sells": 1195
           }
         },
         "volume": {
-          "h24": 140308.59,
-          "h6": 33278.86,
-          "h1": 402.14,
+          "h24": 140620.23,
+          "h6": 28281.63,
+          "h1": 480.89,
           "m5": 0
         }
       }
@@ -2553,55 +2748,55 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792247927595,
       "firstQuoteUsd": 0.0001283,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.0001296,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.0001099,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0002012,
       "maxQuoteAt": 1792238652020,
-      "currentMultiple": 1.010132501948558,
+      "currentMultiple": 0.8565861262665627,
       "maxMultiple": 1.568199532346064,
       "alerts": [],
       "pair": {
         "pairAddress": "6a8h2e4jX5BCcXYtAEFSV1n6iskGzoeXmRhNviX1U7Bx",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/6a8h2e4jx5bccxytaefsv1n6iskgzoexmrhnvix1u7bx",
-        "priceUsd": 0.0001296,
-        "liquidityUsd": 33128.28,
-        "fdv": 123392,
-        "marketCap": 123392,
+        "priceUsd": 0.0001099,
+        "liquidityUsd": 30363.25,
+        "fdv": 104619,
+        "marketCap": 104619,
         "pairCreatedAt": 1792171696000,
         "priceChange": {
-          "m5": -5.2,
-          "h1": -6.51,
-          "h6": -27.28,
-          "h24": -76.37
+          "m5": -1.79,
+          "h1": -21.81,
+          "h6": -27.19,
+          "h24": -72.7
         },
         "txns": {
           "m5": {
-            "buys": 8,
+            "buys": 10,
             "sells": 10
           },
           "h1": {
-            "buys": 60,
-            "sells": 83
+            "buys": 67,
+            "sells": 71
           },
           "h6": {
-            "buys": 792,
-            "sells": 728
+            "buys": 774,
+            "sells": 692
           },
           "h24": {
-            "buys": 14317,
-            "sells": 11388
+            "buys": 11600,
+            "sells": 9374
           }
         },
         "volume": {
-          "h24": 1492948.48,
-          "h6": 69601.62,
-          "h1": 6958.49,
-          "m5": 1372.39
+          "h24": 1195266.52,
+          "h6": 67762.26,
+          "h1": 4856.09,
+          "m5": 476.28
         }
       }
     },
@@ -2638,55 +2833,55 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792256190375,
       "firstQuoteUsd": 0.00003132,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00003315,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00003925,
-      "maxQuoteAt": 1792262262102,
-      "currentMultiple": 1.0584291187739463,
-      "maxMultiple": 1.2531928480204342,
+      "currentQuoteUsd": 0.00003966,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.00003966,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.2662835249042148,
+      "maxMultiple": 1.2662835249042148,
       "alerts": [],
       "pair": {
         "pairAddress": "AjNs1xGxhcu8owXaEfqCv4R2NknYc6g6kcTCbZ6g9qD8",
         "dexId": "pumpfun",
         "url": "https://dexscreener.com/solana/ajns1xgxhcu8owxaefqcv4r2nknyc6g6kctcbz6g9qd8",
-        "priceUsd": 0.00003315,
+        "priceUsd": 0.00003966,
         "liquidityUsd": null,
-        "fdv": 33158,
-        "marketCap": 33158,
+        "fdv": 39667.55,
+        "marketCap": 39667.55,
         "pairCreatedAt": 1791843535000,
         "priceChange": {
-          "m5": -15.78,
-          "h1": -1.73,
-          "h6": -0.6,
-          "h24": 103
+          "m5": 4.82,
+          "h1": 11.41,
+          "h6": 19.06,
+          "h24": 147
         },
         "txns": {
           "m5": {
-            "buys": 5,
-            "sells": 7
+            "buys": 1,
+            "sells": 1
           },
           "h1": {
             "buys": 38,
-            "sells": 19
+            "sells": 20
           },
           "h6": {
-            "buys": 263,
-            "sells": 142
+            "buys": 273,
+            "sells": 146
           },
           "h24": {
-            "buys": 756,
-            "sells": 417
+            "buys": 764,
+            "sells": 414
           }
         },
         "volume": {
-          "h24": 30874.51,
-          "h6": 12798.83,
-          "h1": 3348.6,
-          "m5": 1496.87
+          "h24": 30993.15,
+          "h6": 14066.09,
+          "h1": 4075.52,
+          "m5": 317.57
         }
       }
     },
@@ -2718,53 +2913,55 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792234202244,
       "firstQuoteUsd": 0.00001378,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00001437,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00001409,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00001659,
       "maxQuoteAt": 1792246114952,
-      "currentMultiple": 1.0428156748911466,
+      "currentMultiple": 1.0224963715529753,
       "maxMultiple": 1.2039187227866472,
       "alerts": [],
       "pair": {
         "pairAddress": "42cLgy3EDs7X8k3qqgJwNgiNPNooQjTLreQCwRwQ46Gf",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/42clgy3eds7x8k3qqgjwnginpnooqjtlreqcwrwq46gf",
-        "priceUsd": 0.00001437,
-        "liquidityUsd": 12068.4,
-        "fdv": 13994,
-        "marketCap": 13994,
+        "priceUsd": 0.00001409,
+        "liquidityUsd": 11946.09,
+        "fdv": 13715,
+        "marketCap": 13715,
         "pairCreatedAt": 1786548927000,
         "priceChange": {
-          "h6": -9.08,
-          "h24": 20.92
+          "m5": -0.68,
+          "h1": -1.99,
+          "h6": -13.18,
+          "h24": 16.33
         },
         "txns": {
           "m5": {
             "buys": 0,
-            "sells": 0
+            "sells": 1
           },
           "h1": {
             "buys": 0,
-            "sells": 0
+            "sells": 2
           },
           "h6": {
-            "buys": 8,
-            "sells": 11
+            "buys": 7,
+            "sells": 12
           },
           "h24": {
-            "buys": 217,
-            "sells": 177
+            "buys": 216,
+            "sells": 178
           }
         },
         "volume": {
-          "h24": 16383.21,
-          "h6": 761.73,
-          "h1": 0,
-          "m5": 0
+          "h24": 16440.46,
+          "h6": 724.79,
+          "h1": 58.25,
+          "m5": 53
         }
       }
     },
@@ -2801,30 +2998,30 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792256190375,
       "firstQuoteUsd": 0.000003361,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.000003622,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.000003609,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000004036,
       "maxQuoteAt": 1792249388854,
-      "currentMultiple": 1.0776554596846175,
+      "currentMultiple": 1.0737875632252305,
       "maxMultiple": 1.2008330853912526,
       "alerts": [],
       "pair": {
         "pairAddress": "2kDUw5GUbiaPpZhzD8gTzLkn9pUqhmwKEAv5F4rc8Up7",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/2kduw5gubiappzhzd8gtzlkn9puqhmwkeav5f4rc8up7",
-        "priceUsd": 0.000003622,
-        "liquidityUsd": 3709.91,
-        "fdv": 3609,
-        "marketCap": 3609,
+        "priceUsd": 0.000003609,
+        "liquidityUsd": 3699.51,
+        "fdv": 3596,
+        "marketCap": 3596,
         "pairCreatedAt": 1792166537000,
         "priceChange": {
-          "h1": 5.3,
-          "h6": 16.23,
-          "h24": -99.94
+          "h1": 4.91,
+          "h6": 15.8,
+          "h24": 10.67
         },
         "txns": {
           "m5": {
@@ -2833,102 +3030,22 @@
           },
           "h1": {
             "buys": 1,
-            "sells": 3
+            "sells": 4
           },
           "h6": {
             "buys": 10,
-            "sells": 10
+            "sells": 11
           },
           "h24": {
-            "buys": 2284,
-            "sells": 6392
+            "buys": 58,
+            "sells": 57
           }
         },
         "volume": {
-          "h24": 152408.46,
-          "h6": 685.79,
-          "h1": 87.39,
+          "h24": 3198.5,
+          "h6": 695.47,
+          "h1": 97.08,
           "m5": 0
-        }
-      }
-    },
-    {
-      "address": "DtcicPCKTKeAh7TDEzTym3hXeoHAoMiBdYJhMYxZpump",
-      "chainId": "solana",
-      "name": "Cartoon Money",
-      "symbol": "CBUCKS",
-      "description": "Someone asked AI to build a game the entire crypto space would love. So it recreated the crypto world for us to own. 🪙 Built & controlled by Agentic AI.",
-      "icon": "2bajn2a05AdQGV-4",
-      "url": "https://dexscreener.com/solana/dtcicpcktkeah7tdeztym3hxeohaomibdyjhmyxzpump",
-      "links": [
-        {
-          "url": "https://cartoon-money.com/",
-          "type": null,
-          "label": null
-        },
-        {
-          "url": "https://x.com/cartoonmoney_ai",
-          "type": "twitter",
-          "label": null
-        }
-      ],
-      "boosts": {
-        "latest": false,
-        "top": false,
-        "amount": null,
-        "totalAmount": null
-      },
-      "currentlyBoosted": false,
-      "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792262262102,
-      "firstQuoteUsd": 0.0006253,
-      "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.0007341,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.0007407,
-      "maxQuoteAt": 1792262262102,
-      "currentMultiple": 1.1739964816887896,
-      "maxMultiple": 1.184551415320646,
-      "alerts": [],
-      "pair": {
-        "pairAddress": "B4Cp45PGifVM5FAXfh6AeV8QZ3eUNQnqGBw7KuC7MHnB",
-        "dexId": "pumpswap",
-        "url": "https://dexscreener.com/solana/b4cp45pgifvm5faxfh6aev8qz3eunqnqgbw7kuc7mhnb",
-        "priceUsd": 0.0007341,
-        "liquidityUsd": 85725.05,
-        "fdv": 692444,
-        "marketCap": 692444,
-        "pairCreatedAt": 1791311393000,
-        "priceChange": {
-          "m5": 2.54,
-          "h1": 6.13,
-          "h6": 19.78,
-          "h24": 32.15
-        },
-        "txns": {
-          "m5": {
-            "buys": 9,
-            "sells": 2
-          },
-          "h1": {
-            "buys": 79,
-            "sells": 35
-          },
-          "h6": {
-            "buys": 207,
-            "sells": 123
-          },
-          "h24": {
-            "buys": 754,
-            "sells": 510
-          }
-        },
-        "volume": {
-          "h24": 98053.49,
-          "h6": 28821.11,
-          "h1": 10381.2,
-          "m5": 609.77
         }
       }
     },
@@ -2970,140 +3087,55 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792259339642,
       "firstQuoteUsd": 0.0005625,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.0005789,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.000584,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0006556,
       "maxQuoteAt": 1792252704223,
-      "currentMultiple": 1.0291555555555556,
+      "currentMultiple": 1.0382222222222224,
       "maxMultiple": 1.1655111111111112,
       "alerts": [],
       "pair": {
         "pairAddress": "4wbt5gf46kCt9dhzNFVtAEn5PnFr56U5HTpw27TVytvV",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/4wbt5gf46kct9dhznfvtaen5pnfr56u5htpw27tvytvv",
-        "priceUsd": 0.0005789,
-        "liquidityUsd": 79702.55,
-        "fdv": 543559,
-        "marketCap": 543559,
+        "priceUsd": 0.000584,
+        "liquidityUsd": 80059.08,
+        "fdv": 548348,
+        "marketCap": 548348,
         "pairCreatedAt": 1790247790000,
         "priceChange": {
-          "m5": 1.15,
-          "h1": -8.57,
-          "h6": -1.16,
-          "h24": 2.34
+          "m5": -0.11,
+          "h1": -3.43,
+          "h6": 4.4,
+          "h24": 3.97
         },
         "txns": {
           "m5": {
-            "buys": 1,
+            "buys": 0,
             "sells": 2
           },
           "h1": {
-            "buys": 17,
-            "sells": 18
+            "buys": 24,
+            "sells": 26
           },
           "h6": {
-            "buys": 124,
-            "sells": 134
+            "buys": 132,
+            "sells": 133
           },
           "h24": {
-            "buys": 374,
-            "sells": 464
+            "buys": 380,
+            "sells": 474
           }
         },
         "volume": {
-          "h24": 60472.27,
-          "h6": 20216.26,
-          "h1": 3008.91,
-          "m5": 4.62
-        }
-      }
-    },
-    {
-      "address": "DMRKspYf38RCq9M6RSHP2CRhXVAPEkPLN9E7MwTfa95h",
-      "chainId": "solana",
-      "name": "Deadmark",
-      "symbol": "DMRK",
-      "description": "Survive the zombie apocalypse in Deadtiles. Scavenge, trade, and choose a side. Play in the browser.",
-      "icon": "JvzIv3ils0E99TOV",
-      "url": "https://dexscreener.com/solana/dmrkspyf38rcq9m6rshp2crhxvapekpln9e7mwtfa95h",
-      "links": [
-        {
-          "url": "https://deadtiles.com",
-          "type": null,
-          "label": null
-        },
-        {
-          "url": "https://x.com/deadtiles",
-          "type": "twitter",
-          "label": null
-        },
-        {
-          "url": "https://t.me/deadtiles",
-          "type": "telegram",
-          "label": null
-        }
-      ],
-      "boosts": {
-        "latest": false,
-        "top": false,
-        "amount": null,
-        "totalAmount": null
-      },
-      "currentlyBoosted": false,
-      "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
-      "lastBoostSeenAt": 1792247927595,
-      "firstQuoteUsd": 0.000002213,
-      "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.000002423,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.000002533,
-      "maxQuoteAt": 1792240721658,
-      "currentMultiple": 1.094893809308631,
-      "maxMultiple": 1.1446000903750566,
-      "alerts": [],
-      "pair": {
-        "pairAddress": "6A7Vi4EmGSeLfinoiP5MU4o7oKDuCbY3dyxZiHQPckLb",
-        "dexId": "raydium",
-        "url": "https://dexscreener.com/solana/6a7vi4emgselfinoip5mu4o7okducby3dyxzihqpcklb",
-        "priceUsd": 0.000002423,
-        "liquidityUsd": 17286.26,
-        "fdv": 24232,
-        "marketCap": 24232,
-        "pairCreatedAt": 1792192715000,
-        "priceChange": {
-          "m5": 0.84,
-          "h1": 9.21,
-          "h6": -0.62,
-          "h24": -32.62
-        },
-        "txns": {
-          "m5": {
-            "buys": 1,
-            "sells": 0
-          },
-          "h1": {
-            "buys": 3,
-            "sells": 0
-          },
-          "h6": {
-            "buys": 40,
-            "sells": 48
-          },
-          "h24": {
-            "buys": 515,
-            "sells": 448
-          }
-        },
-        "volume": {
-          "h24": 68425.3,
-          "h6": 4363.06,
-          "h1": 343.81,
-          "m5": 36.05
+          "h24": 60473.47,
+          "h6": 19290.49,
+          "h1": 2458.48,
+          "m5": 4.07
         }
       }
     },
@@ -3140,55 +3172,139 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792234202244,
       "firstQuoteUsd": 0.00008812,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00008844,
-      "currentQuoteAt": 1792263987421,
-      "maxQuoteUsd": 0.00009609,
-      "maxQuoteAt": 1792235410724,
-      "currentMultiple": 1.0036314117113028,
-      "maxMultiple": 1.0904448479346345,
+      "currentQuoteUsd": 0.0001027,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.0001027,
+      "maxQuoteAt": 1792265550974,
+      "currentMultiple": 1.1654561960962324,
+      "maxMultiple": 1.1654561960962324,
       "alerts": [],
       "pair": {
         "pairAddress": "ALNPAbQbgLApREFRDuJoBYJNvKePHbL7Lu6ru7zTeL85",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/alnpabqbglaprefrdujobyjnvkephbl7lu6ru7ztel85",
-        "priceUsd": 0.00008844,
-        "liquidityUsd": 26460.63,
-        "fdv": 84829,
-        "marketCap": 84829,
+        "priceUsd": 0.0001027,
+        "liquidityUsd": 28574.23,
+        "fdv": 98542,
+        "marketCap": 98542,
         "pairCreatedAt": 1792196525000,
         "priceChange": {
-          "m5": -6.65,
-          "h1": 2.92,
-          "h6": 64.9,
-          "h24": 96.25
+          "m5": 10,
+          "h1": 21.67,
+          "h6": 25.5,
+          "h24": 128
         },
         "txns": {
           "m5": {
-            "buys": 73,
-            "sells": 75
+            "buys": 76,
+            "sells": 72
           },
           "h1": {
-            "buys": 972,
-            "sells": 957
+            "buys": 975,
+            "sells": 949
           },
           "h6": {
-            "buys": 5315,
-            "sells": 4739
+            "buys": 5671,
+            "sells": 5145
           },
           "h24": {
-            "buys": 16336,
-            "sells": 14404
+            "buys": 16789,
+            "sells": 14845
           }
         },
         "volume": {
-          "h24": 176822.12,
-          "h6": 27147.47,
-          "h1": 2170.27,
-          "m5": 232.01
+          "h24": 178805.97,
+          "h6": 21157.28,
+          "h1": 3221.14,
+          "m5": 595.39
+        }
+      }
+    },
+    {
+      "address": "DMRKspYf38RCq9M6RSHP2CRhXVAPEkPLN9E7MwTfa95h",
+      "chainId": "solana",
+      "name": "Deadmark",
+      "symbol": "DMRK",
+      "description": "Survive the zombie apocalypse in Deadtiles. Scavenge, trade, and choose a side. Play in the browser.",
+      "icon": "JvzIv3ils0E99TOV",
+      "url": "https://dexscreener.com/solana/dmrkspyf38rcq9m6rshp2crhxvapekpln9e7mwtfa95h",
+      "links": [
+        {
+          "url": "https://deadtiles.com",
+          "type": null,
+          "label": null
+        },
+        {
+          "url": "https://x.com/deadtiles",
+          "type": "twitter",
+          "label": null
+        },
+        {
+          "url": "https://t.me/deadtiles",
+          "type": "telegram",
+          "label": null
+        }
+      ],
+      "boosts": {
+        "latest": false,
+        "top": false,
+        "amount": null,
+        "totalAmount": null
+      },
+      "currentlyBoosted": false,
+      "firstSeenAt": 1792233777615,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792247927595,
+      "firstQuoteUsd": 0.000002213,
+      "firstQuoteAt": 1792233777615,
+      "currentQuoteUsd": 0.000002344,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.000002533,
+      "maxQuoteAt": 1792240721658,
+      "currentMultiple": 1.0591956619972889,
+      "maxMultiple": 1.1446000903750566,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "6A7Vi4EmGSeLfinoiP5MU4o7oKDuCbY3dyxZiHQPckLb",
+        "dexId": "raydium",
+        "url": "https://dexscreener.com/solana/6a7vi4emgselfinoip5mu4o7okducby3dyxzihqpcklb",
+        "priceUsd": 0.000002344,
+        "liquidityUsd": 17004.61,
+        "fdv": 23442,
+        "marketCap": 23442,
+        "pairCreatedAt": 1792192715000,
+        "priceChange": {
+          "h1": 2.57,
+          "h6": -1.55,
+          "h24": -34.82
+        },
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h1": {
+            "buys": 3,
+            "sells": 2
+          },
+          "h6": {
+            "buys": 39,
+            "sells": 33
+          },
+          "h24": {
+            "buys": 516,
+            "sells": 450
+          }
+        },
+        "volume": {
+          "h24": 68726.19,
+          "h6": 4161.46,
+          "h1": 544.6,
+          "m5": 0
         }
       }
     },
@@ -3225,12 +3341,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792242864667,
       "firstQuoteUsd": 0.000006946,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000006975,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000007144,
       "maxQuoteAt": 1792244746573,
       "currentMultiple": 1.0041750647854881,
@@ -3246,8 +3362,7 @@
         "marketCap": 6975.78,
         "pairCreatedAt": 1791601356000,
         "priceChange": {
-          "h1": 0.41,
-          "h6": 6.7,
+          "h6": 11.12,
           "h24": 21.98
         },
         "txns": {
@@ -3256,12 +3371,12 @@
             "sells": 0
           },
           "h1": {
-            "buys": 1,
+            "buys": 0,
             "sells": 0
           },
           "h6": {
             "buys": 27,
-            "sells": 20
+            "sells": 18
           },
           "h24": {
             "buys": 261,
@@ -3270,8 +3385,8 @@
         },
         "volume": {
           "h24": 18071.79,
-          "h6": 2292.07,
-          "h1": 0.25,
+          "h6": 2199.71,
+          "h1": 0,
           "m5": 0
         }
       }
@@ -3309,12 +3424,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792249388854,
       "firstQuoteUsd": 0.00008608,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000002347,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00008848,
       "maxQuoteAt": 1792237238818,
       "currentMultiple": 0.027265334572490706,
@@ -3330,9 +3445,9 @@
         "marketCap": 2280,
         "pairCreatedAt": 1792163104000,
         "priceChange": {
-          "h1": 1.7,
-          "h6": -4.19,
-          "h24": -97.3
+          "h1": 1.5,
+          "h6": -1.81,
+          "h24": -97.32
         },
         "txns": {
           "m5": {
@@ -3341,21 +3456,21 @@
           },
           "h1": {
             "buys": 1,
-            "sells": 1
+            "sells": 0
           },
           "h6": {
-            "buys": 6,
-            "sells": 50
+            "buys": 5,
+            "sells": 46
           },
           "h24": {
-            "buys": 9951,
-            "sells": 3136
+            "buys": 9788,
+            "sells": 3044
           }
         },
         "volume": {
-          "h24": 377511.1,
-          "h6": 61.91,
-          "h1": 0.56,
+          "h24": 366931.12,
+          "h6": 45.56,
+          "h1": 0.17,
           "m5": 0
         }
       }
@@ -3388,12 +3503,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792256190375,
       "firstQuoteUsd": 0.000005079,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000004972,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000005202,
       "maxQuoteAt": 1792247927595,
       "currentMultiple": 0.9789328607993699,
@@ -3471,55 +3586,54 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792251096023,
       "firstQuoteUsd": 0.0000299,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00001358,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00001175,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00003034,
       "maxQuoteAt": 1792235410724,
-      "currentMultiple": 0.454180602006689,
+      "currentMultiple": 0.39297658862876256,
       "maxMultiple": 1.0147157190635452,
       "alerts": [],
       "pair": {
         "pairAddress": "FQJvU1JkBBzwWH8wL3nYFgwTBW4gWUhuTBJUxgDphbN6",
         "dexId": "raydium",
         "url": "https://dexscreener.com/solana/fqjvu1jkbbzwwh8wl3nyfgwtbw4gwuhutbjuxgdphbn6",
-        "priceUsd": 0.00001358,
-        "liquidityUsd": 9974.1,
-        "fdv": 13584,
-        "marketCap": 13584,
+        "priceUsd": 0.00001175,
+        "liquidityUsd": 9284.95,
+        "fdv": 11753,
+        "marketCap": 11753,
         "pairCreatedAt": 1792205018000,
         "priceChange": {
-          "m5": 0.7,
-          "h1": 35.85,
-          "h6": -50.04,
-          "h24": -70.23
+          "h1": 0.27,
+          "h6": -42.85,
+          "h24": -74.24
         },
         "txns": {
           "m5": {
-            "buys": 3,
+            "buys": 0,
             "sells": 0
           },
           "h1": {
-            "buys": 24,
-            "sells": 3
+            "buys": 17,
+            "sells": 9
           },
           "h6": {
             "buys": 164,
             "sells": 100
           },
           "h24": {
-            "buys": 691,
-            "sells": 443
+            "buys": 695,
+            "sells": 450
           }
         },
         "volume": {
-          "h24": 53928.62,
-          "h6": 10547.54,
-          "h1": 1055.76,
-          "m5": 21.78
+          "h24": 54501.24,
+          "h6": 10511.9,
+          "h1": 1124.9,
+          "m5": 0
         }
       }
     },
@@ -3551,12 +3665,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792246114952,
       "firstQuoteUsd": 0.000002324,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000002285,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000002337,
       "maxQuoteAt": 1792257761582,
       "currentMultiple": 0.9832185886402754,
@@ -3573,7 +3687,7 @@
         "pairCreatedAt": 1792157414000,
         "priceChange": {
           "h6": -1.69,
-          "h24": -10.74
+          "h24": -10.71
         },
         "txns": {
           "m5": {
@@ -3589,12 +3703,12 @@
             "sells": 3
           },
           "h24": {
-            "buys": 9,
+            "buys": 8,
             "sells": 16
           }
         },
         "volume": {
-          "h24": 234.09,
+          "h24": 183.18,
           "h6": 13.84,
           "h1": 0,
           "m5": 0
@@ -3629,12 +3743,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792251096023,
       "firstQuoteUsd": 0.000002229,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000002234,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000002234,
       "maxQuoteAt": 1792263987421,
       "currentMultiple": 1.0022431583669806,
@@ -3652,7 +3766,7 @@
         "priceChange": {
           "h1": 1.78,
           "h6": 0.2,
-          "h24": -99.61
+          "h24": -99.54
         },
         "txns": {
           "m5": {
@@ -3668,14 +3782,81 @@
             "sells": 3
           },
           "h24": {
-            "buys": 13765,
-            "sells": 11421
+            "buys": 12430,
+            "sells": 11231
           }
         },
         "volume": {
-          "h24": 629394.07,
+          "h24": 573303.42,
           "h6": 3.34,
           "h1": 0.09,
+          "m5": 0
+        }
+      }
+    },
+    {
+      "address": "9H8iVVQycrmhMRQTFie6ZrdUgid8iye7Z78pJrn8pump",
+      "chainId": "solana",
+      "name": "SOLBRO",
+      "symbol": "SOLBRO",
+      "description": "",
+      "icon": "",
+      "url": "https://dexscreener.com/solana/9h8ivvqycrmhmrqtfie6zrdugid8iye7z78pjrn8pump",
+      "links": [],
+      "boosts": {
+        "latest": false,
+        "top": false,
+        "amount": null,
+        "totalAmount": null
+      },
+      "currentlyBoosted": false,
+      "firstSeenAt": 1792238652020,
+      "lastSeenAt": 1792265550974,
+      "lastBoostSeenAt": 1792263987421,
+      "firstQuoteUsd": 0.000003463,
+      "firstQuoteAt": 1792238652020,
+      "currentQuoteUsd": 0.00000305,
+      "currentQuoteAt": 1792265550974,
+      "maxQuoteUsd": 0.000003463,
+      "maxQuoteAt": 1792238652020,
+      "currentMultiple": 0.8807392434305515,
+      "maxMultiple": 1,
+      "alerts": [],
+      "pair": {
+        "pairAddress": "n7aqnRJgAwvqGqTrRsZdU6tg8v6eF57CpA6GnaaQTYb",
+        "dexId": "pumpfun",
+        "url": "https://dexscreener.com/solana/n7aqnrjgawvqgqtrrszdu6tg8v6ef57cpa6gnaaqtyb",
+        "priceUsd": 0.00000305,
+        "liquidityUsd": null,
+        "fdv": 3050.51,
+        "marketCap": 3050.51,
+        "pairCreatedAt": 1791659487000,
+        "priceChange": {
+          "h6": -4.96,
+          "h24": 0.66
+        },
+        "txns": {
+          "m5": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h1": {
+            "buys": 0,
+            "sells": 0
+          },
+          "h6": {
+            "buys": 1,
+            "sells": 2
+          },
+          "h24": {
+            "buys": 13,
+            "sells": 15
+          }
+        },
+        "volume": {
+          "h24": 1166.44,
+          "h6": 228.4,
+          "h1": 0,
           "m5": 0
         }
       }
@@ -3708,30 +3889,30 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792260385439,
       "firstQuoteUsd": 0.000003878,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.000003677,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.000003684,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000003878,
       "maxQuoteAt": 1792233777615,
-      "currentMultiple": 0.9481691593604952,
+      "currentMultiple": 0.9499742135121196,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "28t4T71VX3sj2N3PhT35JQ1oELDb9Drp966Yisw4zGLB",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/28t4t71vx3sj2n3pht35jq1oeldb9drp966yisw4zglb",
-        "priceUsd": 0.000003677,
-        "liquidityUsd": 3477.43,
-        "fdv": 3548,
-        "marketCap": 3548,
+        "priceUsd": 0.000003684,
+        "liquidityUsd": 3482.48,
+        "fdv": 3555,
+        "marketCap": 3555,
         "pairCreatedAt": 1792172302000,
         "priceChange": {
-          "h1": 0.3,
-          "h6": -0.37,
-          "h24": -95.3
+          "h1": 0.09,
+          "h6": -0.18,
+          "h24": -94.73
         },
         "txns": {
           "m5": {
@@ -3739,22 +3920,22 @@
             "sells": 0
           },
           "h1": {
-            "buys": 0,
+            "buys": 1,
             "sells": 4
           },
           "h6": {
-            "buys": 6,
-            "sells": 8
+            "buys": 7,
+            "sells": 9
           },
           "h24": {
-            "buys": 406,
-            "sells": 564
+            "buys": 226,
+            "sells": 359
           }
         },
         "volume": {
-          "h24": 25257.86,
-          "h6": 105.58,
-          "h1": 6.42,
+          "h24": 15979.19,
+          "h6": 119.34,
+          "h1": 19.61,
           "m5": 0
         }
       }
@@ -3776,12 +3957,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792259339642,
       "firstQuoteUsd": 0.000002979,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000002935,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000002979,
       "maxQuoteAt": 1792233777615,
       "currentMultiple": 0.9852299429338703,
@@ -3854,12 +4035,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792254433053,
       "firstQuoteUsd": 0.000002238,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.00000214,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.000002238,
       "maxQuoteAt": 1792233777615,
       "currentMultiple": 0.9562109025915996,
@@ -3937,12 +4118,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792251096023,
       "firstQuoteUsd": 0.00003554,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.00003554,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00003554,
       "maxQuoteAt": 1792233777615,
       "currentMultiple": 1,
@@ -4009,12 +4190,12 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792244746573,
       "firstQuoteUsd": 0.0000038,
       "firstQuoteAt": 1792233777615,
       "currentQuoteUsd": 0.000003732,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.0000038,
       "maxQuoteAt": 1792233777615,
       "currentMultiple": 0.9821052631578947,
@@ -4030,7 +4211,7 @@
         "marketCap": 3732.87,
         "pairCreatedAt": 1792208263000,
         "priceChange": {
-          "h6": -0.95,
+          "h6": -0.39,
           "h24": 5.47
         },
         "txns": {
@@ -4044,7 +4225,7 @@
           },
           "h6": {
             "buys": 2,
-            "sells": 4
+            "sells": 3
           },
           "h24": {
             "buys": 939,
@@ -4053,7 +4234,7 @@
         },
         "volume": {
           "h24": 59892.46,
-          "h6": 36.02,
+          "h6": 30.87,
           "h1": 0,
           "m5": 0
         }
@@ -4082,55 +4263,55 @@
       },
       "currentlyBoosted": false,
       "firstSeenAt": 1792233777615,
-      "lastSeenAt": 1792263987421,
+      "lastSeenAt": 1792265550974,
       "lastBoostSeenAt": 1792238652020,
       "firstQuoteUsd": 0.00004084,
       "firstQuoteAt": 1792233777615,
-      "currentQuoteUsd": 0.00001734,
-      "currentQuoteAt": 1792263987421,
+      "currentQuoteUsd": 0.00001857,
+      "currentQuoteAt": 1792265550974,
       "maxQuoteUsd": 0.00004084,
       "maxQuoteAt": 1792233777615,
-      "currentMultiple": 0.4245837414299706,
+      "currentMultiple": 0.45470127326150833,
       "maxMultiple": 1,
       "alerts": [],
       "pair": {
         "pairAddress": "2ERvb5qqWWPgie9fSEqpEtMbJ5ndy7uKHPgp6rKw92Lj",
         "dexId": "pumpswap",
         "url": "https://dexscreener.com/solana/2ervb5qqwwpgie9fseqpetmbj5ndy7ukhpgp6rkw92lj",
-        "priceUsd": 0.00001734,
-        "liquidityUsd": 10405.51,
-        "fdv": 16833,
-        "marketCap": 16833,
+        "priceUsd": 0.00001857,
+        "liquidityUsd": 10846.32,
+        "fdv": 18035,
+        "marketCap": 18035,
         "pairCreatedAt": 1792194269000,
         "priceChange": {
-          "m5": -1.22,
-          "h1": 10.61,
-          "h6": -19.37,
-          "h24": -61.55
+          "m5": 0.36,
+          "h1": 14.43,
+          "h6": -14.76,
+          "h24": -58.81
         },
         "txns": {
           "m5": {
             "buys": 1,
-            "sells": 2
+            "sells": 0
           },
           "h1": {
             "buys": 32,
-            "sells": 20
+            "sells": 26
           },
           "h6": {
-            "buys": 225,
-            "sells": 215
+            "buys": 211,
+            "sells": 202
           },
           "h24": {
-            "buys": 12297,
-            "sells": 9429
+            "buys": 12310,
+            "sells": 9439
           }
         },
         "volume": {
-          "h24": 885410.59,
-          "h6": 12705.71,
-          "h1": 1031.09,
-          "m5": 5.26
+          "h24": 885732.19,
+          "h6": 10839.95,
+          "h1": 1160.02,
+          "m5": 20.65
         }
       }
     }
