@@ -1,0 +1,21 @@
+name: early-radar-trial
+on:
+  schedule: [{cron: '*/10 * * * *'}]
+  workflow_dispatch:
+concurrency: {group: early-radar, cancel-in-progress: false}
+permissions: {contents: write}
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 early-radar/cycle.py
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}   # SECRET NAME TO BE CONFIRMED against existing Radar secret names
+          TG_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}       # SECRET NAME TO BE CONFIRMED
+        working-directory: .
+      - run: |
+          git config user.name early-radar-bot; git config user.email noreply@users.noreply.github.com
+          git add early-radar/radar.db; git commit -m "early-radar cycle $(date -u +%FT%TZ)" || exit 0
+          git pull --rebase -q && git push
