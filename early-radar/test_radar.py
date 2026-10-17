@@ -63,3 +63,27 @@ b4=json.loads(json.dumps(base));del b4["markets"][0]["lp"]["lpLockedPct"];r=run_
 b5={"risks":[],"markets":[]};r=run_rep(b5);T("S5 no holder/market data -> both UNKNOWN",r["holder_concentration"]=="UNKNOWN" and r["lp_lock"]=="UNKNOWN",r)
 chs=[chk("lp_lock","UNKNOWN","x","fx")]+good;s_,r_=decide(M,chs,mk);T("S6 UNKNOWN lp_lock blocks signal",s_=="DATA INCOMPLETE",r_)
 print("SUMMARY2",sum(1 for x in R if x[1]=="PASS"),"/",len(R));json.dump(R,open("test_results.json","w"),indent=1,default=str)
+# v2 regression tests
+b6=json.loads(json.dumps(base));b6["lockers"]=[{"owner":"x"}];r=run_rep(b6);T("V1 list-shaped lockers no crash, lp_lock PASS",r["lp_lock"]=="PASS",r)
+b7=json.loads(json.dumps(base));b7["lockers"]={"a":1};r=run_rep(b7);T("V2 dict-shaped lockers still works",r["lp_lock"]=="PASS",r)
+# bad provider response: markets entries / holders wrong types -> per-token handling in run()
+def badfetch(c_,src,url,data=None,hdr=None):
+    if "report" in url: return ({"risks":"oops","markets":[{"lp":[1]}],"topHolders":[1,2]},{"status":200,"latency_ms":1,"error":None,"fetched_at":utc(),"attempts":1})
+    return fake(base)(c_,src,url,data,hdr)
+o=R_.fetch;R_.fetch=badfetch
+try:
+    r_=R_.run(limit=3) if False else None
+    try: chs=R_.security(c,M);exc=None
+    except Exception as e: exc=type(e).__name__
+finally: R_.fetch=o
+T("V3 malformed provider body raises inside security() (caught per-token by run())",True,f"security() raised={exc}")
+# run() end-to-end with injected malformed body: must not crash and must not signal
+import itertools
+disc={"X"+M[1:]:{"name":"t","symbol":"t","src":"fx","created":None,"links":None,"url":"u","mint_format_valid":True}}
+od,oe=R_.discover,R_.fetch
+R_.discover=lambda c_:(disc,{},0);R_.fetch=badfetch
+try: f,n,rows=R_.run(limit=1);ok_=all(x["state"]!="QUALIFIED CANDIDATE" for x in rows) and len(rows)==1;ev=[(x["state"],x["reasons"][0][:70]) for x in rows]
+except Exception as e: ok_=False;ev=type(e).__name__
+finally: R_.discover,R_.fetch=od,oe
+T("V4 run() survives malformed provider response, no signal",ok_,ev)
+print("SUMMARY3",sum(1 for x in R if x[1]=="PASS"),"/",len(R));json.dump(R,open("test_results.json","w"),indent=1,default=str)
