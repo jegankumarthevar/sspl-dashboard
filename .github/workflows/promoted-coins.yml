@@ -1,0 +1,54 @@
+name: Promoted coins watch
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: promoted-coins-watch
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Assert public free scope
+        env:
+          IS_PRIVATE: ${{ github.event.repository.private }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          test "$IS_PRIVATE" = false
+          test "$DEFAULT_BRANCH" = main
+      - name: Update promoted snapshot
+        run: node promoted-coins/server/update.cjs promoted-coins/live.json
+      - name: Commit snapshot
+        run: |
+          git config user.name 'promoted-coins-bot'
+          git config user.email 'promoted-coins-bot@users.noreply.github.com'
+          git add promoted-coins/live.json
+          if git diff --cached --quiet; then
+            echo 'No promoted-coin snapshot change'
+            exit 0
+          fi
+          git commit -m 'Promoted coins watch [skip ci]'
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+            fi
+            sleep $((i * 5))
+          done
+          echo 'Could not publish promoted snapshot after retries'
+          exit 1
