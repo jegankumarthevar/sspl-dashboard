@@ -51,13 +51,19 @@ jobs:
         env:
           RADAR_HELIUS_API_KEY: ${{ secrets.RADAR_HELIUS_API_KEY }}
         run: node radar-r2/server/runner.cjs scan '${{ github.run_id }}'
+      - name: Build mobile dashboard summary
+        run: |
+          python3 radar-r2/server/build_dashboard_summary.py radar-r2/server-ledger.json radar-r2/server-ledger-summary.json
+          gzip -9 -c radar-r2/server-ledger-summary.json > radar-r2/server-ledger-summary.json.gz
+          rm radar-r2/server-ledger-summary.json
       - name: Commit complete append-only paper ledger
         run: |
           git config user.name 'radar-paper-bot'
           git config user.email 'radar-paper-bot@users.noreply.github.com'
-          git rm --cached --ignore-unmatch radar-r2/server-ledger.json
-          git add radar-r2/server-ledger.json.gz radar-r2/recovery-20261014.json radar-r2/recovery-archive
+          git rm --cached --ignore-unmatch radar-r2/server-ledger.json radar-r2/server-ledger-summary.json
+          git add radar-r2/server-ledger.json.gz radar-r2/server-ledger-summary.json.gz radar-r2/recovery-20261014.json radar-r2/recovery-archive
           test "$(wc -c < radar-r2/server-ledger.json.gz)" -lt 90000000
+          test "$(wc -c < radar-r2/server-ledger-summary.json.gz)" -lt 2000000
           if ! git diff --cached --quiet; then
             git commit -m 'Radar paper scan [skip ci]'
             git fetch origin main
@@ -78,6 +84,7 @@ jobs:
             --exclude='*.zip' --exclude='*.tmp' --exclude='recovery-archive/'
           test -f _public_site/radar-r2/index.html
           test -f _public_site/radar-r2/server-ledger.json
+          test -f _public_site/radar-r2/server-ledger-summary.json.gz
       - name: Upload complete site including post-scan ledger
         if: success()
         uses: actions/upload-pages-artifact@v3
