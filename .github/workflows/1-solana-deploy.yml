@@ -1,0 +1,54 @@
+name: Solana Intelligence deploy-only (additive)
+# Additive. Does not touch Radar R4. Stages the same full public site from main and
+# deploys it, so Solana Intelligence releases do not wait for a scanner run.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'solana-intelligence/**'
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  # Same group as Radar R4, as its own comment requires for any custom Pages deployment.
+  group: radar-pages-site
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Stage entire existing public site
+        run: |
+          mkdir -p _public_site
+          rsync -a ./ _public_site/ \
+            --exclude='.git/' --exclude='.github/' --exclude='_public_site/' \
+            --exclude='node_modules/' --exclude='server/' --exclude='*.log' \
+            --exclude='*.pem' --exclude='.env*' --exclude='*TEST_OUTPUT*' \
+            --exclude='*REPORT*' --exclude='LOCAL_*' --exclude='DASHBOARD_TEST_*' \
+            --exclude='*.zip' --exclude='*.tmp' --exclude='recovery-archive/'
+          test -f _public_site/radar-r2/index.html
+          test -f _public_site/radar-r2/server-ledger.json
+          test -f _public_site/radar-r2/server-ledger-summary.json.gz
+          test -d _public_site/solana-intelligence
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _public_site
+  deploy:
+    needs: stage
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
