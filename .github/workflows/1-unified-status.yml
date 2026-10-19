@@ -1,0 +1,95 @@
+name: Unified status collector (Bot A + Bot B)
+
+# Additive workflow. Probes the free public sources used by both bots and
+# publishes status.json to the separate branch "unified-data".
+# It never commits to main and does not touch the Radar workflows.
+# Rollback: delete this file (and optionally the unified-data branch).
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: unified-status
+  cancel-in-progress: true
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - name: Probe free sources and write status.json
+        run: |
+          mkdir -p out
+          curl -s -m 15 -o prev.json "https://raw.githubusercontent.com/${{ github.repository }}/unified-data/status.json?cb=$(date +%s)" || true
+          RUN_ID="${{ github.run_id }}" RUN_NUMBER="${{ github.run_number }}" EVENT="${{ github.event_name }}" node - <<'JS'
+          const fs = require('fs');
+          const M = 'So11111111111111111111111111111111111111112';
+          const probes = [
+            { id: 'gecko', name: 'GeckoTerminal new pools', bots: ['A', 'B'], url: 'https://api.geckoterminal.com/api/v2/networks/solana/new_pools?page=1', check: j => Array.isArray(j.data) ? j.data.length : null },
+            { id: 'dex', name: 'Dexscreener token profiles', bots: ['A'], url: 'https://api.dexscreener.com/token-profiles/latest/v1', check: j => Array.isArray(j) ? j.length : null },
+            { id: 'rugcheck', name: 'RugCheck leaderboard', bots: ['A', 'B'], url: 'https://api.rugcheck.xyz/v1/leaderboard', check: j => Array.isArray(j) ? j.length : (j && typeof j === 'object' ? Object.keys(j).length : null) },
+            { id: 'jupiter', name: 'Jupiter price v3', bots: ['B'], url: 'https://lite-api.jup.ag/price/v3?ids=' + M, check: j => (j && j[M] && typeof j[M].usdPrice === 'number') ? 1 : null },
+            { id: 'rpc', name: 'Solana public RPC (publicnode) getHealth', bots: ['A', 'B'], url: 'https://solana-rpc.publicnode.com', post: { jsonrpc: '2.0', id: 1, method: 'getHealth' }, check: j => j && j.result === 'ok' ? 1 : null }
+          ];
+          async function run(p) {
+            const t0 = Date.now();
+            const r = { id: p.id, name: p.name, bots: p.bots, ok: false, http: null, ms: null, items: null, error: null };
+            try {
+              const ctl = new AbortController();
+              const to = setTimeout(() => ctl.abort(), 12000);
+              const opt = { signal: ctl.signal, headers: { 'user-agent': 'Mozilla/5.0 unified-status-collector', accept: 'application/json' } };
+              if (p.post) { opt.method = 'POST'; opt.headers['content-type'] = 'application/json'; opt.body = JSON.stringify(p.post); }
+              const res = await fetch(p.url, opt);
+              clearTimeout(to);
+              r.http = res.status; r.ms = Date.now() - t0;
+              if (!res.ok) { r.error = 'HTTP ' + res.status; return r; }
+              let j; try { j = await res.json(); } catch (e) { r.error = 'MALFORMED_JSON'; return r; }
+              const n = p.check(j);
+              if (n === null) { r.error = 'UNEXPECTED_SHAPE'; return r; }
+              r.items = n; r.ok = true;
+            } catch (e) { r.ms = Date.now() - t0; r.error = (e && e.name === 'AbortError') ? 'TIMEOUT_12s' : 'NETWORK_ERROR'; }
+            return r;
+          }
+          (async () => {
+            const results = [];
+            for (const p of probes) results.push(await run(p));
+            let prev = null;
+            try { prev = JSON.parse(fs.readFileSync('prev.json', 'utf8')); } catch (e) {}
+            const now = new Date().toISOString();
+            const bot = b => {
+              const rs = results.filter(r => r.bots.includes(b));
+              const ok = rs.filter(r => r.ok).length;
+              return { sources: rs.length, ok, status: ok === rs.length ? 'OK' : (ok === 0 ? 'UPDATE FAILED' : 'DATA INCOMPLETE'), failed: rs.filter(r => !r.ok).map(r => r.id + ':' + r.error) };
+            };
+            const A = bot('A'), B = bot('B');
+            const hist = ((prev && prev.history) || []).slice(-23);
+            hist.push({ at: now, a: A.status, b: B.status });
+            const out = {
+              schema: 1,
+              generatedAt: now,
+              nominalIntervalMinutes: 5,
+              note: 'Scheduled GitHub Actions run. GitHub may delay or queue scheduled runs; use generatedAt to judge freshness. This file only reports public-source reachability, not trading data.',
+              run: { id: process.env.RUN_ID, number: process.env.RUN_NUMBER, event: process.env.EVENT },
+              previousGeneratedAt: prev && prev.generatedAt || null,
+              botA: A, botB: B,
+              probes: results,
+              history: hist
+            };
+            fs.writeFileSync('out/status.json', JSON.stringify(out, null, 1));
+            console.log(JSON.stringify({ A: A.status, B: B.status, at: now }));
+          })();
+          JS
+      - name: Publish status.json to branch unified-data
+        run: |
+          cd out
+          git init -q
+          git config user.name "unified-status[bot]"
+          git config user.email "unified-status@users.noreply.github.com"
+          git checkout -q -b unified-data
+          git add status.json
+          git commit -q -m "Unified status ${{ github.run_number }} [skip ci]"
+          git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/unified-data
