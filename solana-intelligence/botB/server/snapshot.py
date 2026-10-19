@@ -14,12 +14,16 @@ def load():
     except Exception:return {'tokens':{},'runs':0,'gaps':[],'last':None,'errors':[]}
 def main():
     now=time.time();st=load();errs=[]
-    if st['last'] and now-st['last']>20*60:st['gaps'].append({'from':st['last'],'to':now,'min':round((now-st['last'])/60)});st['gaps']=st['gaps'][-50:]
+    st.setdefault('run_times',[])
+    if st['last']:
+        gap=now-st['last'];iv=[b-a for a,b in zip(st['run_times'][-21:],st['run_times'][-20:])]
+        med=sorted(iv)[len(iv)//2] if iv else 300
+        if gap>max(15*60,3*med):st['gaps'].append({'from':st['last'],'to':now,'min':round(gap/60),'median_prev_s':round(med)});st['gaps']=st['gaps'][-50:]
     try:
         for p in get('https://api.geckoterminal.com/api/v2/networks/solana/new_pools?page=1')['data']:
             m=p['relationships']['base_token']['data']['id'].split('_')[1]
             if m in STABLE or m in st['tokens']:continue
-            a=p['attributes'];st['tokens'][m]={'first':now,'name':a.get('name'),'p0':None,'liq0':None,'polls':0,'miss':0,'changes':0,'last':None,'max_valid':1.0,'liq':None,'price':None}
+            a=p['attributes'];st['tokens'][m]={'first':now,'name':a.get('name'),'p_first_seen':None,'liq_first_seen':None,'chunk_fail':0,'polls':0,'miss':0,'changes':0,'last':None,'max_valid':1.0,'liq':None,'price':None}
     except Exception as e:errs.append('gecko: '+str(e)[:80])
     cut=now-TRACK_HOURS*3600
     for m in [k for k,v in st['tokens'].items() if v['first']<cut]:del st['tokens'][m]
@@ -33,19 +37,21 @@ def main():
                 m=q['baseToken']['address']
                 if m in st['tokens'] and (m not in best or ((q.get('liquidity') or {}).get('usd') or 0)>((best[m].get('liquidity') or {}).get('usd') or 0)):best[m]=q
         except Exception as e:
-            errs.append('dex: '+str(e)[:80]);continue
+            errs.append('dex chunk %d/%d: %s'%(i//30+1,(len(ms)+29)//30,str(e)[:80]))
+            for m in chunk:st['tokens'][m]['polls']+=1;st['tokens'][m]['miss']+=1;st['tokens'][m]['chunk_fail']+=1
+            continue
         for m in chunk:
             t=st['tokens'][m];t['polls']+=1;q=best.get(m)
             if q is None or not q.get('priceUsd'):t['miss']+=1;continue
             pr=float(q['priceUsd']);liq=(q.get('liquidity') or {}).get('usd') or 0
-            if t['p0'] is None:t['p0']=pr;t['liq0']=liq
+            if t['p_first_seen'] is None:t['p_first_seen']=pr;t['liq_first_seen']=liq
             if t['price'] is not None and pr!=t['price']:t['changes']+=1
             t['price']=pr;t['liq']=liq;t['last']=now
-            if liq>=max(1000,0.2*(t['liq0'] or 0)) and t['p0']>0:t['max_valid']=max(t['max_valid'],pr/t['p0'])
-    st['runs']+=1;st['last']=now;st['errors']=(st['errors']+[{'t':now,'e':e} for e in errs])[-30:]
+            if liq>=max(1000,0.2*(t['liq_first_seen'] or 0)) and t['p_first_seen']>0:t['max_valid']=max(t['max_valid'],pr/t['p_first_seen'])
+    st['runs']+=1;st['last']=now;st['run_times']=(st['run_times']+[now])[-60:];st['errors']=(st['errors']+[{'t':now,'e':e} for e in errs])[-30:]
     json.dump(st,open(STATE,'w'))
-    toks=[dict(mint=m,**{k:v[k] for k in ('name','first','p0','liq0','price','liq','polls','miss','changes','max_valid','last')}) for m,v in st['tokens'].items()]
-    json.dump({'schema':1,'engine':'Bot B snapshot','generated_at':now,'run':st['runs'],'interval_expected_min':5,'paper_only':True,'tokens':toks,'gaps':st['gaps'],'errors_this_run':errs,
-      'note':'max_valid counts only while liquidity stayed at least max($1000, 20% of start). A static price over many polls means a thin pool, not stability.'},open(OUT,'w'))
+    toks=[dict(mint=m,**{k:v[k] for k in ('name','first','p_first_seen','liq_first_seen','price','liq','polls','miss','chunk_fail','changes','max_valid','last')}) for m,v in st['tokens'].items()]
+    json.dump({'schema':2,'run_times':st['run_times'],'engine':'Bot B snapshot','generated_at':now,'run':st['runs'],'interval_expected_min':5,'paper_only':True,'tokens':toks,'gaps':st['gaps'],'errors_this_run':errs,
+      'note':'Multiples are relative to the first price THIS job observed (p_first_seen), not the pool creation price. max_valid counts only while liquidity stayed at least max($1000, 20% of the first observed liquidity). A static price over many polls means a thin pool, not stability.'},open(OUT,'w'))
     print('ok',len(toks),'tokens',len(errs),'errors')
 if __name__=='__main__':main()
