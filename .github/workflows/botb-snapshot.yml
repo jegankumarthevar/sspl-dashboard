@@ -32,7 +32,7 @@ jobs:
           mkdir -p work
           cp solana-intelligence/botB/server/snapshot.py work/snapshot.py
           curl -s -m 20 -o work/state.json "https://raw.githubusercontent.com/${{ github.repository }}/botb-data/state.json?cb=$(date +%s)" || true
-          python3 -c "import json;json.load(open('work/state.json'))" 2>/dev/null || rm -f work/state.json
+          python3 -c "import json;d=json.load(open('work/state.json'));assert 'run_times' in d" 2>/dev/null || rm -f work/state.json
           python3 work/snapshot.py
           python3 -c "import json;d=json.load(open('work/snapshot.json'));d['github_run']={'id':'${{ github.run_id }}','number':'${{ github.run_number }}','event':'${{ github.event_name }}'};json.dump(d,open('work/snapshot.json','w'))"
       - name: Publish to branch botb-data
