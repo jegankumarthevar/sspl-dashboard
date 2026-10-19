@@ -1,0 +1,184 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Solana Intelligence v002 (Bot B)</title>
+<style>
+:root{--bg:#0b1020;--card:#141b30;--b:#25304f;--t:#e8ecf8;--m:#8d99b8;--g:#28d17c;--r:#ff5470;--y:#ffc857;--c:#4cc9f0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--t);font:14px/1.4 system-ui,sans-serif;padding-bottom:70px}
+header{position:sticky;top:0;background:#0b1020ee;backdrop-filter:blur(6px);padding:10px 12px;border-bottom:1px solid var(--b);z-index:5}
+h1{font-size:16px;margin:0}.sub{color:var(--m);font-size:12px}
+.row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:6px}
+button,select,input{background:var(--card);color:var(--t);border:1px solid var(--b);border-radius:8px;padding:7px 10px;font:inherit}
+button.p{background:var(--c);color:#041018;border:0;font-weight:700}button.s{padding:4px 8px;font-size:12px}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:#0e1427;border-top:1px solid var(--b);z-index:6;overflow-x:auto}
+nav button{flex:1;min-width:64px;border:0;border-radius:0;background:none;color:var(--m);padding:12px 4px;font-size:12px}nav button.on{color:var(--c);border-top:2px solid var(--c)}
+main{padding:10px}.card{background:var(--card);border:1px solid var(--b);border-radius:12px;padding:10px;margin-bottom:8px}
+.tag{display:inline-block;padding:1px 7px;border-radius:99px;font-size:11px;border:1px solid var(--b);margin-right:4px}
+.CANDIDATE{color:var(--g);border-color:var(--g)}.WATCH{color:var(--c);border-color:var(--c)}.BLOCKED{color:var(--r);border-color:var(--r)}.DATA_INCOMPLETE{color:var(--y);border-color:var(--y)}
+.m{color:var(--m)}.g{color:var(--g)}.r{color:var(--r)}.y{color:var(--y)}.mono{font-family:ui-monospace,monospace;font-size:11px;word-break:break-all}
+.bar{height:6px;background:#0b1020;border-radius:4px;overflow:hidden;margin:2px 0 6px}.bar i{display:block;height:100%;background:var(--c)}
+.demo{border:1px dashed var(--y);background:#2a2410}.warn{border:1px solid var(--y);color:var(--y)}
+table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:4px;border-bottom:1px solid var(--b);text-align:left}
+a{color:var(--c)}.hide{display:none}
+</style></head><body>
+<header><h1>Solana Intelligence v002 <span class="tag">Bot B</span><span class="tag warn">PAPER ONLY</span></h1>
+<div class="sub" id="status">idle - press Scan. No trades, no keys, no wallet.</div>
+<div class="row"><button class="p" id="scan">Scan now</button><label class="m"><input type="checkbox" id="auto"> auto 60s</label>
+<input id="q" placeholder="search name / mint" style="flex:1;min-width:120px"><select id="f"><option value="">all</option><option>CANDIDATE</option><option>WATCH</option><option>DATA_INCOMPLETE</option><option>BLOCKED</option><option value="WL">watchlist</option></select></div></header>
+<main id="v"></main>
+<nav id="nav"></nav>
+<script>
+// BOT B core v0.2 - independent implementation. Weights are UNTUNED defaults (not backtested).
+const TARGETS=[2,3,4,5];
+const W={earlyness:20,liquidity:15,momentum:10,tokenSafety:25,holders:15,confirmation:10,walletQuality:5};
+const OBS='OBSERVED',NO='NOT_OBSERVED';
+function clamp(x){return Math.max(0,Math.min(1,x))}
+// snapshot: {observedAt(ms), createdAt(ms), liqUsd, buys5m, sells5m, buys1h, sells1h, rug:{score_normalised,risks[],topHolderPct,mintAuth,freezeAuth}|null}
+function scoreToken(s){
+  const c={};
+  const ageMin=(s.observedAt-s.createdAt)/60000;
+  if(s.createdAt&&ageMin>=0) c.earlyness={v:clamp(1-ageMin/60),st:OBS,note:`age ${ageMin.toFixed(1)}m`}; else c.earlyness={v:0,st:NO};
+  c.liquidity=s.liqUsd!=null?{v:clamp(Math.log10(Math.max(s.liqUsd,1)/2000)/Math.log10(25)),st:OBS,note:`$${Math.round(s.liqUsd)}`}:{v:0,st:NO};
+  const b=s.buys5m,se=s.sells5m;
+  c.momentum=(b!=null&&se!=null&&b+se>=5)?{v:clamp(b/(b+se)),st:OBS,note:`${b}B/${se}S 5m`}:{v:0,st:NO,note:'<5 txns'};
+  if(s.rug){const r=s.rug;
+    c.tokenSafety={v:clamp(1-(r.score_normalised??10)/10)*((r.mintAuth||r.freezeAuth)?0:1),st:OBS,note:(r.risks||[]).slice(0,3).join(',')||'none listed'};
+    c.holders=r.topHolderPct!=null?{v:clamp(1-r.topHolderPct/50),st:OBS,note:`top holder ${r.topHolderPct.toFixed(1)}%`}:{v:0,st:NO};
+  }else{c.tokenSafety={v:0,st:NO};c.holders={v:0,st:NO};}
+  c.confirmation={v:0,st:NO,note:'needs tx-level data; free RPC only'};
+  c.walletQuality={v:0,st:NO,note:'no historical wallet proof on free data'};
+  let tot=0,obsW=0,all=0;
+  for(const k in W){all+=W[k];if(c[k].st===OBS){obsW+=W[k];tot+=W[k]*c[k].v}}
+  const confidence=obsW/all;
+  const hard=[];
+  if(s.rug&&(s.rug.mintAuth||s.rug.freezeAuth))hard.push('MINT_OR_FREEZE_AUTHORITY');
+  if(s.liqUsd!=null&&s.liqUsd<3000)hard.push('LIQ_UNDER_3K');
+  if(c.tokenSafety.st===NO)hard.push('SAFETY_UNKNOWN');
+  const score=Math.round(100*tot/all);           // missing data scores 0, never imputed
+  const verdict=hard.length?'BLOCKED':(confidence<0.7?'DATA_INCOMPLETE':(score>=60?'CANDIDATE':'WATCH'));
+  return {score,confidence:+confidence.toFixed(2),verdict,hard,components:c};
+}
+// round-trip cost model: constant-product, quote reserve ~ liq/2. Returns fraction of value kept after exit.
+function exitFactor(sizeUsd,liqUsd,feePct=1.0){
+  if(!liqUsd)return null;const R=liqUsd/2;const impact=sizeUsd/(R+sizeUsd);
+  return (1-impact)*(1-feePct/100);
+}
+class Tracker{
+  constructor(sig){this.s=Object.assign({sizeUsd:20},sig);this.last=sig.t;this.max=1;this.min=1;this.hits={};this.unavail=false;this.n=0;this.net=1;}
+  update(t,price){
+    if(t<=this.last)throw new Error('LOOKAHEAD_GUARD: non-monotonic time');
+    if(!(price>0)){this.n++;this.last=t;return;}      // missing price: counts as unresolved, never a win
+    this.last=t;this.n++;
+    const m=price/this.s.refPrice;this.max=Math.max(this.max,m);this.min=Math.min(this.min,m);
+    const ef=exitFactor(this.s.sizeUsd*m,this.s.liqUsd);   // liquidity at SIGNAL time (conservative if pool grows)
+    this.net=ef==null?null:m*ef;
+    for(const T of TARGETS){const k=T+'x';
+      if(!this.hits[k]&&m>=T)this.hits[k]={t,min:(t-this.s.t)/60000,grossOnly:!(this.net!=null&&this.net>=T)};}
+  }
+  report(){return {id:this.s.id,gross_max:+this.max.toFixed(3),gross_min:+this.min.toFixed(3),net_last:this.net==null?null:+this.net.toFixed(3),hits:this.hits,polls:this.n,status:this.n===0?'UNRESOLVED':'OPEN'}}
+}
+
+const TABS=['Radar','Stats','Tracking','Ledger','Wallets','Health','Data'];
+const KEY='sib_v002';let tab='Radar';
+const S=JSON.parse(localStorage.getItem(KEY)||'null')||{seen:{},sig:{},ledger:[],wl:{},health:{},rug:{},demo:false};
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const STABLE=new Set(['So11111111111111111111111111111111111111112','EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v','Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB']);
+let live=[];const $=s=>document.querySelector(s);
+const fm=(x,d=2)=>x==null||isNaN(x)?'n/a':(x>=1000?Math.round(x).toLocaleString():(+x).toPrecision(3));
+const ago=ms=>{const m=(Date.now()-ms)/60000;return m<1?'<1m':m<90?Math.round(m)+'m':(m/60).toFixed(1)+'h'};
+async function api(name,url,opt){const h=S.health[name]||(S.health[name]={ok:0,fail:0,r429:0});const t0=performance.now();
+ try{const r=await fetch(url,opt);h.lat=Math.round(performance.now()-t0);h.last=Date.now();h.code=r.status;
+  if(r.status===429){h.r429++;h.fail++;save();throw new Error('429')}if(!r.ok){h.fail++;save();throw new Error('HTTP '+r.status)}
+  h.ok++;save();return await r.json()}catch(e){if(!h.code||h.code==200){h.code='ERR';h.last=Date.now();h.fail++}h.err=String(e.message).slice(0,40);save();throw e}}
+async function scan(){$('#status').textContent='scanning...';const t0=Date.now();
+ let pools=[];
+ try{const j=await api('GeckoTerminal new_pools','https://api.geckoterminal.com/api/v2/networks/solana/new_pools?page=1');pools=j.data}catch(e){}
+ try{const j=await api('GeckoTerminal trending','https://api.geckoterminal.com/api/v2/networks/solana/trending_pools');pools=pools.concat(j.data.map(p=>(p._src='trending',p)))}catch(e){}
+ const mints=[];const meta={};
+ for(const p of pools){const b=p.relationships.base_token.data.id.split('_')[1];if(STABLE.has(b)||meta[b])continue;meta[b]={src:p._src||'new_pool',name:p.attributes.name,created:Date.parse(p.attributes.pool_created_at)};mints.push(b)}
+ // Dexscreener batch (30/req): price, liquidity, txns
+ const dex={};
+ const recent=Object.keys(S.seen).filter(k=>Date.now()-S.seen[k].first<6*3600e3);
+ const want=[...new Set(mints.concat(recent,Object.keys(S.sig).filter(k=>S.sig[k].open)))];
+ for(let i=0;i<want.length;i+=30){try{const j=await api('Dexscreener tokens','https://api.dexscreener.com/tokens/v1/solana/'+want.slice(i,i+30).join(','));
+  for(const q of j){const a=q.baseToken.address;if(!dex[a]||(q.liquidity?.usd||0)>(dex[a].liquidity?.usd||0))dex[a]=q}}catch(e){}}
+ const now=Date.now();live=[];
+ for(const m of mints){const q=dex[m];const mt=meta[m];
+  if(!S.seen[m])S.seen[m]={first:now,src:mt.src,name:mt.name,created:mt.created,p0:q?+q.priceUsd:null};
+  const snap={observedAt:now,createdAt:mt.created,liqUsd:q?.liquidity?.usd??null,buys5m:q?.txns?.m5?.buys??null,sells5m:q?.txns?.m5?.sells??null,rug:S.rug[m]?.rep||null};
+  const sc=scoreToken(snap);live.push({mint:m,name:(q?.baseToken?.symbol||mt.name),src:mt.src,price:q?+q.priceUsd:null,liq:snap.liqUsd,created:mt.created,sc,snap,pair:q?.url})}
+ // v002: outcome tracking for EVERY seen token (not only signals) => base rates without survivorship bias
+ for(const k of recent){const s=S.seen[k],q=dex[k];s.n=(s.n||0)+1;const p=q?+q.priceUsd:0;
+  if(!(s.p0>0)&&p>0){s.p0=p;s.liq0=q.liquidity?.usd||0}
+  if(p>0&&s.p0>0){const m=p/s.p0;s.max=Math.max(s.max||1,m);s.min=Math.min(s.min||1,m);s.last=m;s.lastT=now;
+   const ef=exitFactor(20*m,s.liq0||0);s.maxNet=Math.max(s.maxNet||0,ef==null?0:m*ef);
+   const age=(now-s.first)/60000;for(const [lab,mins] of [['m10',10],['m60',60],['h6',360]]){if(!s[lab]&&age>=mins)s[lab]=m}}
+  else s.miss=(s.miss||0)+1}
+ // risk lookups for the best pre-scored (RugCheck, sequential, stops on 429)
+ const todo=live.filter(x=>!S.rug[x.mint]&&x.liq>=3000).sort((a,b)=>b.sc.score-a.sc.score).slice(0,5);
+ for(const x of todo){const ok=await rug(x.mint);if(ok===429)break;await new Promise(r=>setTimeout(r,600))}
+ for(const x of live){x.snap.rug=S.rug[x.mint]?.rep||null;x.sc=scoreToken(x.snap);
+  if(x.sc.verdict==='CANDIDATE'&&!S.sig[x.mint]&&x.price>0)openSignal(x)}
+ // update tracked
+ for(const k in S.sig){const s=S.sig[k];if(!s.open)continue;const q=dex[k];const t=Date.now();if(t<=s.tr.last)continue;
+  const tr=Object.assign(new Tracker(s.tr.s),s.tr);try{tr.update(t,q?+q.priceUsd:0)}catch(e){}s.tr=JSON.parse(JSON.stringify(tr));s.tr.hits=tr.hits;s.lastPrice=q?+q.priceUsd:s.lastPrice;
+  const P=S.ledger.find(l=>l.mint===k&&!l.closed);if(P&&q?.priceUsd){P.mark=+q.priceUsd;P.net=tr.net}}
+ save();$('#status').textContent=`scan ${new Date().toLocaleTimeString()} | ${live.length} tokens | ${Date.now()-t0}ms | free sources, paper only`;render()}
+async function rug(m){try{const r=await api('RugCheck report','https://api.rugcheck.xyz/v1/tokens/'+m+'/report');
+  const th=(r.topHolders||[]).filter(h=>!(r.markets||[]).some(k=>[k.lp?.lpLockedAddress,k.pubkey,k.liquidityA,k.liquidityB].includes(h.address)));
+  const top=(th.length&&(r.totalHolders||0)>=5)?Math.max(...th.map(h=>h.pct)):null; // <5 holders: pool/curve accounts distort %, treat as NOT OBSERVED
+  S.rug[m]={t:Date.now(),rep:{score_normalised:r.score_normalised,risks:(r.risks||[]).map(x=>x.name),topHolderPct:top,mintAuth:r.mintAuthority!=null,freezeAuth:r.freezeAuthority!=null,holders:th.slice(0,10).map(h=>({a:h.address,p:h.pct,ins:!!h.insider})),totalHolders:r.totalHolders,insNets:(r.insiderNetworks||[]).length,rugged:!!r.rugged,lpLocked:(r.markets||[])[0]?.lp?.lpLockedPct??null}};
+  if(r.rugged)S.rug[m].rep.risks.push('RUGGED');save();return 200}catch(e){return e.message==='429'?429:0}}
+function openSignal(x){const s={id:x.mint,name:x.name,t:Date.now(),refPrice:x.price,liqUsd:x.liq,sizeUsd:20};
+ S.sig[x.mint]={open:true,name:x.name,score:x.sc.score,conf:x.sc.confidence,t:s.t,ref:x.price,liq:x.liq,why:Object.fromEntries(Object.entries(x.sc.components).map(([k,v])=>[k,v.st==='OBSERVED'?+(v.v*100).toFixed(0):'N/O'])),tr:{s,last:s.t,max:1,min:1,hits:{},n:0,net:1}};
+ S.ledger.push({mint:x.mint,name:x.name,t:s.t,entry:x.price,sizeUsd:20,liq:x.liq,mark:x.price,net:1,closed:false})}
+function card(x){const c=x.sc.components,w=S.wl[x.mint];
+ return `<div class="card"><div><b>${x.name}</b> <span class="tag ${x.sc.verdict}">${x.sc.verdict}</span><span class="tag">${x.src}</span> <span class="m">score ${x.sc.score} | conf ${Math.round(x.sc.confidence*100)}%</span>
+ <button class="s" onclick="wl('${x.mint}')">${w?'★':'☆'}</button></div>
+ <div class="m">age ${ago(x.created)} | price $${fm(x.price)} | liq $${fm(x.liq)} | first seen by me ${ago(S.seen[x.mint].first)} ago</div>
+ ${Object.entries(c).map(([k,v])=>`<div class="m" style="font-size:11px">${k} ${v.st==='OBSERVED'?Math.round(v.v*100)+'/100 '+(v.note||''):'NOT OBSERVED '+(v.note||'')}</div><div class="bar"><i style="width:${v.st==='OBSERVED'?v.v*100:0}%;${v.st==='OBSERVED'?'':'background:#444'}"></i></div>`).join('')}
+ ${x.sc.hard.length?`<div class="r">Blocked by: ${x.sc.hard.join(', ')}</div>`:''}
+ <div class="row"><button class="s" onclick="chk('${x.mint}')">Check risk</button><a href="${x.pair||'#'}" target="_blank">Dexscreener</a><a href="https://rugcheck.xyz/tokens/${x.mint}" target="_blank">RugCheck</a><a href="https://solscan.io/token/${x.mint}" target="_blank">Solscan</a></div>
+ <div class="mono m">${x.mint}</div></div>`}
+window.wl=m=>{S.wl[m]?delete S.wl[m]:S.wl[m]=1;save();render()};
+window.chk=async m=>{$('#status').textContent='risk check...';const r=await rug(m);const x=live.find(l=>l.mint===m);if(x){x.snap.rug=S.rug[m]?.rep||null;x.sc=scoreToken(x.snap)}$('#status').textContent=r===429?'RugCheck 429 rate limited, retry later':'risk check done';render()};
+const DEMO=[{name:'DEMO-AAA',sc:{verdict:'CANDIDATE',score:71,confidence:.85,hard:[],components:{earlyness:{v:.9,st:'OBSERVED',note:'DEMO'},wallet:{v:0,st:'NOT_OBSERVED'}}},src:'DEMO',created:Date.now()-3e5,price:.0001,liq:50000,mint:'DEMO1'}];
+function render(){
+ $('#nav').innerHTML=TABS.map(t=>`<button class="${t==tab?'on':''}" onclick="tab='${t}';render()">${t}</button>`).join('');
+ const q=$('#q').value.toLowerCase(),f=$('#f').value;let h='';
+ if(tab=='Radar'){let L=live.slice().sort((a,b)=>b.sc.score-a.sc.score).filter(x=>(!q||x.name.toLowerCase().includes(q)||x.mint.toLowerCase().includes(q))&&(!f||(f=='WL'?S.wl[x.mint]:x.sc.verdict==f)));
+  h=L.length?L.map(card).join(''):'<div class="card m">No data yet. Press Scan now. If a source is down see Health tab. Nothing is faked.</div>';
+  if(S.demo)h='<div class="card demo"><b>DEMO DATA</b> - fake example only, not a signal.</div>'+DEMO.map(d=>'<div class="card demo">'+d.name+' DEMO DATA</div>').join('')+h;
+  h='<div class="card"><b>How ranking works:</b> weights are untuned defaults (not backtested). Missing data scores 0 and lowers confidence, never guessed. Wallet quality and independent confirmation are NOT OBSERVED in v002 (free data cannot prove them). A CANDIDATE needs safety data + liquidity + 70% confidence. Not advice.</div>'+h}
+ if(tab=='Stats'){const A=Object.values(S.seen).filter(s=>s.p0>0&&s.n>=2);const med=a=>{a=a.filter(x=>x!=null).sort((x,y)=>x-y);return a.length?a[Math.floor(a.length/2)]:null};
+  const pc=(f)=>A.length?Math.round(100*A.filter(f).length/A.length)+'%':'n/a';const f2=x=>x==null?'n/a':x.toFixed(2)+'x';
+  const old=A.filter(s=>(Date.now()-s.first)>=3600e3);
+  h=`<div class="card warn">Base rates over EVERY token this browser saw (not only signals). Needs the page open over time. Sample = ${A.length} tokens with 2+ price polls, ${old.length} older than 1h. Small samples prove nothing.</div>
+  <div class="card"><b>Gross (price only)</b><br>reached 2x: ${pc(s=>s.max>=2)} | 3x: ${pc(s=>s.max>=3)} | 5x: ${pc(s=>s.max>=5)}<br>
+  <b>Net of $20 exit cost (signal-time liquidity)</b><br>reached 2x net: ${pc(s=>s.maxNet>=2)} | 3x: ${pc(s=>s.maxNet>=3)}<br>
+  <b>Median multiple</b> at 10m ${f2(med(A.map(s=>s.m10)))} | at 1h ${f2(med(A.map(s=>s.m60)))} | at 6h ${f2(med(A.map(s=>s.h6)))}<br>
+  below 0.5x now: ${pc(s=>s.last<0.5)} | missing-price polls: ${A.reduce((a,s)=>a+(s.miss||0),0)}</div>
+  <div class="card"><b>Candidates vs everything else</b><br>candidates ${Object.keys(S.sig).length}: median max ${f2(med(Object.values(S.sig).map(s=>s.tr.max)))} | all tokens: median max ${f2(med(A.map(s=>s.max)))}<br><span class="m">If candidates do not beat the base rate, the score has no edge. Compare only when both samples are large.</span></div>`}
+ if(tab=='Tracking'){const ks=Object.keys(S.sig);h=ks.length?ks.sort((a,b)=>S.sig[b].t-S.sig[a].t).map(k=>{const s=S.sig[k],t=s.tr;return `<div class="card"><b>${s.name}</b> <span class="m">signal ${new Date(s.t).toLocaleString()} (${ago(s.t)} ago) | ref $${fm(s.ref)} | polls ${t.n}</span>
+  <div>gross max <b class="${t.max>=2?'g':''}">${t.max.toFixed(2)}x</b> | gross min <b class="${t.min<.5?'r':''}">${t.min.toFixed(2)}x</b> | net-of-exit now <b>${t.net==null?'n/a':t.net.toFixed(2)+'x'}</b></div>
+  <div>${[2,3,4,5].map(T=>{const hh=t.hits[T+'x'];return `<span class="tag ${hh?(hh.grossOnly?'DATA_INCOMPLETE':'CANDIDATE'):''}">${T}x ${hh?(hh.grossOnly?'gross only':'net hit')+' '+hh.min.toFixed(0)+'m':'not hit'}</span>`}).join('')}</div>
+  <div class="m">Net uses signal-time liquidity, 1% fee, $20 size (constant-product estimate). Missing price counts as unresolved, never a win. Losers are kept.</div></div>`}).join(''):'<div class="card m">No signals yet. A signal is only created when a token reaches CANDIDATE with real safety data.</div>'}
+ if(tab=='Ledger'){const tot=S.ledger.reduce((a,l)=>a+(l.closed?l.out:l.sizeUsd*(l.net??0)),0),inv=S.ledger.length*20;
+  h=`<div class="card">Paper ledger. Invested ${inv}$ | value now ${tot.toFixed(2)}$ (net of estimated exit cost) <span class="tag warn">PAPER</span></div>`+S.ledger.slice().reverse().map(l=>`<div class="card"><b>${l.name}</b> entry $${fm(l.entry)} | mark $${fm(l.mark)} | net ${l.net==null?'n/a':l.net.toFixed(2)+'x'} ${l.closed?'(closed)':'<button class="s" onclick="cl(\''+l.mint+'\')">Close paper</button>'}</div>`).join('')}
+ if(tab=='Wallets'){const cnt={};for(const m in S.rug)for(const hd of S.rug[m].rep.holders||[]){(cnt[hd.a]=cnt[hd.a]||[]).push(m)}
+  const rep=Object.entries(cnt).filter(([a,ms])=>ms.length>1);
+  h='<div class="card warn">Wallet QUALITY (skill) is NOT OBSERVED: free data has no verified wallet history. This tab shows only what RugCheck and your own scans prove: top holders, insider flags, and repeat holders across scanned tokens (cluster hint, not proof).</div>'+
+  `<div class="card"><b>Repeat holders (same wallet in top holders of 2+ scanned tokens)</b>${rep.length?rep.map(([a,ms])=>`<div class="mono">${a} in ${ms.length} tokens</div>`).join(''):'<div class="m">none found yet</div>'}</div>`+
+  Object.entries(S.rug).map(([m,r])=>`<div class="card"><b>${S.seen[m]?.name||m.slice(0,6)}</b> holders ${r.rep.totalHolders??'n/a'} | insider networks ${r.rep.insNets} | LP locked ${r.rep.lpLocked??'n/a'}% ${(r.rep.risks||[]).map(x=>`<span class="tag">${x}</span>`).join('')}
+  <table>${(r.rep.holders||[]).map(x=>`<tr><td class="mono">${x.a.slice(0,6)}..${x.a.slice(-4)}</td><td>${x.p.toFixed(1)}%</td><td>${x.ins?'<span class="r">insider</span>':''}</td></tr>`).join('')}</table></div>`).join('')}
+ if(tab=='Health'){h='<div class="card m">Health per source. 429 = rate limited. Data older than 3 min is STALE.</div>'+Object.entries(S.health).map(([n,x])=>{const st=x.last&&Date.now()-x.last>180000;return `<div class="card"><b>${n}</b> <span class="tag ${x.code==200?'CANDIDATE':'BLOCKED'}">${x.code??'n/a'}</span>${st?'<span class="tag DATA_INCOMPLETE">STALE</span>':''}<div class="m">ok ${x.ok} | fail ${x.fail} | 429s ${x.r429} | ${x.lat??'?'}ms | last ${x.last?ago(x.last):'never'} ${x.err||''}</div></div>`}).join('')||'<div class="card m">No calls yet.</div>'}
+ if(tab=='Data'){h=`<div class="card"><button class="s" onclick="ex('json')">Export JSON</button> <button class="s" onclick="ex('csv')">Export CSV (signals)</button> <button class="s" onclick="S.demo=!S.demo;save();render()">${S.demo?'Hide':'Show'} DEMO DATA</button> <button class="s" onclick="if(confirm('Clear all local data?')){localStorage.removeItem(KEY);location.reload()}">Clear</button>
+  <div class="m">seen tokens ${Object.keys(S.seen).length} | signals ${Object.keys(S.sig).length} | stored in this browser only. Runs only while the page is open (no backend). Browser limits: CORS must be allowed by each API; background scanning is not possible.</div></div>
+  <div class="card"><b>First-observed log</b> (every token ever seen by this browser)<table>${Object.entries(S.seen).slice(-40).reverse().map(([m,x])=>`<tr><td>${x.name}</td><td>${new Date(x.first).toLocaleTimeString()}</td><td>age at 1st sight ${((x.first-x.created)/60000).toFixed(1)}m</td></tr>`).join('')}</table></div>`}
+ $('#v').innerHTML=h}
+window.cl=m=>{const l=S.ledger.find(x=>x.mint===m&&!x.closed);if(l){l.closed=true;l.out=l.sizeUsd*(l.net??0)}if(S.sig[m])S.sig[m].open=false;save();render()};
+window.ex=k=>{let txt,fn;if(k=='json'){txt=JSON.stringify(S,null,1);fn='sib_v002.json'}else{txt='mint,name,signal_time,ref_price,gross_max,gross_min,net_last,hit2x,hit3x,hit4x,hit5x,polls\n'+Object.entries(S.sig).map(([m,s])=>[m,s.name,new Date(s.t).toISOString(),s.ref,s.tr.max,s.tr.min,s.tr.net,...[2,3,4,5].map(T=>s.tr.hits[T+'x']?(s.tr.hits[T+'x'].grossOnly?'gross':'net'):'no'),s.tr.n].join(',')).join('\n');fn='sib_v002_signals.csv'}
+ const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([txt]));a.download=fn;a.click()};
+$('#scan').onclick=scan;$('#q').oninput=render;$('#f').onchange=render;
+let tm;$('#auto').onchange=e=>{clearInterval(tm);if(e.target.checked){scan();tm=setInterval(scan,60000)}};
+const tp=new URLSearchParams(location.search).get('tab');if(tp)tab=tp;
+render();if(location.search.includes('autoscan'))scan();
+</script></body></html>
