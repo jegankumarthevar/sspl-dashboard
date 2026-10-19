@@ -1,0 +1,48 @@
+name: botb-snapshot
+
+# Additive. Runs Bot B's snapshot job (solana-intelligence/botB/server/snapshot.py).
+# Writes ONLY to the separate branch "botb-data" (never main). Free public APIs, no keys, paper analysis only.
+# GitHub scheduled runs are best-effort (can be delayed or skipped). Not claimed 24x7 until observed.
+# Rollback: delete this file (and optionally the botb-data branch).
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: botb-snapshot
+  cancel-in-progress: false
+
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Fetch snapshot.py (read-only checkout of main)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          sparse-checkout: solana-intelligence/botB/server
+          sparse-checkout-cone-mode: true
+      - name: Run one poll cycle with previous state from botb-data
+        run: |
+          mkdir -p work
+          cp solana-intelligence/botB/server/snapshot.py work/snapshot.py
+          curl -s -m 20 -o work/state.json "https://raw.githubusercontent.com/${{ github.repository }}/botb-data/state.json?cb=$(date +%s)" || true
+          python3 -c "import json;json.load(open('work/state.json'))" 2>/dev/null || rm -f work/state.json
+          python3 work/snapshot.py
+          python3 -c "import json;d=json.load(open('work/snapshot.json'));d['github_run']={'id':'${{ github.run_id }}','number':'${{ github.run_number }}','event':'${{ github.event_name }}'};json.dump(d,open('work/snapshot.json','w'))"
+      - name: Publish to branch botb-data
+        run: |
+          cd work
+          rm -rf .git
+          git init -q
+          git config user.name "botb-snapshot[bot]"
+          git config user.email "botb-snapshot@users.noreply.github.com"
+          git checkout -q -b botb-data
+          git add state.json snapshot.json
+          git commit -q -m "botb snapshot ${{ github.run_number }} [skip ci]"
+          git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/botb-data
