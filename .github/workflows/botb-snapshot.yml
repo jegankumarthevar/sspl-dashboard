@@ -4,6 +4,7 @@ name: botb-snapshot
 # Writes ONLY to the separate branch "botb-data" (never main). Free public APIs, no keys, paper analysis only.
 # GitHub scheduled runs are best-effort (can be delayed or skipped). Not claimed 24x7 until observed.
 # Rollback: delete this file (and optionally the botb-data branch).
+# v2 adds ONE extra step (continue-on-error) that appends each run's raw price rows to branch "botb-raw" (normal push, 7 UTC days kept). Rollback of that step: remove it and optionally delete botb-raw.
 on:
   schedule:
     - cron: '*/5 * * * *'
@@ -46,3 +47,30 @@ jobs:
           git add state.json snapshot.json
           git commit -q -m "botb snapshot ${{ github.run_number }} [skip ci]"
           git push -q --force "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/botb-data
+      - name: Append raw rows to branch botb-raw (additive, 7-day cap)
+        continue-on-error: true
+        env:
+          REMOTE: https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          RUN_ID: ${{ github.run_number }}
+        run: |
+          RAWFILE="$PWD/work/raw_rows.jsonl"; export RAWFILE
+          # Append this run's raw rows to branch botb-raw (additive, normal push, no force). Keeps 7 UTC days of files.
+          # Env: REMOTE (git url), RAWFILE (this run's rows), RUN_ID. Never touches main or botb-data.
+          set -e
+          D=$(date -u +%Y%m%d); CUT="$(date -u -d '7 days ago' +%Y%m%d).jsonl"
+          rm -rf rawrepo
+          if git ls-remote --exit-code --heads "$REMOTE" botb-raw >/dev/null 2>&1; then
+            git clone -q --depth 1 --branch botb-raw "$REMOTE" rawrepo
+          else
+            mkdir rawrepo; (cd rawrepo; git init -q; git checkout -q -b botb-raw)
+          fi
+          cd rawrepo
+          git config user.name "botb-raw[bot]"; git config user.email "botb-raw@users.noreply.github.com"
+          mkdir -p raw
+          N=$(wc -l < "$RAWFILE" | tr -d ' ')
+          cat "$RAWFILE" >> "raw/$D.jsonl"
+          for f in raw/*.jsonl; do b=$(basename "$f"); if [ "$b" \< "$CUT" ]; then git rm -q -f "$f" 2>/dev/null || rm -f "$f"; fi; done
+          git add -A raw
+          git commit -q -m "botb raw run $RUN_ID rows $N [skip ci]" || { echo "nothing to commit"; exit 0; }
+          git push -q "$REMOTE" HEAD:refs/heads/botb-raw
+          echo "persisted run $RUN_ID rows $N file raw/$D.jsonl"
