@@ -3,7 +3,7 @@
 One run = one poll cycle. State lives in state.json, the app reads snapshot.json.
 Every poll is recorded, including misses and failed sources. A gap is recorded when a run is late."""
 import json,os,sys,time,urllib.request
-DIR=os.path.dirname(os.path.abspath(__file__));STATE=os.path.join(DIR,'state.json');OUT=os.path.join(DIR,'snapshot.json')
+DIR=os.path.dirname(os.path.abspath(__file__));STATE=os.path.join(DIR,'state.json');OUT=os.path.join(DIR,'snapshot.json');RAW=os.path.join(DIR,'raw_rows.jsonl')
 STABLE={'So11111111111111111111111111111111111111112','EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v','Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB'}
 MAX_TRACK=300;TRACK_HOURS=24
 def get(u):
@@ -29,7 +29,7 @@ def main():
     for m in [k for k,v in st['tokens'].items() if v['first']<cut]:del st['tokens'][m]
     if len(st['tokens'])>MAX_TRACK:
         for m in sorted(st['tokens'],key=lambda k:st['tokens'][k]['first'])[:len(st['tokens'])-MAX_TRACK]:del st['tokens'][m]
-    ms=list(st['tokens'])
+    ms=list(st['tokens']);raw=[]
     for i in range(0,len(ms),30):
         chunk=ms[i:i+30];best={}
         try:
@@ -46,10 +46,12 @@ def main():
             pr=float(q['priceUsd']);liq=(q.get('liquidity') or {}).get('usd') or 0
             if t['p_first_seen'] is None:t['p_first_seen']=pr;t['liq_first_seen']=liq
             if t['price'] is not None and pr!=t['price']:t['changes']+=1
-            t['price']=pr;t['liq']=liq;t['last']=now
+            t['price']=pr;t['liq']=liq;t['last']=now;raw.append({'t':round(now,1),'run':st['runs']+1,'mint':m,'price':pr,'liq':liq})
             if liq>=max(1000,0.2*(t['liq_first_seen'] or 0)) and t['p_first_seen']>0:t['max_valid']=max(t['max_valid'],pr/t['p_first_seen'])
     st['runs']+=1;st['last']=now;st['run_times']=(st['run_times']+[now])[-60:];st['errors']=(st['errors']+[{'t':now,'e':e} for e in errs])[-30:]
     json.dump(st,open(STATE,'w'))
+    with open(RAW,'w') as f:
+        for r in raw:f.write(json.dumps(r,separators=(',',':'))+'\n')
     toks=[dict(mint=m,**{k:v[k] for k in ('name','first','p_first_seen','liq_first_seen','price','liq','polls','miss','chunk_fail','changes','max_valid','last')}) for m,v in st['tokens'].items()]
     json.dump({'schema':2,'run_times':st['run_times'],'engine':'Bot B snapshot','generated_at':now,'run':st['runs'],'interval_expected_min':5,'paper_only':True,'tokens':toks,'gaps':st['gaps'],'errors_this_run':errs,
       'note':'Multiples are relative to the first price THIS job observed (p_first_seen), not the pool creation price. max_valid counts only while liquidity stayed at least max($1000, 20% of the first observed liquidity). A static price over many polls means a thin pool, not stability.'},open(OUT,'w'))
