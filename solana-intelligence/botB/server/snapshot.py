@@ -5,7 +5,7 @@ Every poll is recorded, including misses and failed sources. A gap is recorded w
 import json,os,sys,time,urllib.request
 DIR=os.path.dirname(os.path.abspath(__file__));STATE=os.path.join(DIR,'state.json');OUT=os.path.join(DIR,'snapshot.json');RAW=os.path.join(DIR,'raw_rows.jsonl')
 STABLE={'So11111111111111111111111111111111111111112','EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v','Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB'}
-MAX_TRACK=300;TRACK_HOURS=24
+MAX_TRACK=1500;TRACK_HOURS=24
 def get(u):
     r=urllib.request.Request(u,headers={'User-Agent':'botb-snapshot','Accept':'application/json'})
     return json.load(urllib.request.urlopen(r,timeout=20))
