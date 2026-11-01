@@ -1,0 +1,211 @@
+{
+ "schema": 1,
+ "generatedAt": "2026-11-01T00:17:05.330Z",
+ "nominalIntervalMinutes": 5,
+ "note": "Scheduled GitHub Actions run. GitHub may delay or queue scheduled runs; use generatedAt to judge freshness. This file only reports public-source reachability, not trading data.",
+ "run": {
+  "id": "41256056929",
+  "number": "440",
+  "event": "schedule"
+ },
+ "previousGeneratedAt": "2026-10-31T23:41:25.617Z",
+ "botA": {
+  "sources": 4,
+  "ok": 4,
+  "status": "OK",
+  "failed": []
+ },
+ "botB": {
+  "sources": 4,
+  "ok": 4,
+  "status": "OK",
+  "failed": []
+ },
+ "probes": [
+  {
+   "id": "gecko",
+   "name": "GeckoTerminal new pools",
+   "bots": [
+    "A",
+    "B"
+   ],
+   "ok": true,
+   "http": 200,
+   "ms": 388,
+   "items": 20,
+   "error": null
+  },
+  {
+   "id": "dex",
+   "name": "Dexscreener token profiles",
+   "bots": [
+    "A"
+   ],
+   "ok": true,
+   "http": 200,
+   "ms": 108,
+   "items": 30,
+   "error": null
+  },
+  {
+   "id": "rugcheck",
+   "name": "RugCheck leaderboard",
+   "bots": [
+    "A",
+    "B"
+   ],
+   "ok": true,
+   "http": 200,
+   "ms": 785,
+   "items": 50,
+   "error": null
+  },
+  {
+   "id": "jupiter",
+   "name": "Jupiter price v3",
+   "bots": [
+    "B"
+   ],
+   "ok": true,
+   "http": 200,
+   "ms": 275,
+   "items": 1,
+   "error": null
+  },
+  {
+   "id": "rpc",
+   "name": "Solana public RPC (publicnode) getHealth",
+   "bots": [
+    "A",
+    "B"
+   ],
+   "ok": true,
+   "http": 200,
+   "ms": 143,
+   "items": 1,
+   "error": null
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-31T09:16:39.590Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T09:59:11.779Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T10:37:16.989Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T11:14:18.161Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T11:54:34.124Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T12:40:19.083Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T13:31:00.571Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T14:15:09.195Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T14:54:31.054Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T15:30:08.349Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T16:09:36.025Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T16:49:48.020Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T17:20:42.158Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T17:56:28.523Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T18:39:24.870Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T19:23:00.883Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T19:59:15.980Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T20:36:54.564Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T21:14:49.486Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T21:53:38.449Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T22:28:46.954Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T23:06:15.316Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-10-31T23:41:25.617Z",
+   "a": "OK",
+   "b": "OK"
+  },
+  {
+   "at": "2026-11-01T00:17:05.330Z",
+   "a": "OK",
+   "b": "OK"
+  }
+ ]
+}
